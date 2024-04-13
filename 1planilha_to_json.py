@@ -8,8 +8,8 @@ from datetime import datetime
 
 # VARIAVEIS ===================================================================
 caminho_arquivo_excel = './excel/original.xlsx'
-palavras_chave_ignoradas = ['Dinamica', 'MODELO PARA CÓPIA', 'Cópia de THA21']
-caminho_arquivo_json = './excel/dados_sem_palavra_chave.json'  
+palavras_chave_ignoradas = ['MODELO PARA CÓPIA']
+caminho_arquivo_json = './excel/dados_sem_palavra_chave.json'
 colunas_desejadas = ['Matrícula', 'ALUNO', 'REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento', 'Obs. da Biblioteca']
 
 # FUNÇÕES =====================================================================
@@ -21,28 +21,30 @@ def salvar_dados_em_json(dados, caminho_arquivo):
     except Exception as e:
         print(f"Ocorreu um erro ao salvar os dados em JSON: {e}")
 
-def obter_linhas_sem_palavra_chave(caminho_do_arquivo, palavras_chave_ignoradas, colunas_desejadas):
+def obter_linhas_sem_palavra_chave(caminho_arquivo_excel, palavras_chave_ignoradas, colunas_desejadas):
     linhas_encontradas = {}
 
     try:
         # Lê todas as planilhas do arquivo Excel
-        planilhas = pd.read_excel(caminho_do_arquivo, sheet_name=None)
+        planilhas = pd.read_excel(caminho_arquivo_excel, sheet_name=None, dtype={'Matrícula': str})
 
         for nome_da_planilha, df in planilhas.items():
             # Verifica se alguma palavra-chave está presente no nome da planilha
             if not any(palavra.lower() in nome_da_planilha.lower() for palavra in palavras_chave_ignoradas):
-                # Seleciona apenas as colunas desejadas
-                df = df[colunas_desejadas]
+                # Verifica se as colunas desejadas existem na planilha
+                if set(colunas_desejadas).issubset(df.columns):
+                    # Seleciona apenas as colunas desejadas
+                    df = df[colunas_desejadas]
 
-                # Converte colunas Timestamp para formato serializável
-                for coluna in df.select_dtypes(include=['datetime64']).columns:
-                    df[coluna] = df[coluna].apply(lambda x: x.strftime('%Y-%m-%d %H:%M:%S') if pd.notnull(x) else None)
+                    # Converte colunas Timestamp para formato serializável
+                    for coluna in df.select_dtypes(include=['datetime64']).columns:
+                        df[coluna] = df[coluna].apply(lambda x: x.strftime('%Y-%m-%d %H:%M:%S') if pd.notnull(x) else None)
 
-                # Remove linhas vazias
-                df = df.dropna(how='all')
+                    # Remove linhas vazias
+                    df = df.dropna(how='all')
 
-                # Adiciona as linhas da planilha correspondente
-                linhas_encontradas[nome_da_planilha] = df.to_dict(orient='records')
+                    # Adiciona as linhas da planilha correspondente
+                    linhas_encontradas[nome_da_planilha] = df.to_dict(orient='records')
 
         return linhas_encontradas
 
