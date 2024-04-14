@@ -1,5 +1,6 @@
 import time
 import json
+import sys
 from tkinter import *
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -96,6 +97,9 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
                         # Fecha o alerta
                         alerta.accept()
 
+                        # Adiciona o texto do alerta ao objeto aluno
+                        aluno['texto_alerta'] = texto_alerta
+
                         # Adiciona o aluno à lista de alunos com débito
                         alunos_sem_debito.append(aluno)
 
@@ -128,6 +132,7 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
             json.dump(resultado, f, ensure_ascii=False, indent=4)
 
         print("Arquivo JSON criado com sucesso.")
+        sys.exit()
 
     # preencher os campos quando o programa iniciar
     fazer_login('elian.oliveira', '4192')
