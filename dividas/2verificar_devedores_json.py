@@ -1,6 +1,7 @@
 import time
 import json
 import sys
+from datetime import datetime
 from tkinter import *
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -61,8 +62,22 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
 
         # Muda para a última aba aberta
         driver.switch_to.window(driver.window_handles[-1])
-        time.sleep(3)
         iframe = driver.find_element(By.NAME, "meio")
+
+        # Adiciona uma espera explícita
+        wait = WebDriverWait(driver, 10)
+
+        def diferenca_dias(data1, data2):
+            if data1 == '0,00' or data2 == '0,00':
+                return 0  # ou qualquer valor padrão que você queira usar
+            else:
+                data1 = datetime.strptime(data1, '%d/%m/%Y %H:%M:%S.%f')
+                data2 = datetime.strptime(data2, '%d/%m/%Y %H:%M:%S.%f')
+                # Removendo horas, minutos, segundos e microssegundos
+                data1 = data1.replace(hour=0, minute=0, second=0, microsecond=0)
+                data2 = data2.replace(hour=0, minute=0, second=0, microsecond=0)
+                return abs((data2 - data1).days)
+
 
         # Itera sobre cada turma nos dados
         for turma, alunos in dados.items():
@@ -78,9 +93,6 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
                 try:
                     # Extrai a matrícula do aluno
                     matricula_dados = aluno['Matrícula']
-
-                    # Adiciona uma espera explícita
-                    wait = WebDriverWait(driver, 10)
 
                     matricula_input = wait.until(EC.presence_of_element_located((By.ID, "id_txt_cod_pessoa")))
                     matricula_input.send_keys(matricula_dados)
@@ -105,6 +117,41 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
 
                     except TimeoutException:
                         # Se não houver alerta, o aluno tem débito
+
+                        linhas = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "#table_debito_devolucao tbody tr:not(:first-child)")))
+                        div_valor_debito = wait.until(EC.presence_of_element_located((By.ID, "divValorDebito"))).text.strip()
+
+                        aluno['Livros'] = []
+                        aluno['ValorLivros'] = []
+                        aluno['Emprestado em'] = []
+                        aluno['Devolução prevista'] = []
+                        aluno['Devolução efetiva'] = []
+
+                        # Itera sobre cada linha para capturar os elementos desejados
+                        for linha in linhas:
+                            # pegue todos os td's da linha
+                            tds = linha.find_elements(By.TAG_NAME, "td")
+
+                            td3 = tds[3].get_attribute("innerText").strip()
+                            td9 = tds[9].get_attribute("innerText").strip()
+                            td13 = tds[13].get_attribute("innerText").strip().split(' ')[0]
+                            td14 = tds[14].get_attribute("innerText").strip().split(' ')[0]
+                            td15 = tds[15].get_attribute("innerText").strip().split(' ')[0]
+
+                            # Adiciona os valores às respectivas listas
+                            aluno['Livros'].append(td3)
+                            aluno['ValorLivros'].append(td9)
+                            aluno['Emprestado em'].append(td13)
+                            aluno['Devolução prevista'].append(td14)
+                            aluno['Devolução efetiva'].append(td15)
+
+                        aluno['Livros'] = '; '.join(aluno['Livros'])
+                        aluno['ValorLivros'] = '; '.join(aluno['ValorLivros'])
+                        aluno['Valor total a pagar'] = div_valor_debito
+                        aluno['Emprestado em'] = '; '.join(aluno['Emprestado em'])
+                        aluno['Devolução prevista'] = '; '.join(aluno['Devolução prevista'])
+                        aluno['Devolução efetiva'] = '; '.join(aluno['Devolução efetiva'])
+
                         alunos_com_debito.append(aluno)
                         print(f"Aluno com débito encontrado: {matricula_dados}")
 

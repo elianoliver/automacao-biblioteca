@@ -1,0 +1,89 @@
+{
+    "alunos_com_debito": [
+        {
+            "Matrícula": "2019325720",
+            "ALUNO": "ÁGATA VITÓRIA MANARICK",
+            "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+            "Obs. da Biblioteca": NaN,
+            "Livros": "Extraordinário / 2013",
+            "ValorLivros": "12,00",
+            "Emprestado em": "10/06/2015",
+            "Devolução prevista": "24/06/2015",
+            "Devolução efetiva": "15/07/2015",
+            "Valor total a pagar": "12,00"
+        },
+        {
+            "Matrícula": "2020302933",
+            "ALUNO": "ANA JULIA DE ALBUQUERQUE",
+            "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+            "Obs. da Biblioteca": NaN,
+            "Livros": "Nutrição animal : volume 1 : as bases e os fundamentos da nutrição animal, os alimentos - 4. ed / 1986",
+            "ValorLivros": "21,00",
+            "Emprestado em": "03/03/2020",
+            "Devolução prevista": "28/03/2022",
+            "Devolução efetiva": "02/05/2022",
+            "Valor total a pagar": "21,00"
+        },
+        {
+            "Matrícula": "2019306653",
+            "ALUNO": "ESTEFANY MOTTA SANTOS",
+            "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Não",
+            "Obs. da Biblioteca": "Possui débito",
+            "Livros": "Vida, 4 biografias : Cruz e Sousa, Bashô, Jesus, Trótski / 2013; Liberte meu coração / 2011",
+            "ValorLivros": "2,00; 4,00",
+            "Emprestado em": "31/07/2019; 08/04/2019",
+            "Devolução prevista": "14/08/2019; 22/04/2019",
+            "Devolução efetiva": "16/08/2019; 26/04/2019",
+            "Valor total a pagar": "6,00"
+        },
+        {
+            "Matrícula": "2021312809",
+            "ALUNO": "GEREMIAS SAMUEL PEREIRA",
+            "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+            "Obs. da Biblioteca": NaN,
+            "Livros": "Dom, O / 2015; Perola, A - 13. ed / [198?]",
+            "ValorLivros": "1,00; 2,00",
+            "Emprestado em": "21/03/2022; 06/04/2022",
+            "Devolução prevista": "04/04/2022; 20/04/2022",
+            "Devolução efetiva": "06/04/2022; 25/04/2022",
+            "Valor total a pagar": "3,00"
+        },
+        {
+            "Matrícula": "2020329436",
+            "ALUNO": "GUSTAVO BORGES DA SILVA",
+            "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+            "Obs. da Biblioteca": NaN,
+            "Livros": "Guia de plantas tropicais: plantas ornamentais, plantas úteis, frutos exóticos / 2007; Plantas para jardim no Brasil : herbáceas, arbustivas e trepadeiras / 2013; Orgulho e preconceito / 2011",
+            "ValorLivros": "17,00; 17,00; 16,00",
+            "Emprestado em": "26/11/2021; 26/11/2021; 29/10/2021",
+            "Devolução prevista": "28/03/2022; 28/03/2022; 28/03/2022",
+            "Devolução efetiva": "25/04/2022; 25/04/2022; 25/04/2022",
+            "Valor total a pagar": "50,00"
+        },
+        {
+            "Matrícula": "2021309670",
+            "ALUNO": "ISABELLE APARECIDA TAUFER MARTINS",
+            "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+            "Obs. da Biblioteca": NaN,
+            "Livros": "Entomologia agrícola / 2002",
+            "ValorLivros": "6,00",
+            "Emprestado em": "27/09/2022",
+            "Devolução prevista": "11/10/2022",
+            "Devolução efetiva": "19/10/2022",
+            "Valor total a pagar": "6,00"
+        },
+        {
+            "Matrícula": "2021313477",
+            "ALUNO": "LARISSA KÁTHELYN CARDOSO DE JESUS",
+            "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+            "Obs. da Biblioteca": NaN,
+            "Livros": "Memorias postumas de Bras Cubas - 22. ed. / 1997; Olhos d'água / 2014; Quem é você, Alasca? / 2014",
+            "ValorLivros": "3,00; 3,00; 4,00",
+            "Emprestado em": "28/03/2022; 28/03/2022; 06/09/2022",
+            "Devolução prevista": "11/04/2022; 11/04/2022; 20/09/2022",
+            "Devolução efetiva": "18/04/2022; 18/04/2022; 26/09/2022",
+            "Valor total a pagar": "10,00"
+        }
+    ],
+    "alunos_sem_debito": []
+}
