@@ -1,44 +1,564 @@
 {
-  "AA21": [
+  "SUPERIOR Colações 2024": [
     {
-      "Matrícula": "2019325720",
-      "ALUNO": "ÁGATA VITÓRIA MANARICK",
+      "Matrícula": "2020003513",
+      "ALUNO": "FILIPE WILLIAM CANELLO DE ALMEIDA",
       "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
       "Obs. da Biblioteca": NaN
     },
     {
-      "Matrícula": "2020302933",
-      "ALUNO": "ANA JULIA DE ALBUQUERQUE",
+      "Matrícula": "2016007820",
+      "ALUNO": "ITALO CORRÊA",
       "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
       "Obs. da Biblioteca": NaN
     },
     {
-      "Matrícula": "2019306653",
-      "ALUNO": "ESTEFANY MOTTA SANTOS",
+      "Matrícula": "2019002756",
+      "ALUNO": "JONATHAN LINCOLN MORMELO GÜTHS",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2012000348",
+      "ALUNO": "LUCAS SILVA RIBEIRO",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2020000333",
+      "ALUNO": "MARÍLIA CASTRO DE MELO",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2019005883",
+      "ALUNO": "NÍCOLAS GABRIEL RABELLO",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2020017152",
+      "ALUNO": "VALERIA LUCIA OLIVERA SANTANA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2019008286",
+      "ALUNO": "ANA CRISTINA GOMES FEDRIZZI",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021011752",
+      "ALUNO": "CEZAR VALIGURA DOS SANTOS",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021011082",
+      "ALUNO": "DAIANE NUNES ABREU",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021006387",
+      "ALUNO": "ELENITA MARCONDES FONTES",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021013292",
+      "ALUNO": "ELISANDRA DA SILVA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2020013897",
+      "ALUNO": "HELCIO RODRIGO VIEIRA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021010835",
+      "ALUNO": "IURI PEDRELLI TOMAZONI",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021013327",
+      "ALUNO": "JOCIANE CORREIA SCHRAN",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021006420",
+      "ALUNO": "LUIZ FELIPE BITTENCOURT",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021009674",
+      "ALUNO": "MARCELO RODRIGUES NUNES",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021013309",
+      "ALUNO": "MIRIAM TABACZENSKI",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021000356",
+      "ALUNO": "NARCISO BARROS PONTES",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021009262",
+      "ALUNO": "SIRLEI IARA DE SOUZA ROSA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021010871",
+      "ALUNO": "SONIA MARIA ABRAHAO",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021000300",
+      "ALUNO": "TATIANA GONÇALVES VIEIRA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021013274",
+      "ALUNO": "TAUANA DOS SANTOS FONTOURA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2020001045",
+      "ALUNO": "CLEITON ARAUJO MOURA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2019009748",
+      "ALUNO": "DIEGO CELIO FONSECA MENDES",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": NaN,
+      "Obs. da Biblioteca": "usuario inexistente"
+    },
+    {
+      "Matrícula": "2021006500",
+      "ALUNO": "LUIS ANTONIO DE SOUZA SILVA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021004687",
+      "ALUNO": "ROGER BENEVENUTTI ",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2020007503",
+      "ALUNO": "DANIEL BOMBAZAR",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2020009320",
+      "ALUNO": "IURY PRAXEDES HILLMANN DOS SANTOS",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2019000297",
+      "ALUNO": "LUCAS GABRIEL RECK",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2019001463",
+      "ALUNO": "LUIZ HENRIQUE GONÇALVES DE ARAUJO",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2020001223",
+      "ALUNO": "MATHEUS YAGI DE BORBA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2019000896",
+      "ALUNO": "VICTORIA GIULIANA FONSECA QUINZEN KOPP",
       "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Não",
       "Obs. da Biblioteca": "Possui débito"
     },
     {
-      "Matrícula": "2021312809",
-      "ALUNO": "GEREMIAS SAMUEL PEREIRA",
+      "Matrícula": "2020002033",
+      "ALUNO": "ALESSANDRA VIDAL DIAS",
       "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
       "Obs. da Biblioteca": NaN
     },
     {
-      "Matrícula": "2020329436",
-      "ALUNO": "GUSTAVO BORGES DA SILVA",
+      "Matrícula": "2020007192",
+      "ALUNO": "DAIANE DOS SANTOS SOUZA ALBUQUERQUE",
       "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
       "Obs. da Biblioteca": NaN
     },
     {
-      "Matrícula": "2021309670",
-      "ALUNO": "ISABELLE APARECIDA TAUFER MARTINS",
+      "Matrícula": "2020013476",
+      "ALUNO": "FABIOLA ROSA DOS SANTOS MEZZOMO",
       "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
       "Obs. da Biblioteca": NaN
     },
     {
-      "Matrícula": "2021313477",
-      "ALUNO": "LARISSA KÁTHELYN CARDOSO DE JESUS",
+      "Matrícula": "2020001896",
+      "ALUNO": "HÉRIKA DE MELLO CEZAR",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2017016672",
+      "ALUNO": "MARIA INÊS CONCEIÇÃO DA SILVA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2020011918",
+      "ALUNO": "MARISETE DE LIMA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2020007325",
+      "ALUNO": "PAMELA MOTTA DE ABRANJO",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2020007610",
+      "ALUNO": "PAULO ANTUNES MACIEL",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2020014419",
+      "ALUNO": "SAMARA SILVERIO DA SILVA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    }
+  ],
+  "TTI": [
+    {
+      "Matrícula": "2021325709",
+      "ALUNO": "NATHALIA ZANELLA NAUMANN",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022327940",
+      "ALUNO": "ANDERSON CARVALHO DE OLIVEIRA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022327548",
+      "ALUNO": "ERICA RODRIGUES DE LIMA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Não",
+      "Obs. da Biblioteca": "Possui débito"
+    },
+    {
+      "Matrícula": "2021325718",
+      "ALUNO": "LAIS FERNANDA DIAS BARRETO",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022328035",
+      "ALUNO": "LUÃ OLIVEIRA DA ROSA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Não",
+      "Obs. da Biblioteca": "Possui débito"
+    },
+    {
+      "Matrícula": "2022328160",
+      "ALUNO": "MIGUEL ANGELO SILVA DA SILVA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022328115",
+      "ALUNO": "RAFAEL GONÇALVES LINS",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022327691",
+      "ALUNO": "RENATA ALESSANDRA DE JESUS",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    }
+  ],
+  "TDC": [
+    {
+      "Matrícula": "2022327261",
+      "ALUNO": "ADRIANA KONIG KIPFER",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022327412",
+      "ALUNO": "ADRIANO FRANCELINO DE SOUSA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022327557",
+      "ALUNO": "ANDRÉ CRISTIANO ARCHER",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022327403",
+      "ALUNO": "EDEVILSON PAULINO CUGIKI",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022327397",
+      "ALUNO": "ELAINE CRISTINA GUMS VICK",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021320711",
+      "ALUNO": "FABIANA REGINA BERNZ SOUZA (PRESENCIAL)",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022327360",
+      "ALUNO": "HIPOLITO SARDA DE SOUZA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022327978",
+      "ALUNO": "ISAIAS KUBNIK",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022327270",
+      "ALUNO": "JAIRO MACHADO",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022327243",
+      "ALUNO": "JOÃO OTAVIO CARDOSO AMANTE",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2023315336",
+      "ALUNO": "JÚLIA CARLA DE GONZALES",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022327501",
+      "ALUNO": "JULIANA LUPATO ZUCCHI",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022327593",
+      "ALUNO": "JULIO GERMANO MARCELINO",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022327495",
+      "ALUNO": "MARCELO DA SILVA LOPES",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021324130",
+      "ALUNO": "PATRICIA MOELLMANN DA SILVA (PRESENCIAL)",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022327753",
+      "ALUNO": "PEDRO ROBERTO MACHADO JAQUES",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2023322635",
+      "ALUNO": "BRUNO ANDRE SARMENTO DA SILVA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022328536",
+      "ALUNO": "CARLA BEATRIZ DA SILVA GARCIA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2023315390",
+      "ALUNO": "DEMIS MIGUEL STILLER",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022327234",
+      "ALUNO": "MARNIO LUIZ PEREIRA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022327762",
+      "ALUNO": "NATIELI FÁTIMA DA COSTA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022328133",
+      "ALUNO": "RAQUEL MARIA LOSTADA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    }
+  ],
+  "TST": [
+    {
+      "Matrícula": "2022321929",
+      "ALUNO": "ANA LUCIA SOUSA VIANNA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021328362",
+      "ALUNO": "ARIANE RIBEIRO",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021328676",
+      "ALUNO": "GABRIELE RODRIGUES DA VEIGA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Não",
+      "Obs. da Biblioteca": "Possui débito"
+    },
+    {
+      "Matrícula": "2022323280",
+      "ALUNO": "LAIZA ARIANI RILANDER",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022321947",
+      "ALUNO": "NATACHA DE ALMEIDA SILVA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022322318",
+      "ALUNO": "TATIANE ALVES MACEDO",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022323306",
+      "ALUNO": "TIAGO UÉSLEI SCHROEDER",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2018324639",
+      "ALUNO": "JANIEDE MARIA FERREIRA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022322013",
+      "ALUNO": "JEFERSON DE JESUS",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    }
+  ],
+  "EJAs": [
+    {
+      "Matrícula": "2022324591",
+      "ALUNO": "ANA CLARA BARBIERI DA SILVA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022325202",
+      "ALUNO": "BEATRIZ PESTANA DIAS",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022326845",
+      "ALUNO": "FABRICIO KUHL ALVIM",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022325580",
+      "ALUNO": "LEYDIANE DO SOCORRO SANTOS DA SILVA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022324635",
+      "ALUNO": "CECILIA APARECIDA MARINS DOS SANTOS",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022326148",
+      "ALUNO": "LUCIANA KRAUS DE LIMA DAS CHAGAS",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022324653",
+      "ALUNO": "MARIA REGIANA MARQUES RIBEIRO",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2022325042",
+      "ALUNO": "THIAGO AUGUSTO ESPÍNDOLA",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    }
+  ],
+  "Colações de Grau em Gabinete": [
+    {
+      "Matrícula": "2019000528",
+      "ALUNO": "TAMARA SAMPAIO VIEIRA FERNANDES",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2021010782",
+      "ALUNO": "ADEMILTON AMARO MARIANO ",
+      "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
+      "Obs. da Biblioteca": NaN
+    },
+    {
+      "Matrícula": "2020005240",
+      "ALUNO": "YASMIN QUEIROS SILVA",
       "REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento": "Sim",
       "Obs. da Biblioteca": NaN
     }

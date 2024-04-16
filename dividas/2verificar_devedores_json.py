@@ -145,12 +145,7 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
                             aluno['Devolução prevista'].append(td14)
                             aluno['Devolução efetiva'].append(td15)
 
-                        aluno['Livros'] = '; '.join(aluno['Livros'])
-                        aluno['ValorLivros'] = '; '.join(aluno['ValorLivros'])
                         aluno['Valor total a pagar'] = div_valor_debito
-                        aluno['Emprestado em'] = '; '.join(aluno['Emprestado em'])
-                        aluno['Devolução prevista'] = '; '.join(aluno['Devolução prevista'])
-                        aluno['Devolução efetiva'] = '; '.join(aluno['Devolução efetiva'])
 
                         alunos_com_debito.append(aluno)
                         print(f"Aluno com débito encontrado: {matricula_dados}")
