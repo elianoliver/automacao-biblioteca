@@ -12,11 +12,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import TimeoutException
-
+from dotenv import load_dotenv
+import os
 
 # Configurações Selenium
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
+
 
 # Inicialização do WebDriver Selenium
 with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager().install())) as driver:
@@ -177,7 +179,10 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
         sys.exit()
 
     # preencher os campos quando o programa iniciar
-    fazer_login('elian.oliveira', '4192')
+    load_dotenv()
+    username = os.getenv('USER')
+    password = os.getenv('PASSWORD')
+    fazer_login(username, password)
 
     # Interface gráfica
     root = Tk()
