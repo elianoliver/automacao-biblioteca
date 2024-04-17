@@ -1,0 +1,219 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:1583:b0:7c:89f8:37c6 with SMTP id bv3csp1151318rbb;
+        Fri, 2 Feb 2024 11:42:51 -0800 (PST)
+X-Received: by 2002:a05:6512:479:b0:511:30fd:9221 with SMTP id x25-20020a056512047900b0051130fd9221mr3505780lfd.11.1706902970232;
+        Fri, 02 Feb 2024 11:42:50 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706902970; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Gon+c0ySbqsc/ZCvT2RfFzWgYIzRHKoiApRHZgPKfOa63hydHbJ0VrQ7F1z7IXgxh0
+         MHlkl4YGBmp9FFbEQ6Lm9/IYmczzSmrewd1jDtgFH/p/siAT/aZy5S/NZCavTBS0krGi
+         syLImiL81tJ4Hi1Cau18Bs4AoKLr4fOxSs+mkGf/x9+Ngsk7SV7Yddf44ZwKUpc46Ghv
+         H/SQnsotcY7JuiPtSmcVPNG7/LmyPiyz2Fezb9y6smp5jeS6B9i74WgR5PFUFkTa2SYO
+         KGJxCwARvAYzmhSj1sIGvXmrwM9NqkCv+ScxYmcwF3GhDVWlqjUwfxdSbH9HnIw6KPw3
+         9kkA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=dOQuy2t7pPw/GoN5uts0eKmvJcxqiLJx9KkwzJjJuks=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=tbTbotcPG/ZnR7fPLRe4vyw9rWaldanG4BboIuT40G5KjDsWNmOxaONAL+veqZ7rGd
+         aJ1tfXcMqyy/lDzZRzC0ZuUQTTZBukf1n8srKCu8kcCT2wr7WmAaRoUeyrYiWqq5+P+6
+         whU24OGxSNRzt4wFYLutIX+7n0W+w2StxUEC0odLYyEp3rUUWLYD5Upgd8PP0pDyiEBf
+         zv9ULuS+1tIY+Rz50BgbJZnaWuc5zFFmytew52xgO/pTAJHF8iCvBR73Gm6pWdGZHNJu
+         EDrJ5F6ExjqolyfksXT6kmK/AKezuxE/ppfZ4maX4K2erKhzWPrsSANcsnfAazCAG4VO
+         LRVg==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=VURo6j3X;
+       spf=pass (google.com: domain of pedro.marchioro30@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=pedro.marchioro30@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <pedro.marchioro30@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id j10-20020a056512398a00b005101914b605sor1045164lfu.23.2024.02.02.11.42.50
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Fri, 02 Feb 2024 11:42:50 -0800 (PST)
+Received-SPF: pass (google.com: domain of pedro.marchioro30@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=VURo6j3X;
+       spf=pass (google.com: domain of pedro.marchioro30@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=pedro.marchioro30@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706902969; x=1707507769; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=dOQuy2t7pPw/GoN5uts0eKmvJcxqiLJx9KkwzJjJuks=;
+        b=VURo6j3XV/1ZGdai3BwAVob6FhuPHeq3z9+WtgDewOUNqNV6tvL/EFwFzqbifNffsi
+         9/tJaUTNLeERR6DSndfnK9Qp+AM7UP2b2DkinVXrKaSib8qg0pcurBEtVxXzkRb06ASw
+         zltBQygz76lxBGwCNEBogJQJjXC8yWwuu9T3DF+O+0kKw8qV16D7KD8bXkhzGnmerkIc
+         HguheDMjtKYi0sCkL+8TN/3ggH1WfmXVIxOZph8G5fgYnYgsg4LgkD+HDDe4lxQSXCbE
+         ghLp0ydLkUJP82Hm24eYHyxeKau4nsZGGER4z4FUd3gyL5243w9Vx8MgG4wZxw2yi53I
+         OB/A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706902969; x=1707507769;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=dOQuy2t7pPw/GoN5uts0eKmvJcxqiLJx9KkwzJjJuks=;
+        b=Fu7SVHPfYEAdLaA8Ds7NH+pQmoFa57ufMpinsevxUA6Yv+NurnUtgQDHh3DG97OmUz
+         xFTk3CXn7snQ3gprnWhErf+ZzDlIgkYPmgQ18zYo97jTQFePc1EuwEhoImBB6DpqXdhn
+         3p30TKVI0SnQG0EOyY2Sy/t8AYbEYx7j/PuzFAXVTIlLq3uA4xbhc/k+Q3DwEcraQkeB
+         TGmlWB8qyjsRdhnPoaSGBor4Wr4DT7FTzIM7vTDe0dh/91bG6ysf3zmK80K0Q4iLjBTw
+         zhhvG2ugzOGBbjIqXs/ThDTQxo4hQDVjgSLMykOI571s5J0yB8ilOKfVEz8fVWJCJ2pX
+         FQJA==
+X-Gm-Message-State: AOJu0YzM+xZJEgi2cxJgkaimY1dcysCmot1VSr2NPxdgrAzQT7LnQ3iP
+	ScxzamYNJtZD0g/Dtn7y3MM0Zt1SMH/MULDd6F9L5I9xzAKHaqM5ZH/uXpijk+tgg3hV2kd7bEM
+	sX2i7Nl7F/igh3i/qaQtYumE4+fFmjdvI
+X-Google-Smtp-Source: AGHT+IGPbK/qwV6gEeYG7WrLt1SR4xZ/HMColjMKnwVxJV/VeynYDUZ21iLxkkvjHcoF/X20W63ki5FOK1piTl7sn00=
+X-Received: by 2002:a05:6512:613:b0:510:d29:cf57 with SMTP id
+ b19-20020a056512061300b005100d29cf57mr4865429lfe.33.1706902968773; Fri, 02
+ Feb 2024 11:42:48 -0800 (PST)
+MIME-Version: 1.0
+References: <6LBeGpfpshxltZuIbpJEkrYQHJnscDwDGTFGapAgaE@localhost>
+In-Reply-To: <6LBeGpfpshxltZuIbpJEkrYQHJnscDwDGTFGapAgaE@localhost>
+From: pedro marchioro <pedro.marchioro30@gmail.com>
+Date: Fri, 2 Feb 2024 16:47:48 -0300
+Message-ID: <CANorz4op+KRTqRstEOjbHkMcBj42Qjk1WfYpMALbaFpdr5X9hQ@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/mixed; boundary="0000000000001f54c306106b51d9"
+
+--0000000000001f54c306106b51d9
+Content-Type: multipart/alternative; boundary="0000000000001f54c006106b51d7"
+
+--0000000000001f54c006106b51d7
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Segue o comprovante de pagamento.
+
+Att
+
+Pedro
+
+Em qui., 1 de fev. de 2024 =C3=A0s 03:16, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: 000000003363819 - Pedro Francisco Marchioro
+>
+> Valor Total de Debito: $ 46.00
+> Valor Total do Desconto: $ 0.00
+> Valor Total a Pagar: $ 46.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+--0000000000001f54c006106b51d7
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Segue o comprovante=C2=A0de pagamento.<div><br></div><div>=
+Att</div><div><br></div><div>Pedro</div></div><br><div class=3D"gmail_quote=
+"><div dir=3D"ltr" class=3D"gmail_attr">Em qui., 1 de fev. de 2024 =C3=A0s =
+03:16, <a href=3D"mailto:biblioteca@ifc.edu.br">biblioteca@ifc.edu.br</a> &=
+lt;<a href=3D"mailto:noreplay.biblioteca.camboriu@ifc.edu.br">noreplay.bibl=
+ioteca.camboriu@ifc.edu.br</a>&gt; escreveu:<br></div><blockquote class=3D"=
+gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(20=
+4,204,204);padding-left:1ex">=20
+<br>Usu=C3=A1rio: 000000003363819 - Pedro Francisco Marchioro              =
+                                                            =20
+<br> <br>
+Valor Total de Debito: $ 46.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 46.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div>
+
+--0000000000001f54c006106b51d7--
+--0000000000001f54c306106b51d9
+Content-Type: application/pdf; name="1706735328858.pdf"
+Content-Disposition: attachment; filename="1706735328858.pdf"
+Content-Transfer-Encoding: base64
+Content-ID: <f_ls524ind0>
+X-Attachment-Id: f_ls524ind0
+
+JVBERi0xLjQKJeLjz9MKNCAwIG9iaiA8PC9Db2xvclNwYWNlWy9JbmRleGVkL0RldmljZVJHQiAy
+NTUo7gIs9zBT9ixQ8RA5//P1+0pn//L0/73J/7TB7gMt/9fe/+To/4SY9SRK/4ic/9vh8Q44/WB6
+/3KJ//H08FxiNP/4+f+Dl/5qg/1Zdf+Hm/IYQP+ltP/19/96kP+zwPERO/+Qou8FMf9uh//r7vxV
+cv93jf/09v/v8v/6+/9ziv/o7Pg+Xv/v8fxWc/+Upvg2Wf5mf//j6P+suf/p7P/t8P+Fmf+zv/91
+jPpJZ/pGZf+Blf+GmvBcbjTzGUH//f3/ws3xEjz//P30I0n/4OX/pLT8XXj7TGn8U3H+a4T/cYj/
+2uD/tsL/i57/v8r/9/j/bYb/2N//usXvBS//mar/x9HzHEP/n6/zGkL/7O/yFD3/na3/hZn/eY//
+f5T/e5DvBzP/+fr/t8P/doz/9vj/w87wCzX9X3r/eI74OFr9YXv/ztb/5+v/zNT9Ynz/mKn8V3T/
+y9P8VHH/fJH/3OL1JUvvBjL9Xnn/yNL/xtD1J0z+aYL/bIX8Tmz/1dv6RWT/fpP+ZX7zG0L8T2z5
+Olxc/8XP/+bq/9nf+DRW/6Cw+0to+0xq+kdm+Txd+01r/7nF//Hz/6e1/mN9/5Wm9ipO9CJI8Fxm
+Nvk5W/+7xv+NoP+PovYuUf9ogf/P1v+XqP/f5PMeRP+Mn//Ay//l6fITPf90i/+4xPlCYv/q7fQh
+Rv+vvPYrT/tScPYtUP/i5/9wh//7/P+tuv/u8f+quPcyVf/w8v+Wp/VcKU3/q7j/fZL/mqv0H0X5
+QGDyFT71XChM/5Ol/4md/8rT+1Bt+Dda/7C8/97j/83V/7G9+1Fu/9fd/8nT/9Pa8hc//7G+/5ur
+/Vxcd/cuUu4DLv/R2P+8x//h5v+js/+uu/5pg/pEY/czVf5ngP+crP+isv+8yP+erv++yv5kfvcx
+VO8ELvEQOP/W3P+gr//S2f/U2v/d4/lBYf1advQgRv+SpPk/X//Q1/lDY/+Clv///wAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACldL01hc2sgWzI0MCAyNDAgXS9T
+dWJ0eXBlL0ltYWdlL0hlaWdodCA0MC9GaWx0ZXIvRmxhdGVEZWNvZGUvVHlwZS9YT2JqZWN0L1dp
+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
+CrPRIlLBiYTR6rtW5+j0A4jodro+Su/hOuRuvxjHMEvCNw+Dt2fQG/T7b68mrZpZlXkvco6bXW3Y
+u2UhLrxxBzbZ9eGHUX8KGfcOV1nWAtWO5iO9eQ1Hq3iUhsUVHA8vj69n4hJ8/CIVHL+RKHVdI5Xt
+rOYT/dz5Dxt4ggAKZW5kc3RyZWFtCmVuZG9iagoxIDAgb2JqPDwvQ29udGVudHMgNSAwIFIvVHlw
+ZS9QYWdlL1Jlc291cmNlczw8L1Byb2NTZXQgWy9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9J
+bWFnZUldL0ZvbnQ8PC9GMSAyIDAgUi9GMiAzIDAgUj4+L1hPYmplY3Q8PC9pbWcwIDQgMCBSPj4+
+Pi9QYXJlbnQgNiAwIFIvTWVkaWFCb3hbMCAwIDYxMiA3OTJdPj4KZW5kb2JqCjMgMCBvYmo8PC9T
+dWJ0eXBlL1R5cGUxL1R5cGUvRm9udC9CYXNlRm9udC9IZWx2ZXRpY2EtQm9sZC9FbmNvZGluZy9X
+aW5BbnNpRW5jb2Rpbmc+PgplbmRvYmoKMiAwIG9iajw8L1N1YnR5cGUvVHlwZTEvVHlwZS9Gb250
+L0Jhc2VGb250L0hlbHZldGljYS9FbmNvZGluZy9XaW5BbnNpRW5jb2Rpbmc+PgplbmRvYmoKNiAw
+IG9iajw8L0tpZHNbMSAwIFJdL1R5cGUvUGFnZXMvQ291bnQgMT4+CmVuZG9iago3IDAgb2JqPDwv
+VHlwZS9DYXRhbG9nL1BhZ2VzIDYgMCBSPj4KZW5kb2JqCjggMCBvYmo8PC9Nb2REYXRlKEQ6MjAy
+NDAxMzEyMTA4NDhaKS9DcmVhdGlvbkRhdGUoRDoyMDI0MDEzMTIxMDg0OFopL1Byb2R1Y2VyKGlU
+ZXh0IDIuMC44IFwoYnkgbG93YWdpZS5jb21cKSk+PgplbmRvYmoKeHJlZgowIDkKMDAwMDAwMDAw
+MCA2NTUzNSBmIAowMDAwMDAzNzkxIDAwMDAwIG4gCjAwMDAwMDQwNzEgMDAwMDAgbiAKMDAwMDAw
+Mzk3OSAwMDAwMCBuIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDI0NTggMDAwMDAgbiAKMDAw
+MDAwNDE1OCAwMDAwMCBuIAowMDAwMDA0MjA4IDAwMDAwIG4gCjAwMDAwMDQyNTIgMDAwMDAgbiAK
+dHJhaWxlcgo8PC9JbmZvIDggMCBSL0lEIFs8Yjg5MWJmNGJlMDhkYjM3MTE1YmIyNmFkY2JlNmIw
+OTM+PDc3OWFkOWZhZmU3NmJiMGYwNmUwN2EzMzc5MTMyYWZkPl0vUm9vdCA3IDAgUi9TaXplIDk+
+PgpzdGFydHhyZWYKNDM3MQolJUVPRgo=
+--0000000000001f54c306106b51d9--

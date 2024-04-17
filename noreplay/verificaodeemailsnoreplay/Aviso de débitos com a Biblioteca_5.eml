@@ -1,0 +1,182 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:adf:cd03:0:b0:33b:48ee:a916 with SMTP id w3csp247424wrm;
+        Tue, 13 Feb 2024 05:08:08 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFZ78OcIk+L818Pdk+FYed1dilIlMfHFojOn5KK9r+4ds3yEmCvA2kV0r99mgwNCk6JIHKt
+X-Received: by 2002:a05:6808:2f18:b0:3c0:4814:e16b with SMTP id gu24-20020a0568082f1800b003c04814e16bmr673393oib.33.1707829687836;
+        Tue, 13 Feb 2024 05:08:07 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1707829687; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=j7BBIXM5gfnLc4USkREFDBnFOGPzUq9i7G2A/qq1FF6uzTrfbOfFpGLag5zRzDJjCs
+         EFnTXlBijgVP0q2HUOClrgASRIB1qAENzJEbR0fr6z1CxCD3hdVAyAl+cuRsPizV0+F+
+         lvsLSAba6JtrgTl0R5QwA0sGWJF63SPIqC6yrmpizSFLLmIzVyuNVOpqf4iesqRWHau4
+         3n10l0CXvYTZHtbcrUMkSiLDtBi19cgVMuA3lfSPVrGTUxVUnuVUVmwgI75a1EK8Y8DM
+         DuxySk1B8kk5am0ofXai+Tbb97/nM4zW8+jqSxkHHvVzTw8Dcezg4kj9RlWMN+QtHeVr
+         noCg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:msip_labels:content-language:accept-language
+         :in-reply-to:references:message-id:date:thread-index:thread-topic
+         :subject:to:from;
+        bh=tVjBFaetEsEpthT6pqt+Y06AK8E0qwCMWu3LKeHS12M=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=aWCMeOuytoVTlqpX4bDK/yIesOV5a9i6VQ7nuBd/dz/fFEO5tOkMj5OXtftPB8DSST
+         3jrDlWCfhRPdUxdWxCFOhS6td8I/OO8Vvp0nrzgkrTP9CAH4FJ02mEBC2wiIXFicfaRI
+         403U/5YP1rIJXLVN3reEIVQvyLl41Co7spVrA5UZFCzcFslnbSULorhOVsfWZFFV5P2Z
+         BqEYeticStZV9nF2eycKzFbYytPJZ2bkA49v0f2D42A0S1e2GhlyhMthl/f1RiuEpn9C
+         sXGweZvSCzsln5aBYB8iPoS0CQ/u/EgZxsXWb4xPhnUuss0q0cgdQcY5oKzBtHG8vlKr
+         EP0g==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=2; mx.google.com;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of taynara.lima@hotmail.com.br designates 2a01:111:f403:2c14::800 as permitted sender) smtp.mailfrom=taynara.lima@hotmail.com.br;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hotmail.com.br
+Return-Path: <taynara.lima@hotmail.com.br>
+Received: from NAM11-BN8-obe.outbound.protection.outlook.com (mail-bn8nam11olkn20800.outbound.protection.outlook.com. [2a01:111:f403:2c14::800])
+        by mx.google.com with ESMTPS id v12-20020a05610205cc00b0046b19773c2fsi897274vsf.557.2024.02.13.05.08.07
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 13 Feb 2024 05:08:07 -0800 (PST)
+Received-SPF: pass (google.com: domain of taynara.lima@hotmail.com.br designates 2a01:111:f403:2c14::800 as permitted sender) client-ip=2a01:111:f403:2c14::800;
+Authentication-Results: mx.google.com;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of taynara.lima@hotmail.com.br designates 2a01:111:f403:2c14::800 as permitted sender) smtp.mailfrom=taynara.lima@hotmail.com.br;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hotmail.com.br
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=PwPrhI1DpOOireQ1ytw+uZOCoy/+51qlKIWwFphKdq99+1eIAQCXt+tJTIS1KhWfgg2yzQ+ZPGIdn4Ky6zc119hUMCS2WlmxEx5M6IE7vNWjjdaNC6P1LqCskhjPWXW+B+y6AupOKot4lDhqdyLFNd0Og0lMhvCLrHZIIFVQT54fxZSL0bzjcUttnI5NVROoGx8bz0F1gm7hk6pDCLVLfiGcROSzYOAMR7DnJWjQ5J9Eb1M2wX0SoSigsORbtLx7bKQzvwZlQOZeoOoRrgx61cyJvrRte+1r5rVi3HVx7+K411XvpE50p5RQm1UORZ8ECRWyvb8CidH2YGqPNensBQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=tVjBFaetEsEpthT6pqt+Y06AK8E0qwCMWu3LKeHS12M=;
+ b=WqUn8wMzfBdi0/JJPv6D26VPhCEVMrkNlEd1SNLtQC+OjBGm69obmCkIFrCLNiktAEIPG/8g3q/UYQ8l+ZJmgeAp2k9kL0LMjj+nxaxNPDXpVm7klkPSiSlH8jQWLxuRo4sDlog8eaKDsfOby3EUi7Z3o05movDSo/nO2ADwdNIJFfj+dRlbrj1sUl3pcqWReTOL9SIG38nsUbDcPvFHTREroqe+uHBUWrXr/d+1f1u/uUcvyb37Rairm8GW0+/a235LbDf8DZ91K4Xufzh5AhV2HQB+E2xMxYZ11HgtUbspCLosKgrLHTiawujDirWFTISqdz1cQjQGI7CotJOUZQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+Received: from SCZP152MB6143.LAMP152.PROD.OUTLOOK.COM (2603:10d6:300:61::7) by
+ CPUP152MB4956.LAMP152.PROD.OUTLOOK.COM (2603:10d6:103:19e::12) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7270.39; Tue, 13 Feb 2024 13:08:05 +0000
+Received: from SCZP152MB6143.LAMP152.PROD.OUTLOOK.COM
+ ([fe80::d43c:707a:729d:963b]) by SCZP152MB6143.LAMP152.PROD.OUTLOOK.COM
+ ([fe80::d43c:707a:729d:963b%5]) with mapi id 15.20.7270.033; Tue, 13 Feb 2024
+ 13:08:05 +0000
+From: Taynara de Souza Lima <taynara.lima@hotmail.com.br>
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Subject: =?iso-8859-1?Q?RE:_Aviso_de_d=E9bitos_com_a_Biblioteca?=
+Thread-Topic: =?iso-8859-1?Q?Aviso_de_d=E9bitos_com_a_Biblioteca?=
+Thread-Index: AQHaVNhXYb0hUcHdpEO8A0/gTR2Tm7EIUVg+
+Date: Tue, 13 Feb 2024 13:08:04 +0000
+Message-ID:
+ <SCZP152MB6143A12DD4570BCD05253D45A64F2@SCZP152MB6143.LAMP152.PROD.OUTLOOK.COM>
+References: <Ftm1PXrzTnbVUY4kNlG9N0XebKOARslIhmzchFZlw4@localhost>
+In-Reply-To: <Ftm1PXrzTnbVUY4kNlG9N0XebKOARslIhmzchFZlw4@localhost>
+Accept-Language: pt-BR, en-US
+Content-Language: pt-BR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+msip_labels:
+x-tmn: [9a6ojKsKHn0VIvFxUVYhyBvptgg+fSvKsuGZBOeOKhSksPTJ8lOgtmoeMhB5ikWZ]
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: SCZP152MB6143:EE_|CPUP152MB4956:EE_
+x-ms-office365-filtering-correlation-id: 5ef72d14-b439-4fc4-ee09-08dc2c94d0aa
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ p9bBQHaAOGTkNzv6ZHFDusRaGNwIUJO1EOql9XYeoOnFAcsIOC25bauI50hxA2efJYm4LRW+jM0QHiwzugYWFe5F7EjUAORIuLwXAsbAnvSM56XdngGNSL+mjfClBZyCrXislSv29Fcqvl7KRnuwV7n/5hcNXCd1/eNbuKn7J421cgNehEZXen0tTeO/IIYmu+htsVIqA3gjjRKfjG1w/TPAT+gjY4l+efQwjhHZvxk8fu2dePv49JsKkg1o2/5SKckv6MQL4RYQMb5CXaDgu9npHyKaP8AA/DjMhCwLXGDZVvvEkaJhpAmQ2E18IdGWwPK7nmIhS3jAMH+5U4PLA4a2aerdoQsMJnfgUT6Eb7i+wXFop3txsGuhOf1z6OGyldOwp93L4kjkcczTwMHTyebWUzy5RxOMTMWV7nmnL74gbVrqKSs59eTHyXrvtgos1YTuEfZZRi25tC67+d3Be/Tav6EVqxHAkFbbDVloU9CwV4c0XLcmz5miA57jKggDklugEQu3TO0BvKMeyn987yFMNsZqJJe5yVuHNoSNbJDXPYvlPqBNxlU2LlvZiyfZ
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?iso-8859-1?Q?M/Lbse23irJEwabgexdSu4SbPaIp5IfKbPEr8HxO4Z5U8J8VYPKdh038U9?=
+ =?iso-8859-1?Q?t80mgISPUs/Cx39LxYARatAWIIhGrCiuCS77gvR23mQbNd7glMGr0CxHeQ?=
+ =?iso-8859-1?Q?Qpg0OHOLHsTxxPyClPLE8sH0bjOi9Gji72zHu3D3fsbxUfBPVjQq3i/GPp?=
+ =?iso-8859-1?Q?KiBElg8DncrCEPMIGu+uVBAKYWb1Da3z53/tUdnD3f69HOglt5mXTMIqYB?=
+ =?iso-8859-1?Q?WhT25m2ev3wEe0tYPPNvy6f8AgOZ7DjdQrCAzXIoQvso7lUuJfftfUpUej?=
+ =?iso-8859-1?Q?fccVutGPtOd3yf5HcV/VLOwUiqja5fbSlezhCIUbzelKRvISIdYvXtHJ5X?=
+ =?iso-8859-1?Q?Qvu2NGT7TGHXQCVMkgW1rGIBQR5yzdbuSSc8jAkl3Dplat4ztxeSzJhnqO?=
+ =?iso-8859-1?Q?aYhGXBjxog1GR2FCGuEdutsPUY9Y9DqebGHRz75mxOb1vzQzxKNRfJORPj?=
+ =?iso-8859-1?Q?Dyz/0ZtbPkJ1M90HcqxpUTFMDB+mYB8gImueZbRz3qsL9R+i1DPFVMeOdE?=
+ =?iso-8859-1?Q?d8n7FrVDW1TWjwUl9x8R9+FexA4/XEP02KNb1tz24hdCvWu9oJWuYL5akm?=
+ =?iso-8859-1?Q?xGHa2ZcRF/54ZQp+vaSZS1J8DYvXUEIkJtji5ygFY+MfsCwTTf0VSQk5St?=
+ =?iso-8859-1?Q?oEMP285uxrS0d5UhYrhm5g/Yt/rpG2/wpIj+zBmg6ZLyZmLdmy3OSplk0V?=
+ =?iso-8859-1?Q?AZPJXilzmweenRZSPKt/coz0j4yy2sYf7BX4IrHTB/hqqBhEQ1yMSZzNay?=
+ =?iso-8859-1?Q?6M6ei8gJAW8ePxLhayQrpX+PhdB+d9J/252bJ+SDUjxB/RpgkNkyCrj7iR?=
+ =?iso-8859-1?Q?a6MkEXftv/SwdttaJeCj6OfNtlQ7vPYfW7QV9vRDP0K6S3//jhgAmwy1XN?=
+ =?iso-8859-1?Q?2tS35hdxhY6ebcCqpGRZJWd+dmWEuM5I0kd34OEjgk6a1Pr8ope8TbcMLV?=
+ =?iso-8859-1?Q?/zw7yOgXBACk4hn2G38J89q3alR24KEdcwUFuU6DEWVS7bN9fpV/+ZHYO2?=
+ =?iso-8859-1?Q?ItqKS/seB1RhrVAuR8XvaZWkLgV9BFVHB1/aXi2Mbeu8vvjdod55AIOwTI?=
+ =?iso-8859-1?Q?+xzRIKRyKGUQb9pLdcVsunGOhOlykXn7ZE+GHJOWnum9KR1XcJsan/gQx5?=
+ =?iso-8859-1?Q?Yv1flvLvN8k1NQrWcgZk6tsSpvn8JjbhePaFrDVG5RQOKaDfr0oQQySF8r?=
+ =?iso-8859-1?Q?CThORy4ejmfuYL7qGx1+dghxoIy5+l+whmaMlQMFDIEisSzGtWcAfdae5p?=
+ =?iso-8859-1?Q?y84Q1l6jjDo79Bh9chfxBtVomBMMpLFB49E8VkEpsjIRXI16XFyhmdD/8l?=
+ =?iso-8859-1?Q?SPKbCFZsQBiBQp/UWOzRy6aCcd0HT1BOniv6+GeWTWgvFpE=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_SCZP152MB6143A12DD4570BCD05253D45A64F2SCZP152MB6143LAMP_"
+MIME-Version: 1.0
+X-OriginatorOrg: sct-15-20-4755-11-msonline-outlook-bf824.templateTenant
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: SCZP152MB6143.LAMP152.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: 5ef72d14-b439-4fc4-ee09-08dc2c94d0aa
+X-MS-Exchange-CrossTenant-originalarrivaltime: 13 Feb 2024 13:08:04.6869
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CPUP152MB4956
+
+--_000_SCZP152MB6143A12DD4570BCD05253D45A64F2SCZP152MB6143LAMP_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Boa tarde, gostaria de saber do que se trata este D=E9bito, pode me informa=
+ o nome no livro? pois n=E3o lembro de ter pego nenhum livro na biblioteca =
+a muito tempo
+________________________________
+De: biblioteca@ifc.edu.br <noreplay.biblioteca.camboriu@ifc.edu.br>
+Enviado: quinta-feira, 1 de fevereiro de 2024 03:31
+Para: taynara.lima@hotmail.com.br <taynara.lima@hotmail.com.br>
+Assunto: Aviso de d=E9bitos com a Biblioteca
+
+
+Usu=E1rio: 000002019008160 - TAYNARA DA SILVA DE SOUZA LIMA
+
+Valor Total de Debito: $ 10.00
+Valor Total do Desconto: $ 0.00
+Valor Total a Pagar: $ 10.00
+Este material est=E1 pendente, por favor verifique a data de devolu=E7=E3o.
+
+--_000_SCZP152MB6143A12DD4570BCD05253D45A64F2SCZP152MB6143LAMP_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div class=3D"elementToProof" style=3D"font-family: Calibri, Helvetica, san=
+s-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+Boa tarde, gostaria de saber do que se trata este D=E9bito, pode me informa=
+ o nome no livro? pois n=E3o lembro de ter pego nenhum livro na biblioteca =
+a muito tempo&nbsp;</div>
+<div id=3D"appendonsend"></div>
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>De:</b> biblioteca@ifc.edu.br &=
+lt;noreplay.biblioteca.camboriu@ifc.edu.br&gt;<br>
+<b>Enviado:</b> quinta-feira, 1 de fevereiro de 2024 03:31<br>
+<b>Para:</b> taynara.lima@hotmail.com.br &lt;taynara.lima@hotmail.com.br&gt=
+;<br>
+<b>Assunto:</b> Aviso de d=E9bitos com a Biblioteca</font>
+<div>&nbsp;</div>
+</div>
+<div><br>
+Usu=E1rio: 000002019008160 - TAYNARA DA SILVA DE SOUZA LIMA <br>
+<br>
+Valor Total de Debito: $ 10.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 10.00 <br>
+Este material est=E1 pendente, por favor verifique a data de devolu=E7=E3o.=
+ </div>
+</body>
+</html>
+
+--_000_SCZP152MB6143A12DD4570BCD05253D45A64F2SCZP152MB6143LAMP_--

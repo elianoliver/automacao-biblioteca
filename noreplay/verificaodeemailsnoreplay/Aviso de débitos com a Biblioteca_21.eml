@@ -1,0 +1,131 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:1583:b0:7c:89f8:37c6 with SMTP id bv3csp102286rbb;
+        Wed, 31 Jan 2024 23:39:32 -0800 (PST)
+X-Received: by 2002:a9d:73cd:0:b0:6dd:e52e:1f53 with SMTP id m13-20020a9d73cd000000b006dde52e1f53mr4100659otk.11.1706773172308;
+        Wed, 31 Jan 2024 23:39:32 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706773172; cv=none;
+        d=google.com; s=arc-20160816;
+        b=QKm9ij648U3qXgyZ602DzMFBrhqmvTYaHUuAkEjme39RNfGNabrJWg35QTUaNV0UKj
+         1oHt4lRgTqQqg64cRZ0Dnpve7FlSiv9oOzGip/fXsVafGN0rCGY3NJupCL2mXiX1jkCJ
+         LnjaZHOHc6x6wqNasjtrldtqDDmnvaZao9AnLh48eMKlsk+a3JRfjZBrZ0wB7SDfxQf5
+         NBg7bJe2pibFwXDTdOnoGIkGdwntB1reHaTAfnZWi8bFPJ6kDtZUnk0hwYg7/opDqs1i
+         5pCBnw1rEJW2wG2TbMZ5j0UWzLtdOncZjZUmB84LbqxgoWeLRG2FfXwZ+sl2ZNArjmef
+         zT6A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=COhPTgZyW45pvkEtwn9ozBUMsSUwZHpZmPswai1uVMM=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=zWroFCVc6PRZrfWDNQPAS2deQbCr5yc9D1DpZ1MYuhaRhkFGHK+7XUo/eaPuR+836n
+         nfc2yIcDRT7RsanuMQ7yw9mDvga1TBElTvHLWPq9CatWUCev0GtIh/7R6POPfkeHxyjx
+         pbRvGA23LnPMyCFsZ7rTvwyyokBE/YpcDPj5YE8cReQUf0nG1DoFnfcQ6Hj9igBO+bb3
+         NlbCn/AVxa/AvzG7sDPg+O4EB1pFR2dFkj3mkZ/2Eeo4snzmSxxUIn0EufHiZ07zw3AU
+         HWdlqJZFNjKhF8jhbVPLHS+89BF8y5Siy5xyVaPEoaBZeNY78PhhARvfMA35JebGoUvx
+         78/Q==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=LOR72oR8;
+       spf=pass (google.com: domain of pdfc84@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=pdfc84@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <pdfc84@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id eo9-20020a056830720900b006e11488f8d1sor2004727otb.1.2024.01.31.23.39.31
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 23:39:32 -0800 (PST)
+Received-SPF: pass (google.com: domain of pdfc84@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=LOR72oR8;
+       spf=pass (google.com: domain of pdfc84@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=pdfc84@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706773171; x=1707377971; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=COhPTgZyW45pvkEtwn9ozBUMsSUwZHpZmPswai1uVMM=;
+        b=LOR72oR8ox2JMP04HZiQHbeQcUhQe25vowbH166xE6KFAvhj5Ihf04gsoIbniiqp+R
+         /BegEy1x7FoVYdeBlzvUaLYhQv8PXoveNR14xnNNqb2NblLPULhnoeboL5Q0g8UlMfsZ
+         LI2yTRU3I+NlxByOdyVW2OmeyT/UyjZfk13qFtFMX9OsYitKKADZUxJVaQLbVCH2bzdK
+         1JW0AKPwV100+/mYMNYxsITIzhQaeIrGJI+lVd+Q1FUG8hb9efqktS0TtVV1tCMVNSl5
+         gHs35oMFmn886KDSvJRo9aAolrTeVMfvdu+O/lSo2jgiWHr9hN9FTS1XQ3ANrSU3BTsB
+         lbGw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706773171; x=1707377971;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=COhPTgZyW45pvkEtwn9ozBUMsSUwZHpZmPswai1uVMM=;
+        b=C/7AhA+WcmD7IRO4WMg9szlY/RV3mhDZxoSb0NGMP9khBhrpK/tdIlz8/DpqifnQon
+         4AKv6h/AUY1zH6dawDChebZvEctb0l0aCu/0rRak+kUVa4GIdNftJgt2aWuGtYe/m+xf
+         r6uDnIrkfhuWN/ceaMQOUx5IX1Qo/dFgZtX1HZEqM0ZLhdMdB1Dg3Vw5oLIO0+Qrsemu
+         13xIK+XmN1AgD6rRvt8FXdLso6jIBR42aAmguh0haUvErDVlIZvuUYm8j0eF/2iI3bfY
+         GXoymQUaC9v0KKwaF5QbqCthjxYQGwARGmL7mFbwedoPt/gGPkV13+v0jwLSxGpHgm1f
+         vT4w==
+X-Gm-Message-State: AOJu0Yyo+1UWsLNIjXxtNWrRHKE7e5Q84jSLbgVJgMZIgITfBSVlg8xd
+	9ikPMv9mjGNlFPVcl2fFsiYRQYzuFKCZVARoffB5JJ1ckT3HDCUzwqHBDtjBsV06FfQDwkT3rPI
+	KfkJrvT6/IToeNEM6qdiS75e+VXYJlDt/
+X-Google-Smtp-Source: AGHT+IGhPsv0H9xFehJU061+AgJ0RukgPTzE+bkBQUf6Mx/NJcuX0WWNwTt4RlmiCGwSg8FifZqLcKFyb07S/9JrZtQ=
+X-Received: by 2002:a05:6358:2489:b0:176:805c:60a3 with SMTP id
+ m9-20020a056358248900b00176805c60a3mr4061914rwc.11.1706773171119; Wed, 31 Jan
+ 2024 23:39:31 -0800 (PST)
+MIME-Version: 1.0
+References: <isQj3ztoKZ1w0ywKgrCOeflNA2ET8PTMblEcLleI6w@localhost>
+In-Reply-To: <isQj3ztoKZ1w0ywKgrCOeflNA2ET8PTMblEcLleI6w@localhost>
+From: Pry Felsky <pdfc84@gmail.com>
+Date: Thu, 1 Feb 2024 04:39:19 -0300
+Message-ID: <CABNCV8rdgs=OXwCDRJGML-qxSWneF9KAuaciXY9Mbb6VAhdvUw@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="00000000000093a91206104d185a"
+
+--00000000000093a91206104d185a
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Bom dia.
+
+Desconhe=C3=A7o qualquer pend=C3=AAncia.
+
+Pode por gentileza me informar dados da pend=C3=AAncia? Como nome, data de
+retirada.
+
+
+At.
+
+Em qui., 1 de fev. de 2024 03:18, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: 000000121081884 - PRISCYLA DAIANE FELSKY
+>
+> Valor Total de Debito: $ 322.00
+> Valor Total do Desconto: $ 0.00
+> Valor Total a Pagar: $ 322.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+--00000000000093a91206104d185a
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Bom dia.=C2=A0<div dir=3D"auto"><br></div><div dir=3D"aut=
+o">Desconhe=C3=A7o qualquer pend=C3=AAncia.</div><div dir=3D"auto"><br></di=
+v><div dir=3D"auto">Pode por gentileza me informar dados da pend=C3=AAncia?=
+ Como nome, data de retirada.=C2=A0</div><div dir=3D"auto"><br></div><div d=
+ir=3D"auto"><br></div><div dir=3D"auto">At.</div></div><br><div class=3D"gm=
+ail_quote"><div dir=3D"ltr" class=3D"gmail_attr">Em qui., 1 de fev. de 2024=
+ 03:18, <a href=3D"mailto:biblioteca@ifc.edu.br">biblioteca@ifc.edu.br</a> =
+&lt;<a href=3D"mailto:noreplay.biblioteca.camboriu@ifc.edu.br">noreplay.bib=
+lioteca.camboriu@ifc.edu.br</a>&gt; escreveu:<br></div><blockquote class=3D=
+"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding=
+-left:1ex">=20
+<br>Usu=C3=A1rio: 000000121081884 - PRISCYLA DAIANE FELSKY
+<br> <br>
+Valor Total de Debito: $ 322.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 322.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div>
+
+--00000000000093a91206104d185a--

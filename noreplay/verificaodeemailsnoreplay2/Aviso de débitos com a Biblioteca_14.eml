@@ -1,0 +1,127 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp2931184rbb;
+        Wed, 31 Jan 2024 10:10:40 -0800 (PST)
+X-Received: by 2002:a2e:9850:0:b0:2cf:5119:95cb with SMTP id e16-20020a2e9850000000b002cf511995cbmr1577920ljj.26.1706724640558;
+        Wed, 31 Jan 2024 10:10:40 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706724640; cv=none;
+        d=google.com; s=arc-20160816;
+        b=d6SFEdydwRr++OG9TywRWDS7dmi2hkV70oVROIlLFLCMy+6guBwlDTx21J11nMlRuD
+         xHXVqEBMLZQDpa18HlkFzQeKXvQN8ODpjpxWuhS1DhRnjQASw0fXmHa9EOxstQS25e8K
+         AaNimqbFi0R+lqXiRZpjNvA4IeklfUxX0apjss3R4r//3O2io5Kho6E6QZcJm6RHLJUT
+         9rIvgTtHgAwUORNgfumoBdX4DS06iMZ8XVCASK8uPY5zIMIlr7bUW+VcOlC3cV+p0tio
+         JeATEWwgAA32dbVkQteEsOGhnEGOyJcASE+l1YbS9wGOXcZFJ+X53/3ACTimIe4HG6Fa
+         BkcQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=q8gFnoXiooR7X8wSwAMO0J6z5qRkI4IVPG4vxv7knkw=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=SpBET2ET5zb/ET9XHP6T8sDh2tDCiA64KOmfc74bJy9uoHXdPTlz+D89WUqcS2qDvX
+         IiWRkIfLV9edmO99fSgMuJj1+rtFABDMU8/Adycy2l8MzS+uGUa84s+QpcJI7tiPDoSw
+         iW/bkljbywCex/ZueT2VIB6ZtJhLWYd5YKDJu8oXTznXyXOzXXtm+kY/UbHZpiIWI8/o
+         mXfgSohVociUX43Mw0Uzs8lHgLQCGvN/RRYqeO42wC/xbkWNQxhSPC514aw/Z9uElJQk
+         2K4Pt9kn/6M603F5iim4oYwE4EbyaHc6fa1XiMjF5npNMhPrm/sFhf+IttsEAAc0uHqT
+         R91Q==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=ihAueIYW;
+       spf=pass (google.com: domain of silvoneiprofessor@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=silvoneiprofessor@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <silvoneiprofessor@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id h1-20020a2eb0e1000000b002cf1adbf618sor2609986ljl.5.2024.01.31.10.10.40
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 10:10:40 -0800 (PST)
+Received-SPF: pass (google.com: domain of silvoneiprofessor@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=ihAueIYW;
+       spf=pass (google.com: domain of silvoneiprofessor@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=silvoneiprofessor@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706724640; x=1707329440; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=q8gFnoXiooR7X8wSwAMO0J6z5qRkI4IVPG4vxv7knkw=;
+        b=ihAueIYW1My7HriPHWhWZ+8e9pgfeY6htjq1C96Pf2Hd8h8/Qh3UYsB/e3ULRnWDge
+         AT9a0gQnlReBKzNTgRnJaNuQO2d/ferFIw7U6K7TyxVyjloqGgZnl28Xo/idU1vuhBRE
+         DWbNfCvgfarW+1zbXpxkESxVMkOQAeGxhDIflfQWSR2kANEYNI0HC2Bdx+20vxzAo6zO
+         HJk8OKZNpzh81Al3dN6PvaHaNjBhTLk283HF2Pt/eXCBQ2keP94I3ocxylidsDBuPnvX
+         s130YHv6fHyBLGGnvEGEYd64oDyI6F1MbiXwv/MqFUhaat2nGBk+X4u7Rvh6hT+vabte
+         9xTw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706724640; x=1707329440;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=q8gFnoXiooR7X8wSwAMO0J6z5qRkI4IVPG4vxv7knkw=;
+        b=RG8S2NLQwg02dMlYooJ2TZ3zjnmZQF7zrzX4atXnSobVzCh8+gLO9MwZOaWu2xi9GU
+         hUxuHta1NU3R1WxLGaymp9FFxrQcbjTjEq86jYMqW6UFZ14bKsYT4UGJmn9m9RDGLXnW
+         Dnfo0ZwFKF8zuWJfmgcZ8Y6ubDQldATKYKfB7OCXT+Bz1XWRjiScwaJEayUfdqUFLRUJ
+         RSw/cPeg8UxhionmfxnfgNmDPdihO7rrQv+L6Z8q/aWR1dxp/w/VOoRJdViRyW9L7Gnc
+         WmqjjeyEpydjhy4CpCTSqIcLdwypABgx1kXUAUVHqUSqgOcSnZJL+M9AUXDibvn0pvzl
+         b7qQ==
+X-Gm-Message-State: AOJu0Yw8IjTunQ/5ccGDMB7VS3LPNDmrl/ozo/jnnwVecGtKEvYrMHGy
+	1DLHjezbR5abWVQd32eLaysvasOsNYlDz9ZJ8vCucxQG84hOKY+uS4RG/Fy2RYaaqsTaVQeGbe8
+	rIIrnpv4ZimixJ42ZAHgLlGx/c6hI6vcxmmI=
+X-Google-Smtp-Source: AGHT+IHEYLN6ljb/43s30AC8NqatW/3q2349Zh5/pO9ytNYPy5YeINdyCaeXkjbK/zg5QDnH9bcpnhtgFA8ytfAv/hw=
+X-Received: by 2002:a2e:83c5:0:b0:2cf:56b:18d3 with SMTP id
+ s5-20020a2e83c5000000b002cf056b18d3mr1681508ljh.1.1706724639311; Wed, 31 Jan
+ 2024 10:10:39 -0800 (PST)
+MIME-Version: 1.0
+References: <VYBhEs4WYLE94CZ7QM0oKPid38pI7S4sFXrCONdEQ@pergamum.ifc.edu.br>
+In-Reply-To: <VYBhEs4WYLE94CZ7QM0oKPid38pI7S4sFXrCONdEQ@pergamum.ifc.edu.br>
+From: Professor Silvonei Maximiano <silvoneiprofessor@gmail.com>
+Date: Wed, 31 Jan 2024 15:10:27 -0300
+Message-ID: <CA+hpq8oTQu8P-TGrNeXfpRu3nF7JVD9++b0hNr1mBHJWeTxQfg@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="000000000000db0cdd061041cb86"
+
+--000000000000db0cdd061041cb86
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Boa tarde
+
+Manda um boleto atualizado
+
+Obrigado
+
+Silvonei
+
+Em qua., 31 de jan. de 2024 14:45, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: 000002023100486 - SILVONEI ANTUNES MAXIMIANO
+>
+> Valor Total de Debito: $ 13.00
+> Valor Total do Desconto: $ 0.00
+> Valor Total a Pagar: $ 13.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+--000000000000db0cdd061041cb86
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Boa tarde=C2=A0<div dir=3D"auto"><br></div><div dir=3D"au=
+to">Manda um boleto atualizado=C2=A0</div><div dir=3D"auto"><br></div><div =
+dir=3D"auto">Obrigado=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"au=
+to">Silvonei</div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" cla=
+ss=3D"gmail_attr">Em qua., 31 de jan. de 2024 14:45, <a href=3D"mailto:bibl=
+ioteca@ifc.edu.br">biblioteca@ifc.edu.br</a> &lt;<a href=3D"mailto:noreplay=
+.biblioteca.camboriu@ifc.edu.br">noreplay.biblioteca.camboriu@ifc.edu.br</a=
+>&gt; escreveu:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:=
+0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">=20
+<br>Usu=C3=A1rio: 000002023100486 - SILVONEI ANTUNES MAXIMIANO
+<br> <br>
+Valor Total de Debito: $ 13.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 13.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div>
+
+--000000000000db0cdd061041cb86--

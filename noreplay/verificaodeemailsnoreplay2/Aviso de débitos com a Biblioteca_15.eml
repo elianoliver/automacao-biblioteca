@@ -1,0 +1,183 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp2929512rbb;
+        Wed, 31 Jan 2024 10:08:01 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IET/WYje/Ew9mWX0YTr94SYcSPh9tQ+EEa3AuOwBvjHapwFRcMxLSDU2lIYwUHvpWZf+N2s
+X-Received: by 2002:ad4:5dc6:0:b0:685:5314:d3b6 with SMTP id m6-20020ad45dc6000000b006855314d3b6mr2862605qvh.26.1706724480806;
+        Wed, 31 Jan 2024 10:08:00 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1706724480; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=Yjhe+kpXn21DKLyybpjJFeVkhc3tywMhe8fjiGhFwHfiLoCWoBhsOzhYsbUi8614Nn
+         wSN0ZjzpqC7Vz7tNMunnJfWnhYeReFFicAY3IeselpNB1XG0c7eo9mV7whyb523S+ne5
+         jpoKQf2h+hH0rh1jzgU8EbM1B7jXG2h/0+GWvq8nRnfvkmscK2dJPpTtRc0U/Wjx70Y8
+         1+qk6tUA6GJKuJ4rf5atPuZca38vNRyqhM0Aa+SC5T/OyVtCvgm1kACT8qkK5Fnow10L
+         N+juTlD4bG7D4EbDSi9bzRsdsb/b8coscglXVoQatI7XlUyXebx2JQCC7c8d9dympLOk
+         92kw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:to:subject:message-id:date:from:in-reply-to:references
+         :dkim-signature;
+        bh=HAzpMbB2LE5gl4DRbB5zhJeKW6OMY2rXEjcxhiBjHZI=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=RieMoSXukoiDOT2EIXXF9pC6bHmn5Cucc7AAzj4SMkZ4t5jpgS0gDfcgX3vqubL55Z
+         k2pVxe7BnGHnY1KHx6Y3lGM1FOllE2vdnItkmUfzAah5IoBLM1WmbaAIP+u/4tW01Yw4
+         RWOavsJrY8MnDuSRdwiKB4D6zsXvz3pSd8D4LrAXXmoQUGYhIjIuIsrVtERXXjzXC2ot
+         aSD+HkHspFS3RJBWHQ9aQYG0laXubU9iGYSBBxgsAuYzJu9rW9pw7zzmEI+7AIuAecs7
+         cUIFrJIEhthybRh/p7AsgHwsxoq2Dtr8F/Ji5i1SFNUvt8Vbbw0B4CCaQ8ZeYwr/0mJE
+         Yvfg==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@hotmail.com header.s=selector1 header.b=m1Mc2oe9;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of nicolas-guerra@hotmail.com designates 2a01:111:f403:2c12::801 as permitted sender) smtp.mailfrom=nicolas-guerra@hotmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hotmail.com
+Return-Path: <nicolas-guerra@hotmail.com>
+Received: from NAM10-MW2-obe.outbound.protection.outlook.com (mail-mw2nam10olkn20801.outbound.protection.outlook.com. [2a01:111:f403:2c12::801])
+        by mx.google.com with ESMTPS id h1-20020a0562140da100b0067f32e92d37si13179026qvh.31.2024.01.31.10.08.00
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 31 Jan 2024 10:08:00 -0800 (PST)
+Received-SPF: pass (google.com: domain of nicolas-guerra@hotmail.com designates 2a01:111:f403:2c12::801 as permitted sender) client-ip=2a01:111:f403:2c12::801;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@hotmail.com header.s=selector1 header.b=m1Mc2oe9;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of nicolas-guerra@hotmail.com designates 2a01:111:f403:2c12::801 as permitted sender) smtp.mailfrom=nicolas-guerra@hotmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hotmail.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=mKjPOGzion4+pNf+yRCtq3PTryNXO90QApvm932kD9bq3QMAwtzImrXQfNDu8EkNg4xctSKKGJHLRB7uPoUQS92zxpOYHNy3nuUK2feBRqCabijrogcINymOX5bSqKdwWj3i+zVyful7whL6A+/wB48lezU3+9EQAR1S0lVXSjYy3gnEva5of9RGgFAmzt3AjrxVjn4xee3tDO+5jHkTN3rdWGAaNxKlbmp0J1+SXl5M/4CWDaaPiUn1WQ1op5v5PORkzYKnFjVx0FTjORPsBdUoXUvTidO6bzoAw2WXoMnRqBL461EgcUO3Ysm+ppdT32tgIh1qc6TpQSVFqZonKQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=HAzpMbB2LE5gl4DRbB5zhJeKW6OMY2rXEjcxhiBjHZI=;
+ b=mSLSn8ujsj1Buyn32mq/sAHLPCGatKfxhhd0RSsS0Gfo8XkI6blA8xp1jF+mYUrRQSg58tpaVIfM9Ch1M5BW3RUZeb73nkzhLIQTO1Tgj0MLIPDFFCDsTiUPU3iL/wh6fXs2qbcdkwdvgpAfBT0kRI/2wSwOc07/hHNrAx9uobweblP8CSNEDV4pYcnQBZymGvDm4EqAR6HFEHXLJYbgyDW3cEVEZFEpdtbIKh2F3VSjDgWg11iGKc7/TbElvvgxF+g4EM7GgkMhsTtSRmOzg0w3aa1RWSyl13ZSMpwWZqB6UYAEije1K1AkG1a0pP8jWiVGONycfS3DPhZm70SueQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=HAzpMbB2LE5gl4DRbB5zhJeKW6OMY2rXEjcxhiBjHZI=;
+ b=m1Mc2oe9LdZq9NqVQi1YEQEzGXiZZsDaETxT8XyNsT41vwCA8cVuHBlAAS07R1Uzr2nED7ORz7OCCcrkBCKn1d3B3m25MmEbenbjPu8f+7VwpYvefpEdlKG21xVu5AA98s+v26mw16mcdihiI7mrd8y2+JkRUfLqk9t00Hqao1/3y7HcXzefZJ6E5nXbrp7QmFMsttHx43gPUZLJQjfmFsPLA+uqvlyJoDSGIgfASa+KB6rW+OlsmvKmR3ZZ8nGt6r6N45r1FpOqKtHA6qItHYT49zMr2+7On5kLAoDsUECfWWmg+ui/U/q3yCajs7xcUNX+RHN5nl4M7fU57A03Wg==
+Received: from CY5PR12MB6599.namprd12.prod.outlook.com (2603:10b6:930:41::11)
+ by SA3PR12MB8802.namprd12.prod.outlook.com (2603:10b6:806:314::18) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7228.34; Wed, 31 Jan
+ 2024 18:07:54 +0000
+Received: from CY5PR12MB6599.namprd12.prod.outlook.com
+ ([fe80::d4cf:8c6b:5fb:a48]) by CY5PR12MB6599.namprd12.prod.outlook.com
+ ([fe80::d4cf:8c6b:5fb:a48%4]) with mapi id 15.20.7228.029; Wed, 31 Jan 2024
+ 18:07:54 +0000
+X-Gm-Message-State: AOJu0Yzo+lRueewISd1mwHNLMVloCuP+O0h+U9PtR563rnXMsTezblyW
+	N6JJJhfpLNFbmWhGEYEEW2qQhucGPfsDblgPCrXyKycKXqEC0PbCLo7hJrupPbfUgJCyCk659o3
+	aR2Dv0JMt8aWNqYZpw2T+Z2t3kAY=
+X-Received: by 2002:a05:6808:18a9:b0:3be:a497:6214 with SMTP id
+ bi41-20020a05680818a900b003bea4976214mr3149464oib.23.1706724473549; Wed, 31
+ Jan 2024 10:07:53 -0800 (PST)
+References: <cAaZMXWhhynkVPqXXF2OU4lQKcBfTTVAR7rY9ts@pergamum.ifc.edu.br>
+In-Reply-To: <cAaZMXWhhynkVPqXXF2OU4lQKcBfTTVAR7rY9ts@pergamum.ifc.edu.br>
+From: Nicolas Guerra <nicolas-guerra@hotmail.com>
+Date: Wed, 31 Jan 2024 15:07:40 -0300
+X-Gmail-Original-Message-ID: <CAPEOEE_q8Qtnk2PM1ED4qxKhu6EXxxF3Oso6g7TGxbOZ=K8i9Q@mail.gmail.com>
+Message-ID:
+ <CY5PR12MB65991DF2CCD1E172CAECA8F5817C2@CY5PR12MB6599.namprd12.prod.outlook.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="000000000000f9b7c2061041c153"
+X-TMN: [0ljBeMusTvvcnlbzauLzR6PdYSgtBXw4]
+X-ClientProxiedBy: SA0PR11CA0136.namprd11.prod.outlook.com
+ (2603:10b6:806:131::21) To CY5PR12MB6599.namprd12.prod.outlook.com
+ (2603:10b6:930:41::11)
+Return-Path: nicolas-guerra@hotmail.com
+X-Microsoft-Original-Message-ID:
+ <CAPEOEE_q8Qtnk2PM1ED4qxKhu6EXxxF3Oso6g7TGxbOZ=K8i9Q@mail.gmail.com>
+MIME-Version: 1.0
+X-MS-Exchange-MessageSentRepresentingType: 1
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: CY5PR12MB6599:EE_|SA3PR12MB8802:EE_
+X-MS-Office365-Filtering-Correlation-Id: b20a6a4d-ca2b-4f84-4ae2-08dc22878bf0
+X-MS-Exchange-SLBlob-MailProps:
+	bHQ38DpbEWBPBFzioglwk/oHBuP9XMcQdbr3Xpr0bU6smY7jvxUomV/7MHhjtObws975VSpdJ4jgStEoM/9FlKdp1ONr8l+dSPdF5lJErLZF7kVkaxWj8lZygyGAcRRCcN09rLuqMGEzFCgPwy0ewLftVeGpRc51SIC137WXsrf+O9Ac2HJOHvY73Jf4zzFyT81aUfIPR3tv8wEbGEoqcQdniJXACcZFStFLuGV/cT1ZpU5kvCVq/e2eof7i7qPvYvmoAAYF+Rj4b0QlaVHWMEL7uDyAigcWIXN2MhrEzfdF0Z+d571Sg4U/KUTcOm8JnnpaBoRhRMMeABf1jG8p1vZ97H0bYaIhYa/J/Gnop5HwCXnR2vWF2qKo9KEGAefUCxA23dGatByrCIwM0xph88qkWv1z0bdJsxf2i9uFiNskGeNUtaQjyQ2JqrF2LVTqZ6jzk2u+fk050wv4Gls4Vnill33gz03jdpR1RnO7r9HuMuF7IJq6j5BXtvUTjo01tUcAijv/ZSVJ5ZLRRV8QwiM7m4lD4kIpJUpezn3VZA4iR4RkeYRE4C0rMiPK/+SVSwTdGPD69ct0pcrjzgIujoSTHdQXdYkJV+AtoLTYdPcevaoASUAzO7w/SBMOmcmQ5CFXDtXzSrKMW1doufBsz7MZJeYDxt2srX/Ch8uR50Aibpx98fuhmQ==
+X-Microsoft-Antispam: BCL:0;
+X-Microsoft-Antispam-Message-Info:
+	AVvvkXdyHGx1rD5x8BLIC1jZnEwFdjRbtwxDa5SH1qplNXhrlz46zFVKkdVJ+41WCVyD6Dg5+Pnbon93Enxlg6D/qwKnuJpT/sJtr1S6i1mPc6zb8dmUXYG4HY/mkAKmYapsJnG7tN8M0/Ef5plJotitvxmY7W4ATbgBNpUzFTXgiunz+SBNBr4Z0WvGJW+WtoLVTJ9KhU3QExmgskj4GxT0tFmMmzmj3HyxljoPEfzOTrAHWCq3uEwQvMFcMg9uR/tugJl6YxLLkxoc/GMqei22NNLFPTYHVlDfW3xKPHoZJI3dq8Ie61dnFBfdGL2xIWO05VJ1pXZCI7FYVMDPyD0htUcYhnobiHO5NESs2MgUBerYsk2UOysxLIkUUCOyGkM7ZNPBe1dLzVFOXizlgMkpHm8a2Xp6gPaOUOqNn6utoLWOXsTc6XaUAJvLHuODEcqKAuSpm3an/CLYTcfA9UfTZNp4+7veFWivbwxyhe6AbqRlObzn0mTXg2xwCB9WmJT1+j4VUW2uyLK3HS1JkUejz0yuEBJ6zd/X+ypMcaA8ORZTUvNbozOoObAPa3LA
+X-MS-Exchange-AntiSpam-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-0:
+	=?utf-8?B?TU9sYlhFTFMrdkJpKzY2UStFNHduSDg2Rjd6bTIyRnlNUjdSSTZnUk9BMzhn?=
+ =?utf-8?B?OGs1R0dQRmR0MnE2QmhqQy94d05LT1pHMCswa21WRlozd0RTTVIxT0hxRWZO?=
+ =?utf-8?B?UFNYOHBvMTE5OUNLSVUwc3VoeXkvREREbmsycmNZQ3pJaWhRZlFlRGFxNGJq?=
+ =?utf-8?B?aGdBaUV4bjZWV1JxK2p0VmZRb0Q3cWgxeUJCUGJCK2NWclltWmpZdW4vaG5H?=
+ =?utf-8?B?aHF3eWhNMFFtWXFrYzhtNzF5VW43ekE5WGtCRkwxZGUvdGcrekpzamlEM256?=
+ =?utf-8?B?ckt2Vk5WbFJrQS8zMWVaSlZRQUdVdGIrb3doeW9xY2dOVFVqQTN1OTZrMndD?=
+ =?utf-8?B?c2k4NFN2Nm1nSnAveHFhV3NXNzFKNTdnT3B3Q0lac3RUYkl6YllLTHRnN1BS?=
+ =?utf-8?B?YklFSEtEN0hZZFBnay96SCs3d2x3SFdHOXVJNkd6NjMyTG12c3Z2TGExSVBU?=
+ =?utf-8?B?TW1mbVRmK3I4T29HYXdNMEkxelVSZW8vWkpqQzB3QnhQNnJ3Z3dlUllvRlZ6?=
+ =?utf-8?B?ZzJNS3AzbmR2Q3ZzYmdDREFPWDVuTGd6UFRWRXhIUExRNXo2U0JuTGFoRFNq?=
+ =?utf-8?B?S0JwM1A4MmkvMDFtYjNHUHMwMnRxdGY0ZUxFN2pzejRlVWNPN0tuSnZHM2Vp?=
+ =?utf-8?B?UTBNNzJUY3ZYckkzd1pZU2FaT1BoaXQ5N2dJamJDMFQ3eW5SbWhWYmZxYUZz?=
+ =?utf-8?B?bTRNUXc4NU8xb1dxRHZkcHIxRHB0WThsdjU4SkxmRDhNN2did2ZlbTBUbWJT?=
+ =?utf-8?B?Kzg5eitLcmJDWktnNkRHRzZ4NldCeXNXSlQyeXBjeGtvSDFYbk5vVnROTk5M?=
+ =?utf-8?B?UFZjaGpVMk53QTlBcWNVMTY4R3NjaUlJcXhnKzlra0U3YTFTa2tRems5aFBW?=
+ =?utf-8?B?OXI0K3BwTm5Xcko0Smc1ODQ1djJNTHlRdHdIU2xxa2tYZ0FNYTRkNUJLKzdO?=
+ =?utf-8?B?UkpJVmo0SUZrSk0xUSt4NHlYdmJKZ0hqRW9QMkd3Z3JYSWw3RnNkUFExQzJy?=
+ =?utf-8?B?b1NJSUl0VlEzaVNLc1NYUDNGZ2JPWkt3Z1JqNFQxZlljTm5NaFNSR0YvaDZV?=
+ =?utf-8?B?bGNsaityZElyOUFqMlFoZVlubU9FUFptK2dGS2JMMFQyeUpYanRMQ093ZEpa?=
+ =?utf-8?B?Z2ozNmxlL05vdVc1YkVGTFdaVDF6NmVSM0srRm0vYVR1YW9RVk9HbVgyY2dv?=
+ =?utf-8?B?a3NsTmxCTURWa1YrdXJPTEZ0OWtIWGNpYkk0ZTF5ODJ4d2ltTTZCZDluZkEz?=
+ =?utf-8?B?ZXBub2hITENsbG5vWWFtTVhLclNveFJRK2tOZjB5WXRrU0t2Ty9wQXJER0Nw?=
+ =?utf-8?B?MVVEMEgvVElDQnNERFhZMjk4eHRVYVNHWkRuWFJJNDJMa2w1ZVZvSHBrN0JP?=
+ =?utf-8?B?NXlZZTA3UEgrd0VGbU1USGhwMC83QlAzb3ZvZTZCVGtxbGZUNkVOWTd5clZF?=
+ =?utf-8?B?SWduTU1VbEpyZzI0c3dQNVQ0NzVkcVoxN3dJenFVQlVjK1ZEazQ0SE1sMEJF?=
+ =?utf-8?B?L3A5TDVCUHlxVVcyS0pVTTBLb0kxd09XNnRoOEVydzB3czBRY1NQSXlkMnFQ?=
+ =?utf-8?B?V0tnMmQ4ZUI0T2V0ZWtXKzNVc2FTWjNIc3FQOWFnNkxrRlN1UlBhekRNUmdW?=
+ =?utf-8?Q?J1uTdk4X/saabEn92BbvQeKEbJ6FpZWm4TNSBallynFs=3D?=
+X-OriginatorOrg: sct-15-20-4755-11-msonline-outlook-71ea3.templateTenant
+X-MS-Exchange-CrossTenant-Network-Message-Id: b20a6a4d-ca2b-4f84-4ae2-08dc22878bf0
+X-MS-Exchange-CrossTenant-AuthSource: CY5PR12MB6599.namprd12.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 31 Jan 2024 18:07:54.7147
+ (UTC)
+X-MS-Exchange-CrossTenant-FromEntityHeader: Hosted
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+	00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA3PR12MB8802
+
+--000000000000f9b7c2061041c153
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+J=C3=A1 devolvi, na ocasi=C3=A3o levei livros para sanar a d=C3=ADvida, n=
+=C3=A3o foi dado baixa?
+
+Em qua., 31 de jan. de 2024 14:33, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: 000000133111112 - N=C3=8DCOLAS HENRIQUE DE MELO GUERRA
+>
+> Valor Total de Debito: $ 20.00
+> Valor Total do Desconto: $ 0.00
+> Valor Total a Pagar: $ 20.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+--000000000000f9b7c2061041c153
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"auto">J=C3=A1 devolvi, na ocasi=C3=A3o levei livros para sanar a =
+d=C3=ADvida, n=C3=A3o foi dado baixa?</div><br><div class=3D"gmail_quote"><=
+div dir=3D"ltr" class=3D"gmail_attr">Em qua., 31 de jan. de 2024 14:33, <a =
+href=3D"mailto:biblioteca@ifc.edu.br">biblioteca@ifc.edu.br</a> &lt;<a href=
+=3D"mailto:noreplay.biblioteca.camboriu@ifc.edu.br">noreplay.biblioteca.cam=
+boriu@ifc.edu.br</a>&gt; escreveu:<br></div><blockquote class=3D"gmail_quot=
+e" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">=
+<br>Usu=C3=A1rio: 000000133111112 - N=C3=8DCOLAS HENRIQUE DE MELO GUERRA
+<br> <br>
+Valor Total de Debito: $ 20.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 20.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div>
+
+--000000000000f9b7c2061041c153--

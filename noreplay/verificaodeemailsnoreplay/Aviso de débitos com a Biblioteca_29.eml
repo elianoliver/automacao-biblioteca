@@ -1,0 +1,218 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp3040827rbb;
+        Wed, 31 Jan 2024 13:54:08 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IH5o702LVO8B2jaaFC/+iVxhsQIpv6jrFrPEzR87tJ+4icOXTniM5FQ3EqzpRqpK5l4Ls0i
+X-Received: by 2002:a05:6214:4114:b0:68c:65b5:665 with SMTP id kc20-20020a056214411400b0068c65b50665mr3621457qvb.52.1706738047819;
+        Wed, 31 Jan 2024 13:54:07 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1706738047; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=DeFgTGbiXxbgZcBsLJ73NIZ0axexIhqEUHFXoA8ux+Uh+2wPGCy09hzyzuzYymgq54
+         el0Vc23LmTPQ3QKx0/5gRK1bZNVT22eSs0VtQm98QFJUQt8/+Zql0xHQiVGSYBqOD8Qs
+         krXewyqTptPJ3poclyI1wbSB52SAeOgHKbtqA2h/6oJWSTs7B/LkPMOVB/Dg+n5RAFI1
+         OEobTn4UxptcIqbLCGqlVMloPqfwxt7kqEPeROods1glxPZZDW9/4rY2cLLtvL2NURtX
+         rQP6ARholRDN7XrPRFSwiY19oO80RGXBJChWc/gYOotM79P6pcb8K9cANOQ1bP6+GlSr
+         GWvQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:in-reply-to
+         :references:message-id:date:thread-index:thread-topic:subject:to
+         :from:dkim-signature;
+        bh=Y7hHXfrKCTm3mNNocvsH+qfhOCLbzSbWfOOKaUcXbXk=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=qehtsZ7gaFZdBkm20SLZX4JgXmmQigi7OdlrGLUwg0EJDK1iN7oqjdK4Y5FfopvCtd
+         RwDUeL/2x92B4i6B/WZJUPzxa6JZ1gynpbdUamYfZtwvYOztuLCBF3j4qJKsedywmWvU
+         WqRaWOXNtJZshg7jDYlpocENbkmhCGw4gQUS80J2G0Ucuc7MUT8lx1qntRl2Cb6FaOk5
+         VlQw8IR/eA4h9morxQRmRmSqdLkbfLaON1t2kIHIK/UYIunF8Xw5WTtY3bSSOk+Pr0oy
+         Jrj+GeQbfFdfJNsDakcTWLEjhHcdpgKceeC/DN1yRmkKKc2W/14zlZyEoFa8DwF8VJ0v
+         gWHA==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@hotmail.com header.s=selector1 header.b=LTnLOA67;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of edsnil-05@hotmail.com designates 2a01:111:f403:2c16::800 as permitted sender) smtp.mailfrom=edsnil-05@hotmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hotmail.com
+Return-Path: <edsnil-05@hotmail.com>
+Received: from NAM11-CO1-obe.outbound.protection.outlook.com (mail-co1nam11olkn20800.outbound.protection.outlook.com. [2a01:111:f403:2c16::800])
+        by mx.google.com with ESMTPS id w5-20020a05620a094500b007853860a338si2418269qkw.740.2024.01.31.13.54.07
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 31 Jan 2024 13:54:07 -0800 (PST)
+Received-SPF: pass (google.com: domain of edsnil-05@hotmail.com designates 2a01:111:f403:2c16::800 as permitted sender) client-ip=2a01:111:f403:2c16::800;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@hotmail.com header.s=selector1 header.b=LTnLOA67;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of edsnil-05@hotmail.com designates 2a01:111:f403:2c16::800 as permitted sender) smtp.mailfrom=edsnil-05@hotmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hotmail.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=Lh1H91BdJ/5FR9jQEE8o1ZflQmzoJnwGfIAvthQ1zeSeONK0eopsm6M0o0UzF44Aec/EmY9LUX5rhG841T0aTZCcBnrRx1a2+Rq2MzoB+QoNd8L3Y2cTCPsy2A5m4nLZYpNFKqAS/mF3tX3jH0MqlLGVFM0IybMJwRTKSfiBCSIQzrs+NUIt9jafLijGeYmByqi1t5/AtZwl6n6NAFegqIhZqpmOu8b/tyGw55K9ua03zBvebxYMlpLLOd2zQ0/p7P9uB2rCP5YjZ/w6LHog9VumcOihMY3oToI2J3nA8TW0kcpidJZaxdENtvdm4+gLxBcOY7yqmW30+NzlpVSI6Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=Y7hHXfrKCTm3mNNocvsH+qfhOCLbzSbWfOOKaUcXbXk=;
+ b=P3+HzrS21HigybjZo7V96EEdc+wP0zOgomX3GyO5OImmjDPkIknbaSQc8btEx8cG7KCfby/tgccMuv5WCWc+Ko3Zzk+z1OcGEZpIXNZTjXm9opbMUdQIO4PSvEyWrGr8D8shFn/ixj8YVzq+lp3SpvmqJ5KHk9kRnubAxrx42A3akTO0bH+SMEtIgcDY3aZIVi5iYAz9+PNCi77uxD0oJ4ZQjyprgBqzpFO+qhNsFB77q6ZdP3AlBzlA7RKpDf1rPTYHu1exOOsl1k5UP6YU91nc2YQ3Y/a670+KKlKggEl23DLptPgm93ITXc5d9wCH+NMBwkpESGgT8QQfvH6ttw==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=Y7hHXfrKCTm3mNNocvsH+qfhOCLbzSbWfOOKaUcXbXk=;
+ b=LTnLOA67V1+PLIeTcf9+TsJ61dkgYT9bi7FeSb5WC9AdiZAhHO+iUsk3ctfkiBd1KzJL0fCh3UDE/skictUUdp4FGgJTH7uRaGGpwhT2A+rD0QCBW8nKOph5opxXc8Pn5cDtDEkVUpIUzQ2skZiv64qvUjBiLKfNBb+TS+X6/bSOkmK4knpWM9biQzD1ARE/N9TSC4xbnD6Evbe7p5nWQhPC+/cYqkUB4gKrAIC0FjNddHwZsE1SnDn0OQvrEsx15hQ7W9W3q7FBljxaueo4Vx/ZutuPRpBRctlaUb4XFIm+wmQKJzDOAqFk3EhHykQv0Cgd9gOHzyzkuzUPKplzrQ==
+Received: from CPUP215MB1720.LAMP215.PROD.OUTLOOK.COM (2603:10d6:103:c8::5) by
+ CPUP215MB1634.LAMP215.PROD.OUTLOOK.COM (2603:10d6:103:d0::9) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7249.23; Wed, 31 Jan 2024 21:54:04 +0000
+Received: from CPUP215MB1720.LAMP215.PROD.OUTLOOK.COM
+ ([fe80::28f4:bef1:2a69:3dba]) by CPUP215MB1720.LAMP215.PROD.OUTLOOK.COM
+ ([fe80::28f4:bef1:2a69:3dba%6]) with mapi id 15.20.7228.029; Wed, 31 Jan 2024
+ 21:54:04 +0000
+From: Ed Nilton <edsnil-05@hotmail.com>
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Subject: =?iso-8859-1?Q?Re:_Aviso_de_d=E9bitos_com_a_Biblioteca?=
+Thread-Topic: =?iso-8859-1?Q?Aviso_de_d=E9bitos_com_a_Biblioteca?=
+Thread-Index: AQHaVGOKW/xzvf3aA0ahVwNjkSS/3bD0HqgHgABYdgg=
+Date: Wed, 31 Jan 2024 21:54:04 +0000
+Message-ID:
+ <CPUP215MB172021D4F4A25D86147C70DDFE7C2@CPUP215MB1720.LAMP215.PROD.OUTLOOK.COM>
+References: <iMcP8xPwpoYrL95Pc6sGrEwkU59GMiCnmjc6HHuAWI@pergamum.ifc.edu.br>
+ <CPUP215MB17207DB2BB8E3C196100A336FE7C2@CPUP215MB1720.LAMP215.PROD.OUTLOOK.COM>
+In-Reply-To:
+ <CPUP215MB17207DB2BB8E3C196100A336FE7C2@CPUP215MB1720.LAMP215.PROD.OUTLOOK.COM>
+Accept-Language: pt-BR, en-US
+Content-Language: pt-BR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [sRRmoLr6pam0sIN2TcGNQjIV3DtJq9VC]
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: CPUP215MB1720:EE_|CPUP215MB1634:EE_
+x-ms-office365-filtering-correlation-id: 1909563b-1ded-440d-58cd-08dc22a72487
+x-ms-exchange-slblob-mailprops:
+ CLk2x5OX5VZDJxO9urernfQ6ouOHyky/SDUNBOp8YcnmPc/8R09RpKfuamqCpT2bTq75ZtLcwmavC8KdP3XvGVlMMuRmbaZokzBvG2Dyl95Uk4h9OkrOZBAILigt4g/ntANPPUVZ8+mjeKXKH1UL5NIEo10kBSQGJdzFP4FQl2mgBchWXjHxTGdF2KUehfTrlw3xPmPJy9sCEOi7iOJj2peINo4ogenr5B1j+UmxnefsuYk+sG4XtARy4NfvBDBy3D0ze+MpHIQTC5vn06wXWH23ytI0gw4KXdLxB2PdwonEAw6hYimrlYCOvyOsgl90KWUJ5k2dXZDAKO0GJuYedLwfMMMyndHwHwobf8YVTTmwTxb8BGihHmqNG6W/zIW1flpRvGtDabk1FEwZl2lQplToe9T24wHbUtte8AWQw7okkDQNXsAfRpgkee01Y1vvfjpeUaCT0is5FtjQ88T1KIy3OeIsfjH8z+rnqcnuDNzBpECvIpF9MXl7Mt+eeL7NfbAz8wTfoPhXHwcZpPabCJ+kJePH798KN+yZ/P0t9sTQFN+s26YXgME6YBs2sRl/GTsI0JFXXe+MYXIRDhnYZK4AxBJtUKrEPUvwQ+HLSQkuiEv83UqAWdIg5CsnjmlwIF4F67SOzngzGYz88S5HbfVDxUgyIGXCwuvObEzgmqFqUqaidUKK8KYyMxGN5Q1+rBEn+inJUfj4aqj60fMLug==
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ M/ghFDu4BVdd6mYcsb45sSvfQLf0ywi9Nz9Uc/En71u1U0BVsjzLc70rRYHGtnwJ4+ln/zIPgH+OrNf3rx4K39vdM3HT9BTDNZsyE9qFjZUPhWOLBhAv9dw1jlRmL/C6zjl/gDanLix+IQ3IxMuw0LXrR/pZflkbdiA0OgaNM//t/p+XZ/kH5LI/SlD1t4RF4Dm2BdMhQPy9o7JsGxp+EP2oCzllWRh3Osdx6b5i3CtbmHz9711h2XiAiCgrdjMhxCiaZ12vkAGClsFsp3oQkCaouyoklhxb0Apkc4Kaf6KXeUTjxPf3jgs71ukKyE7EIpYGDztEKZfEiVqc+3kywHXIkPd4xq2TXUY196UhZrpe4SkXqxsCc0puuDJ7M7DPIlrh6tQ/IWfkHANwrD/aSfyiFFOlp/yEzt+7eLRB2T6hZDcjg6H+llffhuwLQ2Otrjy7xt6jRw1RkMhQbptJJYv6zekpOWgxQ5KRTaKWhLdZ4POb07lesDdcpD7mQEvaUIgMz2z8s50tIb3IU9S6CxOp2DpTfy5BKITKnmEdvyLgVGAH4/WY/gznjYjMnQqfuupLJ0XMkfjg0MBI2jwqFsfsbYLaVlzV63lX25pHMwg=
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?iso-8859-1?Q?HVjq7B3xUYiTuRZyNoR37obWpuyCif3WRso7I5zJIv51XPbGMaAf9HVcA0?=
+ =?iso-8859-1?Q?8LwnV/l2+GkD9Z6g+moYf6flUXzGB7D++lzGxVN4PU1hQ3xGIMfU4Y/49b?=
+ =?iso-8859-1?Q?sFDiK8R+2MC039XVV74NCTGTLeeRSr7wug3TnHeY8cwcMEnVKNJ9XoUwYv?=
+ =?iso-8859-1?Q?DVIpvRZEf7wAiZSJUgABCtfFcdi/7NFGcUCf79iZIHb30kb+mSpDZJEC2/?=
+ =?iso-8859-1?Q?yOVgoaWgCkJP6u6d57CBXuzp7EfVAOkt4ceFtPT88TTO3AQ8mXHL+RuinP?=
+ =?iso-8859-1?Q?vLjTX+AmmM8tiQ3tF3ldauvEgJA+Cqfn4YigRYVGxYg1V/UaZniHMGwXKl?=
+ =?iso-8859-1?Q?VXdLe+RlwXXb02OTDDkCgh+P4kQZ2St8so7vRUwHcudApI7mU9C4fKCQt5?=
+ =?iso-8859-1?Q?qa9wwXfYO4E0FXRF/dTIViSaksVXHINf49SS3XHgdobIIjQBd+6ai0yeuC?=
+ =?iso-8859-1?Q?vNafvYa1NeU5Hm1P8hWOUzzpxrKVOH2awbi5heVHShQ9vQudc8Zp5xzJDJ?=
+ =?iso-8859-1?Q?uzz0nsreXPFIjxKbtZftlfq+gWEMjNWUjooRRvZuuYPGAOAF8IQtlYSx9l?=
+ =?iso-8859-1?Q?kcU/beTnhlU5xghTy0wWQAwUZLJ4CZ0LwxY7Xnu8P7CjlF8eVz1jqY5T9Z?=
+ =?iso-8859-1?Q?jTchmk3cDoVJQXCOfsyQ16E8IyCzlE6hPz9ozkUJJ07he6oAKuZj6Z27LO?=
+ =?iso-8859-1?Q?yuGSidJQMzyxflcyXppGrE7W2mn7BdszoYVUz5HqyAKyZguhxsG5UBugHM?=
+ =?iso-8859-1?Q?gpSTpX+68taPgbnFArnJ/TzQm6IffN6rj16mj7o5ibl80nK/rVpJE5cezp?=
+ =?iso-8859-1?Q?ejQOgn9fndCHJex5uOqbrEsO2PK3L/AR0A52JVZvIcqxX5TGzgPVf02H1b?=
+ =?iso-8859-1?Q?1Qqyd+aGm1Dv/v1CyUldlrK1XbVtiJjKVrKNaI/OTX7kPyZV9UyNWfJzva?=
+ =?iso-8859-1?Q?64hUFxpDQCgmRlKnaErUstZFvpnfzqoFiygk0QVNoXCZFHEUStEppb9eMT?=
+ =?iso-8859-1?Q?+zkx1I9KAHzqJ4o8t6yZQ62NQCjM4lMZ4tiIdEIXwAxFbLHWgvBz4ZihNb?=
+ =?iso-8859-1?Q?nRisGzgkC7FM1JACXC07gQkrIiY9fD/wblrrZfNhsnEaVLCo1KUHb7moUb?=
+ =?iso-8859-1?Q?Xb6ah8x9TwqeGUMupgsD0Al59mnPYO/l/v6G4vkHTdjBff2K0bbQyaTqL3?=
+ =?iso-8859-1?Q?ynXjynfrPVYTdlmBiKsQlima0ajr8fIqMNEXjP5Y+HnA/q4KaSSHjL8ao6?=
+ =?iso-8859-1?Q?q8RQp292eQOUde86n1KQf9D2o6OL7q4EsW1CbrKR8NxphcPMJR87py+y37?=
+ =?iso-8859-1?Q?nU7C?=
+Content-Type: multipart/alternative;
+	boundary="_000_CPUP215MB172021D4F4A25D86147C70DDFE7C2CPUP215MB1720LAMP_"
+MIME-Version: 1.0
+X-OriginatorOrg: sct-15-20-4755-11-msonline-outlook-7d2c5.templateTenant
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: CPUP215MB1720.LAMP215.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: 1909563b-1ded-440d-58cd-08dc22a72487
+X-MS-Exchange-CrossTenant-originalarrivaltime: 31 Jan 2024 21:54:04.7031
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CPUP215MB1634
+
+--_000_CPUP215MB172021D4F4A25D86147C70DDFE7C2CPUP215MB1720LAMP_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+N=E3o tenho acesso ao meu pergamun!
+
+Obter o Outlook para Android<https://aka.ms/AAb9ysg>
+________________________________
+From: Ed Nilton <edsnil-05@hotmail.com>
+Sent: Wednesday, January 31, 2024 1:37:45 PM
+To: biblioteca@ifc.edu.br <noreplay.biblioteca.camboriu@ifc.edu.br>
+Subject: Re: Aviso de d=E9bitos com a Biblioteca
+
+J=E1 devolvi, por=E9m esqueci do d=E9bito, terias como me enviar o boleto p=
+or gentileza?
+
+Obter o Outlook para Android<https://aka.ms/AAb9ysg>
+________________________________
+From: biblioteca@ifc.edu.br <noreplay.biblioteca.camboriu@ifc.edu.br>
+Sent: Wednesday, January 31, 2024 1:35:37 PM
+To: edsnil-05@hotmail.com <edsnil-05@hotmail.com>
+Subject: Aviso de d=E9bitos com a Biblioteca
+
+
+Usu=E1rio: 000002017002588 - Ednilton da Silva
+
+Valor Total de Debito: $ 14.00
+Valor Total do Desconto: $ 0.00
+Valor Total a Pagar: $ 14.00
+Este material est=E1 pendente, por favor verifique a data de devolu=E7=E3o.
+
+--_000_CPUP215MB172021D4F4A25D86147C70DDFE7C2CPUP215MB1720LAMP_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+</head>
+<body>
+<div dir=3D"auto">N=E3o tenho acesso ao meu pergamun!</div>
+<div><br>
+</div>
+<div id=3D"ms-outlook-mobile-signature" dir=3D"auto">Obter o <a href=3D"htt=
+ps://aka.ms/AAb9ysg">
+Outlook para Android</a></div>
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>From:</b> Ed Nilton &lt;edsnil-=
+05@hotmail.com&gt;<br>
+<b>Sent:</b> Wednesday, January 31, 2024 1:37:45 PM<br>
+<b>To:</b> biblioteca@ifc.edu.br &lt;noreplay.biblioteca.camboriu@ifc.edu.b=
+r&gt;<br>
+<b>Subject:</b> Re: Aviso de d=E9bitos com a Biblioteca</font>
+<div>&nbsp;</div>
+</div>
+<div>
+<div dir=3D"auto">J=E1 devolvi, por=E9m esqueci do d=E9bito, terias como me=
+ enviar o boleto por gentileza?</div>
+<div><br>
+</div>
+<div id=3D"x_ms-outlook-mobile-signature" dir=3D"auto">Obter o <a href=3D"h=
+ttps://aka.ms/AAb9ysg">
+Outlook para Android</a></div>
+<hr tabindex=3D"-1" style=3D"display:inline-block; width:98%">
+<div id=3D"x_divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" =
+color=3D"#000000" style=3D"font-size:11pt"><b>From:</b> biblioteca@ifc.edu.=
+br &lt;noreplay.biblioteca.camboriu@ifc.edu.br&gt;<br>
+<b>Sent:</b> Wednesday, January 31, 2024 1:35:37 PM<br>
+<b>To:</b> edsnil-05@hotmail.com &lt;edsnil-05@hotmail.com&gt;<br>
+<b>Subject:</b> Aviso de d=E9bitos com a Biblioteca</font>
+<div>&nbsp;</div>
+</div>
+<div><br>
+Usu=E1rio: 000002017002588 - Ednilton da Silva <br>
+<br>
+Valor Total de Debito: $ 14.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 14.00 <br>
+Este material est=E1 pendente, por favor verifique a data de devolu=E7=E3o.=
+ </div>
+</div>
+</body>
+</html>
+
+--_000_CPUP215MB172021D4F4A25D86147C70DDFE7C2CPUP215MB1720LAMP_--

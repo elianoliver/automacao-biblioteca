@@ -1,0 +1,128 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp2994024rbb;
+        Wed, 31 Jan 2024 12:10:53 -0800 (PST)
+X-Received: by 2002:a05:6808:1b26:b0:3be:26f4:5339 with SMTP id bx38-20020a0568081b2600b003be26f45339mr227676oib.32.1706731853539;
+        Wed, 31 Jan 2024 12:10:53 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706731853; cv=none;
+        d=google.com; s=arc-20160816;
+        b=DW5tdnHBXlN/oPmkkqh72IDc16gcg4vX64U9a6G11oX18gekBcmOBxZrqHjuepX3B+
+         UOMucJWsTURlJTi5j2DydYAuPyho6C6zvXdvKts5VSc32C+d1lLhRZxo/pYXDnI+XPlb
+         wcgGK1xRbqy2X11CxiHi2D5xLddNiC38473w+W5wg6meTo2jI6dFtyLmbuoNwaNyfHUx
+         DwUJsacJtHqeL/XA2PZxOLQlMgn4X8nFM5jYUQgZEk1kacci7a5MLiS0Zu03fPN65LpV
+         6G35reBy2wYwS6dVfY2jusYy59dNK9uqAYpFFVfCeVio1+Ydb6j7sTh2FMr8Dr8gibIc
+         8t0A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=qzyDYtWDb8b/DCF/KLOQ7xwk1euFeItyOw+vLmGUA8o=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=DgapkPma8l7jkrwQJ8AbyO8hCbYq5qnFHbnLjPFz496aFa5UZMxlz5D+tEN5Rh6zY3
+         JZo6yd1V4Co0piWiMXCMetZIJeCsj4d3Fbi6IINt4hzQxhWs1Hb21w0mOWokvSkjudDl
+         uLF3xvcO8lQxW7m7AsachAptStmOTA6FDapZJ9JcIRxIpnZUwt3w8S9E/4ABisGjbyxI
+         YbnuR/lUFNbKNpiop1tni69kY3ghJVvYaO+vfdkW0CRfbrSiU6glrYUscpqOWk8bBjj+
+         uH9jIQN14r/XidspMRJGQXYK9wweA35EpdgvuazX7T3lEycPlNLic4buV7jUP3S8PpN0
+         RM6Q==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=BwziVKEI;
+       spf=pass (google.com: domain of brunaagoliveira25@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=brunaagoliveira25@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <brunaagoliveira25@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id u23-20020a056808001700b003be97c1df93sor628713oic.1.2024.01.31.12.10.53
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 12:10:53 -0800 (PST)
+Received-SPF: pass (google.com: domain of brunaagoliveira25@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=BwziVKEI;
+       spf=pass (google.com: domain of brunaagoliveira25@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=brunaagoliveira25@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706731853; x=1707336653; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=qzyDYtWDb8b/DCF/KLOQ7xwk1euFeItyOw+vLmGUA8o=;
+        b=BwziVKEI9RyM0zsy/V8jIJljIeYDdHaFB19BL5KXNwTGAN5ezx4qZwzLCLwdn94CWx
+         FCy0v44LTSSCHKbj9VCRHVq1lkHpHOd05j9fYMko3P5I+QLTtFCexwA3v/7vfD4uLBpc
+         E75mE37Bt+F95rCCeNSqzArLvUVjiwdPYYiW5BR6LljeytZve9fF/6mWfYaa3mIaNgsQ
+         +WNvIH1XsNBEneU/bfDO6Pr12Qz5gDkxdDtMRAcZhtuzYYo3bKQwLvgeovqUVJL/IoF+
+         HyMNJxWg/pNBsaztQF7fxU+nPd5ciEL0z6S+C0078OKlx15zta4zbTNdK4ppjE6sSrc2
+         CQzQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706731853; x=1707336653;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=qzyDYtWDb8b/DCF/KLOQ7xwk1euFeItyOw+vLmGUA8o=;
+        b=o/ZVaEB1MFS3iQzDSeRXS1/JVIzIzUieoUgYwzUN+Ic8ote9Lg+dP210/EFjmx7P/6
+         nUT9zRXYa16LjTBUddVusm2d04fxcFwhEPjGeU6243nWdzCCgQXU7oppcBWeK+zicLzj
+         gqSnhqqK1pzMQZua5CAqWu0CNV3qNFkk8a/dyNY1LBvTMnVnsWolBx8jI26YdLwM6ZbN
+         C+OWB7cUlPSjLcaESXZiLAJsMUCvqLFRTN6HWIOw5FpBtLs+HqUHxx2XFl5lEc4FyI3H
+         IOvAqAG0sQQXcVdt49pO84a6uuqiyFysZ+wlcKZwIarLrfutCPK+mYJhJZdv9POiuk80
+         ITlQ==
+X-Gm-Message-State: AOJu0YwBurPD8/lIpf8V1V2vjOYVDMTsfEHDva7aiUptt1H0kKE5Iuo9
+	cGR9oCR3KDcbYpl+iKqSfpzbXV1kWU6iPU+0BxztXjUYkQza4jcFsYeyjrp+bZrUoNR34CPhZw9
+	3GBkRruaazNpLN3Q4msTEI+uDoA4PqDwF
+X-Google-Smtp-Source: AGHT+IFzEeKkUnqr9PH+et/kpvAg2z9dD9pDhBnm2XLyB8qaMML1+r1uWrAT690xRFacOhOvvCKN/04CYt2Ww0vU83s=
+X-Received: by 2002:a05:6808:1396:b0:3be:7a56:9e21 with SMTP id
+ c22-20020a056808139600b003be7a569e21mr716828oiw.0.1706731852958; Wed, 31 Jan
+ 2024 12:10:52 -0800 (PST)
+MIME-Version: 1.0
+References: <ouywGiYznQ4E8B9YcyDfwetNdfIAOImwzK7uyTIBLAs@localhost>
+In-Reply-To: <ouywGiYznQ4E8B9YcyDfwetNdfIAOImwzK7uyTIBLAs@localhost>
+From: Bruna Oliveira <brunaagoliveira25@gmail.com>
+Date: Wed, 31 Jan 2024 17:10:41 -0300
+Message-ID: <CAAbXq8aRRkB1OuoxEKH=8bqbpEJee9ttRwzX7zzg9Vz_m3QdwA@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="000000000000d2917d0610437995"
+
+--000000000000d2917d0610437995
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Boa tarde
+
+Faz muitos anos que estudei a=C3=AD, e nunca peguei nenhum livro semente um=
+a vez
+e peguei num dia devolvi no outro essa cobran=C3=A7a =C3=A9 totalmente inde=
+vida...
+
+Em qua., 31 de jan. de 2024 17:00, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: 000000012124106 - BRUNA APARECIDA GON=C3=87ALVES DE OLIVEIR=
+A
+>
+> Valor Total de Debito: $ 28.00
+> Valor Total do Desconto: $ 0.00
+> Valor Total a Pagar: $ 28.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+--000000000000d2917d0610437995
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Boa tarde<div dir=3D"auto"><br></div><div dir=3D"auto">Fa=
+z muitos anos que estudei a=C3=AD, e nunca peguei nenhum livro semente uma =
+vez e peguei num dia devolvi no outro essa cobran=C3=A7a =C3=A9 totalmente =
+indevida...</div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" clas=
+s=3D"gmail_attr">Em qua., 31 de jan. de 2024 17:00, <a href=3D"mailto:bibli=
+oteca@ifc.edu.br">biblioteca@ifc.edu.br</a> &lt;<a href=3D"mailto:noreplay.=
+biblioteca.camboriu@ifc.edu.br">noreplay.biblioteca.camboriu@ifc.edu.br</a>=
+&gt; escreveu:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0=
+ 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">=20
+<br>Usu=C3=A1rio: 000000012124106 - BRUNA APARECIDA GON=C3=87ALVES DE OLIVE=
+IRA                                                              =20
+<br> <br>
+Valor Total de Debito: $ 28.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 28.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div>
+
+--000000000000d2917d0610437995--

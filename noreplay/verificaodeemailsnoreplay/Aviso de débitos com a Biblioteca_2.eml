@@ -1,0 +1,182 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:adf:a34d:0:b0:33d:83ec:cc73 with SMTP id d13csp346008wrb;
+        Thu, 22 Feb 2024 09:05:34 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFMxlzqniLWQbf0Kq6DBX8ngYvSdj3NB/n6Wg7x/lEZLTXkYqU5CmkI6CcEbCJ/4UrCFh/7
+X-Received: by 2002:a05:620a:120f:b0:787:6de6:cc64 with SMTP id u15-20020a05620a120f00b007876de6cc64mr10158089qkj.12.1708621533907;
+        Thu, 22 Feb 2024 09:05:33 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1708621533; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=n0DFlbTCmqumWxHHw5QS6/q71Bwlzl+xEkcxIYB2IhGH4OGWHMymZ5nY3YgtN7FiG3
+         VMNGFzzGrDmsHzhJkiO+2sBFDkaqv2L8NL6AlOswAzeAOHYhT3pi0VS+moYlUTAxH3XR
+         PId5GA4mNAgA4JzvtMOY7WH6xy5dsI+yaxunc40buJ6CYLPDMtKVRxF4yFauayluikdI
+         k7DaTV8+3z98fWXo+DFrc1/oq4W2oIeEQKS0SmPlMWm9BTfjhRBaPrPp34Jr1z81J2I5
+         g9FhtNybjzOIXSnHvzbWSqHsQWACR/DIqKEozdyfEHFWeSsGD8PnPd0wCA9SqP/6qbXv
+         g/3w==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:in-reply-to
+         :references:message-id:date:thread-index:thread-topic:subject:to
+         :from:dkim-signature;
+        bh=h5wE1SqOVfpfDFN7Ewb0lY6MaMoRysWWPjCW0pKTdnY=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=Ol2LOweeOQemGu4K4Njftl3TWTG1D5ehid2sg/P2UZmqiP/3+j37TW0kimlp9ifDVp
+         248hMr+NRH54pqpq8LcY/CIVpuZO4u2GXhUgKwBIEYn6P4mv2dZSUD3Gk9jmEUDkTwuP
+         s6+VPMre6BNBwUJQoG0IK0gyWx/WO706o3/AVmdy8VkiZrhfODVr5JEOjWaUmQwUEWBP
+         z5kGdPIafZXB1HCtGIXd65rWfOw10HkJHhg+macFL/ngcbA3BJE7OWNcXwmA10yFhmv8
+         z1NgR1Mf+ZGZ3HD0dVhlurlvZkagDpWFAF5cHHqCaHj/NxMEuH63R1WkCZwqa3f2RMuS
+         I1Kg==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@hotmail.com header.s=selector1 header.b=uuUvwhGv;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of lu_bianchet@hotmail.com designates 2a01:111:f400:7e88::825 as permitted sender) smtp.mailfrom=lu_bianchet@hotmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hotmail.com
+Return-Path: <lu_bianchet@hotmail.com>
+Received: from NAM10-DM6-obe.outbound.protection.outlook.com (mail-dm6nam10olkn20825.outbound.protection.outlook.com. [2a01:111:f400:7e88::825])
+        by mx.google.com with ESMTPS id d15-20020a05620a136f00b00787acad01b8si138969qkl.152.2024.02.22.09.05.33
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 22 Feb 2024 09:05:33 -0800 (PST)
+Received-SPF: pass (google.com: domain of lu_bianchet@hotmail.com designates 2a01:111:f400:7e88::825 as permitted sender) client-ip=2a01:111:f400:7e88::825;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@hotmail.com header.s=selector1 header.b=uuUvwhGv;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of lu_bianchet@hotmail.com designates 2a01:111:f400:7e88::825 as permitted sender) smtp.mailfrom=lu_bianchet@hotmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hotmail.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=T8OzPVGpScJcyt6GMmjQv8Yvk3PP8Q6fworXm0F5o2Ejdim1jvryL9cUuXLPBOa2yKTGYhD2tJHgsrc3m+EQ+8P6h6eQPoRfGVRak545DtEdh2wIZh9IwlAG7AekMhaOo4u3gkfTCDfyjCeqyWHLKFcdwKd1iLBdizYT2oGs73bPoHVlDRSzRY/IAbEkSdGYv9DzxrbDTz+DDPyj4P9wg/0zTbCZ7AkKAH5FBjT/QQ0h5CoXbjWl3pztOtdQSbwGJJjUyPiQ8t7oDBWongHn9UaR0AoC69U+AXSptemMs3IjoUBOVjN0jh6RyqadDzUitfFReOkcTauS94U6+zTnnA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=h5wE1SqOVfpfDFN7Ewb0lY6MaMoRysWWPjCW0pKTdnY=;
+ b=nWfymZTDW22PanwcN4HZvjPQszj357WMvyC2L+aXm6dEVUM0FsrELZ+XPuMKGUCxkT27EjwNTtjguuB9MtMKEYHYmY3ndMSRzkQYlw2aGD2TJDfZqyHBfjcwwNtWm4uylXOwLHT43ZoyDvcLEcxMZPCIuxlfms/Qz3grpbPgVruvtXxvB6CCVjOKbhzQkiW3AeN18Ne+DKk1a/whIvwrEUewIA/stwVnexKdW/BJXlTuWYnc9ESmR9HDOQ4m5DBzThcF7g+oe+tvjMo6AQIo8wHbr1nwoRxsOwSj3I0fVeWGsl88ytCQXKO8mZqq2dDPmjf274viT6DrkSI62jHdxw==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=h5wE1SqOVfpfDFN7Ewb0lY6MaMoRysWWPjCW0pKTdnY=;
+ b=uuUvwhGvIOfm20rrEHE7kxi1VMSGdqbpxtVTCgHKG6gSmNs0MF+CcYx5vngGtRXMbwIz+B/CmvKMcxhfdsCTxdH+1PSEvEXYcir5BRBH66jjSoZGgrS3Q5nDqbBiOkQxtqpTjHhCN60EUp9UbokyJoOjLZ2TzxkdXyw6QpU9YCQPuTaCwbMdmcesrJ+NHuvRYkWwYoa66mHg0vYX7phh8MMk4iP8cjMT3wXMcHa+x+ymaGX4jlNOBXcKIuFzN0QWk2s1ytL+97gMRMGuqKD507QvBd6N/VUPnXn7b9o8fIqaWIsdP+x6V7xIMRp5ZL9VkdEqMgKeKl1yxyJwDmuWpA==
+Received: from SA1PR84MB3216.NAMPRD84.PROD.OUTLOOK.COM (2603:10b6:806:25b::10)
+ by CH3PR84MB3446.NAMPRD84.PROD.OUTLOOK.COM (2603:10b6:610:1cd::6) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7292.39; Thu, 22 Feb
+ 2024 17:05:30 +0000
+Received: from SA1PR84MB3216.NAMPRD84.PROD.OUTLOOK.COM
+ ([fe80::f5c2:f5ca:6fe6:f378]) by SA1PR84MB3216.NAMPRD84.PROD.OUTLOOK.COM
+ ([fe80::f5c2:f5ca:6fe6:f378%3]) with mapi id 15.20.7292.036; Thu, 22 Feb 2024
+ 17:05:30 +0000
+From: Luana Bianchet <lu_bianchet@hotmail.com>
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Subject: =?iso-8859-1?Q?Re:_Aviso_de_d=E9bitos_com_a_Biblioteca?=
+Thread-Topic: =?iso-8859-1?Q?Aviso_de_d=E9bitos_com_a_Biblioteca?=
+Thread-Index: AQHaVNK73/umYEQhMki+H7Fdt1pHlLEWuQiu
+Date: Thu, 22 Feb 2024 17:05:30 +0000
+Message-ID:
+ <SA1PR84MB3216C7E505FBE49B5773680197562@SA1PR84MB3216.NAMPRD84.PROD.OUTLOOK.COM>
+References: <EdGSU537yoGQziPCjgOpjP17riwRGKnofKAVESjig6g@localhost>
+In-Reply-To: <EdGSU537yoGQziPCjgOpjP17riwRGKnofKAVESjig6g@localhost>
+Accept-Language: pt-BR, en-US
+Content-Language: pt-BR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [M/iV1adtPQXLLAuyXmp1DY07WLkGEysLkxSoLlY002BoSVjkE8BTxXP+TH95ze9C]
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: SA1PR84MB3216:EE_|CH3PR84MB3446:EE_
+x-ms-office365-filtering-correlation-id: 40235132-f6fa-43a2-3149-08dc33c879b1
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ tAIteQs3+b5vQgDp+HXg4cIUo0MdMZ7Z3WaMFlrQddw0gmb4cIhzMmJIxhNGbBiduV/Lu5KZDXeM82+JfAaTa2En6NGWv5jnn/yGBZcBY4EL0z9yBwx//c3FsrqYP0g2piAI0VYZwVWmh9tJCERPASSWSPe16zMt6vXorqA1OiE1hO3mA9YMStt1fEbznkoDLSktxdGqiVYXoyNcax2p0bJ+5lY1jr8NVlyiYcbSUum61ZdAdQFZSZtgpAAI6XzjHMmTmp5FTu22oOW+3UC4ExzPR24kxQd+i5RZbgnafd2R8NawOR8AQeHpkOZk4P8W4QtAbmSwNKSD9UuMbbE4otlUBe95qLThUA3bmfuof6h53jTMKeY+N8rYTox6gE+IvRh8L+qHAAkEm/GTPZiPpyKqDrO6E+fnoLZQt3zDj16epknifG9Fx0GDZ8iV0+ZextKBFsfmBALL1bSp8TE19M/wK+i1Aq7KomupW2dPsaGBTQyy4Jh8g9zLMCJO4q++W4aCq09aIgqEifi1qFcZ0Tk3DhpMOMSCAZVsiD0KuTiaDBUq+0KUw+B3RyUvVXHb
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?iso-8859-1?Q?WbLpdDSsIqQd/BbkHm6lrvCL0id7Nfg3dJ5HC0GBqlvCQbaZgLgKAphLYL?=
+ =?iso-8859-1?Q?QvMK3pBD8sIp4eO/ffL5p1tpNAbARg47lr+ELEIC6C2Clpim7+P9mgyqXb?=
+ =?iso-8859-1?Q?refPBNG34K7sOM0/78cYDnCh4C2aFsIkLrro53nlerE0VSINDNatilQhro?=
+ =?iso-8859-1?Q?Nrf7LRm3/cwzxCzMjP83559aXdDgtDBA33La+RrKOPjsR+luCRcUQpuLLu?=
+ =?iso-8859-1?Q?6mmY9g1F+jbm5Tu4KYBq+bw0kHG5Z9H0P8HMAxpyTi/0Oc0i27OoRPMIVy?=
+ =?iso-8859-1?Q?urKkhcF7UWRdMfwR37wm5YtzUy6uiOvsU0lLEWsA3yzbQF80NqLl5KIJ2l?=
+ =?iso-8859-1?Q?CaZ+anJGXK98Eeiy5pdbaT7gAc9EPB4lKmAFeDT6q9XuUnOnEPrfN3/rgX?=
+ =?iso-8859-1?Q?WFvy3tK45MEMNLNFzbPBAzXfM4yoLOJckSYP0/TQpKufpYMhuE7mWK7STG?=
+ =?iso-8859-1?Q?Y4RgSoyTJhYgvL540FWNEKUKqkBfEajibExfuf3peamtlV10owm5gBLnty?=
+ =?iso-8859-1?Q?7RryeIr7yMOAEyXZ6qw29sWidNLSzwSxHsdqWKM9tdT6uvp0lGFyI9G+1x?=
+ =?iso-8859-1?Q?kWrWGsFu3BqtQgcLD7smBhm5xQhlscgZQXEasRpmssGslH94qYFgT4EF6t?=
+ =?iso-8859-1?Q?P8aezh+2xY9ZClSpsBuCeDEq7US4yMQvj6X+I/qurnLQHipnUrSxT5jSYk?=
+ =?iso-8859-1?Q?1J79Mp9TyU9jxay06skXZXOlvGZQkWQlAmDLhWoeuWCVOD/234aYSfQrFx?=
+ =?iso-8859-1?Q?4BpVqHSNglYK/DQ/DgcqCJqx6vIr5dpw3cU2fQaMyZnatFZq2K4/PD8qbX?=
+ =?iso-8859-1?Q?7dwA/lSUp7whs9tDx9cB4kFssTHDE1r00s+PnnqLSobrUFi1OUwBTVfE1G?=
+ =?iso-8859-1?Q?P/G5gJLm+WkmaoQWv3rT3ugGg9gRY+H9hMA0R5400p/SawCbBC2x7yjcND?=
+ =?iso-8859-1?Q?mqrU9lR5Eaty/4wztn9ofVmvHMPUADGYaaWsY0pMU032WTU6fwR/tKganY?=
+ =?iso-8859-1?Q?AdWpGClJ48DK9NmF+G2e1xNQ5lOvquf/gDZO+Gcr41rFAW4tV5PSbyeXsE?=
+ =?iso-8859-1?Q?35/jSCCmES/TB9BIfDZFfryU6CGVxs5lfairzC6x/0Fr+t9n5OLE59LwN8?=
+ =?iso-8859-1?Q?44OqNqMfqK+aJpJFqLVsk06j1a1ya/TAhZ1znxaA1VYD71et5vE8SZA4fZ?=
+ =?iso-8859-1?Q?/YscQ+yhs8BFk7MElHBbuoR32j9g0ahmPcKjq7fN9271umbuAkGLDP063C?=
+ =?iso-8859-1?Q?y15SQl0gLbTiWZWtVQfQQ9SUH2z1OGXA3hM5dAGl9BvdxIdlpNiz9Lh5rB?=
+ =?iso-8859-1?Q?Kf0e0tFIXfGD7Q9sepnHli/i8KxVmeoaD/TMst8dGpDkkKw=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_SA1PR84MB3216C7E505FBE49B5773680197562SA1PR84MB3216NAMP_"
+MIME-Version: 1.0
+X-OriginatorOrg: sct-15-20-4755-11-msonline-outlook-3ea80.templateTenant
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: SA1PR84MB3216.NAMPRD84.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: 40235132-f6fa-43a2-3149-08dc33c879b1
+X-MS-Exchange-CrossTenant-originalarrivaltime: 22 Feb 2024 17:05:30.7653
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CH3PR84MB3446
+
+--_000_SA1PR84MB3216C7E505FBE49B5773680197562SA1PR84MB3216NAMP_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+N=E3o sei do que se trata.
+
+________________________________
+De: biblioteca@ifc.edu.br <noreplay.biblioteca.camboriu@ifc.edu.br>
+Enviado: quinta-feira, 1 de fevereiro de 2024 03:51
+Para: lu_bianchet@hotmail.com <lu_bianchet@hotmail.com>
+Assunto: Aviso de d=E9bitos com a Biblioteca
+
+
+Usu=E1rio: 000000010001417 - Luana Bianchet - IX07
+
+Valor Total de Debito: $ 16.00
+Valor Total do Desconto: $ 0.00
+Valor Total a Pagar: $ 16.00
+Este material est=E1 pendente, por favor verifique a data de devolu=E7=E3o.
+
+--_000_SA1PR84MB3216C7E505FBE49B5773680197562SA1PR84MB3216NAMP_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+</head>
+<body>
+<div>N=E3o sei do que se trata.</div>
+<br>
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>De:</b> biblioteca@ifc.edu.br &=
+lt;noreplay.biblioteca.camboriu@ifc.edu.br&gt;<br>
+<b>Enviado:</b> quinta-feira, 1 de fevereiro de 2024 03:51<br>
+<b>Para:</b> lu_bianchet@hotmail.com &lt;lu_bianchet@hotmail.com&gt;<br>
+<b>Assunto:</b> Aviso de d=E9bitos com a Biblioteca</font>
+<div>&nbsp;</div>
+</div>
+<div><br>
+Usu=E1rio: 000000010001417 - Luana Bianchet - IX07 <br>
+<br>
+Valor Total de Debito: $ 16.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 16.00 <br>
+Este material est=E1 pendente, por favor verifique a data de devolu=E7=E3o.=
+ </div>
+</body>
+</html>
+
+--_000_SA1PR84MB3216C7E505FBE49B5773680197562SA1PR84MB3216NAMP_--

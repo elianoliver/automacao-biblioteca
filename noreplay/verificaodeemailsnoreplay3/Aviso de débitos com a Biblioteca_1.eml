@@ -1,0 +1,102 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp2904904rbb;
+        Wed, 31 Jan 2024 09:25:52 -0800 (PST)
+X-Received: by 2002:a17:90b:349:b0:295:6d17:1639 with SMTP id fh9-20020a17090b034900b002956d171639mr2465120pjb.25.1706721952045;
+        Wed, 31 Jan 2024 09:25:52 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706721952; cv=none;
+        d=google.com; s=arc-20160816;
+        b=aPhDARTzBb1pa36sJZHSMloVs2tEJm5QNOk4gBGq8ZnprX9ozpGBRbRygrAqdGtCDw
+         UK3LE+03QwdpXhJ5aifNf3WyWO8YVLE2BmWSk4Vhy4vYAcJNpZdeIZ01VbXrYGfGRtTb
+         QHfV9lkP1qwbob3h92DEukN2g4dlyfOlx2fMNNdi5mXsm/KKMneULhhbjRNZW6sNyjMi
+         5Xa2+qKpKjNrrMQlFNCk7YzL7IbW0jkO08nKz5j6VnrskgdHpnswEyA0H1ShQ3NMES13
+         hqBTIqj0GFHKi/s2wRUPBWAEPKLROm3+wa8mKcz56uZxN6Pm2ebUBoAXNbc/GtJWFnFg
+         Nv4Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:in-reply-to:references:message-id:date:subject:mime-version:from
+         :content-transfer-encoding:dkim-signature;
+        bh=tLQ8+fAt75Z3uraenp08Z4SfKvgzdJR41IWF1XRbjgQ=;
+        fh=c/5d/wew3TjGwPab/A1nA+qM4/joswTGkgu8+0sIG2M=;
+        b=oNPFIl7cXLt/qiyzimoSadi6MriAOUMtuav/uwiGe5Gmr4G+FQ5/EHzk3sBYXdXFO9
+         A97SaLRDetvllAkjRU0PMhFhC2EnFZMu9HslO9iLrTd6YfDjE2t3Ans+u5s+4rhIEYHn
+         gwgEqvN12cewlXPSVaAcx9nWf/u5xfeBcC3Rrl5zOhIjFB0hVZEHqfHMx0HLrgI1KEtu
+         E+2mH9twoWC6lTMkp903aCt6iiV4X1Sdyu8S+ikJxXuNen3yRvs/sInEh0df+fKl7nJp
+         EMYdwxnYgXJp4NgEOZABEYqmkkTScdtEoAW8JEh0dwf7kmJMEpNu5k7tjZfHSzeLqcCD
+         0Ucw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=faKt+ghp;
+       spf=pass (google.com: domain of elisabetevenancio001@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=elisabetevenancio001@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <elisabetevenancio001@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id w7-20020a17090a5e0700b00295f98b53basor425617pjf.6.2024.01.31.09.25.51
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 09:25:52 -0800 (PST)
+Received-SPF: pass (google.com: domain of elisabetevenancio001@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=faKt+ghp;
+       spf=pass (google.com: domain of elisabetevenancio001@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=elisabetevenancio001@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706721951; x=1707326751; darn=ifc.edu.br;
+        h=to:in-reply-to:references:message-id:date:subject:mime-version:from
+         :content-transfer-encoding:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=tLQ8+fAt75Z3uraenp08Z4SfKvgzdJR41IWF1XRbjgQ=;
+        b=faKt+ghpoLSypJu1KImMaOhn+C9+9at2891uYU2ZpVm5lAIPgk7/hrZBHCfvJ5ywWT
+         /t0ri+ycHZ/7fddK7ceELP9yQw5N1cPOYM73pWWpUoR0VMETId+U9vT0m0+yU16ME2Qy
+         bLN8iVJ58xkfF2HK3J8UrIGhBup5lyA69jXdJTbBUE9vGh2cmTTG0usNYdRVzuuinv/q
+         /9Ou+ghsYLbe3XQe1RA43VCTNKexWWOIpqb36VeyzJ1y6NtVEOUgQKESaHgtX6lqc56r
+         3Hype3EI+KGQtUl89l4OnH/A0sdF7PhiELaSDm6N87FlPoJ8K6uCJnS0FnWQkddszz/U
+         mWOQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706721951; x=1707326751;
+        h=to:in-reply-to:references:message-id:date:subject:mime-version:from
+         :content-transfer-encoding:x-gm-message-state:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=tLQ8+fAt75Z3uraenp08Z4SfKvgzdJR41IWF1XRbjgQ=;
+        b=sNspUz0yMAVqVnMR9gDiO2uAi2kjt6G9Wvxs315niAn6jQOWlvAlcEDsiUYb1jjF8+
+         jdN7U862fEWAn/lhbBh2XbPbuYJowBglCIBLXpJmEiq3EOroYZv/r/WJRnPfkwdAlK1v
+         7lbuG0d+rGokvZkYq2jls5mEZqJWAzsrRG22Hqn75KSUeHGSNbnWpgblj3gaDWN3PWAQ
+         DmHOJcdmh5sSeH1MOHkVW9MSC3XCrAPIxVGcE4SZtADu4q6iU3lmx91vozQHgi7gmy7K
+         49rERdFWiQO3qvGhq1cXdSv4SLzKttaUoUbTADedWX7gF6sXQXtAKVUL6qATe5/0maGm
+         KEWQ==
+X-Gm-Message-State: AOJu0YxHgqxnTIhwsz/Q6/plQ0WjpULBgmuCVv5I6ZCDS6ggN351x3GG
+	g+3aE3ZTQF1XpcJgDT9Bh1335YnRQajum4XAtOJUXOCl8s40z5SLjrqaL8D7
+X-Google-Smtp-Source: AGHT+IEvaN4XMvGIb+zfevU5uY+f3dhSgYDVoo2fKdmbnV3zsMD9P/3zzi1Tif8IC7loOc9OAOYd2A==
+X-Received: by 2002:a17:90b:2352:b0:290:6170:91b5 with SMTP id ms18-20020a17090b235200b00290617091b5mr2158147pjb.27.1706721950916;
+        Wed, 31 Jan 2024 09:25:50 -0800 (PST)
+Return-Path: <elisabetevenancio001@gmail.com>
+Received: from smtpclient.apple ([177.91.225.76])
+        by smtp.gmail.com with ESMTPSA id so10-20020a17090b1f8a00b00290701c8623sm1707628pjb.28.2024.01.31.09.25.49
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 31 Jan 2024 09:25:50 -0800 (PST)
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+From: elisabetevenancio001@gmail.com
+Mime-Version: 1.0 (1.0)
+Subject: =?utf-8?Q?Re:_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+Date: Wed, 31 Jan 2024 14:25:38 -0300
+Message-Id: <151D77D7-8FF6-4BF9-A6AB-72014DBC30C8@gmail.com>
+References: <ar9qR8t6s99qPFaPCVgu8fEFkmXp03cJWkPVod6uR5E@pergamum.ifc.edu.br>
+In-Reply-To: <ar9qR8t6s99qPFaPCVgu8fEFkmXp03cJWkPVod6uR5E@pergamum.ifc.edu.br>
+To: noreplay.biblioteca.camboriu@ifc.edu.br
+X-Mailer: iPhone Mail (21C66)
+
+Ol=C3=A1 boa tarde, como assim d=C3=A9bito, j=C3=A1 devolvi o livro, e j=C3=A1=
+ sai do col=C3=A9gio faz 3 anos
+Enviado do meu iPhone
+
+> Em 31 de jan. de 2024, =C3=A0(s) 13:37, noreplay.biblioteca.camboriu@ifc.e=
+du.br escreveu:
+>=20
+> =EF=BB=BF
+> Usu=C3=A1rio: 000002020306941 - ELISABETE TE=C3=93FILO DOS SANTOS VENANCIO=
+
+>=20
+> Valor Total de Debito: $ 19.00
+> Valor Total do Desconto: $ 0.00
+> Valor Total a Pagar: $ 19.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=A7=
+=C3=A3o.

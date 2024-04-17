@@ -1,0 +1,120 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp3149483rbb;
+        Wed, 31 Jan 2024 18:17:44 -0800 (PST)
+X-Received: by 2002:a81:ad17:0:b0:602:cb6c:5121 with SMTP id l23-20020a81ad17000000b00602cb6c5121mr992003ywh.31.1706753863930;
+        Wed, 31 Jan 2024 18:17:43 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706753863; cv=none;
+        d=google.com; s=arc-20160816;
+        b=HZnXW8tB0kPJIz0O8aBX2OIppMmeBwJijwUHYycbtNS1fLRiBYHXC0tV2I85u3rtqp
+         seWxws5QOHMjv8dL1T6EhWlcWoqz7GrG8qHfshWItLI3R+y6AgJnXMKiUucmfc+kIzlD
+         DmGq0Z7UKA9crpPREL7NxeWZmhEd+oL4HGmeHqnSS+DF5DT4cKu9OPBEG4RJwoApVhAI
+         KizKslDXPDb+JoKv+MXD2kiBWGOVvuBULe7bbLJs9AG42fnvjx0OGDpGunyy2bNbHPrH
+         9PjEswKoNNDrhLhXo3QAqnYFbkbsKi/uD3ycrWEAu1CB1PX+1rq60APggxKd1QP7bIG8
+         hFfA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=dEzFpigUSb7kqCxakbTgy1DkA3DjeSNt7nQqCSQxf3w=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=Y6zxm1iSzznWIblTS4HnLrQBPix7rU4RmgkYDQ1rqyaDuVblSabWoiL0E6ZG19PR2B
+         0fshNg/ksbjNYh0CuLEN2E3qiUuBdKuZn2YCkIBP+ixPdCdKwX3WKn1uzmWO+uaHe/xG
+         z+q5XsyVvzAkJdXPecJ6DgiYM8ij9/DOFbG9Pxp3LhhoyITNoSP6HTQL9BT/Dvyq85eA
+         6i2sNW9rvmaM0fvPDxJZITaWq4KFiTkfdt850dbSIPOW+kcG+w8zO/xg1f+r84QOrUc0
+         d+Duo6Jzx7c/KF2p3jEoI3b+zPda6HoSqyGY3MnmEzn6skMWgey1zbl1FR8cM81KaRf5
+         3H9A==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=fp6gsQJw;
+       spf=pass (google.com: domain of bina.wilberth@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=bina.wilberth@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <bina.wilberth@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id u71-20020a0deb4a000000b006040f03dff5sor1343154ywe.18.2024.01.31.18.17.43
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 18:17:43 -0800 (PST)
+Received-SPF: pass (google.com: domain of bina.wilberth@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=fp6gsQJw;
+       spf=pass (google.com: domain of bina.wilberth@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=bina.wilberth@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706753863; x=1707358663; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=dEzFpigUSb7kqCxakbTgy1DkA3DjeSNt7nQqCSQxf3w=;
+        b=fp6gsQJw9/ohBtM+p3Oiy9yMGIVIocmMcjJuiHHapwMfmILVCD5WMNHpr/cu9xmeA7
+         RHlbzF0jLI3CIxk6JEhjBv7hGfyhJZflpyVw10oQ9QVoFTjUiZkKZNw2azJUYd4aP+f/
+         uT4W+hxUBGFc5c0hb4UErLJU1w7Kq26yegTEmopGe90yiA0c46GnFA8coWSy6pY2VUkJ
+         Fx5P/ObwJoIGRtVUrmKFi48bS4gI61C3+cLEPI7aFB7m+sm9SWw/nW9/VPo8uZYt+vsq
+         5RO6SpOteIe04Djfmzow9r23vTKywjdz6R5nHfzc2+pvOJ3KSmHKQX5lXD6zzNNg19C3
+         uL/A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706753863; x=1707358663;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=dEzFpigUSb7kqCxakbTgy1DkA3DjeSNt7nQqCSQxf3w=;
+        b=KXpRNpAyiuxUpW8G+gxNHYu5eNnPBU5fcIYaJj4mGAAkAhxGNmeuF3oPycycRAS2/U
+         /q+xRgUuCia5f7GaTkq79u2JtoXxN1a9Garb6HeHEYJigFS3uKEQIbCz61IrgeqJCgGo
+         SEHBIHKRUZdqJGe2WzaHihaIpPfPIfJMSIF4r8MYJUZfWWsdJwzjEjjwlxE5y7Eq2YD+
+         jmBSPggOe7Avj0l+tOdl2ejziht/x9bftfQZ6iAc6jqMZ/mEscnUXk4+aQGXk1i3oOJo
+         IKefMDeid3mMm5bMC9Kx8XAlELC+3akDqBLhcqUgnPyuf/SJQmj5k0aMdiHBSv5vETdZ
+         CwYQ==
+X-Gm-Message-State: AOJu0YyVH0BiU6y9OI0Iysfkfi8WzdXGqKZvod6QxmC2Ldc7gmmYKYaa
+	cQ/Go5GkCSWsiECFik5yswIqrrN3Ryi0Q1TftUw/nfplsCXZeS3Dm4tAysz3O2mFvjGhSOfgoRD
+	4kxezrevJU7cx9eL0FdqMnxJ+Tq8/sAab
+X-Google-Smtp-Source: AGHT+IEh0W9ADhrYoY2aBnLhqNo1RsnRm/IoJzQjb4HqQEyV7mj5iETHaw0qYlryHu2gXPuXoZeWgrlb8pNgjRylv6A=
+X-Received: by 2002:a0d:dfcb:0:b0:604:bfd:cdba with SMTP id
+ i194-20020a0ddfcb000000b006040bfdcdbamr1046089ywe.9.1706753863011; Wed, 31
+ Jan 2024 18:17:43 -0800 (PST)
+MIME-Version: 1.0
+References: <GMmECISKt4F9KhRLotxc3gEebYWCZVtCfY407Rfy44@localhost>
+In-Reply-To: <GMmECISKt4F9KhRLotxc3gEebYWCZVtCfY407Rfy44@localhost>
+From: Sabrina Wilbert <bina.wilberth@gmail.com>
+Date: Wed, 31 Jan 2024 23:17:31 -0300
+Message-ID: <CADZ=DitWtswXJ0P-2reJZFXpeZZfRYEN78DT9HnZVX36WnzMyw@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="000000000000b9518606104899a9"
+
+--000000000000b9518606104899a9
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Favor enviar o boleto.
+
+Em qua., 31 de jan. de 2024 18:25, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: 000002018014556 - Sabrina Wilbert
+>
+> Valor Total de Debito: $ 15.00
+> Valor Total do Desconto: $ 0.00
+> Valor Total a Pagar: $ 15.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+--000000000000b9518606104899a9
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Favor enviar o boleto.=C2=A0</div><br><div class=3D"gmail=
+_quote"><div dir=3D"ltr" class=3D"gmail_attr">Em qua., 31 de jan. de 2024 1=
+8:25, <a href=3D"mailto:biblioteca@ifc.edu.br">biblioteca@ifc.edu.br</a> &l=
+t;<a href=3D"mailto:noreplay.biblioteca.camboriu@ifc.edu.br">noreplay.bibli=
+oteca.camboriu@ifc.edu.br</a>&gt; escreveu:<br></div><blockquote class=3D"g=
+mail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-l=
+eft:1ex">=20
+<br>Usu=C3=A1rio: 000002018014556 - Sabrina Wilbert                        =
+                                                            =20
+<br> <br>
+Valor Total de Debito: $ 15.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 15.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div>
+
+--000000000000b9518606104899a9--

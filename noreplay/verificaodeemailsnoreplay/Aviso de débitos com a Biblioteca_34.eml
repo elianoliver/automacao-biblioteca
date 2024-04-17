@@ -1,0 +1,286 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp3032116rbb;
+        Wed, 31 Jan 2024 13:31:49 -0800 (PST)
+X-Received: by 2002:a17:903:2443:b0:1d9:a15:615d with SMTP id l3-20020a170903244300b001d90a15615dmr2829075pls.1.1706736709289;
+        Wed, 31 Jan 2024 13:31:49 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706736709; cv=none;
+        d=google.com; s=arc-20160816;
+        b=skH7R6n5otf4fuPStSEsWs7luAEtUEfvdFalLLL0CpKikTRVrKqqPKR9264shqKvDP
+         kJZgii6luLfJZprtdnC9dWUKoJKXGq4mNPxTxU2djogbio/Gbt5Fm2Qakrd8mCN7hq8p
+         nL/7TZ240faGFI5CR3GeSRaqLDTFRhOveb/jLVWp1BNnZoxvyrC6/ctOSq3CyLkV6AVL
+         o/THvxKvSAmpqe7l6hAa2wX5qZ4rNunJ54VSRIjRlpdG0K0dw9kP8PD1+I9t49zcwqTH
+         UsDXr/BOPskezlfy3q9XxAwva+cuRwtIUnzlj+INF9K7jJ6q/OOqKSPjoTTu6Cov48a6
+         6PkA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=in-reply-to:references:subject:from:date:message-id:auto-submitted
+         :to:dkim-signature;
+        bh=PxIlzLIVMG4+qMt4AmtneuzqD+Ju5Ry836aXHxy1UMg=;
+        fh=c/5d/wew3TjGwPab/A1nA+qM4/joswTGkgu8+0sIG2M=;
+        b=dphsAGFWlfLTjRqkpau7+J4lSqwsyDHhNlmcQpu0QhonYkEXZuIYRUMMbiT+Mu3NMW
+         Hnjnf7jdR6zFtfKi2IPrPZ7KqgspGowmDmDbd92G05Yd3ov1Yl3dDagDr1DUGN/UbsIC
+         JDhK+zyscrpUfLwZaeOIPQdrRcY53tjgoXh8wEL+iVJdYCvpZIi5cGC8fAijWAOYNU1X
+         AaPed7T+7j0EQ6yZU26WRNOVfEaUf3rctwzo8/Fn5sDHtJO0enP9cbqkoy9MYTcwpjuJ
+         qwN+OMUoGIAvJ1bQaJGU5UwXeFeF8t7gJx3rkv9BycetSs/yV7b/3hz1GVfDmw3jdokZ
+         cINA==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@googlemail.com header.s=20230601 header.b=esG2hmJf;
+       spf=none (google.com: mail-sor-f69.google.com does not designate permitted sender hosts) smtp.helo=mail-sor-f69.google.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=googlemail.com
+Return-Path: <>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id o2-20020a170902bcc200b001d78cd94eacsor6996326pls.6.2024.01.31.13.31.49
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 13:31:49 -0800 (PST)
+Received-SPF: none (google.com: mail-sor-f69.google.com does not designate permitted sender hosts) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlemail.com header.s=20230601 header.b=esG2hmJf;
+       spf=none (google.com: mail-sor-f69.google.com does not designate permitted sender hosts) smtp.helo=mail-sor-f69.google.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=googlemail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlemail.com; s=20230601; t=1706736709; x=1707341509; darn=ifc.edu.br;
+        h=in-reply-to:references:subject:from:date:message-id:auto-submitted
+         :to:from:to:cc:subject:date:message-id:reply-to;
+        bh=PxIlzLIVMG4+qMt4AmtneuzqD+Ju5Ry836aXHxy1UMg=;
+        b=esG2hmJf6guqbi44V7+kcCDaMtRwS6CPPKiyoW4eIb4JC3vQcNKixoCsJ+ipUpaCzQ
+         KTRPgz4plhEmG+dKaS5O+K2jsYazpSP4SOES81C29eLLHw7MGLkfik+9iAnB/CoTC3TI
+         a3oRWDludsSzVlrj+zD1dbu+Igf7KYBSIqW9eQxuAzjBck9LhQk5YjyXQ8h8In4cQBZz
+         WzbCJ/p3u+iaz07av3GoXbeXdsnTVnpFKJ7dljlSePSUhT0URVfCqccE2E7QptUS7n3K
+         t8EfpXsbHKLi5BvC/iBUbCLDiJHyffnkavX0m6Nv1rKp+e9RmQH8o6oOS+TCtxExo7GY
+         xzvA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706736709; x=1707341509;
+        h=in-reply-to:references:subject:from:date:message-id:auto-submitted
+         :to:x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=PxIlzLIVMG4+qMt4AmtneuzqD+Ju5Ry836aXHxy1UMg=;
+        b=oE1+81Cd4aFnF7Bjc4haAhpZAYTFRk+x5HEHSNvFFZfTGJfwUHHkXpxnFRzjouls1u
+         /pA4/gBJRdwPJ/1SygxcT5yYtSf7jWXUDNhVnrKdW5VVJ2L6RSQC/0McvgqWHnsKPiq9
+         y+9pRprRCo20SRbfoyXVLbtDOY94qimOdB4xfzNfKDMjLhLI42gJvTy1XpJT1T0p0GCe
+         IEG+Pi8vtF5OCgTuBE9GqJzlrPgQPbnrdVvTF1PWtwQAHkA8xgcH0zzMrL+gfbco9Juj
+         54Mnqb0eLeMbv0b7HJuZB99etIe14Jtzzm0026PYgIXO8dF7y0BaJTgKavQjjN0ZRGHH
+         VlRA==
+X-Gm-Message-State: AOJu0YxVAuiMEKdDlIsL7/JCX2PuKW63Kplv9wMiBFozb3hNQQ+DlCbz
+	qYYglIXp2TX7VOaEd7qf4855qZmCAFsvhVQ8lLjBn+vnhKU3nM5vmgVFk3VOaPf8WCiE6WfHw24
+	ebuzVcku2ZtiDWCI4y7rDbS5r1lrzWwNrtvTg0XdKIS7unN0ChOStOg==
+X-Google-Smtp-Source: AGHT+IHxtQ9WTcu/mwbfH/dlc1OqWzYiB8+TxpR16Sae8Cc/0KmImNlAT8t1V/RLvq2QTZroPFykZgYM7r+FjtuxOzit9TYArEq6F40=
+X-Received: by 2002:a17:902:e74b:b0:1d9:1b80:8795 with SMTP id p11-20020a170902e74b00b001d91b808795mr391045plf.27.1706736708988;
+        Wed, 31 Jan 2024 13:31:48 -0800 (PST)
+Content-Type: multipart/report; boundary="00000000000043943b0610449b22"; report-type=delivery-status
+To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a17:902:e74b:b0:1d9:1b80:8795 with SMTP id
+ p11-20020a170902e74b00b001d91b808795mr390225plf.27; Wed, 31 Jan 2024 13:31:48
+ -0800 (PST)
+Return-Path: <>
+Auto-Submitted: auto-replied
+Message-ID: <65babc44.170a0220.68378.14e1.GMR@mx.google.com>
+Date: Wed, 31 Jan 2024 13:31:48 -0800 (PST)
+From: Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+Subject: Delivery Status Notification (Failure)
+References: <pH2EjA9RfALZFdSGJhYHh9X3g2bhFBIrNTDVkV0C8@localhost>
+In-Reply-To: <pH2EjA9RfALZFdSGJhYHh9X3g2bhFBIrNTDVkV0C8@localhost>
+X-Failed-Recipients: amaralthaina193@gmail.com
+
+--00000000000043943b0610449b22
+Content-Type: multipart/related; boundary="00000000000043a3720610449b4b"
+
+--00000000000043a3720610449b4b
+Content-Type: multipart/alternative; boundary="00000000000043a3790610449b4c"
+
+--00000000000043a3790610449b4c
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+** Caixa de entrada do destinat=C3=A1rio cheia **
+
+A mensagem n=C3=A3o foi entregue a amaralthaina193@gmail.com. A Caixa de en=
+trada do destinat=C3=A1rio est=C3=A1 cheia ou est=C3=A1 recebendo muitos e-=
+mails no momento.
+
+Saiba mais aqui: https://support.google.com/mail/?p=3DOverQuotaPerm
+
+A resposta foi:
+
+552 5.2.2 The recipient's inbox is out of storage space and inactive. Pleas=
+e direct the recipient to https://support.google.com/mail/?p=3DOverQuotaPer=
+m g4-20020a170902c38400b001d93fdb82bbsor687979plg.1 - gsmtp
+
+--00000000000043a3790610449b4c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+<html>
+<head>
+<style>
+* {
+font-family:Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+<table cellpadding=3D"0" cellspacing=3D"0" class=3D"email-wrapper" style=3D=
+"padding-top:32px;background-color:#ffffff;"><tbody>
+<tr><td>
+<table cellpadding=3D0 cellspacing=3D0><tbody>
+<tr><td style=3D"max-width:560px;padding:24px 24px 32px;background-color:#f=
+afafa;border:1px solid #e0e0e0;border-radius:2px">
+<img style=3D"padding:0 24px 16px 0;float:left" width=3D72 height=3D72 alt=
+=3D"=C3=8Dcone de erro" src=3D"cid:icon.png">
+<table style=3D"min-width:272px;padding-top:8px"><tbody>
+<tr><td><h2 style=3D"font-size:20px;color:#212121;font-weight:bold;margin:0=
+">
+Caixa de entrada do destinat=C3=A1rio cheia
+</h2></td></tr>
+<tr><td style=3D"padding-top:20px;color:#757575;font-size:16px;font-weight:=
+normal;text-align:left">
+A mensagem n=C3=A3o foi entregue a <a style=3D'color:#212121;text-decoratio=
+n:none'><b>amaralthaina193@gmail.com</b></a>. A Caixa de entrada do destina=
+t=C3=A1rio est=C3=A1 cheia ou est=C3=A1 recebendo muitos e-mails no momento=
+.
+</td></tr>
+<tr><td style=3D"padding-top:24px;color:#4285F4;font-size:14px;font-weight:=
+bold;text-align:left">
+<a style=3D"text-decoration:none" href=3D"https://support.google.com/mail/?=
+p=3DOverQuotaPerm">SAIBA MAIS</a>
+</td></tr>
+</tbody></table>
+</td></tr>
+</tbody></table>
+</td></tr>
+<tr style=3D"border:none;background-color:#fff;font-size:12.8px;width:90%">
+<td align=3D"left" style=3D"padding:48px 10px">
+A resposta foi:<br/>
+<p style=3D"font-family:monospace">
+552 5.2.2 The recipient's inbox is out of storage space and inactive. Pleas=
+e direct the recipient to https://support.google.com/mail/?p=3DOverQuotaPer=
+m g4-20020a170902c38400b001d93fdb82bbsor687979plg.1 - gsmtp
+</p>
+</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+--00000000000043a3790610449b4c--
+--00000000000043a3720610449b4b
+Content-Type: image/png; name="icon.png"
+Content-Disposition: attachment; filename="icon.png"
+Content-Transfer-Encoding: base64
+Content-ID: <icon.png>
+
+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
+AFCdVg4msK/6AAAAAElFTkSuQmCC
+--00000000000043a3720610449b4b--
+--00000000000043943b0610449b22
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; googlemail.com
+Received-From-MTA: dns; noreplay.biblioteca.camboriu@ifc.edu.br
+Arrival-Date: Wed, 31 Jan 2024 13:31:47 -0800 (PST)
+X-Original-Message-ID: <pH2EjA9RfALZFdSGJhYHh9X3g2bhFBIrNTDVkV0C8@localhost>
+
+Final-Recipient: rfc822; amaralthaina193@gmail.com
+Action: failed
+Status: 5.2.2
+Diagnostic-Code: smtp; 552-5.2.2 The recipient's inbox is out of storage space and inactive. Please
+ 552-5.2.2 direct the recipient to
+ 552 5.2.2  https://support.google.com/mail/?p=OverQuotaPerm g4-20020a170902c38400b001d93fdb82bbsor687979plg.1 - gsmtp
+Last-Attempt-Date: Wed, 31 Jan 2024 13:31:48 -0800 (PST)
+
+--00000000000043943b0610449b22
+Content-Type: message/rfc822
+
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=ifc.edu.br; s=google; t=1706736708; x=1707341508; dara=google.com;
+        h=content-transfer-encoding:mime-version:message-id:subject:to:date
+         :from:from:to:cc:subject:date:message-id:reply-to;
+        bh=ixRBftrizDLDf4T5i/SH9NIa16Vwz2kmlCVtBB9XP2c=;
+        b=Nk/Sua3leOCsXclDf8AsWAETAFvDlqtFWcoWb0P+G9ydZKRNZ8wcfk6Sq+lVoEw0tY
+         QzhKXgAYvGe6Xs5NpBkeNXIfVmT2PSQvh8jZO0RWpORy9qhyCLY9H9xdAdQPhExM9IMz
+         XJOhoW+BN8I6mme8HJsWNHBE7BYKCfp2hvajrjsH1wmTNANp2Z6Q4lXgNY3Ay9bG/WWv
+         U+eiTFqOrIqgPijxakZ1wSgQ1ShfBbiz0kymfelYZeIjiG+t13aGa/9annKmPQ9CkVbL
+         XCXPqH6j+8quJfptmRKbv4F4yNzcvaBBdBdnVhl0DwkjpA0+W+ALbNGIwpnsY9TphPeN
+         HhbA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706736708; x=1707341508;
+        h=content-transfer-encoding:mime-version:message-id:subject:to:date
+         :from:x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=ixRBftrizDLDf4T5i/SH9NIa16Vwz2kmlCVtBB9XP2c=;
+        b=O1mqj7woR8ZkCMGye5Zmnh7KGIiQiF/v+9T/dV0emcDWcmtoSFJhztA+j5/PgY4vkN
+         TbQOfuw+KeO3dPAUSA2cVrLm14mZ32v0TxG6A5Bs9WyCCLD+3cEORJMe/RzDUFWdIPqg
+         yQsfg30N4oJoozUijBaC3jlLb31ovnDEcSIvDWthgS8ACkifx5WcTBIkEvO/iuHcG330
+         Cw1s/5ChBggzlg6rgR1i6fYK1/FGtMOea0Hzbmyt/lbmcWL97lY2zidGoVZNOdctsMbg
+         vfA7Vy4pSmLUsCGAjab6gN1TMiVV8DvVw0yT7ScDzANTm0R61mX0QLppxXLQP8+Y8l6n
+         YjAA==
+X-Gm-Message-State: AOJu0YyyyvhRu612OAxFzSLH6WRa4qPRDLB3WodEdbNQEsncwG6XzAzT
+	li+j9rf4WqbFskgoP0qZnnuOgWs9aL2LgTA0IS8t96qKwZMEkBCV2u6i0ATQvxZcq24k2a6g0vd
+	xY1s=
+X-Google-Smtp-Source: AGHT+IHu74E8rqUVtFDAmv9rbRf2ctLEnhyVoujep3SSyKM0MzYT1Oe1Aek0G5LfCFKNbsAOFFBecQ==
+X-Received: by 2002:a17:902:e74b:b0:1d9:1b80:8795 with SMTP id p11-20020a170902e74b00b001d91b808795mr391006plf.27.1706736708197;
+        Wed, 31 Jan 2024 13:31:48 -0800 (PST)
+Return-Path: <noreplay.biblioteca.camboriu@ifc.edu.br>
+Received: from localhost ([20.226.250.122])
+        by smtp.gmail.com with ESMTPSA id h13-20020a170902680d00b001d8fec31348sm4315452plk.294.2024.01.31.13.31.47
+        for <amaralthaina193@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 31 Jan 2024 13:31:47 -0800 (PST)
+From: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+X-Google-Original-From: "biblioteca@ifc.edu.br" <biblioteca@ifc.edu.br>
+Date: Wed, 31 Jan 2024 18:31:45 -0300
+To: amaralthaina193@gmail.com
+Subject: =?utf-8?Q?Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+Message-ID: <pH2EjA9RfALZFdSGJhYHh9X3g2bhFBIrNTDVkV0C8@localhost>
+X-Mailer: PHPMailer 6.6.0 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+ 
+<br>Usuário: 000002019313219 - THAINÁ JADE SILVA AMARAL                                                                            
+<br> <br>
+Valor Total de Debito: $ 15.00<br>
+Valor Total do Desconto: $ 2.00<br>
+Valor Total a Pagar: $ 13.00
+<br>Este material está pendente, por favor verifique a data de devolução.
+
+
+--00000000000043943b0610449b22--

@@ -1,0 +1,140 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp2901959rbb;
+        Wed, 31 Jan 2024 09:20:46 -0800 (PST)
+X-Received: by 2002:a2e:3c09:0:b0:2d0:506f:5c18 with SMTP id j9-20020a2e3c09000000b002d0506f5c18mr1728559lja.45.1706721645973;
+        Wed, 31 Jan 2024 09:20:45 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706721645; cv=none;
+        d=google.com; s=arc-20160816;
+        b=PskTzYcRtxPKpuTodzthlOvQInIVPIAEpttr5wjF2xXoyOWrMMGY39bWzUxv+wdP+C
+         V2fepWyqtJwyIBWRxJS297EwNKlGNztbNhpQHyfyRuk4B4BVJo94MNlS2lD6h3fz1xYJ
+         o3De2WRuZXbnAx8ibrOT3Kd52SMK0npHX4kDpnb5ZoTDkCvuS/KOMjTx0IOaZXFHxlHC
+         yO1AgbsUxkoTi/T6riQ/+kvQsX7RvyuuAwJdJ0d4482QK7rhbrONW9mfrKkMHWd7VbYD
+         uGi/4OwetRL+EjzFjjrgTmyQiQsX8jOpDKLqFxpNMV3brl+Qn9O/uYQ/KHAy2WbRcHGo
+         6Kwg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=sek45FGJ5zvTIIkP580GxFUyJMrqnGa35U06nIgMDeY=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=SKVDJFkre2JFB6QZrQncmOk83ly1+iwkUj1VUM4hgidnksGBt9Tsa0Wz8PYklgGOfU
+         60rIQZk8bH+dZGJJ4zsIgSTZqXTurWCh4ue4VqD3p5vYicoaPOBnjf6L35QcqGr3oQxf
+         z2fY4bFaFBn535LrwdCVVuWzuvBjb+gcdaHVPzxL11lRZJqGmiL3MqrooQYErhd/HVIW
+         WgsxDAV6ItD2lcrEuRGtowNAhAgr42vN8oKKknR3PwWyw4p4F/7pII7+aL216Zg0hl/t
+         lelk42zLhd7u2qBaRRiCyRgIffCy5SZzijguOMw+zSCouMA5SCSyLRjPL4E4QmH2VSq0
+         PrNA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=YQyT6g1V;
+       spf=pass (google.com: domain of jenifer.carolina.dias@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=jenifer.carolina.dias@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <jenifer.carolina.dias@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id v5-20020a2e9905000000b002d05e5123eesor1099058lji.12.2024.01.31.09.20.45
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 09:20:45 -0800 (PST)
+Received-SPF: pass (google.com: domain of jenifer.carolina.dias@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=YQyT6g1V;
+       spf=pass (google.com: domain of jenifer.carolina.dias@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=jenifer.carolina.dias@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706721645; x=1707326445; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=sek45FGJ5zvTIIkP580GxFUyJMrqnGa35U06nIgMDeY=;
+        b=YQyT6g1VEYYInwgxnKhM/qK88ECe+R+H3WiOLZdUOy7Zh1od9BJW7P2hievEmRp0zL
+         0PpHZ4gfY/akZfIyNgxmmg6dVk91F51mvzk7AUAjgDdQgEMoV9YiigNNQ1vVM/LQce0h
+         AOMaF/TZAd2xgkuZ//FvZgvNHCAXuBF7CA6H6iWePoOHfru0Wp2y8G96wKMAvvV+QQJA
+         DRReFQWNDquvJwhqBieHKAkyxu2mxT8mP/EpHrOTq6AbeyogIXcJ4JaAoD/Uv2AHuOVq
+         ydq+2BqrkMjpmhZ3u5Pwro/cApNEhgict053jYYy11ISV4wuYtdVhozzt0C9XJPltjU9
+         AyLg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706721645; x=1707326445;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=sek45FGJ5zvTIIkP580GxFUyJMrqnGa35U06nIgMDeY=;
+        b=qHKrSQaE1kGSQVbYPBmcS/v9/XvY5YFaZc6umfAXN6qzcR3DWcRhKEm9Jvgt7ii67L
+         d2AjVbKF8OTc0zeM02q98DIs1kE9hT3QTlEmXRUUvNthRifZ2sRmoDQHSAUlma+waJb0
+         Jl/oJaP21uSvDe0MbwVcqu0k1y4D0gG6uGhVLj2Z7VJ7VJ7qwQzOy+MTI+RkNiOG+Zu/
+         N2sd+ZGtLLmVgv98ixKFq0uFjSGF0dX3GlFyfWWp4kYFOpQ5gYZFLtAtAjuiPg1aMy/I
+         WYZJh3yl7SrMtpN6QlUSYS3GRIXnnImJ/r1fVE5DA0XfuYNpp+98poxAS5VVnZ768nax
+         omoQ==
+X-Gm-Message-State: AOJu0Yy9E3tjY7oOUjoNeJTYxAl9ceKzLxbFBhiBRlhW6/9xpB4omwUT
+	b5VGKZ0LW312j4M+FcoYHSp5YSigQro8V7sFTsqUJJbBu/mLKBm6KePdQasd5PwfVL8ykJ9w+lx
+	62cZoPGHCqrBH7OVGrv22HV57R3AwWi9G
+X-Google-Smtp-Source: AGHT+IFLEFcLic53ZjVtndwUIOnLNU+gXy17BHfjAgKLFGztUlCvtjNvUK99VmoaPErnA/jluNQoK7HRSEWVqwV6cEE=
+X-Received: by 2002:a05:651c:104d:b0:2d0:5531:8f3d with SMTP id
+ x13-20020a05651c104d00b002d055318f3dmr1703637ljm.33.1706721645054; Wed, 31
+ Jan 2024 09:20:45 -0800 (PST)
+MIME-Version: 1.0
+References: <HwSNNsWeIzei8Bwm4pXq2h1JNcivqmEEwuM5v0nADQ8@pergamum.ifc.edu.br>
+In-Reply-To: <HwSNNsWeIzei8Bwm4pXq2h1JNcivqmEEwuM5v0nADQ8@pergamum.ifc.edu.br>
+From: Jenifer Carolina <jenifer.carolina.dias@gmail.com>
+Date: Wed, 31 Jan 2024 14:20:33 -0300
+Message-ID: <CAHueXEX0CZ_MC+ZuxWVeWKDznQ4hqYmQzbbMPHFCySDOs4G3dA@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="000000000000624f0806104119c2"
+
+--000000000000624f0806104119c2
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+VALOR =C3=89 DOZE REAIS ?
+
+QUAL PIX?
+*Atenciosamente, *
+
+*Jenifer Carolina*
+*T=C3=A9cnica em Seguran=C3=A7a do Trabalho.*
+*Contato: 48 9 8427-2070*
+
+
+Em qua., 31 de jan. de 2024 =C3=A0s 14:00, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: 000000012183144 - JENIFER CAROLINA BERTODI
+>
+> Valor Total de Debito: $ 12.00
+> Valor Total do Desconto: $ 0.00
+> Valor Total a Pagar: $ 12.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+--000000000000624f0806104119c2
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:tahoma,s=
+ans-serif">VALOR =C3=89 DOZE REAIS ?<br><br>QUAL PIX?=C2=A0</div><div><div =
+dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><d=
+iv dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D=
+"ltr"><div dir=3D"ltr"><div><i style=3D"background-color:rgb(255,255,255)">=
+<font color=3D"#444444">Atenciosamente,=C2=A0</font></i></div><div><b style=
+=3D"color:rgb(102,102,102);font-size:large"><br></b></div><div><b style=3D"=
+color:rgb(102,102,102);font-size:large">Jenifer Carolina</b><b style=3D"col=
+or:rgb(102,102,102);font-size:large;background-color:rgb(243,243,243)">=C2=
+=A0</b><br></div><div><div><i><font style=3D"background-color:rgb(243,243,2=
+43)" color=3D"#666666" size=3D"2">T=C3=A9cnica em Seguran=C3=A7a do Trabalh=
+o.</font></i></div></div><div><i style=3D"color:rgb(102,102,102)">Contato: =
+48 9 8427-2070</i><i><font color=3D"#999999" style=3D"background-color:rgb(=
+243,243,243)"><br></font></i></div></div></div></div></div></div></div></di=
+v></div></div></div><br></div><br><div class=3D"gmail_quote"><div dir=3D"lt=
+r" class=3D"gmail_attr">Em qua., 31 de jan. de 2024 =C3=A0s 14:00, <a href=
+=3D"mailto:biblioteca@ifc.edu.br">biblioteca@ifc.edu.br</a> &lt;<a href=3D"=
+mailto:noreplay.biblioteca.camboriu@ifc.edu.br">noreplay.biblioteca.cambori=
+u@ifc.edu.br</a>&gt; escreveu:<br></div><blockquote class=3D"gmail_quote" s=
+tyle=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);pad=
+ding-left:1ex">=20
+<br>Usu=C3=A1rio: 000000012183144 - JENIFER CAROLINA BERTODI
+<br> <br>
+Valor Total de Debito: $ 12.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 12.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div>
+
+--000000000000624f0806104119c2--

@@ -1,0 +1,123 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp3039378rbb;
+        Wed, 31 Jan 2024 13:50:09 -0800 (PST)
+X-Received: by 2002:a05:6512:1090:b0:511:2ce3:1f30 with SMTP id j16-20020a056512109000b005112ce31f30mr241890lfg.32.1706737809638;
+        Wed, 31 Jan 2024 13:50:09 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706737809; cv=none;
+        d=google.com; s=arc-20160816;
+        b=GSveJ5QP/Fv6Ds/XZSKOEMwElw5YVJ/lRMCn3JmjmoZ5AmCwXjmXDzKQZk0YMAmygk
+         mpX3qu8VBXwl1BET3apyjkpAOzsSaQWyQ14q3hmEO67a2eMJU5kvfgVhnIYwvxUV9qIE
+         xwO6tbHn4FzBkWwugHx4JPqblECZOCvT/sQTQ+C9h5XY72DsDATrAFC6UpfDIOUDkF4I
+         WX0mGQ0GtauCcIJoDeVZpg2+MtDrPkoUtV2HXSKxLU6O+nRd2UfNkw2ZRYtB/+42v80E
+         d7x8wEVJ5FHvEPCYEz9AAj53drOfHcPoU9zSWksvpcrv5kovenOrI2qjkUBdZ5XCZzpD
+         AOOA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=Affysay0zfE7OyZEi14gokYv+fJqJeAOlED0umB/jqg=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=IoBEDEk44TidWe50pn2Pk0m82M19eKPBZXN6UKkvDoZ1Cu/9zj7gOdQviYwoHPwOaR
+         X6d0RG05S698i9Yji/idx1rGEP9+1nmyvm76KRcU2eSl4TAUNj+7v/3o7BhWJWys5xqL
+         3cQnRzSP/6lVNpNZrDT9tVnTnSzYSKrbN4mEXq2bQevuEY/wlwIjBUt0blLCg+rlSkaP
+         JDoUX7CiEE1OghWKB3gjEmZEe69tJquuby9GK13z8bnang+NeUCGIFkhXmr9tQ+tPCwC
+         WhchSCRtjCECZduUfBaOVqEgIrGhQcJMPwX0m0huF7kFeqD+TxDw5bazxAMjO0L9Paib
+         0nkA==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=h0dsfCYx;
+       spf=pass (google.com: domain of riantrombetta1@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=riantrombetta1@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <riantrombetta1@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id t10-20020a1709066bca00b00a34b3d589a9sor2977448ejs.19.2024.01.31.13.50.09
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 13:50:09 -0800 (PST)
+Received-SPF: pass (google.com: domain of riantrombetta1@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=h0dsfCYx;
+       spf=pass (google.com: domain of riantrombetta1@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=riantrombetta1@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706737809; x=1707342609; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=Affysay0zfE7OyZEi14gokYv+fJqJeAOlED0umB/jqg=;
+        b=h0dsfCYxjgq0k6ywxDcdtJYxxnA8xsSRemPPV6Mq5hcRuwgeEsnYXit3hXzeXeMBOn
+         1C7+6eCQiaJTszgwgSOHtmkZv9b/dHf12W3GQ2CwIGuZZ/LL2OOLqLBogx6/T9hvgD/y
+         9qrwIbDJSprv5mJAX1kl7m6BEFVzKopJvGCUeKeG//IveNIvyHortv+7RuUIkAIuobWs
+         woWBDqzvqoFoSHU0Y+EKzB53KBT+CRkUGUzYYYnDsb0C4ji440ClCcoReOWv26Er180n
+         YxxIYeZmQWep5TPYQHZ+Nk11JsLBGAdyAWiKAwRaF64Kh+2N1D5zxVEAxAw45wseUI20
+         dHjQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706737809; x=1707342609;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=Affysay0zfE7OyZEi14gokYv+fJqJeAOlED0umB/jqg=;
+        b=HezLP3Yk6BTcEyNH4Dx9aqDkKTwTDeF6tqtBi60D+cXARLgULDKS3POGGxhQ/840YC
+         yuynJWP28RUEetRrz2YU2ZY336VE0n9a4SoHBEUuqbz/Dc9oJd0FLqIkV9sgNm+lSkBS
+         bSn1NEET/kJjKBjzNu75pIFZQZyUdU3Vf6wycmo1cAR3rmGRFUUwE+vqf8coWwlOCK9a
+         n4x/uCysYichtxwPWWIrLYzenHM+Nl3t9e/Ma8LHPb7KNj90eLqrfcEAND4Yu/yNQVWO
+         OVxGAVWwFaldlF1PP03LHYGaXTMlaZc20PPzRosPA2JVjVrc05dAdMH1/+760eN/UGGc
+         meuQ==
+X-Gm-Message-State: AOJu0YyzaKCGUYZVLiajkUFr1dxyfSQUnbE3ybiinufGU58MCBy192ec
+	gwe8MX1UDJTr3Tpq2bGgZmSpBJ/COl1AVy6m950leI5jmOhjgFmiSruYKKAhr834Sso6VuBK2VX
+	VIKNXQZ2TLkstoO+RnOOKZ56tY5Z0wl+feGWWUA==
+X-Google-Smtp-Source: AGHT+IGd0UopvDFuUQaV0KYDGErp0Pz2R1D+mzhS5IRAjmuperuL0NSWFLtLUQ8zAUUEbhZ+iMRjz4YiUxZG3pzTaVs=
+X-Received: by 2002:a17:906:2894:b0:a36:7327:410a with SMTP id
+ o20-20020a170906289400b00a367327410amr2094558ejd.58.1706737808863; Wed, 31
+ Jan 2024 13:50:08 -0800 (PST)
+MIME-Version: 1.0
+References: <ub84gVGdKhkLClCySqYdmGvc0196xXXWc54leDe6Q7Y@localhost>
+In-Reply-To: <ub84gVGdKhkLClCySqYdmGvc0196xXXWc54leDe6Q7Y@localhost>
+From: Rian Trombetta <riantrombetta1@gmail.com>
+Date: Wed, 31 Jan 2024 18:49:56 -0300
+Message-ID: <CAMsOQY9Lwp5c0gDC+5uVfeUm_Mrc9EqcHRXNm1ORBHDXBk7OOw@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="000000000000d276e0061044dcd0"
+
+--000000000000d276e0061044dcd0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Boa tarde queria saber qual =C3=A9 esse material, pois o =C3=BAltimo que eu=
+ peguei eu
+entreguei
+
+Em qua, 31 de jan de 2024 18:21, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: 000002022317668 - RIAN TROMBETTA
+>
+> Valor Total de Debito: $ 23.00
+> Valor Total do Desconto: $ 0.00
+> Valor Total a Pagar: $ 23.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+--000000000000d276e0061044dcd0
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Boa tarde queria saber qual =C3=A9 esse material, pois o =
+=C3=BAltimo que eu peguei eu entreguei</div><br><div class=3D"gmail_quote">=
+<div dir=3D"ltr" class=3D"gmail_attr">Em qua, 31 de jan de 2024 18:21, <a h=
+ref=3D"mailto:biblioteca@ifc.edu.br">biblioteca@ifc.edu.br</a> &lt;<a href=
+=3D"mailto:noreplay.biblioteca.camboriu@ifc.edu.br">noreplay.biblioteca.cam=
+boriu@ifc.edu.br</a>&gt; escreveu:<br></div><blockquote class=3D"gmail_quot=
+e" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">=
+=20
+<br>Usu=C3=A1rio: 000002022317668 - RIAN TROMBETTA                         =
+                                                            =20
+<br> <br>
+Valor Total de Debito: $ 23.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 23.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div>
+
+--000000000000d276e0061044dcd0--

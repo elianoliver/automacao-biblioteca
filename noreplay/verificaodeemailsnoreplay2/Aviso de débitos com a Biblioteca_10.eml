@@ -1,0 +1,120 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp2965403rbb;
+        Wed, 31 Jan 2024 11:14:52 -0800 (PST)
+X-Received: by 2002:a17:902:eb4a:b0:1d8:abde:7c2c with SMTP id i10-20020a170902eb4a00b001d8abde7c2cmr2614293pli.12.1706728492548;
+        Wed, 31 Jan 2024 11:14:52 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706728492; cv=none;
+        d=google.com; s=arc-20160816;
+        b=lhk1H8LrLW5XM1CarQdbxN22aTxb1KCZONCJRw2SbvXez+jkbuC8cAY8lMRn3LxYsR
+         9cb6XGfK/rczoPLk2nK7WwWOtcWAm48wegZNFt9QeGXOaE/cG3kgs54dCLeNJlxWKPkw
+         5YVOerXz0k0W4UX9jefSciaJk7//FaXVbw6niJcCITHG3nlWPSOKW88y9tfOcYL2PPvi
+         Ag4XoR5Pwi4XxscEoxwvIvj1Y3gZpcMxPf9ageXDec48fTKcIGlQdF7ROZeJDHTqDWVe
+         IEtQh5SnQ4zH2YKXOT/KwYOTI3d2BSuzWFwvrY+0ZCokyl14uV/p8fCfpAkgQu3SjDW2
+         HNPg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=5xM9SvdxZ/60Fpao7EISRytOP6RfJ2vgYNZhUahJCtU=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=HshdZwxkXJ8WKvsqREjQ1jTyLSgc2rZC1kGnTSacBtPgSb1E1aJo2TvlywjYzJETl+
+         rpduhuYYvj2tSzhAPaS6BYY8t61BG8+OWMcIS118pxZe+Ix3hdXwHbUBS2iwPBOvdyyU
+         HhSUlY9ka70m49JYCGuYQm4KDNN14c+2LPtWlgDH/ofzJkVAxA/8BVLS+0tCchDWOMkG
+         6D9/TDdI5DmoF06X9FC+WkFhdnz+Yj+zrOIcs7HMN5zRu/5wTXy7Q4W3bvrikxDm6rrC
+         JustDDOUEeoQwVfcBfIEiK6tHK4VR6PBSWEv+nJygWOwpNZBPKgDYwG+zoiZIgs5v0h3
+         Av1w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=DddqdqYr;
+       spf=pass (google.com: domain of gabrielaspiervieira@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=gabrielaspiervieira@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <gabrielaspiervieira@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id ja11-20020a170902efcb00b001d8fe7462a2sor498175plb.0.2024.01.31.11.14.52
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 11:14:52 -0800 (PST)
+Received-SPF: pass (google.com: domain of gabrielaspiervieira@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=DddqdqYr;
+       spf=pass (google.com: domain of gabrielaspiervieira@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=gabrielaspiervieira@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706728491; x=1707333291; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=5xM9SvdxZ/60Fpao7EISRytOP6RfJ2vgYNZhUahJCtU=;
+        b=DddqdqYrl5MlIIVDxRvQyQn35ONPuzJ2dTxNiqL2yw2Gex069O0EVzaYkqoK/3uPHn
+         95CG1SqBfVJ9wAGbZJwtJ6zodubcHx3DEvQr0mjYCLJoTlb3lPdABjjNjpqba2lqlT5o
+         XR6wr8/3Oy9hH8bdcmLklsWoAw9kIRVafbnSfDqWEQAsBlODGUFslTiH32eIMRuSg2rQ
+         9cb/PVMwvIWw+Hm2Gtc8mXF2GrEjCQu2CD+MXIASExhkpEtkO583jwE7Mt593qs3VB2/
+         UEKOoq3dMKAB+PNtl8gvRApr27ozbSlGcYdgkD/ubjEvce6UAYyC/aKUqBeaNQB2sDwa
+         jKpw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706728491; x=1707333291;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=5xM9SvdxZ/60Fpao7EISRytOP6RfJ2vgYNZhUahJCtU=;
+        b=lppf8NA99lFOVO6gRHwhUcTSiz0N+no/rMLml+mYZQy0T0b/sHW4YBjGjTBwK8KZNq
+         ihG9l/KD4d7pm4pgOPlBJSzQPRCeZ540udF9Ojj+FjMrhFdMc5hvY8SOII1Tl+YWkFUP
+         rdlnqWfnrbK9SK6hGakNtFUdf5zmgyTcb1OGQ2S1PbwGGsMhwyW+m+tM2I1SoE0UOuiT
+         upz7vRWnxgmPCt2RO9++7GBqKZVmpPRFgo1K/mPx/BiQ+3Z20sTNQCA0i8c0BD9NiIBv
+         km7yMP+RSYcgGmpcmoOcKS6ABRZ9DobAAx7IAeWgubTCQX4/VVBmX2Vy2BGgeyPgREUZ
+         KGOw==
+X-Gm-Message-State: AOJu0YxaqNKoCdpxlS9z/eJGaa12ThkLhNmOtk73XeFf2+yRLB2yYIrU
+	QQ5myXftJTPMM/RMXvHw8H9ZBHfHlOaidU5NnyVin+OdD1zG9Aku9WyXJL6+Z5ghwAXft1KcUAZ
+	thuVtUhrtPUkkj+h67F1g2EW4erV65SiD
+X-Google-Smtp-Source: AGHT+IEisQlMZ4am/uZWK/ey/JYZIC34Ce6j/saK8/twPvZt3tgP7w8c3YzZgHe6ic+Fxwvzh3h3P6jyzWZH1TYrfgg=
+X-Received: by 2002:a17:90b:38c3:b0:295:cfd1:a861 with SMTP id
+ nn3-20020a17090b38c300b00295cfd1a861mr326776pjb.4.1706728491130; Wed, 31 Jan
+ 2024 11:14:51 -0800 (PST)
+MIME-Version: 1.0
+References: <aHIvyIMrDKBuSYtVyyxSGDILH6SHieqE6pREg33d58@pergamum.ifc.edu.br>
+In-Reply-To: <aHIvyIMrDKBuSYtVyyxSGDILH6SHieqE6pREg33d58@pergamum.ifc.edu.br>
+From: Gabriela Spier <gabrielaspiervieira@gmail.com>
+Date: Wed, 31 Jan 2024 14:14:39 -0500
+Message-ID: <CAHJjREHwyXpkcgJk-Pmb3o6xREC9x_47G_KYmB_fzhM5ajeWbg@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="000000000000712446061042b199"
+
+--000000000000712446061042b199
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Por favor mandar o boleto
+
+Em qua., 31 de jan. de 2024 =C3=A0s 11:48, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: 000002018305259 - Gabriela Spier Vieira
+>
+> Valor Total de Debito: $ 41.00
+> Valor Total do Desconto: $ 9.00
+> Valor Total a Pagar: $ 32.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+--000000000000712446061042b199
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Por favor mandar o boleto</div><div><br><div class=3D"gma=
+il_quote"><div dir=3D"ltr" class=3D"gmail_attr">Em qua., 31 de jan. de 2024=
+ =C3=A0s 11:48, <a href=3D"mailto:biblioteca@ifc.edu.br">biblioteca@ifc.edu=
+.br</a> &lt;<a href=3D"mailto:noreplay.biblioteca.camboriu@ifc.edu.br">nore=
+play.biblioteca.camboriu@ifc.edu.br</a>&gt; escreveu:<br></div><blockquote =
+class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1=
+px;border-left-style:solid;padding-left:1ex;border-left-color:rgb(204,204,2=
+04)">=20
+<br>Usu=C3=A1rio: 000002018305259 - Gabriela Spier Vieira                  =
+                                                            =20
+<br> <br>
+Valor Total de Debito: $ 41.00<br>
+Valor Total do Desconto: $ 9.00<br>
+Valor Total a Pagar: $ 32.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div></div>
+
+--000000000000712446061042b199--

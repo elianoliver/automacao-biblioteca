@@ -1,0 +1,151 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:9103:b0:7d:69f4:d7c3 with SMTP id a3csp1090068rbf;
+        Wed, 7 Feb 2024 07:16:25 -0800 (PST)
+X-Received: by 2002:a17:90a:3047:b0:294:bb78:3972 with SMTP id q7-20020a17090a304700b00294bb783972mr2606332pjl.14.1707318985467;
+        Wed, 07 Feb 2024 07:16:25 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1707318985; cv=none;
+        d=google.com; s=arc-20160816;
+        b=AEE+3hdOyIP3VxXfq1+KApm9PyW2smEW4byIQDcIFjSWb/teE/vQmMMoPWq23j5JiT
+         WV3uVcoQ49FzJTZPeGj36f1Zr/h4Y0T2Px2o+rqkJL+iVwFh8X5uBj7ApaMfDOosxSqu
+         4Jg9nqjNnzubM28HBWNyN8CyxqeUQPMAMANMWtxl1z7d0EFSbyKCXkSYeQPFC9qpa8Ei
+         9Yfe3J8BXW57aqHrrkciGEkxwwZx9Bse5wm9fx54RTgbNcBVWnyR/KGUQ5cFUqA9ErHf
+         7lVVBGxG22kZmEkMD2gj/iRezcdPmp27XAUj0aAmkDvCg4201/jxy3h3q3KuUFogPbZo
+         rmIQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:to:from:importance:in-reply-to:subject:date
+         :savedfromemail:message-id:dkim-signature;
+        bh=yZn8pMLu0VTEr5FiaxqWDJcb0MUNEmA+BjavhKsbcTs=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=KT1kI2t/eGrJZoq0Ft3UlgZ+ZN0ZyGAPP0W/GgHOyCFe7W4HtSdI07oxdeJRdNaQzx
+         sr6cX72LKeMoo9DWzkcWb+vHVb7x6Hlgcy8JbYWe9T6Q/ydFexxq2k/AzC/MrTd8CCOT
+         1vn1EMeTHF8NbEyR/roSs7zReiTQeWOqmFNOhub4PhgL13tH/T8RoenrrZQ6nGRShC81
+         Jm7loj4Gy08z1yjcHKHPFJ3NiTw9p67exHz8TgFYTchX+Kw+0R4RW9omhx8vRgFmrjb1
+         c1YZQWElSA7EGbbFne06u7E1FPLIIS4TASnaCpe14rgrbYgQ5ReHfAbyZxigvsBAe51q
+         A5tw==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=L3WLRNwT;
+       spf=pass (google.com: domain of jessicabertoldicoelho@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=jessicabertoldicoelho@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <jessicabertoldicoelho@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id gb9-20020a17090b060900b00295f73846a2sor698759pjb.0.2024.02.07.07.16.24
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 07 Feb 2024 07:16:25 -0800 (PST)
+Received-SPF: pass (google.com: domain of jessicabertoldicoelho@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=L3WLRNwT;
+       spf=pass (google.com: domain of jessicabertoldicoelho@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=jessicabertoldicoelho@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1707318984; x=1707923784; darn=ifc.edu.br;
+        h=mime-version:to:from:importance:in-reply-to:subject:date
+         :savedfromemail:message-id:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=yZn8pMLu0VTEr5FiaxqWDJcb0MUNEmA+BjavhKsbcTs=;
+        b=L3WLRNwTUUuEkN0orqB+VCnMcqixv/1CVCB6MlPpPsUKMXVkq6VrvVjq8OlN5BMkfI
+         Ca1TSIhSY6T/Tujk5fb7wppyJCSZZV6DTRetsBkJmQcEfloCBoXGp1XuVHeAk/61l6Y/
+         2gqLk/NJAfMZHwBXGJySCzMzCmdw2egtbTyRivZ8FtwekPRkgyOy8yMmAVeefv1ssVPt
+         En8sPTV63GKtFRCiwzMHmLhlFwUibE7Dfxdlb9dHgQJ1mZ65Tt/zXX5W76pV+UiiLs1u
+         ehEN+QLKxcJz2nMb/A4G8XLacztWfbsWvlLcy4HZgEGlFzGYn1uu0x+Fb3lNfED03F5l
+         8lgA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1707318984; x=1707923784;
+        h=mime-version:to:from:importance:in-reply-to:subject:date
+         :savedfromemail:message-id:x-gm-message-state:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=yZn8pMLu0VTEr5FiaxqWDJcb0MUNEmA+BjavhKsbcTs=;
+        b=Lu65C+f9j5C2zZ2FkFhInxH2PHrI7i4+KGHX8B07VUmFQ5KHzg7+0uYL5PX8spmgVN
+         ogXTXH2OGrXKc0fvXJDD4lEmQaOuIbJBhFam7omSMJz7btGTdhuln8i9C7QnZFM7NMIe
+         jqqCAcPW1j0L0vFR3NMZ4XwTj6CaLxCgd4l6Rtp4m4/28RxR+TddqHyT7SPXA8cK9UYi
+         JI6AjoYsoXYf6hJVYqRd3VC337G8QP9H7nSGyE+TLUT59w+XaYehxjUNX/OpUNB/UaQ1
+         7RqaoQyPyNBZJl/VFq0Z3HcfI0RyeNGDPlIipC2QW0oJJBpDleg5w92jsIA+jrxKl0b9
+         gnkw==
+X-Gm-Message-State: AOJu0Yw7CB3wIAhxGOK/Eu+DhIc+07bVRhIaXYIQVzMjbOW50aOAtbaf
+	Tb3A8ntC0VH0qwGlVtkyjxbtWzHoC/H2k5cnvrMeMCyCRH2r+AkqJoD/TYen
+X-Google-Smtp-Source: AGHT+IHPdEYrGaeR2l3WYebqMlLEvHWAd1VwcuXMCEZVXjHOA2sCAVXR/he3Nnf9kNKjdFN/T5+18A==
+X-Received: by 2002:a17:90a:c394:b0:296:5c13:6ea7 with SMTP id h20-20020a17090ac39400b002965c136ea7mr2960357pjt.25.1707318984333;
+        Wed, 07 Feb 2024 07:16:24 -0800 (PST)
+Return-Path: <jessicabertoldicoelho@gmail.com>
+Received: from ?IPv6:2804:27b8:25f:d086:446f:f4ee:cc30:c2d0? ([2804:27b8:25f:d086:446f:f4ee:cc30:c2d0])
+        by smtp.gmail.com with ESMTPSA id sf17-20020a17090b51d100b0029647e89771sm1837646pjb.19.2024.02.07.07.16.23
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 07 Feb 2024 07:16:24 -0800 (PST)
+Message-ID: <65c39ec8.170a0220.ebe76.5740@mx.google.com>
+SavedFromEmail: jessicabertoldicoelho@gmail.com
+Date: Wed, 07 Feb 2024 12:16:21 -0300
+Subject: =?ISO-8859-1?Q?RE:_Aviso_de_d=E9bito_peri=F3dico_de_material?=
+In-Reply-To: <ykxid2uwQ03oHmzOmL9H5PZGrwNalAhY3RB0Yg9xi4@localhost>
+Importance: normal
+From: jessicabertoldicoelho <jessicabertoldicoelho@gmail.com>
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="--_com.samsung.android.email_1682699277604950"
+
+----_com.samsung.android.email_1682699277604950
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+T2zDoSwgYm9tIGRpYS4gRXNxdWVjaSBjb21wbGV0YW1lbnRlIHF1ZSBlc3RhdmEgY29tIG8gbGl2
+cm8sIHZvdSB2b2x0YXIgZGlhIDE1IGRlc3NlIG3DqnMgKHNvdSBkYSBncmFkdWHDp8OjbykgZSBn
+b3N0YXJpYSBkZSBzYWJlciBlbSBxdWFudG8gZXN0w6EgbWV1IGTDqWJpdG8gYXTDqSBhZ29yYSBw
+cmEgc2VwYXJhciBvIHZhbG9yLkVudmlhZG8gZG8gbWV1IEdhbGF4eQotLS0tLS0tLSBNZW5zYWdl
+bSBvcmlnaW5hbCAtLS0tLS0tLURlIDogImJpYmxpb3RlY2FAaWZjLmVkdS5iciIgPG5vcmVwbGF5
+LmJpYmxpb3RlY2EuY2FtYm9yaXVAaWZjLmVkdS5icj4gRGF0YTogMDcvMDIvMjAyNCAgMDE6MzYg
+IChHTVQtMDM6MDApIFBhcmE6IGplc3NpY2FiZXJ0b2xkaWNvZWxob0BnbWFpbC5jb20gQXNzdW50
+bzogQXZpc28gZGUgZMOpYml0byBwZXJpw7NkaWNvIGRlIG1hdGVyaWFsIFVzdcOhcmlvOiBKRVNT
+SUNBIEJFUlRPTERJIENPRUxIT8KgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKg
+wqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDC
+oMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKg
+IExFTUJSRVRFOiBEZXZvbHXDp8OjbyBkZSBNYXRlcmlhbCBwYXJhOiAyMy8wOC8yMDIzVMOtdHVs
+bzogSGlzdMOzcmlhIGRhIG1hdGVtw6F0aWNhIC8gMjAxMlZvbHVtZTogVU5JQ09UaXBvIGRlIG9i
+cmE6IExpdnJvcyJFc3RlIG1hdGVyaWFsIGVzdMOhIHBlbmRlbnRlLCBwb3IgZmF2b3IgdmVyaWZp
+cXVlIGEgZGF0YSBkZSBkZXZvbHXDp8Ojby4iLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLUVzdGUgbWF0ZXJpYWwgZXN0w6EgcGVuZGVudGUsIHBv
+ciBmYXZvciB2ZXJpZmlxdWUgYSBkYXRhIGRlIGRldm9sdcOnw6NvLkNvbmZvcm1lIEFydC4gNDQg
+ZG8gUmVndWxhbWVudG8gZGEgQmlibGlvdGVjYSBow6EgYSBwZW5hbGlkYWRlIGRlIFIkIDEsMDAg
+cG9yIGRpYSBkZSBhdHJhc28u
+
+----_com.samsung.android.email_1682699277604950
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+PGh0bWw+PGhlYWQ+PG1ldGEgaHR0cC1lcXVpdj0iQ29udGVudC1UeXBlIiBjb250ZW50PSJ0ZXh0
+L2h0bWw7IGNoYXJzZXQ9VVRGLTgiPjwvaGVhZD48Ym9keSBkaXI9ImF1dG8iPjxkaXYgZGlyPSJh
+dXRvIj5PbMOhLCBib20gZGlhLiBFc3F1ZWNpIGNvbXBsZXRhbWVudGUgcXVlIGVzdGF2YSBjb20g
+byBsaXZybywgdm91IHZvbHRhciBkaWEgMTUgZGVzc2UgbcOqcyAoc291IGRhIGdyYWR1YcOnw6Nv
+KSBlIGdvc3RhcmlhIGRlIHNhYmVyIGVtIHF1YW50byBlc3TDoSBtZXUgZMOpYml0byBhdMOpIGFn
+b3JhIHByYSBzZXBhcmFyIG8gdmFsb3IuPC9kaXY+PGRpdiBkaXI9ImF1dG8iPjxicj48L2Rpdj48
+ZGl2IGRpcj0iYXV0byI+PGJyPjwvZGl2PjxkaXYgZGlyPSJhdXRvIj48YnI+PC9kaXY+PGRpdiBp
+ZD0iY29tcG9zZXJfc2lnbmF0dXJlIiBkaXI9ImF1dG8iPjxkaXYgc3R5bGU9ImZvbnQtc2l6ZTox
+MnB4O2NvbG9yOiM1NzU3NTciIGRpcj0iYXV0byI+RW52aWFkbyBkbyBtZXUgR2FsYXh5PC9kaXY+
+PC9kaXY+PGRpdiBkaXI9ImF1dG8iPjxicj48L2Rpdj48ZGl2Pjxicj48L2Rpdj48ZGl2IGFsaWdu
+PSJsZWZ0IiBkaXI9ImF1dG8iIHN0eWxlPSJmb250LXNpemU6MTAwJTtjb2xvcjojMDAwMDAwIj48
+ZGl2Pi0tLS0tLS0tIE1lbnNhZ2VtIG9yaWdpbmFsIC0tLS0tLS0tPC9kaXY+PGRpdj5EZSA6ICJi
+aWJsaW90ZWNhQGlmYy5lZHUuYnIiICZsdDtub3JlcGxheS5iaWJsaW90ZWNhLmNhbWJvcml1QGlm
+Yy5lZHUuYnImZ3Q7IDwvZGl2PjxkaXY+RGF0YTogMDcvMDIvMjAyNCAgMDE6MzYgIChHTVQtMDM6
+MDApIDwvZGl2PjxkaXY+UGFyYTogamVzc2ljYWJlcnRvbGRpY29lbGhvQGdtYWlsLmNvbSA8L2Rp
+dj48ZGl2PkFzc3VudG86IEF2aXNvIGRlIGTDqWJpdG8gcGVyacOzZGljbyBkZSBtYXRlcmlhbCA8
+L2Rpdj48ZGl2Pjxicj48L2Rpdj48L2Rpdj48YnI+VXN1w6FyaW86IEpFU1NJQ0EgQkVSVE9MREkg
+Q09FTEhPJm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5i
+c3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7
+Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5i
+c3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7
+Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5i
+c3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7
+Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5i
+c3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7
+Jm5ic3A7IDxicj5MRU1CUkVURTogPGJyPkRldm9sdcOnw6NvIGRlIE1hdGVyaWFsIHBhcmE6IDIz
+LzA4LzIwMjM8YnI+VMOtdHVsbzogSGlzdMOzcmlhIGRhIG1hdGVtw6F0aWNhIC8gMjAxMjxicj5W
+b2x1bWU6IFVOSUNPPGJyPlRpcG8gZGUgb2JyYTogTGl2cm9zPGJyPjxicj4iRXN0ZSBtYXRlcmlh
+bCBlc3TDoSBwZW5kZW50ZSwgcG9yIGZhdm9yIHZlcmlmaXF1ZSBhIGRhdGEgZGUgZGV2b2x1w6fD
+o28uIjxicj48YnI+PGJyPjxicj4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0tPGJyPkVzdGUgbWF0ZXJpYWwgZXN0w6EgcGVuZGVudGUsIHBvciBm
+YXZvciB2ZXJpZmlxdWUgYSBkYXRhIGRlIGRldm9sdcOnw6NvLjxicj5Db25mb3JtZSBBcnQuIDQ0
+IGRvIFJlZ3VsYW1lbnRvIGRhIEJpYmxpb3RlY2EgaMOhIGEgcGVuYWxpZGFkZSBkZSBSJCAxLDAw
+IHBvciBkaWEgZGUgYXRyYXNvLjxicj48YnI+PC9ib2R5PjwvaHRtbD4=
+
+----_com.samsung.android.email_1682699277604950--
+

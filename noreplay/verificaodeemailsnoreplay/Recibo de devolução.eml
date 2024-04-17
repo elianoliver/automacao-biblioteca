@@ -1,0 +1,154 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a5d:4e07:0:b0:33d:83ec:cc73 with SMTP id p7csp534725wrt;
+        Fri, 23 Feb 2024 13:48:49 -0800 (PST)
+X-Received: by 2002:a05:600c:1d07:b0:412:95fb:e41 with SMTP id l7-20020a05600c1d0700b0041295fb0e41mr641247wms.24.1708724929321;
+        Fri, 23 Feb 2024 13:48:49 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1708724929; cv=none;
+        d=google.com; s=arc-20160816;
+        b=JAw0thNQZdBEs0ds94sZaWNciqyCvRFqY2D+M6aBdpiMIesH1f4OhGjJDXbFsD1DoF
+         Yjnu2kaYO3pmdD4NRqkmsISIXHuOC9QoNIQhm9WnPfDtBlRmSBVJTvcLpAlS4R5hSFYX
+         y1vy6FqTDXWWVvZYd1xrIRmv3hUC8n6gysDQASTc6sVS1v3cPSck9tsC7FUtkb7fmmI7
+         A7X8BHAtvYMUjhZRiEhBfdb8ER9sm4D7R4tkdGFzJW5ha4BeQey14GLtPwCgzPYIc0KE
+         +tETIzslLT73Iy6+B5Zcz6hhf/vokGmYabobphaW35ddaFKwAwYXDplVTxAdsW2HMy4Z
+         dW5Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=cwu9A3aHJTmmQQQkSBTqRPM9KQGpMxiI1MaGOp546pI=;
+        fh=Nuv6JPxoYclt4lXoYXxoXYgTxZLBxZACBkwr0M0JKqk=;
+        b=lhVY2H2EIIRjFQZmQFBAjIhQK/R97SUMWx5MYo87ewNvSltmSG6zVtGocB02Iuph02
+         mawKYQtTQv3/TlolCaIfFMzL7rf45bwAHmNv1o6Dwks53opOVOXt/+gX2+aYo0XO2cGo
+         4Zqx/McYICXb6gLo0pj4pWYO4dEzyQsxMLNBmkl4I52W4IoCTH3YEY6gs0CYPH2+C7nf
+         AbOHM1jGPAUKTSf+bkHvT/zeTQl/iEzljMJ9vfxUCwOlMjou+972bW0N5gU+ibt+ehss
+         UL4bgX/gdaPftNsah4yS1bcsfjVzZ3gJa38l/MlKapzwKD4ynmQNZXzxcRA+4boKZSM6
+         ijjQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=gM8lRqiC;
+       spf=pass (google.com: domain of marconiluana08@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=marconiluana08@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <marconiluana08@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id e26-20020a05600c4b9a00b0041294d8957fsor586171wmp.8.2024.02.23.13.48.49
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Fri, 23 Feb 2024 13:48:49 -0800 (PST)
+Received-SPF: pass (google.com: domain of marconiluana08@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=gM8lRqiC;
+       spf=pass (google.com: domain of marconiluana08@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=marconiluana08@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1708724928; x=1709329728; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=cwu9A3aHJTmmQQQkSBTqRPM9KQGpMxiI1MaGOp546pI=;
+        b=gM8lRqiCsp5530nWuTgeJ11s1uNtSGzg8tCpaZSulHzoBFBLv/iDHdLMXogbZTyl/x
+         TyRNL2EeIVZxbRQ2DH0y3uU6c18//QEZSmfN1TE1hbWl/qd4BbcOZkNcov1Q3TzmM5aO
+         nQG3/RE6Qx+MGNAETMvdDHTAFsSyhaj4+ExiewM0Dde06IoVD3WQKYjUcJESjOc+GTjZ
+         bHsp8dK+DcPf8zXiLMAcmh+X+Kd+uyCuNHjggvVZu52wmoBHyNyP7pL0VgrWwDmQQvZ+
+         gCi/AFacZoPoEINKvOcUXwSX+EJjbR1FKmwtSduHGR9Sd72l8Fb4QrGSKCczjC6wPRha
+         mVDQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1708724928; x=1709329728;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=cwu9A3aHJTmmQQQkSBTqRPM9KQGpMxiI1MaGOp546pI=;
+        b=v/DU9mhLkXgztgHsseg02Mqz1NAC4HOy+QZFOhNesHGikMVE0ME3exxR3YF8DqVN7t
+         RNW8QRLSXcqh3jASDew8KOr+aM7BY2pHmZDxTwf8t/Njez+8TFuZRCR8EkOV0quGWKcD
+         IzHgglRYmNKJGYO8CYA6r7CkvFaWQ3X/+Spydf1zPklLYOVK3AHmk4sOHNvqO7UeT7te
+         GKEDe8eV1RKnEOvDreYtxObelKaszAv+QACWYWTTYZfrPf43FX53Gbf5NnKUeZ9y97Sr
+         Gl9y2HhVab4yGyI88IDEj+J7o28i9YLwYCZMILx/CQ3+Vm8YsrHJNRg8JouKXZWLj7b+
+         wYXQ==
+X-Gm-Message-State: AOJu0YzvUaR5mEPuUa64FbijQxlhLyozW2Eqqxuek3aKZXA9sSNHAcfq
+	u+iLoiv6R4yIkBVvE6pT95NYSLke2l1fW8TBKoqujMLx4G3tXCc+gST8Vcd1FBC4GkUoX2+0kNl
+	MerOTkRVuu25SsgmQq5vlhPKyUwPjRTjo
+X-Google-Smtp-Source: AGHT+IGUSgs9oAkwAu3DMXYugrMdAFKa6sc50oArcOcpop+vGhe6ZlXhogC3ZjY2hzsGztSEQ3gmzeeuJbgLAuSitmU=
+X-Received: by 2002:a05:600c:4fcb:b0:412:9724:6fae with SMTP id
+ o11-20020a05600c4fcb00b0041297246faemr646121wmq.32.1708724928483; Fri, 23 Feb
+ 2024 13:48:48 -0800 (PST)
+MIME-Version: 1.0
+References: <647843029.857.1697740706510@novavmpergamum.internal.cloudapp.net>
+In-Reply-To: <647843029.857.1697740706510@novavmpergamum.internal.cloudapp.net>
+From: Luana Marconi <marconiluana08@gmail.com>
+Date: Fri, 23 Feb 2024 18:48:36 -0300
+Message-ID: <CAOahSQdT59HubJpxYsU0T9wutb-ACCXvJC5npoSdr4Tam+mT+g@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Recibo_de_devolu=C3=A7=C3=A3o?=
+To: =?UTF-8?Q?Biblioteca_=2D_Cambori=C3=BA?= <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="0000000000006199790612138618"
+
+--0000000000006199790612138618
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Boa tarde, tudo bem? Gostaria de saber se n=C3=A3o existe pend=C3=AAncia em=
+ meu nome
+
+Em qui., 19 de out. de 2023 15:38, Biblioteca - Cambori=C3=BA <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+>
+>
+> *INSTITUTO FEDERAL DE CI=C3=8ANCIA E TECNOLOGIA CATARINENSEBiblioteca -
+> Cambori=C3=BARecibo de devolu=C3=A7=C3=A3oUsu=C3=A1rio:000002021312282 - =
+LUANA LIA MARCONI*
+>
+>
+> *364731-0 - =C3=81rvores ex=C3=B3ticas no Brasil : madeiras, ornamentais =
+e
+> arom=C3=A1ticas / 2003*N=C3=BAmero de chamada: 582 A795
+> Normal
+> Emprestado em: 05/10/2023 07:57:40.903
+> Devolver at=C3=A9: 19/10/2023
+> Devolvido em: 19/10/2023 15:38:12
+> 3647311027873759
+>
+>
+> *97456581-9 - =C3=81rvores brasileiras : manual de identifica=C3=A7=C3=A3=
+o e cultivo de
+> plantas arb=C3=B3reas nativas do Brasil, volume 3 / 2009*N=C3=BAmero de c=
+hamada:
+> 582 L869a
+> Normal
+> Emprestado em: 05/10/2023 07:57:38.290
+> Devolver at=C3=A9: 19/10/2023
+> Devolvido em: 19/10/2023 15:38:15
+> 9745658119987922
+>
+> Impresso em: 19/10/2023 15:38:20
+> Atendente: 2021013668
+>
+>
+>
+>
+>
+>
+
+--0000000000006199790612138618
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Boa tarde, tudo bem? Gostaria de saber se n=C3=A3o existe=
+ pend=C3=AAncia em meu nome</div><br><div class=3D"gmail_quote"><div dir=3D=
+"ltr" class=3D"gmail_attr">Em qui., 19 de out. de 2023 15:38, Biblioteca - =
+Cambori=C3=BA &lt;<a href=3D"mailto:noreplay.biblioteca.camboriu@ifc.edu.br=
+">noreplay.biblioteca.camboriu@ifc.edu.br</a>&gt; escreveu:<br></div><block=
+quote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc=
+ solid;padding-left:1ex"><strong>INSTITUTO FEDERAL DE CI=C3=8ANCIA E TECNOL=
+OGIA CATARINENSE<br>Biblioteca - Cambori=C3=BA<br>Recibo de devolu=C3=A7=C3=
+=A3o<br>Usu=C3=A1rio:000002021312282 - LUANA LIA MARCONI</strong><br><br><s=
+trong>364731-0 - =C3=81rvores ex=C3=B3ticas no Brasil : madeiras, ornamenta=
+is e arom=C3=A1ticas / 2003<br></strong>N=C3=BAmero de chamada: 582 A795<br=
+>Normal              <br>Emprestado em: 05/10/2023 07:57:40.903<br>Devolver=
+ at=C3=A9: 19/10/2023<br>Devolvido em: 19/10/2023 15:38:12<br>3647311027873=
+759<br><br><strong>97456581-9 - =C3=81rvores brasileiras : manual de identi=
+fica=C3=A7=C3=A3o e cultivo de plantas arb=C3=B3reas nativas do Brasil, vol=
+ume 3 / 2009<br></strong>N=C3=BAmero de chamada: 582 L869a<br>Normal       =
+       <br>Emprestado em: 05/10/2023 07:57:38.290<br>Devolver at=C3=A9: 19/=
+10/2023<br>Devolvido em: 19/10/2023 15:38:15<br>9745658119987922<br><br>Imp=
+resso em: 19/10/2023 15:38:20<br>Atendente: 2021013668<br><br><br><br><br><=
+br>
+</blockquote></div>
+
+--0000000000006199790612138618--

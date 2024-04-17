@@ -1,0 +1,123 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp2880109rbb;
+        Wed, 31 Jan 2024 08:46:43 -0800 (PST)
+X-Received: by 2002:a17:906:c7d3:b0:a23:62fd:e2f6 with SMTP id dc19-20020a170906c7d300b00a2362fde2f6mr2118848ejb.30.1706719603120;
+        Wed, 31 Jan 2024 08:46:43 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706719603; cv=none;
+        d=google.com; s=arc-20160816;
+        b=GPPeUO1uIxKPDeBO7+cmndalvhm6OpgxR0Sp1DAi9x541Tpprk0zs9Yl4sdQhSKmB7
+         pE8FwEdVv9m42BoftnjgGg5WyMaebRMtpUEgyEfocyvHtROwO++3Cc870V6Gn7+RnEsJ
+         ajTm9qvVg7RggNX93tPLp7J902QtGaL64ylbwOD/QoEU3j+OAwaMe4Jjg3VAVJHIyD+D
+         EeiabGjQwRJcfF2+0paXsJRVrNACAcPYp698TU3JXjMqjAw7x3xcDTut4Sq/Qr55zkUk
+         ISgY+17PaUuTxmEKVXxpUxI6vfbEymhed31Y0C6iPwWTfQWFKRhORpNfmbxHf1xvRZ9T
+         s+mw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=2/Hpw3MMrcK8SkrDcGG2E0z8BoulMDqrKOUdxrW3btQ=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=0LAz96By8PrKWgCx13PEQZ+VmO4Ag0vj5BX/0S5PEr6hBK/HVSWKj6cMuUK6ngpigf
+         PH9LVowwLzWtvZp+v3J8Bxp1ph9CQS4E2pRdqsKSHpkLUMufVoue/giys7YLv9tM5+w9
+         jQKKdBPHV0Hy7k7VHynmKnyrVxRzAjAzFS7GpJjSSXL92llNnx7wW1KNc5chkKhfXSmu
+         qlQp6VbrESk8w3xOKYdV8Kg6Sk4dBLOmBn8cK2Pl+SRYS1aMAvrYDayGg+ZrWSt9vMJG
+         FSaInSti7JF4lzcqjhCb3Pd+VrqNuYtW3qtpjn85AiaiZheEYxtHma0VcjW0C9b1fSER
+         kz5w==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=kZptMNzq;
+       spf=pass (google.com: domain of profbarbara.daniele@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=profbarbara.daniele@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <profbarbara.daniele@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id k26-20020a1709063e1a00b00a3161e2f35bsor689023eji.5.2024.01.31.08.46.43
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 08:46:43 -0800 (PST)
+Received-SPF: pass (google.com: domain of profbarbara.daniele@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=kZptMNzq;
+       spf=pass (google.com: domain of profbarbara.daniele@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=profbarbara.daniele@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706719602; x=1707324402; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=2/Hpw3MMrcK8SkrDcGG2E0z8BoulMDqrKOUdxrW3btQ=;
+        b=kZptMNzq2uwRuozYTWQeXi8pRhPL+lT54P0gd9fYKIPqRlP+F1GczMzAyLxqCQE3ef
+         17d7IwxlgbnJzIHkF6ZjPrX1oZ3UfBUtsXaZMJQPzCqsRCPWGhfi3R3at/CmhXwn//SF
+         X021xUI8RQUvHS85vq/TENwqbfmVma4tz47zurXbxuTAeV/0ucpn3AxgiAL/a2uqaWsd
+         AX6ivTIiHcvaz5QVEtX6eR+YWlpaz0ZwtS02kppb1FAer6BvAXQjYizw7p4irnNXOQpw
+         CqNOquOfZOdjeWOx+hpezKvsG3x+4Fh+8K9shnYaOOWe6699hLO3x6twDn5UNbZoQB+C
+         zk/Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706719602; x=1707324402;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=2/Hpw3MMrcK8SkrDcGG2E0z8BoulMDqrKOUdxrW3btQ=;
+        b=KRdxVbcLAPB5X3LLiAvPr7bbuSbjdM3HAz6a205IMtR6xj/HremNNhdOXsrtAvD6oS
+         UBB03Y3QhjqyZlDxBluP33vK6Y+zIuOA7JT+CCckeP6qoTAdszIYrJCNJutetp3YOV0U
+         4jJUNhd/7yFJ9J1+sYkoKoE14tJvlKTrYVei7YjqrjBNmtjBm6DglyBT7vRo6db2ldGT
+         A9EUcu/y4Zeg2+uPcMZvxGsNICtCZ6xZ/ESl2MdNCFaMDH84I1jkGt0ALnHMw55P8M0V
+         uigWV1qADc32GKcoh04p1BK78tJN/HqPZZ9gT2byOBjURy2/paAWzBTA9dt5rx/X0iOW
+         w9jg==
+X-Gm-Message-State: AOJu0YyFVxIwOuqtZjD/PPGLK3eyzbKXTuJdPzOg850l1jiKRIulqGUF
+	PulC42O1T9cCTnNliCc1rTNXdWUr2XudwG0ABHBXRjfGI6bZGB7fZjYqmHNwCnJ2noMFWvxOReT
+	J+IfubqG0QqlBYP0f0Z5kDZowUS4+DckA
+X-Google-Smtp-Source: AGHT+IE5nnaegmnvDhegWcavWWT+rbKtouVzUqa09Xk2eYjdpayl/weT7NM05DtgtrdeOR8gYg6wJu+faQjYiEbHSbM=
+X-Received: by 2002:a17:906:d8d:b0:a36:6c98:a506 with SMTP id
+ m13-20020a1709060d8d00b00a366c98a506mr1978848eji.18.1706719602402; Wed, 31
+ Jan 2024 08:46:42 -0800 (PST)
+MIME-Version: 1.0
+References: <cwglkCtbhINZUn93rRVtgsVQUQ7qDP6mzp81wHt1sf0@pergamum.ifc.edu.br>
+In-Reply-To: <cwglkCtbhINZUn93rRVtgsVQUQ7qDP6mzp81wHt1sf0@pergamum.ifc.edu.br>
+From: =?UTF-8?Q?B=C3=A1rbara_Schultz?= <profbarbara.daniele@gmail.com>
+Date: Wed, 31 Jan 2024 13:53:17 -0300
+Message-ID: <CAGwv7uxDUwQOzoysR7-EOvQDqNqA0YC9vqd6WL8LDOoCkeqEMQ@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="000000000000a1e7de0610409fe7"
+
+--000000000000a1e7de0610409fe7
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Boa tarde! Eu j=C3=A1 entreguei todos os livros, por=C3=A9m n=C3=A3o conseg=
+ui realizar o
+pagamento. Como eu fa=C3=A7o para realiz=C3=A1-lo?
+
+Em qua., 31 de jan. de 2024 13:21, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: 000002021100736 - BARBARA DANIELE SCHULTZ
+>
+> Valor Total de Debito: $ 72.00
+> Valor Total do Desconto: $ 0.00
+> Valor Total a Pagar: $ 72.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+--000000000000a1e7de0610409fe7
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Boa tarde! Eu j=C3=A1 entreguei todos os livros, por=C3=
+=A9m n=C3=A3o consegui realizar o pagamento. Como eu fa=C3=A7o para realiz=
+=C3=A1-lo?</div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gm=
+ail_attr">Em qua., 31 de jan. de 2024 13:21, <a href=3D"mailto:biblioteca@i=
+fc.edu.br">biblioteca@ifc.edu.br</a> &lt;<a href=3D"mailto:noreplay.bibliot=
+eca.camboriu@ifc.edu.br">noreplay.biblioteca.camboriu@ifc.edu.br</a>&gt; es=
+creveu:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8=
+ex;border-left:1px #ccc solid;padding-left:1ex">=20
+<br>Usu=C3=A1rio: 000002021100736 - BARBARA DANIELE SCHULTZ                =
+                                                            =20
+<br> <br>
+Valor Total de Debito: $ 72.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 72.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div>
+
+--000000000000a1e7de0610409fe7--

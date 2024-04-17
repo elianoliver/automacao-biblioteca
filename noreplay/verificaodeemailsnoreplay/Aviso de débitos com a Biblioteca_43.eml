@@ -1,0 +1,189 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp3007207rbb;
+        Wed, 31 Jan 2024 12:37:13 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHDmPDveMtv4RoUToas+Bst42EM9d/B0i7oHyB0LmMnbNE0V46FFqA/rYyg7idkIE2YVD4T
+X-Received: by 2002:a17:90a:f0d7:b0:296:3a2:3054 with SMTP id fa23-20020a17090af0d700b0029603a23054mr1348233pjb.17.1706733433370;
+        Wed, 31 Jan 2024 12:37:13 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1706733433; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=R/wfe+/l6zytlLO5zYBYw5ry8vpRnvgKCQrjRtif6p6UJqA63H7mSEUpVERcl8EUx6
+         azC08soZDB7M4xB0fPJS8qkTSLVYwOlGYgEcMAvFQhVhPYdKJE0FcdN5c09E3v0nCk37
+         r8nHJRsQcKiIMsIWCsewztYSk9m8pL5kE45wEk9lKU8ofCGqFTQe7+c3SZizmyuCqt85
+         ffDAU3Wmrz76T778K04FrR0LH0aEmRQMSC7mEFxM0ZSy1RGAwqEse9NXZYYS6O+rS81+
+         kpVH1qhibV9XLYlZHKdWiO0qzV5B/gm4KvXt91h//g6ZHFjyiHHaWLWZZLXmhQm6OdN6
+         gB1Q==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:in-reply-to
+         :references:message-id:date:thread-index:thread-topic:subject:to
+         :from:dkim-signature;
+        bh=90jEtQ27SElGG7BRTheVOt/W3ACPQw7ZxPC7wgQN2ZM=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=n22jkc7+1zBxYZeNdE6uMwN/j7Wg7Jbip4ww4qTXYYSi3pyhGG9wg541USLVF3LSF7
+         /GfwBQqB/GcKaeusehlMOeRzRyfH1jFv2nEbgncht8XoqCVTSlbnw75CJDaov5+H+unK
+         8x26wB7AMNmZsaJ9H3cO2Kyjk2tUntx3GjiCR8Y+6t/emZEDOi5ZAODRJkAzn066BYHE
+         8IGTLm+qJ31RZnzMfMlerKlm3yW9/aQ4w+5QAXLNl4lZwvnz4HcawoCWIB93P/E8qykW
+         tJCjXFtWAK9ie7iLmcmTQrR+TOPu5LeRVqDinKn0EwpO6eyZ+Ep/JIvppkItlBVQ9CGA
+         sxLw==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@outlook.com header.s=selector1 header.b=i3WdbSYk;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of francielicampos.fran@outlook.com designates 2a01:111:f403:2804::801 as permitted sender) smtp.mailfrom=francielicampos.fran@outlook.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=outlook.com
+Return-Path: <francielicampos.fran@outlook.com>
+Received: from NAM10-BN7-obe.outbound.protection.outlook.com (mail-bn7nam10olkn20801.outbound.protection.outlook.com. [2a01:111:f403:2804::801])
+        by mx.google.com with ESMTPS id z1-20020a17090acb0100b002935f38dcf1si1074782pjt.181.2024.01.31.12.37.13
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 31 Jan 2024 12:37:13 -0800 (PST)
+Received-SPF: pass (google.com: domain of francielicampos.fran@outlook.com designates 2a01:111:f403:2804::801 as permitted sender) client-ip=2a01:111:f403:2804::801;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@outlook.com header.s=selector1 header.b=i3WdbSYk;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of francielicampos.fran@outlook.com designates 2a01:111:f403:2804::801 as permitted sender) smtp.mailfrom=francielicampos.fran@outlook.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=outlook.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=fOi7qmyAcKtcls+aaT48UuYNFQqSMNlc2GlhS7Wd9toBLQskNxjq2WsoTDbwrUvYtCJZP2t8gz/jOF7UsZDWxFAIgpUB2TqiGlwXLGPcWE6pObUNeuyBP2/p31/xTO+rpOrbliI9lUPyiRkKMWvt13UQz+PNegvdfq0x8BmGIglCARg4LLQQ7LFbQhovNZlZdqcoHdAPGRAKINMUtWiOjw2NPsfp9dCq2pqZ+iL3FX6xQPkQbAezViSVkcPsUUoCvWAiCSrfXsJYxBBBhCnjesaVM9iEElGVvVymZQpaDxSgrN8JoweUzDpCgotx5aHytUJZfjqwWCDr8KGwp1/N6A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=90jEtQ27SElGG7BRTheVOt/W3ACPQw7ZxPC7wgQN2ZM=;
+ b=Y3brCAS2vXgoBbTKn7l05U3JHh41n3rDvMjkB8yVqotYuL9aPHxPM8gdQRtWuR7q+YGua5lPItgOrTHRYf/+xIBbu2sFNEQOA6/U5SRt5PzJWl6zcZdEC5jGCLVff1ctHzBS0NK8f/EAcSGFiuQk497xQJl49OStR7oLAspgS4+lYk4amdzozDlBIiXllfMZeJZNM5liGHyP5/pcLkS+ndjNpGA22AxMIuPTEs02oxzN30xSXMyV7Zn1EqiC+Ek+P2PR570cdo7n6i6uub68lAEtoTTofock1XyUESPGIfyM/mglRrXYEHifpSNJ8n9/twVJW4lYZNH1r9ZonTknQQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=outlook.com;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=90jEtQ27SElGG7BRTheVOt/W3ACPQw7ZxPC7wgQN2ZM=;
+ b=i3WdbSYkmYWwdj1pH75SzLwzBHXRD9UkgIBccAX+Qh30U6I734gMFf7mX7nCm1jfViqA45tydGMt1qrmMGlDIjd8C7tLAu/BjP0nGsNvfsha9iuUd9azvt9uEAouvHq/lmm0Stj+t2DdzEJpbf1TABqTc9ejFVdICe5Qr2IVnnPNFBruaZDDRaxrNW/vlqaFmS2ClUYZDlkl3/QY/EO66jNrdBmyDmghZhQiIPglDAk740aSCyRjo0mdwjSE7Kov48bdTaYu92xn45BQ/8Ipcbt1wgc6BrIr/rrtk6nBCcnu0c/DdnavtI5Su1oT5SSZ/3sfK7anykToC5mNWTdBlw==
+Received: from PH7PR20MB6620.namprd20.prod.outlook.com (2603:10b6:510:26b::10)
+ by MW4PR20MB4456.namprd20.prod.outlook.com (2603:10b6:303:18d::15) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7249.22; Wed, 31 Jan
+ 2024 20:37:11 +0000
+Received: from PH7PR20MB6620.namprd20.prod.outlook.com
+ ([fe80::f917:69da:e536:8f7d]) by PH7PR20MB6620.namprd20.prod.outlook.com
+ ([fe80::f917:69da:e536:8f7d%4]) with mapi id 15.20.7249.024; Wed, 31 Jan 2024
+ 20:37:11 +0000
+From: Francieli Campos <francielicampos.fran@outlook.com>
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Subject: =?iso-8859-1?Q?Re:_Aviso_de_d=E9bitos_com_a_Biblioteca?=
+Thread-Topic: =?iso-8859-1?Q?Aviso_de_d=E9bitos_com_a_Biblioteca?=
+Thread-Index: AQHaVINbnh6ZAQ1E8E+ut/lPVL0iA7D0YXtD
+Date: Wed, 31 Jan 2024 20:37:10 +0000
+Message-ID:
+ <PH7PR20MB66202F7FD3DD1F671A2BCA389B7C2@PH7PR20MB6620.namprd20.prod.outlook.com>
+References: <dE7McrOKENFtNMJXftMHC2ObEfPMJR4oyrh5sptpWs@localhost>
+In-Reply-To: <dE7McrOKENFtNMJXftMHC2ObEfPMJR4oyrh5sptpWs@localhost>
+Accept-Language: pt-BR, en-US
+Content-Language: pt-BR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-tmn: [Vv172vKzSsT6nRRndTMj2Aktta1f+IPV]
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: PH7PR20MB6620:EE_|MW4PR20MB4456:EE_
+x-ms-office365-filtering-correlation-id: 7c101395-1dac-4d7c-dc69-08dc229c6682
+x-ms-exchange-slblob-mailprops:
+ bJx5BVzHBHuQMzsGptsXa6J9hHexAEaBJLcQs4XM46GcVdkF2pvmQOMthzMIwhU9QCgMWa2TPu/FJeVOHAdqmfBo7wLBFBz87qwZHKqohTtUwSvS/sDfhJgG7JORPyfwulh4+gv58CIIHUhsxh3uHsXDK1kfqumozZbEjAbrArsZgWa8Pl4RRyw/TC9FAV5/PE20QIXHwztK76B8MAPltO3l/EEvctg7lshVsY7hzSKT2Q01nfM385qzUasvDeHuW97oqYkH/msvQNLXmpvA6B5DUH7b46HOUp4PGehN+7vH9b1imTwPekeBmEOVhgbIu+aBWR+eX8Zp1sx1q8LFVzAJSws0p4kIRrNV88uCfpsNW0fs8lwGo2tFkWeoVy76zE/Mzl/XsMnj57RYZdvU+/trEL0ojPws0vb/ClldGLUY2KN9xgy0EsoHIWr1dIboHuyuRvfbvJMYSSYsrLmTqUiwVO42OtWKK+8n6LH8Xvq6zgt75lsj5Nwchd9z3nunYslCjkemkoTQRveQ8vroM8nicq9LVxCOHs+2BtDYfYiPAN2Ma6MoY7SvWOXK7q/Tpyc3vjSNJGzFFzh5wcfFeJwzELxEbtZexMarqxe1Isg26Rq+SV9XlTehQTb9RA6+QCivLraRZrnsSGOzG2nrlZRHb0wvJvPh
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ viBZ4jtzrVblkh7/Mu8lq2Ua0AEvZpXhLpjZtqey1K2KAQA7unBGuntcmjpKWAYmd86HFEwiegyIo0opuNMXE2maRhZxUI2JHLOYz4kIp5sbk3R9nnnllXXuzVfVaroKIrMm0OcFlThAxGzRA1Tq6ivujSk2a1gj73GZ/+iDDX4RGy9dU4IeHcqsbwbOpyt35dulz5LSK2CalL6agSJljgjjmbSLxtAR4RRnq0A/frJIzHeeNq1qb+Af78wH721MJedwG7VAriSojVfXAylkLZ+2YIffDQg17TqogYbg3IWDouyKBRR8A1iaBkcK7MwiXev8bOzVv8atZEt3x/ot7KOssEDtZBFmh0Jcko/q0/QXhcLIIPCXfP9buJetsfvsw3UuHbfHEUQdGSPuHLKMqf8RkieAzndbEvjwax/i2P0ULsPO+UKGGTZq4YwN8Jzc8YaPVTVVW9t9WDhCffsGN4RoBoBfaugCcxjGnSDTiL3QEVY+xNO4efr6WqgXIFXP3y6sRIR3HDDTmdWy8Qa8L22mx+Cj5YE9meBlwJnqvMW/NQjxneMFwGQooUBsg7nAKxUSGPs+poBnafzSBdOS+X0uDNQBcfxsugwwxKpjvjJHq48A9aW/D06kJ17Y0JHb
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?iso-8859-1?Q?2dJRxTHOPa0gfRW5KuCiHw5MlwyMRDceUx9u681IIJUNh/DkvhJ8GhXRk7?=
+ =?iso-8859-1?Q?PpK2e+uUgeJyGK00vlDciOc2dOwrToqVlZUlkfQwZ0C9nK+BpyZUikY6Og?=
+ =?iso-8859-1?Q?PzpqYJB2ECrk88ldBSprKT/9lLEVQEgT5ODu2Q2I88pTEf9VNIh9l6v3eH?=
+ =?iso-8859-1?Q?k+ZtLcInPYwnoQ9x3eo3gDOa/Cz1Z6zzYoWvKZTpssOXiqI4UkJwE0TXee?=
+ =?iso-8859-1?Q?VuAvUdX2X6vdTeLIyJ8Es2Q3y8nmSMf8ZF99LIBYCqjyBJmOpmi0Fz2Lac?=
+ =?iso-8859-1?Q?syNGdRI59uiKhgRHyW0bFoLxSnpZUmrIwrUn4MljFUp6E9zLpwHwH6aifQ?=
+ =?iso-8859-1?Q?Udl5/ISPh5fib2KO/h+ZEdEuGjeVrEROpOfBmMVqFZ3mP77ccyLCtg4ccp?=
+ =?iso-8859-1?Q?5g0A7/k35gq23WiYiI+Le9B2mAL1w/94ezzrqIXaOl5Fg2LJm87jf00Pvw?=
+ =?iso-8859-1?Q?XbCOKtaQImPBIhIRfsGnKSQbqJnbV2ZcMmS+5lm08vZEHLtH/phiX9kGiB?=
+ =?iso-8859-1?Q?gUfQJEcwtmANiZkphKhFeJWRb/mFsvUITu/kyY0Ez4atxKGjyuUcR6jIna?=
+ =?iso-8859-1?Q?KQz5aYY4aLSxb6S1cV06odYPPh2UaT6utwHWrZNuxH++tiSR1JrjaNSk8y?=
+ =?iso-8859-1?Q?EZWk2Syt6/5K5rT3UzIddWklqAuzqnlaF3G9evikxT0uaekBdxZzVBWpZL?=
+ =?iso-8859-1?Q?E6qnkFQv172v2d3gej8ejdwbxe1ObJ0hGUiAxinC5/UsosBd+sgpUdyRd1?=
+ =?iso-8859-1?Q?Fh+mdbjcsr4Ad51BZviaJOPzgFuvdu/J/Nh6iLniQRMWdx8tHHVFrEQT2B?=
+ =?iso-8859-1?Q?VBq1NQuJzkjpSzLCw4h2HmzbysohIiucwTr0gSUGdiruSIkcJ8ZpUSVkJp?=
+ =?iso-8859-1?Q?O8qRcTJJDR4gSoDdI+euUPsuP7BKdiaf4CriB2a3mn3+BmS0d13PZ4TITV?=
+ =?iso-8859-1?Q?zkea0Pg7dor7i/7vIkBVgsZxpqEWFjnMv9pj7KWqBNiXZsDySRc0KOZh1t?=
+ =?iso-8859-1?Q?+iaR8nag5EPANQRHKTVwT/mZ9ipoa3koMtYDZVZVRqay1Q35IFrYSFLIVM?=
+ =?iso-8859-1?Q?vE07cP++gZU/ne1L2HFrH2J+kqZPA6RJpEC25LPLPEDpsvc55qZphNYo8y?=
+ =?iso-8859-1?Q?O0jNDUzTEGy1PsTV3+J64hCxwa+pICVuWWKhI/NDSi0AUfUZpbcj3LUgZr?=
+ =?iso-8859-1?Q?M2e+pZq42aR5Ycg7ezTwDYDiR2y/LPorKIH2ZhuO5WBj39xX+NuCyyomO5?=
+ =?iso-8859-1?Q?JawADjSQJdu6J99yKxvT5oZp2J0HsudFArJPCcllDZyPQplCKpi0OrR0Ss?=
+ =?iso-8859-1?Q?DT7G?=
+Content-Type: multipart/alternative;
+	boundary="_000_PH7PR20MB66202F7FD3DD1F671A2BCA389B7C2PH7PR20MB6620namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: PH7PR20MB6620.namprd20.prod.outlook.com
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: 7c101395-1dac-4d7c-dc69-08dc229c6682
+X-MS-Exchange-CrossTenant-originalarrivaltime: 31 Jan 2024 20:37:10.9270
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MW4PR20MB4456
+
+--_000_PH7PR20MB66202F7FD3DD1F671A2BCA389B7C2PH7PR20MB6620namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+N=E3o sei do que se trata.
+
+Obter o Outlook para Android<https://aka.ms/ghei36>
+________________________________
+From: biblioteca@ifc.edu.br <noreplay.biblioteca.camboriu@ifc.edu.br>
+Sent: Wednesday, January 31, 2024 5:23:26 PM
+To: francielicampos.fran@outlook.com <francielicampos.fran@outlook.com>
+Subject: Aviso de d=E9bitos com a Biblioteca
+
+
+Usu=E1rio: 000001213010134 - FRANCIELI CAMPOS DA SILVA
+
+Valor Total de Debito: $ 12.00
+Valor Total do Desconto: $ 0.00
+Valor Total a Pagar: $ 12.00
+Este material est=E1 pendente, por favor verifique a data de devolu=E7=E3o.
+
+--_000_PH7PR20MB66202F7FD3DD1F671A2BCA389B7C2PH7PR20MB6620namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+</head>
+<body>
+N=E3o sei do que se trata.
+<div><br>
+</div>
+<div id=3D"ms-outlook-mobile-signature" dir=3D"auto">Obter o <a href=3D"htt=
+ps://aka.ms/ghei36">
+Outlook para Android</a></div>
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>From:</b> biblioteca@ifc.edu.br=
+ &lt;noreplay.biblioteca.camboriu@ifc.edu.br&gt;<br>
+<b>Sent:</b> Wednesday, January 31, 2024 5:23:26 PM<br>
+<b>To:</b> francielicampos.fran@outlook.com &lt;francielicampos.fran@outloo=
+k.com&gt;<br>
+<b>Subject:</b> Aviso de d=E9bitos com a Biblioteca</font>
+<div>&nbsp;</div>
+</div>
+<div><br>
+Usu=E1rio: 000001213010134 - FRANCIELI CAMPOS DA SILVA <br>
+<br>
+Valor Total de Debito: $ 12.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 12.00 <br>
+Este material est=E1 pendente, por favor verifique a data de devolu=E7=E3o.=
+ </div>
+</body>
+</html>
+
+--_000_PH7PR20MB66202F7FD3DD1F671A2BCA389B7C2PH7PR20MB6620namp_--

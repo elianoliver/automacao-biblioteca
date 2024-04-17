@@ -1,0 +1,148 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:1583:b0:7c:89f8:37c6 with SMTP id bv3csp336610rbb;
+        Thu, 1 Feb 2024 07:14:37 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEcXitblZHx+fTuyCIQlkHt8JJxEr+xOU9PqGeB+j5//XLG5x/n/JPDZQwIVxKRs4n7IYXd
+X-Received: by 2002:a05:6830:119:b0:6e1:29f3:6fb6 with SMTP id i25-20020a056830011900b006e129f36fb6mr5417832otp.28.1706800477410;
+        Thu, 01 Feb 2024 07:14:37 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706800477; cv=none;
+        d=google.com; s=arc-20160816;
+        b=a+BA+iZz2XAZ4hwDzDaO7/iCbM6k+4OyQs8Hxi/bzee/UAsRAZqS05aUaoIY7upQr0
+         2f/Y9YeQJbzY776Th5Rp6P9xsevqB2ipLMjIB4wSRixERM9Bc0CcvVVPXMLNfbnANh5a
+         bagsocz/557ArbaWeZwia9/Z0rL53zaAOXYJW7Vls0pdK+zDk960sK3DFY71jgF8++7p
+         9zgCWd9QgUIKHCoHKcJhC5OAHdVrFmj7eIiIEi8yTsrAqjRl1iXq49phJMf3c/iALzbs
+         hKCJIGc7gq5j4kUv2apNq/k8s4PjMltKnpXad3Uo1SepJ1bcBFnI9AjR9y5qj6uWwn0Y
+         Xfww==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:references:in-reply-to:message-id:to:from:date
+         :dkim-signature;
+        bh=vpA3jnEL0N0IfWsUVHdL6XRa2BWFjmuJhlsi3UupCgY=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=wXNpYOIEol4ZBx9qFyTC1zRn8+DMxeZxd+IW8u8q1qAokDwbPvU3SqNXGHF6mtGqnP
+         6LkL5tRS3Uyv5XtGtXDtQ1SFawXVGGQI+kjs/lTFmVdu8oHIXq01dgLVlnDN3OAQbpYs
+         7+TvUl3dZk5LPq+ZLcTTbBaWIDeQ/SquwuGG0I6JFjr/rIrzVYwG/05JNhTU8CGBv4dT
+         Ez599+aT5RfDgxQzt2bauLLUbnwIkE+kuf1BVi2Y8v9FkCwzm5yb+bVPT0g0L5rG0fYl
+         /ca1G8+GJHeRIBI+Sl2MegOqYq2SStGKZrk/LJxcijJ6OlSHBEWGgQSfawBeVEqzdSra
+         qpzA==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yahoo.com.br header.s=s2048 header.b=R3A1G6hS;
+       spf=pass (google.com: domain of lenildoal@yahoo.com.br designates 66.163.189.31 as permitted sender) smtp.mailfrom=lenildoal@yahoo.com.br;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com.br
+Return-Path: <lenildoal@yahoo.com.br>
+Received: from sonic322-56.consmr.mail.ne1.yahoo.com (sonic322-56.consmr.mail.ne1.yahoo.com. [66.163.189.31])
+        by mx.google.com with ESMTPS id c10-20020ab07a6a000000b007d5afc3d835si1445166uat.12.2024.02.01.07.14.37
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 01 Feb 2024 07:14:37 -0800 (PST)
+Received-SPF: pass (google.com: domain of lenildoal@yahoo.com.br designates 66.163.189.31 as permitted sender) client-ip=66.163.189.31;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yahoo.com.br header.s=s2048 header.b=R3A1G6hS;
+       spf=pass (google.com: domain of lenildoal@yahoo.com.br designates 66.163.189.31 as permitted sender) smtp.mailfrom=lenildoal@yahoo.com.br;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com.br
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com.br; s=s2048; t=1706800475; bh=vpA3jnEL0N0IfWsUVHdL6XRa2BWFjmuJhlsi3UupCgY=; h=Date:From:To:In-Reply-To:References:Subject:From:Subject:Reply-To; b=R3A1G6hSDpV7NDRpnKqbi+rCeQCCDMv9ZVFU9ganH2kcvf9pQdduK2h3iXy0pNu/ahThnrbMyQr9AhtuDz1Yz89/8R3OdAakeiCnK774R7By38zti6SFPIRBUhqCIHh0pLu5plfgp2DTROv4fEQxy1XCsX0q2MqXRGd+YY0x03G1P2uFI+u4lx84rX+RA99tXhbef1zFHg4kQt4zV1ZD16JI1ohfeCp7K70M1OOzWYKysSlCHrV8R3ghLe4W6oL1qAlAeqPDm9YroxeosUEL+kXuWF4GE6n1k6LAypG6n4AtTPqQQVr2N9AwW/L85YOxEn1H+OQS2Np3ZFJ6ZxEuIA==
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1706800475; bh=hU/oABZZWNphuG8h6A3KUW6YXp3D3a2P/r6A4a/0R3I=; h=X-Sonic-MF:Date:From:To:Subject:From:Subject; b=R3uzubbCMlBWkxK4/eQKkTH6aWRUoXtHC9m3Trilci8rcQGbbc6kup1n2GFI6sj2MDWQ/79/6XNq18WBYp19WzAE/rom23azMzi2ZAZC/r5yccJ+6GbdcJTGS2+UmhS+xEGhu2GynH6P5QSkQV4tApqw+rYXd0US7nKTOBoltvbWskH3sHJHv6t7Qc3VsMIQT0EAyhTxGLG/wMit1gvSHBbXGpEcUjmRjjKFlj7/BisHTs9KBBQV7ppUQazvFQcw7gQKLRXYdt/zkLpiuIBM4P4dBcsDFszcqliyvxQ5pyhCFlBdGT7x5FEs/vNm7Uey1R1hlNjxEltNEd7Svsn9Pg==
+X-YMail-OSG: afleIQAVM1noROjcnqd9siZEZ6TSdNsmtdwAu1di_XYw_Efbzcn90ZKBeNMczb1
+ 8RBAVom0qzXAF7YwrVuU34DjuN0cP_m30iePfRbW_YKnVqX4csmQ.M4JRUuK9qeoejQI_lgUe0yw
+ 1K_iz0GPO3Uvy1ke.7JXK7oWz46t8b9CTa2tRMy4K6Uc47fCJ4oORPvJYYEhwzs3zrpevYyYSg0.
+ jdkIYexIwnDvvU570jo.kySbk4UpV_tJ3n.uqjd18wdXnh.zW1EyS5JdYoB1A4pSn.p.lIV_gdRu
+ dJHhGsDM56phW6baaNxbIQju86Y45l6qpiU8m.IJ6NgdF7qbEHpIZE6Xyx7TmHoVS8qdAWMq4PXr
+ XACmzy03V.MDz1cK7kYlYgl84xNZUzWdkkbavDNQC6REGL0MCZklhaE0Uu08rYiilQzoq0kahJ1_
+ mNX7yDEbYn3MDRE4CYe4opRfVnwIsYtFVQQcnXXQcwmZKCdHUm7aszNC6AO5HA6vzekuj72rcvpx
+ duxW_DYGP.ad3BFBqqdKKzbOxJmY7Q0ZM7leLGbnl7IBUWBhi8MPR5CvUjH_o4Ay7L9bBvF_DJ9y
+ pG0DGKXmxTGQNpmhei3X8s0Z.UZ_ENFyqMaYGjZcF2R2l6.K7WD3mt_nhRozGx.YvBxtdTGktLJ7
+ e0FbgQy41mElcy5Eb2WTfwAy4TcvWh_AJIUcHnrMhuXch5Y91LuV9BvumvvMEeGcWPjt4za1dzES
+ mz8b7Tm8bFZzIQUjb0zsPCSUgUH3xwKLWjx_.f_ALwHkPK1Xm3AYEt0rtPYGGZWq28NF5OuiLnnc
+ 2vFkgbp5DY14qcRB4HSmu2xpe2.59FyFobZuKdtTLoAmbv7uWA_R_Tv771HhnE48eQSqrXM_J7kM
+ 2g5BLiOtRTa.RBzqdgblsOGW3j0d7P4WkzgjzR.sLIUnlN_gKAcRszBTZTID3OAVn.VAPmWeVdlH
+ rKq84sUp2B7auS2FIpz6kGxr1SzKHbpO9FWXCxGWPGDX4.V8epuudSUiDpJ7vAKBolDEp5fTvJA9
+ cdZsLv.pwAFiEQ7.p2llXhf0CAbU.9MkKHh4_x2WXgE_SsL8hwmG4kdjD_YLl73Y8Xwaf8TJpMaq
+ MWQzs.hQkdT_WwH4yj4.L0q.COZwFU2m9wlrpeam9xlXx2FWzb8vJgAbU5cAq5ps9Zm8RFsD5vJe
+ emGJP3Iwjj_TkaEm5So.8gRzPR4J.H3KiShfGjMo9G7FkChPKzIIv7s8BhqzMSiXE8owDxJLer.2
+ bCYqAn7eTF7f6Wx9EQQWuaMjlzLBEqWZZoBT1yL05x8vJph7eI32ZIay4LwbnXr4ycZ4l2QvUh.c
+ T_7fyWE0rzR8n_GcQFv2Kst_22sbXtVJ6DWeCJKkqorDky14JpwnyTvhvMkWailKS63d_qErNmXT
+ yBhxKHsYm1_kyGYGsKyj0.Mf86p0crXJP4mkp9woif.qGK9A_adyW6wtAws2.yuDiLpkFK40tXIK
+ SwANgTQ0.HRdPzw9aasuXtt.GCSfNszeTeT7DXbdpdG_BUMHDIYyqguHZ6dvluXs4_ZP394BUEkt
+ jjLmum6N1KqbUQ0.iMiGH8gEPrSxz6c8vagiQfr4Gr5qNzDQX4P4.URa5lGTFgMw1rvV2v10kTQp
+ 3Mzfzrz92fC6MjRfXRRDUVOK_DRY5KjTLEviO25dUkHOjYx58DxMXY_g56WVYWp7U_g6dyZRgbo1
+ ePOhBwy.HultnXQB2rh_pPdvab8JsHhxfHEbaClm8L0atKRMfGs0CsOHQpM3cPO6J_PU6VyrQzTi
+ hCThoIKSVP_cW6pXdRTeyifbF4h7HSuE3NAP81T2hfbXU33R0S7owb14uf_qvz46Fzm5yNURuF5e
+ K_tfjxgeyrj.5b6Y9gwMCioLfadhU7Rwnk_RXhx.1KY6XNiYn7kMsXBF.wutBd1fjEk_ETk_9.Xc
+ 26Pxv69tAnKAcHfd.S2JYZPNaLFJksJlz06V72WexTJHqloRxvAZAIiS__Ji17s25i1tl8cfwTjg
+ CyKuwIMUCjYW21OxHGt0lLQ8Q7Qbt_W0SsGqdrDfqOjNKI5fXPge7LuRy3Kh9Fbtp6hwremGMjUu
+ 5PJjA6MTC8aawQ4W4eUuz3pdkc0i8zZyzfXLmBaikMNtBX.IeY5U1KtpfeYy8Vj5tDKqEQTh72G7
+ LMC9ZiKscP5Gg85gOLFj0m3UrZj12q6I8tBOuJUPqRAZrMhsA3lFwqiFjl9ikfQe79R9vRy4cfFd
+ 3u5f6dFxRqQRDlZvfRb3Mp8lAOtNKQIgP_uZfMZIHGmJw6ff2dFT2bNI-
+X-Sonic-MF: <lenildoal@yahoo.com.br>
+X-Sonic-ID: 4d63a258-dbe1-4e12-953c-7c5c61fce74b
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic322.consmr.mail.ne1.yahoo.com with HTTP; Thu, 1 Feb 2024 15:14:35 +0000
+Date: Thu, 1 Feb 2024 15:14:31 +0000 (UTC)
+From: Lenildo Almeida <lenildoal@yahoo.com.br>
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Message-ID: <406393595.3974079.1706800471077@mail.yahoo.com>
+In-Reply-To: <oPPPg8Id2L0c5SCJOSsCu2UqmrIv59EkVjh9wsU@localhost>
+References: <oPPPg8Id2L0c5SCJOSsCu2UqmrIv59EkVjh9wsU@localhost>
+Subject: =?UTF-8?Q?Re:_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_3974078_1781517418.1706800471076"
+X-Mailer: WebService/1.1.22046 YMailNorrin
+Content-Length: 2290
+
+------=_Part_3974078_1781517418.1706800471076
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+=20
+Bom diaN=C3=A3o tenho material do ifcPor favor verifiquemFico no aguardoCor=
+dialmenteL    Em quinta-feira, 1 de fevereiro de 2024 =C3=A0s 02:48:54 BRT,=
+ biblioteca@ifc.edu.br <noreplay.biblioteca.camboriu@ifc.edu.br> escreveu: =
+=20
+=20
+ =20
+Usu=C3=A1rio: 000000099924561 - Lenildo Gomes de Almeida - Docente de Geogr=
+afia
+=20
+Valor Total de Debito: $ 1219.00
+Valor Total do Desconto: $ 1191.00
+Valor Total a Pagar: $ 28.00
+Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o. =20
+------=_Part_3974078_1781517418.1706800471076
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head></head><body><div class=3D"ydp7efc0d18yahoo-style-wrap" style=
+=3D"font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:13px=
+;"><div></div>
+        <div><br></div><div dir=3D"ltr" data-setdir=3D"false">Bom dia</div>=
+<div dir=3D"ltr" data-setdir=3D"false">N=C3=A3o tenho material do ifc</div>=
+<div dir=3D"ltr" data-setdir=3D"false">Por favor verifiquem</div><div dir=
+=3D"ltr" data-setdir=3D"false">Fico no aguardo</div><div dir=3D"ltr" data-s=
+etdir=3D"false">Cordialmente</div><div dir=3D"ltr" data-setdir=3D"false">L<=
+/div>
+       =20
+        </div><div id=3D"yahoo_quoted_7771498786" class=3D"yahoo_quoted">
+            <div style=3D"font-family:'Helvetica Neue', Helvetica, Arial, s=
+ans-serif;font-size:13px;color:#26282a;">
+               =20
+                <div>
+                    Em quinta-feira, 1 de fevereiro de 2024 =C3=A0s 02:48:5=
+4 BRT, biblioteca@ifc.edu.br &lt;noreplay.biblioteca.camboriu@ifc.edu.br&gt=
+; escreveu:
+                </div>
+                <div><br></div>
+                <div><br></div>
+                <div><div id=3D"yiv3563824385">=20
+<br>Usu=C3=A1rio: 000000099924561 - Lenildo Gomes de Almeida - Docente de G=
+eografia
+<br> <br>
+Valor Total de Debito: $ 1219.00<br>
+Valor Total do Desconto: $ 1191.00<br>
+Valor Total a Pagar: $ 28.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</div></div>
+            </div>
+        </div></body></html>
+------=_Part_3974078_1781517418.1706800471076--

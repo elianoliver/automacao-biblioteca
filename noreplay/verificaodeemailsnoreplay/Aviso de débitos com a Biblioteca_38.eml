@@ -1,0 +1,137 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp3024669rbb;
+        Wed, 31 Jan 2024 13:14:50 -0800 (PST)
+X-Received: by 2002:a05:6512:48d8:b0:510:1a04:1e64 with SMTP id er24-20020a05651248d800b005101a041e64mr502559lfb.25.1706735690420;
+        Wed, 31 Jan 2024 13:14:50 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706735690; cv=none;
+        d=google.com; s=arc-20160816;
+        b=0nVRMCj9KazWz/X+DICG5tp51STpnrb6h34d6cJfpUUI7Xzmouno2rlDrHWaT8scRE
+         8nTZnVEkskwb6oPxgdx0OLymC/7BV+s8EXQFLtVRbV4j7n/lguy0ztldEIJtFEch16GG
+         KijsHHbyAFDe6hBJU+khQflEn27Wb3HZtdYS1Eo5JcvyQs9jViMibGMhzVTR7b0zwhqL
+         5rScADXdjeDQGSV6RyIxyi6A6f12Q+zOOheLpnfc3iuzgPCipcu6d+FqSM2Zbruldskt
+         3Kn/XcvzmymJ71TakxbMISLH331YETS5sIfyBj4ZMJjGeafp715w/7AWtSwSZuatII/C
+         p5eA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=M7uTuX1YepVrMa8Dbxrs/7WqwP3j7MXkqh5TUgf7QPE=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=kmF6eJIni1B+KQVDZZYjosYO4myYJKoBO+proELezq300alUsFqZoyffVwPKS+cwpZ
+         6aA67gKiIKTnOV6zTmr3LGnMsKtYKblS+jFig5CRMeckDacXf40/qVrLBkh9Cgt0W7Dz
+         LdsxxE2iq55sPZbpu8iLLsD4GlwnIaQnGQCN6JnQzO959ODI4c+uA3Czz7emibLRqaOE
+         xOOo4pKAhGx6xTB6lkXBJqB+AuwUNS4zY/11n8I1+9z2HiD84tzsIcaXWHJRM42BWai4
+         Fg3dTnb92wIlunA6NElBzlXOdMN5oN7iD+HOFNESsGXuYLPI+IzlHHVeZYBr1uOWsMVI
+         V4Ag==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=KnXogaDS;
+       spf=pass (google.com: domain of miihcardoso2000@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=miihcardoso2000@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <miihcardoso2000@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id g13-20020a19e04d000000b0051008941ac0sor3345425lfj.8.2024.01.31.13.14.50
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 13:14:50 -0800 (PST)
+Received-SPF: pass (google.com: domain of miihcardoso2000@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=KnXogaDS;
+       spf=pass (google.com: domain of miihcardoso2000@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=miihcardoso2000@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706735690; x=1707340490; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=M7uTuX1YepVrMa8Dbxrs/7WqwP3j7MXkqh5TUgf7QPE=;
+        b=KnXogaDSayvohYObng8Ezq+jOkqVHeYr3+FK4wsQtCC7Ibe0A6VegiOYHVC0lAEMap
+         KG/8hO1pAwmJwNwWzRJRK4Lrt/GefKKtHOG89hYFRysEjUVBI7GPWmowD+zFQdiHSMo2
+         PCbfVJ77/tetSS9ddMXfZ2IA+07Od4+4oBJzqnXgVwxEzV2r0t6AnYgRB2I3sdJ0HFM+
+         gyPRI8fOCizT/DvxuMpiE73GEwlN9asb0DyjxpotqHlFA4++4hmLg5gBCutDvqcPNUsk
+         u7C+Ij6sL5SerQzvvPegocUcmf4isw+eOFTn7XOGI3EhxChIjCkcjXXu1fYdzTZ5SIYa
+         +dMw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706735690; x=1707340490;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=M7uTuX1YepVrMa8Dbxrs/7WqwP3j7MXkqh5TUgf7QPE=;
+        b=bGZY8zUYXlxK/LIz8wjRQoIIYTrodse21zknNs+XFRleX5vm+ixUNXm/XJC2LEqH1U
+         GxEuvl4RQa7b8+28HZCOQBnqxVJfkV3jDjkRaBbmHeVRy6aAVLzk199rIxlh9wmg5eIx
+         dE0717vyH0y5M6i8e2bq/Za2of6VyHdEqMqwuqAgHyOc4WHXTHo7vKYbiBO33JL6ynzr
+         6dOiQUjQVBncD9hifgAew6KtDpMI/ciOBzPd5Q+lDGgVPXQ0J0j6b642cbpqSciTmrix
+         VxRHa152BLs5WRL57K85K8T5FMpA5FJBDcUx1F8cFVue6Czxbe6Xqwqi84JSPu5hpi5e
+         JRsA==
+X-Gm-Message-State: AOJu0YzgNvY/IPFIJgdr+HDOx6SQJuaE/s8bwevUxxGIWAvjz9WveV48
+	W/X/Rcmug9KG+HY7IATTsC6+LYVP5Hq0v/xg1WpSgPv8Tg7YLtcIXCIeQIcYR0QIugLlr1H/WCM
+	cD6RMCy1ou1HLRgjaf0cb58CgrxEHzklI3UU=
+X-Google-Smtp-Source: AGHT+IHbcKHkVt+XIQOCGYUrHrTekJkKrC8XOXbkSX3rdhZdLTul+mDsI3jVwzsDbe/Gc2Mds6h7tqY8eF1fWvB0p20=
+X-Received: by 2002:a19:e015:0:b0:511:1dfe:40d with SMTP id
+ x21-20020a19e015000000b005111dfe040dmr497579lfg.2.1706735689412; Wed, 31 Jan
+ 2024 13:14:49 -0800 (PST)
+MIME-Version: 1.0
+References: <iuHdqgX3QfFaWTSAUWPzsJTfNocbJI5qb4TZ80RWR0@localhost>
+In-Reply-To: <iuHdqgX3QfFaWTSAUWPzsJTfNocbJI5qb4TZ80RWR0@localhost>
+From: Michele Oliveira <miihcardoso2000@gmail.com>
+Date: Wed, 31 Jan 2024 18:14:32 -0300
+Message-ID: <CAEKojqT7HekRH3A4mpx41d+iT=qu-erVYWC0QaSJxVxzBF_Gtg@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="0000000000007e32d70610445e42"
+
+--0000000000007e32d70610445e42
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Favor enviar o boleto.
+*Atenciosamente*
+*Michele C. Oliveira *
+*(47) 99613 2966*
+*(47) 99735 7361*
+
+
+
+
+Em qua., 31 de jan. de 2024 =C3=A0s 18:10, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: 000002018009716 - MICHELE CRISTINA DE OLIVEIRA
+>
+> Valor Total de Debito: $ 28.00
+> Valor Total do Desconto: $ 0.00
+> Valor Total a Pagar: $ 28.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+--0000000000007e32d70610445e42
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Favor enviar o boleto.=C2=A0<br clear=3D"all"><div><div di=
+r=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div=
+ dir=3D"ltr"><div><i><font color=3D"#4c1130"><b>Atenciosamente</b></font></=
+i></div><div><font color=3D"#4c1130"><i><b>Michele C. Oliveira=C2=A0</b></i=
+></font></div><div><font color=3D"#4c1130"><i><b>(47) 99613 2966</b></i></f=
+ont></div><div><i><b><font color=3D"#4c1130">(47) 99735 736</font><font col=
+or=3D"#741b47">1</font></b></i></div><div><i><b><font color=3D"#741b47"><br=
+></font></b></i></div><div><i><b><font color=3D"#741b47"><img width=3D"96" =
+height=3D"96" src=3D"https://ci3.googleusercontent.com/mail-sig/AIorK4x-D_I=
+IKGZ_86vsHSZ3rCRIlZPHY7dLHI9QGt4u18DuMyIQouQdj5INH016uY6NfaPmu6vbox8"><br><=
+/font></b></i></div></div></div></div><br></div><br><div class=3D"gmail_quo=
+te"><div dir=3D"ltr" class=3D"gmail_attr">Em qua., 31 de jan. de 2024 =C3=
+=A0s 18:10, <a href=3D"mailto:biblioteca@ifc.edu.br">biblioteca@ifc.edu.br<=
+/a> &lt;<a href=3D"mailto:noreplay.biblioteca.camboriu@ifc.edu.br">noreplay=
+.biblioteca.camboriu@ifc.edu.br</a>&gt; escreveu:<br></div><blockquote clas=
+s=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid r=
+gb(204,204,204);padding-left:1ex">=20
+<br>Usu=C3=A1rio: 000002018009716 - MICHELE CRISTINA DE OLIVEIRA           =
+                                                            =20
+<br> <br>
+Valor Total de Debito: $ 28.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 28.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div>
+
+--0000000000007e32d70610445e42--

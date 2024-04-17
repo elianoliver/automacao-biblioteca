@@ -127,6 +127,13 @@
                 "07/04/2022"
             ],
             "Valor total a pagar": "7,00"
+        },
+        {
+            "Matrícula": "2019008160",
+            "ALUNO": "TAYNARA DA SILVA DE SOUZA LIMA",
+            "LivrosEmprestados": [
+                "Professora sim, tia não : cartas a quem ousa ensinar - 25. ed. rev. e at / 2015"
+            ]
         }
     ],
     "alunos_sem_debito": [

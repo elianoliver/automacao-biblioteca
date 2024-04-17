@@ -1,0 +1,133 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:1583:b0:7c:89f8:37c6 with SMTP id bv3csp37189rbb;
+        Wed, 31 Jan 2024 20:25:34 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHjLDl40IgDt5FtqDYyCRBRwzCTZy7D4Y1/V71YDuqA47zJI7QXJsnmJ/oKUa5u+W/2R8uS
+X-Received: by 2002:a05:6a20:1b1b:b0:19c:888a:56e4 with SMTP id ch27-20020a056a201b1b00b0019c888a56e4mr3681638pzb.49.1706761533760;
+        Wed, 31 Jan 2024 20:25:33 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706761533; cv=none;
+        d=google.com; s=arc-20160816;
+        b=MAqgxhhHs3ir7AY0GYLqWBjP4J5DxRjAVGfVoqn4sgLGTRkqmCwARCmRFEIhVX+AwK
+         HDMtCqKoCm6ORj3v28YdNZZSodGL+dAdQ+iqOrpGYyiGFpbN4FLWTLB+ZOFtBhPbXA4R
+         +4rdzXHQuWuRo43h632ptqAlGXSL+Wl0+KFLL1FlvtqIeb96s+antBrW4uyshN8lLnY2
+         uNJNnDBi6P+r4WAH6sDMJU/kMnjken6ZHeNIe9rNvHFrOQ7OpZgyyz0aClbSezBJKD83
+         iaFppWRnJoTVviNpO1jyU8+BNBrU2LZKq8R3t3mTXa09pR6qhMOiCgwnzNf4qAlDxc6v
+         O7kg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:references:in-reply-to:message-id:to:reply-to
+         :from:date:dkim-signature;
+        bh=Ti9f73O3mpc1Zq+94IGV09+d56lvHuLjdhOEo7j6DX8=;
+        fh=c/5d/wew3TjGwPab/A1nA+qM4/joswTGkgu8+0sIG2M=;
+        b=bO81BL/8GBV5mhNVwjoTac9EQX4tzeDABa+scVXvAtKtsIpt8iG+XmfQ5NjZH2XcEz
+         gkYkQOKw2fOeXNNohBdnU/mEXjvIx25Nv95CZC51gHHvvVeEbmgHWwvtfsjnD0YemtJ2
+         PnkJPgWITUbW/3BZxKK9TicNGuCAPP31kOmJxli//txbrUYYOMo10VTXdhNKjZQqb2ft
+         y3vJkwITvYEB8NRwj/u2xQOHxd/LdSoVEWS1rmqCKRgnOsU/Zd6JyynkaQ8bbcoKaj2D
+         3EoIVpqH/oKO5wjIrUsFBaZ88/PYzEMhHAYB1BTeu1NuQFLdrU+YJsAEzvoYWs2S40l2
+         WuvQ==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yahoo.com.br header.s=s2048 header.b="j/hQvH98";
+       spf=pass (google.com: domain of lms_vanera68@yahoo.com.br designates 98.137.69.32 as permitted sender) smtp.mailfrom=lms_vanera68@yahoo.com.br;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com.br
+Return-Path: <lms_vanera68@yahoo.com.br>
+Received: from sonic316-8.consmr.mail.gq1.yahoo.com (sonic316-8.consmr.mail.gq1.yahoo.com. [98.137.69.32])
+        by mx.google.com with ESMTPS id lo14-20020a056a003d0e00b006d9bdf9dce5si11338579pfb.230.2024.01.31.20.25.33
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 31 Jan 2024 20:25:33 -0800 (PST)
+Received-SPF: pass (google.com: domain of lms_vanera68@yahoo.com.br designates 98.137.69.32 as permitted sender) client-ip=98.137.69.32;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yahoo.com.br header.s=s2048 header.b="j/hQvH98";
+       spf=pass (google.com: domain of lms_vanera68@yahoo.com.br designates 98.137.69.32 as permitted sender) smtp.mailfrom=lms_vanera68@yahoo.com.br;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com.br
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com.br; s=s2048; t=1706761532; bh=Ti9f73O3mpc1Zq+94IGV09+d56lvHuLjdhOEo7j6DX8=; h=Date:From:Reply-To:To:In-Reply-To:References:Subject:From:Subject:Reply-To; b=j/hQvH98YFixPKZbyL3dRlrEaC3n/VU+N3Tz3baPtAGzqwq4CVFTr3xzkqvzFTRV5mJvZIpSFnT0mTqm5HJ+kYqiLhz2OlOh9kLJw2roXsuEQ7Uc+x5C7XlJEFUNBMXmulE9PQK60KqTLFmVN+sgLpwo6iV5v5sKYNYmxc46eNLcFdFOs5cEzuvdHCUQJvq4Mf8sPVMg4G4PWjZoyI9AVT3uEOnhyfXKKQ5lIicsy032qwGyUfH87wXDvjjcKwKyBtvBDOtMngjxrPv+pF+G8GNywIFvRaeJphngJ67bsE2WfMFCgt15Xtk/ikIDSyFjO31IJAHYWUYrrrQpmF5Jfg==
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1706761532; bh=a2VCYC/QG3i4ibxO42Yal+1pALg1zVt4wxBc7KHCi3d=; h=X-Sonic-MF:Date:From:To:Subject:From:Subject; b=o0IJw6FyGibdD9/6cS3oJMAnQN4HbQai9NaElFrVn1MerWBV/NCjiIukneQJNslEzo7RIO+YR9rLZdsfq7cO/T62U3SAJ18cIt4BCpqF13AEoyzQXB8Bg8W4+qSBqfr/IIL5lsbSjKPoGk+cDVfl2qcxw9sHUaFr9H7D4lFNu+1IHui+3LEPta/sBNskD1nWINml4glc5UFVmWJDifxfrs9JasSFUXK4JyTSahYjlU0OPIg1uEWcFw/UVxL4oTI4ENS72LPokJ8qy/4B5s4MpDdXNJ97Xze3s1Xb6Uj5K74A4yxO/xaJG4epChOOUtR7/yx94FSpqlzEmh9xS3G0hA==
+X-YMail-OSG: sr3szToVM1lJqLy9XXGiGBQbYRpJIaRPTOMJ9lgYvd9Z3HCdelEYndwg5XxYCNI
+ 3864UYQgVpqU.nvSiS48Pi2guwudgsQzyi8Zi8MqkEiboyJcbcmiFVh5rUjhddWszc6fAtrC0V9t
+ RrqwYIolnrVdFgNoHXlk0PUQUJpqkZ07tBs4LdIcoXMIJG2QIBtyiolCd0XJif1ZcbWIuP.zu3Ii
+ 6b7pI8MVZxqFVFuiK1XSuOKOvHJxmxetWNx8mfJ6I1EOtNqrJddlGrDght0x98iry5eJyfgnFwIZ
+ k1L2cy0LEJMeNA4M9QeZ9FniR8FexSNiYfzmlzGtBU6RYffor32m40wObQl9rjWeK8eNsiODlwG8
+ tPyWhBI5HXqlwgu6GKtDipN4Tz7Pp.sH3Ak6hbCwjdfAu2egXiTAlU6rED8Gk6ZoFBY6qLUVXQOL
+ SGhGw9XnwicaBvL0Hgm4xvkDoSiBCdiaonk9NT4Li8ffwayWLEpfzy5NoOVsDVWW.kAXUd97A7Il
+ 7jJMn7NSAMPLqOCGZP5KfQCqa8fC5BWQeUscTBaogt7L.2.Mll7s53WlJUrL3z6OUuacTNV2Cd.n
+ GV8olhXov12NFHcFR0fuPitg95_9vO5gKqj2p0rBuTjermb3SEQZAl.BagF1dihF0fv4rDag85i1
+ bwb6PTyO9dfdLGO4PRJfsSOb2Iy8DhLf.Ncy4aDviR9nMZEp1vHKyxeRvPkUuDcq974r6N2ggI1P
+ 9wxEp7OgjH09WRs1zxtpVKDtcr37i_KoBPeCtvHMqCa1bbUF5frCaPg2wQaCOi9vBPSRuSJBfaht
+ mT6PmkxV9EGUv.VgRSzklMo32z8mbtCEwXIOeOOx4EJeFJZyd3AXxv2G2DS1FI02lkoDTJ63Oujm
+ 4XH314Vxl.TGXeCeuhjbCctZjiJkTq1pbRLLu0itG9RMn0J1X0n.RxheX5DA3hZqMhzy1lOS_n9e
+ 4xGBKEo5DDqMs6R64C_ScSuYE0p8M4TWDBtfMRaaE0bjhDE8Nm010qJ3Pc2nfqh1xtZD2DTnSoTZ
+ QDqg.2aVwkYeSnk98bROjyXj_L5LG_7unpJZRX6a6QYcGAXGw.8OFSFOuwQUlzW4_RLnsVDihE2B
+ dLdFOFJ6.XeK8Fqq4AidBV8uUnr2w4C.IrCI0gk76NsulCD0jbVQFZpuoAFeIXnd3pbuw._ymfwa
+ nw0B4f9vmeLAuxxNPAA0XTMudd4.TjhIHoYVqWLkF2tSVyZgF746bFuz3Yi3jhhxXfFmQvtrwkT7
+ 3xpN93fXuAuimCUHGx.xPjIChYesVNgcpJBHs6IM3S807gLC3gvO_p__2R4BmcQlVe.LW4gudJVZ
+ XWnA6OTORZ8x253Lw0PCJ_DUBofpRCxR1Z888yedgPXrtoGHWiLdYqgYywIB.7Z0EfdgCYnitS3Q
+ EieYpG25LI_vX9GvYG4nDzf7KOhGeoig2uHyE4WoQeT1A0egR4wFwQnFyBBqk.nncZ2qn6Eo1.xK
+ V_D3B3wNxz9S0FJf6eV2p7t91n3Ls1rgNt1ObOl3KCVJ_1_gd0EYeiNaBbwP9cj1doLrNgVTtvam
+ FTufmyiTJFOkbZHEbfN0HiP_F_jDF6U7XQin2zrk6c_QIfUl_dC9J3f3d2mbGEIPukHUSO_BPZRx
+ yolsGv4DsIouMb9Jnr7Bf2VZdSAQ5ATesK0dhQXwiHT.OCLRuVZ.UMr5trSQ9RinlSktC5fAYHCp
+ R2VS7kYKhEf2BUgjIrO8ftIoIKdrAVEXnqlvEuokXrur_ABh5IobeQRJJkWCcHeu5Rd8BZtOFQBf
+ axGgFFsc3YduTpY3NTE7G8mCAToRKmVaUdd4_AGg7juov7YC_PI6jw5eOqk9eBB_5v0lvGEuPOhU
+ nW_dXWsVIse3oKQ9MzywFqxqvfjO1Uoe1GQ4Jh0oKoPrLM2C6UW.jwYLb1HRhYV_1vsP_Bz0Ry9x
+ V_oYCHKexrE27VfhtE_rXK62Jce9zTUaoxlZMrEzV7QOkNcyC2L.iMa_hfumhJzopTnTm_n77jxR
+ JiF5lPhNKDbDZpqz8WMj_EFSwQapsrcB5_hK6VYrrZHW.6Ttnv1rDOqK5mLlsFJe3fn9UT0YWy2h
+ mvFLLz21wYKQdaF0V_qqGrkDBVXnqBPzsgd4C8swrVEsvMU0_M5ObMdTfccgcXNadGjDZLBoMlX.
+ toSZGlE.EhVWaMlU2DQBlxLsPisetxGR3TUHBDi60Y4hS57evtBejFzvVOQXKZVZ1s5KNbgobbtT
+ UelKD9AnXte25Q7vhxUoq4acBFe1qzkZ.WjO8tEa69Z14QN1ENOh8VC3npnJniCaf70au2MGMkGG
+ olA8LD8DfrpIaMTIHhunpAh1UpyniazNMG52CD90GhbfxlgUVNBnrfQLfspLZxLxbveeSpCfJmVe
+ 5ukCGkBvLsK2jCS_3LHBvhAJ_4baJRLAk7.CZk0YIYNN0fd6x9VM-
+X-Sonic-MF: <lms_vanera68@yahoo.com.br>
+X-Sonic-ID: 9cc3f491-634d-489e-b550-2ba323fbb6ed
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic316.consmr.mail.gq1.yahoo.com with HTTP; Thu, 1 Feb 2024 04:25:32 +0000
+Date: Thu, 1 Feb 2024 04:25:26 +0000 (UTC)
+From: luciano marcio da silva <lms_vanera68@yahoo.com.br>
+Reply-To: luciano marcio da silva <lms_vanera68@yahoo.com.br>
+To: noreplay.biblioteca.camboriu@ifc.edu.br
+Message-ID: <1915142271.2986300.1706761526498@mail.yahoo.com>
+In-Reply-To: <KUuIkmm5Ck6zn9Cj76uXJXwHBEOSQaUspIOZaLVOQI@localhost>
+References: <KUuIkmm5Ck6zn9Cj76uXJXwHBEOSQaUspIOZaLVOQI@localhost>
+Subject: =?UTF-8?Q?Assunto:_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2986299_379984267.1706761526497"
+X-Mailer: WebService/1.1.22046 YahooMailAndroidMobile
+Content-Length: 1793
+
+------=_Part_2986299_379984267.1706761526497
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Ol=C3=A1Como fa=C3=A7o para pagar essa d=C3=ADvida?Mais acho que j=C3=A1 fo=
+i pago!Por=C3=A9m n=C3=A3o tenho comprovante.=20
+=20
+  Em qua., 31 31e jan. 31e 2024 =C3=A0s 17:57, biblioteca@ifc.edu.br<norepl=
+ay.biblioteca.camboriu@ifc.edu.br> escreveu:   =20
+Usu=C3=A1rio: 000000011108012 - LUCIANO MARCIO DA SILVA
+=20
+Valor Total de Debito: $ 364.00
+Valor Total do Desconto: $ 0.00
+Valor Total a Pagar: $ 364.00
+Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o. =20
+
+------=_Part_2986299_379984267.1706761526497
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div id=3D"ymail_android_signature">Ol=C3=A1</div><div id=3D"ymail_android_=
+signature">Como fa=C3=A7o para pagar essa d=C3=ADvida?</div><div id=3D"ymai=
+l_android_signature">Mais acho que j=C3=A1 foi pago!</div><div id=3D"ymail_=
+android_signature">Por=C3=A9m n=C3=A3o tenho comprovante.</div> <br> <block=
+quote style=3D"margin: 0 0 20px 0;"> <div style=3D"font-family:Roboto, sans=
+-serif; color:#6D00F6;"> <div>Em qua., 31 31e jan. 31e 2024 =C3=A0s 17:57, =
+biblioteca@ifc.edu.br</div><div>&lt;noreplay.biblioteca.camboriu@ifc.edu.br=
+&gt; escreveu:</div> </div> <div style=3D"padding: 10px 0 0 20px; margin: 1=
+0px 0 0 0; border-left: 1px solid #6D00F6;"> <div id=3D"yiv5555330958">=20
+<br>Usu=C3=A1rio: 000000011108012 - LUCIANO MARCIO DA SILVA
+<br> <br>
+Valor Total de Debito: $ 364.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 364.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</div> </div> </blockquote>
+------=_Part_2986299_379984267.1706761526497--

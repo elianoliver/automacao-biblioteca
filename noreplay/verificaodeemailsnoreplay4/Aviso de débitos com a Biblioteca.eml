@@ -1,0 +1,124 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp2914872rbb;
+        Wed, 31 Jan 2024 09:43:42 -0800 (PST)
+X-Received: by 2002:a81:ae16:0:b0:604:4f5:f258 with SMTP id m22-20020a81ae16000000b0060404f5f258mr2529182ywh.25.1706723022049;
+        Wed, 31 Jan 2024 09:43:42 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706723022; cv=none;
+        d=google.com; s=arc-20160816;
+        b=wPpfxcyrqWFYS0mgQrgsHBCyGIUXHjx0s45MZ8eGwNwL9n8dTnblceMGplHsM2GIAq
+         oddYYbIyynLYMXFK8WFqz90ZiJZx6Zxl5b9xbEKGROFV+wsXf6bQ6n/kWXNJ4iFxzBdZ
+         v2ID0dGzeEi7I8yY78hrciHM+0LYOxeuqfTEWrvPJY31jO80+GYZb6TTwlOVcTt06QJJ
+         taf5JTWyCCL2fcsngekhHc7PdRJOR+RdeH6/uwZcSxY7YIr8cCRIWzEocxjDSAmhHfON
+         wKyyMely6JWa5QVrZtqmnbWmNnrfox/5vSfGND+r893f8LJwbgU/ThGG+sDrbrtk23BE
+         +ebA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=N/0P2Mf/b7QZYZdpf8jqWRcz59C/3h3Pp2AUas4RAso=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=F+amhjjQ516ccPDuzgZoxC2fbyayXPWL2w9F3APXK8OIXmG3B9eGdN3QORuVL5z6Ew
+         SbFNMtXYyhW1py/BMgv/cNNg2i4T0jpqXjdW0fC5/LQQUM8dfaX15dwM4ysMWrAtwGcl
+         mHubXLmVpGkrK0TRFWV57VZ+7gNjQsYN2P+ZhxXzYTsqfWg3M2zq7WXJFj8a4O4qSH42
+         52nuv9bGupdq1FlMmDryD6GjR1yA3d1xITJJATW5MzNQEDHa8Q/Ng8ZSxikKJAUeMMm+
+         qqXpqtKGYxMGdV9v6NpD3CTL44R+RxMxRMlWwY97qV538F0UPYZ9lCeLZQ0EvbamPvZk
+         Cndw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=MLL3AVNL;
+       spf=pass (google.com: domain of raafaelquevedo.rq@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=raafaelquevedo.rq@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <raafaelquevedo.rq@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a127-20020a0dd885000000b0060418f6dfedsor21485ywe.11.2024.01.31.09.43.41
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 09:43:42 -0800 (PST)
+Received-SPF: pass (google.com: domain of raafaelquevedo.rq@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=MLL3AVNL;
+       spf=pass (google.com: domain of raafaelquevedo.rq@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=raafaelquevedo.rq@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706723021; x=1707327821; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=N/0P2Mf/b7QZYZdpf8jqWRcz59C/3h3Pp2AUas4RAso=;
+        b=MLL3AVNLV8DRa3TS+QGN1eqY74gRcTAGJhks//oflm9ooHapI1Fh2Ch01yeztimUuL
+         eVXLiBkZX3XHAXVdNOrBN4EuURW/KqxXAx82FJmrFKAb3HAdrCQNgcWs4+HOYJ0Ond2Z
+         8NJffu2OZIdBuIromuV3y/qxDUkbcWtEDGdoLg/LTyPOQHNc0DbD+BHCmertTn/ms3h2
+         MraMPO8XkRXeZCU39RzCutQknvGG0Lk2h1ql6HWxQakJyK2Eke40cpOPXtSm3Buw4qjy
+         JxghnBwPnJ0uL2L36WSKZTx1Q54QIRQ38ICo1KHonG2XJRTk2Am4MmTbXoXCxNfwMBRK
+         cqIQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706723021; x=1707327821;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=N/0P2Mf/b7QZYZdpf8jqWRcz59C/3h3Pp2AUas4RAso=;
+        b=o3hvz28zeqEZMiY9eWn6KGAQasbd6YppA7tYLRd2190+CZlqi1CB5RvqWk+QR0hs3S
+         O18OjtLJAIK2FFFoBqvPgz/N6pyJsrLqTtkkD65ttceCEpvhqZvixRGGUbz/1KicSWev
+         YrFjuiteN0zoaLHbRyc/5MwjAXmUb3x+g+n+SbelFsgqLdnt0gyt51WAlQWLxyckW7N9
+         R40kMmZiydQFGwFMHEy43Gnl78NP+zG7g7e/U8FO/N7jad13bHE0NBk/yWPKPnyMe3KA
+         xZE1RefGs5XeteXDI62CeHPLE5b32/OJ1ABN6iLDOSF0iY0mJxd/Hfr9tqlX7ss2qge/
+         Lsfw==
+X-Gm-Message-State: AOJu0YzE7B83INSaoQpt3BeoyQH+BjlYRKXNsg0YCJRqNdXQYlGPUoUq
+	lZkdazZHZ7pGW5HsdiwK6DUf0COT5wZWtkefNKLIP0RCcvTJE+TZBaDWODLPiOdNT8sU+iNZg2M
+	o66IrQrFwVoHJiN4zbCG5dwZCwYiEPRVf
+X-Google-Smtp-Source: AGHT+IF6dGZJlmhbUre0x3jduoBIf6TzDyqMTpwWK9mpC3MMLOEI6AKlaihK4ITw2OOvcGgx5cknA964uZSVdVPMUVs=
+X-Received: by 2002:a81:4e03:0:b0:600:2da3:1cde with SMTP id
+ c3-20020a814e03000000b006002da31cdemr2238591ywb.42.1706723021390; Wed, 31 Jan
+ 2024 09:43:41 -0800 (PST)
+MIME-Version: 1.0
+References: <WOFqnchM3DqdZpMSepK93aB2kBDXNQyLvamTnijJsfE@pergamum.ifc.edu.br>
+In-Reply-To: <WOFqnchM3DqdZpMSepK93aB2kBDXNQyLvamTnijJsfE@pergamum.ifc.edu.br>
+From: Rafael Quevedo <raafaelquevedo.rq@gmail.com>
+Date: Wed, 31 Jan 2024 14:43:30 -0300
+Message-ID: <CAGBkN1GYtSqgsWEo=m8Uq_7hMeHUn9EKpMzHK6vu6L6EOCHa4A@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="0000000000006b8b560610416b2d"
+
+--0000000000006b8b560610416b2d
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Boa tarde! De qual material seria esse d=C3=A9bito?
+
+Att,
+Rafael Quevedo
+
+
+Em qua., 31 de jan. de 2024 =C3=A0s 14:37, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: 000000121802264 - RAFAEL QUEVEDO DE OLIVEIRA
+>
+> Valor Total de Debito: $ 164.00
+> Valor Total do Desconto: $ 0.00
+> Valor Total a Pagar: $ 164.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+--0000000000006b8b560610416b2d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Boa tarde! De qual material seria esse d=C3=A9bito?=C2=A0=
+<br clear=3D"all"><br clear=3D"all"><div><div dir=3D"ltr" class=3D"gmail_si=
+gnature" data-smartmail=3D"gmail_signature">Att,<br>Rafael Quevedo</div></d=
+iv></div><div><br></div><div><br><div class=3D"gmail_quote"><div dir=3D"ltr=
+" class=3D"gmail_attr">Em qua., 31 de jan. de 2024 =C3=A0s 14:37, <a href=
+=3D"mailto:biblioteca@ifc.edu.br">biblioteca@ifc.edu.br</a> &lt;<a href=3D"=
+mailto:noreplay.biblioteca.camboriu@ifc.edu.br">noreplay.biblioteca.cambori=
+u@ifc.edu.br</a>&gt; escreveu:<br></div><blockquote class=3D"gmail_quote" s=
+tyle=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">=20
+<br>Usu=C3=A1rio: 000000121802264 - RAFAEL QUEVEDO DE OLIVEIRA
+<br> <br>
+Valor Total de Debito: $ 164.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 164.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div></div>
+
+--0000000000006b8b560610416b2d--

@@ -1,0 +1,122 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp2949870rbb;
+        Wed, 31 Jan 2024 10:46:28 -0800 (PST)
+X-Received: by 2002:a25:804e:0:b0:dbd:b081:9663 with SMTP id a14-20020a25804e000000b00dbdb0819663mr2476530ybn.41.1706726788193;
+        Wed, 31 Jan 2024 10:46:28 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706726788; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ogLG5rKZ3Ys0j4HBGFKJobUal7rUmsXtprngCVqb9EF05Rq2NxAUMcJCKK5D6kE/XS
+         CHdAkb9zA5TYqgX6lauENVmMgcu+ANqMwrK7SsUetV4HytEJs2VJ0/qhpkqtdwAvWSZ5
+         UjZDdX5Jy9y99FmBN22pNcJ7bxgWqAAeqXvM8VemIiBk3Vbt0OOR0/JxkA75KrQrFWlX
+         qUt5PoBIAzSgoLHSb/pK8yIdIZaIlgwnRLy+4BK+IF6jZMFZvABWjuKjfMpBMDir1s68
+         /rIG1FOuu2sOh0cpykboVe9BSCZQF5FZZ5c1cTlYwB1Kg7ND2kxjUO3vbs/Uwf8WZMi8
+         SOFA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=Z9D5KNHbVXgu61hidE1xro6o5XfNeA7oZNfp+i1OBCg=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=hotrlVdXsR3UB9SSoDF9vueh/hvjyhCbdEG8dSt+Dg0qZZExTT7Bdqg1WSGyIXop+5
+         lryicsqy20LNu30lIbHy5FGOSK95ihPXOS7S3lfFjelQ8qw1OL/1xg1s40K9ha0IVAk0
+         4mwbjMuOKbAhs3CZ8BIGa1Z3qBuWQaLHb9ld1mYDCu/znSHok1IdS4AK8fEvU+/TDxBL
+         7uT3AJMyXL24e0DCPmv80dPFp7shgDpbaju8DwPLoWR/7JJPH3P6AOi4GVSQ0NhyZsr0
+         9V42kteDm29+0hPYc6RycgI2+7bSL9AJiFR4cLQ86DCI/WUYeII9Bgmxpvz7XdBT+fbR
+         Lh/Q==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=CX92SGGn;
+       spf=pass (google.com: domain of linafloydiana@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=linafloydiana@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <linafloydiana@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id u8-20020a252e08000000b00dc2661dd564sor4008362ybu.17.2024.01.31.10.46.28
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 10:46:28 -0800 (PST)
+Received-SPF: pass (google.com: domain of linafloydiana@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=CX92SGGn;
+       spf=pass (google.com: domain of linafloydiana@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=linafloydiana@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706726787; x=1707331587; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=Z9D5KNHbVXgu61hidE1xro6o5XfNeA7oZNfp+i1OBCg=;
+        b=CX92SGGnoP4zHF8rLEKlDsjqNEYoeexMsRY7GZYlo1Ex7egABF/dDrKtW0XZirqxG3
+         8wfYowFPqW4EykTjTumqRGLjq5Xx/VsVeDldsWWSE6CNVPwLq5+K976dIfa2YUNIrX1U
+         mSmmvnh0USP9tu8XQQldOXlxTOsJat6FmfqTZkeSUGmMkrYGK/leri+ITZEVkO9d1/GW
+         mKflfKc9yAogSc27wush7ncNYN5zau1n0RPsTnVKe3wgOIXCy+Qq654ube4GS9G0RqZy
+         0pJk+jbg3FwrS7s8/ehW27Ay805150/iivuiTGAJa48G/1llubWf+pdkUu8bvCxDwgst
+         y89g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706726787; x=1707331587;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=Z9D5KNHbVXgu61hidE1xro6o5XfNeA7oZNfp+i1OBCg=;
+        b=cfxD/Uv0ESBy3V2nXFYDNJIweg6t4wgzHNIfZTb0XHpBVArv8udjEzwRwWKl1Haa1z
+         wxuXlXtONVgRwdbyJaVqZ7WZpJSLUnb+wamzkmkXpByeysfVCBwuzMRgP5gIR119oS0G
+         RTEQ3gHdZgDJOvg6Rs1l4OTGtc5IKsFOn5GW3Epo0SlQ8hc22H5sqPWhJovgFHdqFm/m
+         EJ06vGGrzfVTywy8cXeN1L77fhv5kajcQvTbkX2zEgF78RlkFBdFujd78v+8jC3OT9kj
+         3UWHk+Kfc0tide/Fj4vs7dhCiEBe91DNb8Aa2JPATJRWDVs0p4O23oTVLul8TASHLzsJ
+         elNA==
+X-Gm-Message-State: AOJu0Ywf0bAjbwqMe6KsuEyFIa7YeUuj3YQ05ZuNS8xfrhZwvbHwU9hg
+	uA8B5SftROo1SW1Y5jO/dO2keIHwXc8xeUIc2OJtMZzLD/EgP18Fa7OUnKZeFEyAl/q8R/uRlre
+	vJixnG1UOYDkXccbAkc3e5xypJ+/F72lNa9k=
+X-Google-Smtp-Source: AGHT+IHLVSeOPv11fvHR7w78fI7cpIfs+/cxoNL2XUhqXDwtazTrlTLPf9wjoJzIp4V8hkT7soe3OoPxOzOiOlt3JLI=
+X-Received: by 2002:a25:264b:0:b0:dc6:c11f:97d7 with SMTP id
+ m72-20020a25264b000000b00dc6c11f97d7mr2624690ybm.52.1706726787565; Wed, 31
+ Jan 2024 10:46:27 -0800 (PST)
+MIME-Version: 1.0
+References: <4i93DdsiHq1KXtF5V9drFNtQF2IfC77a2hNIi18Ug7s@pergamum.ifc.edu.br>
+In-Reply-To: <4i93DdsiHq1KXtF5V9drFNtQF2IfC77a2hNIi18Ug7s@pergamum.ifc.edu.br>
+From: Selina Albano Zazula <linafloydiana@gmail.com>
+Date: Wed, 31 Jan 2024 15:46:15 -0300
+Message-ID: <CAOE0JiJ4YYERrqikEgWExLpv4xCC8LYOr86TPYjjuU4qEfFNsg@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="000000000000e6ccac0610424b6e"
+
+--000000000000e6ccac0610424b6e
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Boa tarde, este d=C3=A9bito =C3=A9 referente a que? Qd foi gerado? como pos=
+so fazer o
+pagamento?
+
+Em qua, 31 de jan de 2024 14:45, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: 000000011114007 - SELINA ALBANO ZAZULA
+>
+> Valor Total de Debito: $ 19.00
+> Valor Total do Desconto: $ 0.00
+> Valor Total a Pagar: $ 19.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+--000000000000e6ccac0610424b6e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Boa tarde, este d=C3=A9bito =C3=A9 referente a que? Qd fo=
+i gerado? como posso fazer o pagamento?=C2=A0</div><br><div class=3D"gmail_=
+quote"><div dir=3D"ltr" class=3D"gmail_attr">Em qua, 31 de jan de 2024 14:4=
+5, <a href=3D"mailto:biblioteca@ifc.edu.br">biblioteca@ifc.edu.br</a> &lt;<=
+a href=3D"mailto:noreplay.biblioteca.camboriu@ifc.edu.br">noreplay.bibliote=
+ca.camboriu@ifc.edu.br</a>&gt; escreveu:<br></div><blockquote class=3D"gmai=
+l_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left=
+:1ex">=20
+<br>Usu=C3=A1rio: 000000011114007 - SELINA ALBANO ZAZULA
+<br> <br>
+Valor Total de Debito: $ 19.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 19.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div>
+
+--000000000000e6ccac0610424b6e--

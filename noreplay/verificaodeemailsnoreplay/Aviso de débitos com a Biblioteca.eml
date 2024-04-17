@@ -1,0 +1,137 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a5d:5408:0:b0:33d:e414:b8ce with SMTP id g8csp1913923wrv;
+        Sun, 3 Mar 2024 17:45:46 -0800 (PST)
+X-Received: by 2002:a2e:3213:0:b0:2d3:6701:2d8f with SMTP id y19-20020a2e3213000000b002d367012d8fmr1705171ljy.10.1709516746043;
+        Sun, 03 Mar 2024 17:45:46 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1709516746; cv=none;
+        d=google.com; s=arc-20160816;
+        b=07wB97PqLyaukSPaR1ShsWyNwJXfs8rgD3ErfdU5htRUGEjMqKgU8x2qUOtzmchZXB
+         +e/xWfvaraPZFgTfLab2CL9wqoFYvXzQawsxUgH5wijiD+LLzNO34pYispls2yE/Z1Gd
+         Awh7h+8xLReUXJV3aKoWdeK8nzVYMuL9rvgbDLyvOn67UwD3W9ESQNRM5zWZyWZV8DPz
+         +/BXWeq7fEnb6sJil+RUifYz4V5TIQ0ya+3H729Vr5Dvyb1oENH2s3TO4ENZ0q1cRM85
+         aKXhJu2AiwWWeU698x2JlemMXerlur52qYvGVn22gU6QdqpyxQ9KgLefHJ3of+PydSHK
+         5cDw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=S0h1pr+QDqGVcmzTQZ/LmW22bPVOjKjkacnfQ3wLq9U=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=qNHBLMNZNPqXg/XPAtc8pl6+3JBRm7ItcXOV6uQuSIo6GCTubYeuk1ws65q6yfKxwd
+         O7ea0G3IwsP67qxpOuQCPraCEAWpHt0+1C5c35VGgXu1cjAH+faa0DJwgev4PertFInD
+         9CK/YTJyCPXoq6NxNwkX61D3z9B5mQ6Nz1uaAuAKemRNNQlqNOwV7aZkcOamLfc+8pgt
+         cdrV8PhLmISbdQsphtCwecRDmTEP3DNT7BJ4LFqL5MgzdksEaiY1pxadx+IP+Sz4i9oq
+         QTLhpk7SFV1l1p+THs3Ldv9SgBuaZLCdJfeZ6zItM8AavV0oUDbwaYmbYQjB6knqagab
+         G3lw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=PM6h7G9o;
+       spf=pass (google.com: domain of poolney@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=poolney@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <poolney@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id x24-20020a2e8818000000b002d271880723sor1855801ljh.3.2024.03.03.17.45.45
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Sun, 03 Mar 2024 17:45:46 -0800 (PST)
+Received-SPF: pass (google.com: domain of poolney@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=PM6h7G9o;
+       spf=pass (google.com: domain of poolney@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=poolney@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1709516744; x=1710121544; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=S0h1pr+QDqGVcmzTQZ/LmW22bPVOjKjkacnfQ3wLq9U=;
+        b=PM6h7G9oRDm+XpuAG/Lnd5rmcUGdQqGTyktyT+Ksc9hpDfukiscYDtH4WjSpVGn5Qz
+         fNCUbF54Q8Qe5ZTqPJrMMYhXjVJmBsmdPRitK85G5HW9BSuJ7L+J9rggYj9+teRG1w35
+         lyuFvzPpjb1EWn7cQgyJZbnxrPqFsTm+bNsfUL9fj/eSWDAZ3BkwdrzElPvanHQQpvYx
+         k671p4tq9iYSezZv2YOLbm96ZdaDwGDrruwP3YqI99cffqbCowtW4aqHpRxkPwoZXt63
+         PNPZBjfXWRk8HzJ6fvgFgd7PVdGfcniU1wLVbT0opJ9galGRICKBmvn5VD1Z4/kOd5Vf
+         Ae1Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1709516744; x=1710121544;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=S0h1pr+QDqGVcmzTQZ/LmW22bPVOjKjkacnfQ3wLq9U=;
+        b=GNM0TF+8n0etFXwAZzBKhDyY6SwwJ3S8vg7MuNvYM8uxGJaYuJ6qPj9DHzIRVgF9uO
+         pM/BwKnXwxzJTBCzOa0BEW1DtOLtqZ5ZUQ4EeUhCTVphIJv5CHGwHlvaXHwAC0cA0G+v
+         PZx+t6D7o0N2CJygBUojugHPRtEIm7/gr0zImRN/Lx/VFcaWSnS9J95kHQ46otC6zqyp
+         wPB3A2lGWF298g1qfJpUsPRYzPm7axoZEMC14MFjGFNFZTIlmqB2oRxdmv03RDqIqzRl
+         OZ3JSuGaq4w6zHbZfQ3nilz4OC54pnzB3G7CPtTbefcExOptN5nazkRY/xVjtP5Y4PPu
+         au1g==
+X-Gm-Message-State: AOJu0YzOb1wx6gul2QheqJ0m1n2WYkBY7j3L3F/uQdt+j/q/y6/qDhVq
+	IES5effRxE3Qd+Pmlm1semvD64SvtLU7ebnJ7blJ5k43lDH9i0lsrOVSO4a+pJ24ZOh8zGpRSi8
+	114p0VFnVLXarIFBkgUoaaFHhUHyiZDH33kE=
+X-Google-Smtp-Source: AGHT+IGOzCmgKn5Ckb5jUSMQ+XjkEwfYFhSYtepowBKn1EiV0aTif3yoz+nXiyOi2WGVikcbNlq1Nb5MBPfjCw482hg=
+X-Received: by 2002:a2e:9106:0:b0:2d2:6457:4087 with SMTP id
+ m6-20020a2e9106000000b002d264574087mr3212141ljg.6.1709516744482; Sun, 03 Mar
+ 2024 17:45:44 -0800 (PST)
+MIME-Version: 1.0
+References: <xfQ0lTHD1ZaEfxeQORDJosBhGx3JohcctVBDsG9wzk@pergamum.ifc.edu.br>
+In-Reply-To: <xfQ0lTHD1ZaEfxeQORDJosBhGx3JohcctVBDsG9wzk@pergamum.ifc.edu.br>
+From: Raphael <poolney@gmail.com>
+Date: Sun, 3 Mar 2024 22:45:07 -0300
+Message-ID: <CAGzeFUk9NBx03N6VYxk_=fOy=vxHB-9SpRkHE01VBdi7LQB6MQ@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="0000000000004ae1740612cbe2a1"
+
+--0000000000004ae1740612cbe2a1
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Ol=C3=A1,
+Que eu me lembro, n=C3=A3o estou devendo livro, todos que emprestei devolvi
+enquanto era aluno.
+
+Qualquer d=C3=BAvida estou a disposi=C3=A7=C3=A3o.
+
+Att,
+Raphael
+
+Em qua., 31 de jan. de 2024 =C3=A0s 14:38, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: 000000011113036 - RAPHAEL POOLNEY TEIXEIRA DE JESUS
+>
+> Valor Total de Debito: $ 10.00
+> Valor Total do Desconto: $ 0.00
+> Valor Total a Pagar: $ 10.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+
+
+--=20
+| )           \/
+| ()()|_/\/E|
+
+--0000000000004ae1740612cbe2a1
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Ol=C3=A1,<div>Que eu me lembro, n=C3=A3o estou devendo liv=
+ro, todos que emprestei devolvi enquanto era aluno.</div><div><br></div><di=
+v>Qualquer d=C3=BAvida estou a disposi=C3=A7=C3=A3o.</div><div><br></div><d=
+iv>Att,</div><div>Raphael</div></div><br><div class=3D"gmail_quote"><div di=
+r=3D"ltr" class=3D"gmail_attr">Em qua., 31 de jan. de 2024 =C3=A0s 14:38, <=
+a href=3D"mailto:biblioteca@ifc.edu.br">biblioteca@ifc.edu.br</a> &lt;<a hr=
+ef=3D"mailto:noreplay.biblioteca.camboriu@ifc.edu.br">noreplay.biblioteca.c=
+amboriu@ifc.edu.br</a>&gt; escreveu:<br></div><blockquote class=3D"gmail_qu=
+ote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,20=
+4);padding-left:1ex">=20
+<br>Usu=C3=A1rio: 000000011113036 - RAPHAEL POOLNEY TEIXEIRA DE JESUS
+<br> <br>
+Valor Total de Debito: $ 10.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 10.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div><br clear=3D"all"><div><br></div><span class=3D"gmail_si=
+gnature_prefix">-- </span><br><div dir=3D"ltr" class=3D"gmail_signature">| =
+)=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 \/<br>| ()()|_/\/E|</div>
+
+--0000000000004ae1740612cbe2a1--

@@ -1,0 +1,120 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp3023459rbb;
+        Wed, 31 Jan 2024 13:12:10 -0800 (PST)
+X-Received: by 2002:a2e:938e:0:b0:2cc:811f:f9ae with SMTP id g14-20020a2e938e000000b002cc811ff9aemr1895332ljh.47.1706735529906;
+        Wed, 31 Jan 2024 13:12:09 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706735529; cv=none;
+        d=google.com; s=arc-20160816;
+        b=CuP3KTVeBcmD9JMx8FerQXIEKqtn15vAHQ85Z0OQsiB29dnF5X8sKMT+ArSWh4hEZB
+         BHW+5ST0LuSXgUMHzhOhWkbXCkKPxUPaWAily26Hgd5Ihpa3mFlA+ZdjG0ERUJJ+ASeO
+         +PVifiATLda5uYO79N55tia8QreWAJUUJPXNZ3S5ZUiXxqVKjDwixkKA/tJ9a75z2T0H
+         ICnMqPuqY4N18qUIe07GrAdBfaktwwyOz9GzPNOxjMGXPkAfVVucTZHekp7xnn1EoR1U
+         ewp24faHcD6bzn7ZcdM8DbU3uY88tLxSYeY0ICBlvq1agBGVRWTDx3P1SB1qjGArrTfM
+         SlOg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=9Tb3N8l+3t3FSJua3jaXhMR7zCpBvwH8rtyMVg43Fw4=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=eGch4ritpoep5rTTNPnZ2uHq+fAz9k5E3vFzHXx7qMsvnNbdQFhT80cfF5owGzUnpj
+         Fh0UeMsW5ze3DjbPDiZvt6ChBQ4ygxpvWJGvwPQ4/7pMwfBRWupCPfk/gg95zKHvdXwy
+         59eAe8dmDDWZG/2NN1CbBkpdwX1M2vwe6vlZP4NLa+y8ppuZbMv3IooH1PI3RRjm1q58
+         TXZuc5zY9zSaVFvgQD2/edAWEVzrL0G0q/d2B2fMIiMy/1S/EBL3BemksydeZIUY1Pyc
+         AuNSFIPSa8rOxM+PlavOmzkBOyg2GcoVf/j4hWacu+r0wzXtPUcY8eW9INxVdcwfVDOF
+         RojQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=W1bvIkuM;
+       spf=pass (google.com: domain of marlonluciano.silva@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=marlonluciano.silva@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <marlonluciano.silva@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id u11-20020a2e9b0b000000b002d06b1bb55csor559843lji.3.2024.01.31.13.12.09
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 13:12:09 -0800 (PST)
+Received-SPF: pass (google.com: domain of marlonluciano.silva@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=W1bvIkuM;
+       spf=pass (google.com: domain of marlonluciano.silva@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=marlonluciano.silva@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706735529; x=1707340329; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=9Tb3N8l+3t3FSJua3jaXhMR7zCpBvwH8rtyMVg43Fw4=;
+        b=W1bvIkuMHtaRNrPjdj7N2nbv0Kfeq3Y/bN0CIY59C5qIN+6/BbJz5sD9MtKc2y+f2i
+         SJ9EswF9v/KIIr7YUHJSBn5uuxeUMeas+E02CGJG/yXd56uzDMNXegqRgn72JUzcAKhU
+         4F4ETsQBYqpGryy1blvQkzpPMfYAttnGK72CPeh0+Mh/681IO1fYtq+hf/Q2bkoiZTOg
+         6DjMqehp+6p4skg6H20uqqKy3If/FNVovi3j5XySyIk21feCBTZXTnO1AfcW1jKRYQHe
+         T+TrSdihfNoy2dqcTIJhbiyHFFN372SqxBT3yuf54/AVb0LGX2TLtEujwKlMax7SYwMN
+         88wQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706735529; x=1707340329;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=9Tb3N8l+3t3FSJua3jaXhMR7zCpBvwH8rtyMVg43Fw4=;
+        b=QrMKXJmGXO9jWlFPI3sbleL3zwkF7/4wBivgAag1Yq8v7T4wZGyICNibWKkkjG6Kh9
+         +AoXwLl9dMKu5BOjZIYLk0IoUX1VjXXth81ElKGtSsmT8fsg+xMkdSgWEOjZTLpr4Bj5
+         0MO0K9Chssa3+JuXNHTEOZ4PWdyaDgsqG4WM4Xg8GDuUCe1DeCCEi8FJgY84j5ALH7+B
+         tG1hMYi6MbmuVadp3pOHWLuexYs7AxV6sxtrhCnexWa9tu67RiE8zTJaAC8DHqZe+RbX
+         +yH5yvNwZxoy4gvfGe34Ide+d525RO8c1qJV9f0b0f8umhLOQO4J6Q9CFo0UmFFUIhH5
+         ADww==
+X-Gm-Message-State: AOJu0Yz2Dsc2DTThz+chTzQIbMPtoMUM719zFRV0rBMolnUpxg2IPCPD
+	eGeJRsyndYVfesXDIrQ6LQI9UkuxFt+FyW+Wk4n1L5yQHh/DtyL/9OIweOpRzgO0uMrwlj6qYk1
+	Dy8pqRfB0C0jbNmj85ogCzdY9KkVrzjp1
+X-Google-Smtp-Source: AGHT+IHiSFQOYEa4HHNyquKQYAnt0DrdH+/f3Q9jfn/jGc3WDQuN5o9amfu26uvlvg+/cpBTxMCnsWSVNVJv9PSs6g4=
+X-Received: by 2002:a2e:a68d:0:b0:2d0:5e8d:64d6 with SMTP id
+ q13-20020a2ea68d000000b002d05e8d64d6mr1609386lje.51.1706735529081; Wed, 31
+ Jan 2024 13:12:09 -0800 (PST)
+MIME-Version: 1.0
+References: <WTPH9FKgVmO1MEpg6gFazFDpgTiDd1mvCJTVBDD1FVI@localhost>
+In-Reply-To: <WTPH9FKgVmO1MEpg6gFazFDpgTiDd1mvCJTVBDD1FVI@localhost>
+From: Marlon Luciano Silva <marlonluciano.silva@gmail.com>
+Date: Wed, 31 Jan 2024 21:11:58 +0000
+Message-ID: <CAOHDHipEnBVHPc_mU=NMWUQ_2H_fnaLb4VvT3xrV0+RhTUZKSg@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="000000000000efbe3006104454c5"
+
+--000000000000efbe3006104454c5
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Boa tarde,deve haver algum erro n=C3=A3o levantei livro nenhum,nem estou em
+Portugal a mais de 5 anos.
+
+On Wed, 31 Jan 2024 at 21:07, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> wrote:
+
+>
+> Usu=C3=A1rio: 000000121131404 - MARLON LUCIANO DA SILVA
+>
+> Valor Total de Debito: $ 31.00
+> Valor Total do Desconto: $ 1.00
+> Valor Total a Pagar: $ 30.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+--000000000000efbe3006104454c5
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Boa tarde,deve haver algum erro n=C3=A3o levantei livro n=
+enhum,nem estou em Portugal a mais de 5 anos.</div><div><br><div class=3D"g=
+mail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Wed, 31 Jan 2024 at 21=
+:07, <a href=3D"mailto:biblioteca@ifc.edu.br">biblioteca@ifc.edu.br</a> &lt=
+;<a href=3D"mailto:noreplay.biblioteca.camboriu@ifc.edu.br">noreplay.biblio=
+teca.camboriu@ifc.edu.br</a>&gt; wrote:<br></div><blockquote class=3D"gmail=
+_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left=
+-style:solid;padding-left:1ex;border-left-color:rgb(204,204,204)">=20
+<br>Usu=C3=A1rio: 000000121131404 - MARLON LUCIANO DA SILVA
+<br> <br>
+Valor Total de Debito: $ 31.00<br>
+Valor Total do Desconto: $ 1.00<br>
+Valor Total a Pagar: $ 30.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div></div>
+
+--000000000000efbe3006104454c5--

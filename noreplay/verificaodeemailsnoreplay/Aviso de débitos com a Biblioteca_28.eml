@@ -1,0 +1,125 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp3042163rbb;
+        Wed, 31 Jan 2024 13:58:00 -0800 (PST)
+X-Received: by 2002:aa7:dc09:0:b0:55f:9359:df05 with SMTP id b9-20020aa7dc09000000b0055f9359df05mr329569edu.37.1706738280653;
+        Wed, 31 Jan 2024 13:58:00 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706738280; cv=none;
+        d=google.com; s=arc-20160816;
+        b=QKXxlE2bFW7dkG/VbNQGAKl5coxD/OAD3YVUQYT36ryrmFV/cPkSEU3fY4MCq5HBxg
+         gDSbpvmKz2y2d3sHLcgs2hRQL1j21ruKo6eWQtCwHLhvJdUEbR5blRoKFd8SdpIil+zn
+         ASZdPrOXXY6SZ0P1b3wZwY4bNP9vEJ4guuTJ6To78eF+myWRBT/KgVTjbitgEWwaVmre
+         dRhcGWSAW7GTonCsYkYfqJJJ86Y8lQztWks9DJToQn2vOA5GPpFIUTCqFMLZX4ow1OBh
+         kQQter1uiqx4J/4MvL+hxGOwOMv9oY1Ul+Vz1l1vw7pd5oQE0ibWEzEDBLXHJ/eimalQ
+         WEbg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=FsWiK8+uUB2sPRF5xJRMhRoAG52v74TDm+FW57dUT4o=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=oniMV2Haw0qz0KQAeTu9KnO4Mb3xHu474HUtfFw7Db2tejxZd5c7ojBmUP0u0NpDJ7
+         ZpTZ+ozkoOldMgZElN8QAUmY2cISxJLQqd4GDNMwqZeIEg3pIStBJ+qJS/l0fZuUNyiz
+         kb0LwsT+w0LG88yfBjd0w8pUvBmtjur50SSeA5exjCSj2dW9kPxos1OaPMZe2IWzWecE
+         KIkliUTpiPJ7SE1BdXAJuqQN6pGFJ9OXK9Hu9RG31ARbiUC3zJnYzsY5vqQQFLKTMm7l
+         wAXgg+6axsgWlF5DpvHChlGnZ/FaXyICfMemNKjYxMnPNw/tEmJoDR1RpB1bhS0MLKPE
+         FoRg==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@ifc.edu.br header.s=google header.b=scbrDKUK;
+       spf=pass (google.com: domain of cleonice.beppler@ifc.edu.br designates 209.85.220.41 as permitted sender) smtp.mailfrom=cleonice.beppler@ifc.edu.br;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=ifc.edu.br
+Return-Path: <cleonice.beppler@ifc.edu.br>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 21-20020a508e55000000b0055f3951387esor1425270edx.5.2024.01.31.13.58.00
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 13:58:00 -0800 (PST)
+Received-SPF: pass (google.com: domain of cleonice.beppler@ifc.edu.br designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@ifc.edu.br header.s=google header.b=scbrDKUK;
+       spf=pass (google.com: domain of cleonice.beppler@ifc.edu.br designates 209.85.220.41 as permitted sender) smtp.mailfrom=cleonice.beppler@ifc.edu.br;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=ifc.edu.br
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=ifc.edu.br; s=google; t=1706738280; x=1707343080; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=FsWiK8+uUB2sPRF5xJRMhRoAG52v74TDm+FW57dUT4o=;
+        b=scbrDKUK73ffSn26nz1bLlBq+Im/oVUTvdqbov/iMSBciUClpCJ8Cgs6jk/ffLcKKu
+         2GItAw5CmwWnNSvnR88vkBp9lJsIn6Zr32vMT5qptNNAyshd1DlY6FiLfYmqQkLyrHxl
+         ahrq1wqBU1a1foXoT3/aGDaCmUqaxIXDT93+tuj9Ola7oi2RMSi7z/w/wNIruCKF96Gz
+         hhbcL+vXdxM69rInIYqaZv2MAHIMPEs52Y9kbdNGUCzwvk5fmQBLsqO50Y8ORzRPBa9A
+         FHH9Fx+gOvHyXx2vNJBYIodERpUrBSp7H4hdLjIWCfxRLISIUVBnwv75+YCLuUKigJjg
+         OT/Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706738280; x=1707343080;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=FsWiK8+uUB2sPRF5xJRMhRoAG52v74TDm+FW57dUT4o=;
+        b=cP9Nevcn1sl/wxBtYTqLiCypkir4NMYN+1TfRWTBND18RhY8U+/nnEi5C9JxuKo/1y
+         EbcRDOzGEA9WqJhC7bIsQcerUDTSLUn2YiRi9rjqo91H8m30CB1dArR3V3+OWihEkAF5
+         OqI/ACyl3qlm0OYFEvobiffROET7Zbx6QCQ2MzZ6VsGGgFQslHPMtngw0eX+si3LYznZ
+         VJ+ejlaipdiJ8I3EBJt5VN2ONL7VyeDMt6XZDUCgzMBh9WOpDMMhTGx0/hjPjgajsiwJ
+         +F34ka9dj6LrkmACYt3of+ptYCrjWoPnTj7sUsLeQewQfs4TAljlTjHgRchflLLOvCdG
+         Llcw==
+X-Gm-Message-State: AOJu0YwKmNYqo0AYwQbvjQ+ijU/r5J8D844njQLzj0xBKskdPGbrxVKf
+	CUTh7NQx2hz40uTA2C9hjOSMvJlceHI/PrfUS7RJPO9QLsO6m+miu/A1d3OUALmbj/zjbr/Me2v
+	/7PX6VmfhiBKiNMEPuuPt/33tXlMXiFTC0JjqvmkJ224wijJTy4A=
+X-Google-Smtp-Source: AGHT+IHGG76dhXQZk+j7t7Z/2Vu+WSryuBilIZVm0hJB45E2m8pkXOH6di2DvN29V13pqhc0JPs2Wwv4omp0stFxmPE=
+X-Received: by 2002:aa7:df04:0:b0:55f:43af:4a29 with SMTP id
+ c4-20020aa7df04000000b0055f43af4a29mr258219edy.18.1706738279739; Wed, 31 Jan
+ 2024 13:57:59 -0800 (PST)
+MIME-Version: 1.0
+References: <qKhBIsYYToo2ClaEkt6vlVcQardZWwzYGwV7XaakVc@localhost>
+In-Reply-To: <qKhBIsYYToo2ClaEkt6vlVcQardZWwzYGwV7XaakVc@localhost>
+From: Cleonice Maria Beppler <cleonice.beppler@ifc.edu.br>
+Date: Wed, 31 Jan 2024 18:57:47 -0300
+Message-ID: <CAFAKJU35q9KkP619r+5X1q++fYZG18Za4pEQCu-8ZgQS=QeFbw@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="000000000000e38351061044f8f8"
+
+--000000000000e38351061044f8f8
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Boa tarde
+N=C3=A3o reconhe=C3=A7o est=C3=A1 retirada. Qual livro e data foi retirado?
+
+Cleonice Beppler
+
+Em qua., 31 de jan. de 2024 17:06, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: 000000001042249 - Cleonice Maria Beppler
+>
+> Valor Total de Debito: $ 45.00
+> Valor Total do Desconto: $ 0.00
+> Valor Total a Pagar: $ 45.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+--000000000000e38351061044f8f8
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto"><div>Boa tarde</div><div dir=3D"auto">N=C3=A3o reconhe=C3=
+=A7o est=C3=A1 retirada. Qual livro e data foi retirado?</div><div><br></di=
+v><div data-smartmail=3D"gmail_signature">Cleonice Beppler</div></div><br><=
+div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">Em qua., 31=
+ de jan. de 2024 17:06, <a href=3D"mailto:biblioteca@ifc.edu.br">biblioteca=
+@ifc.edu.br</a> &lt;<a href=3D"mailto:noreplay.biblioteca.camboriu@ifc.edu.=
+br">noreplay.biblioteca.camboriu@ifc.edu.br</a>&gt; escreveu:<br></div><blo=
+ckquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #c=
+cc solid;padding-left:1ex">=20
+<br>Usu=C3=A1rio: 000000001042249 - Cleonice Maria Beppler                 =
+                                                            =20
+<br> <br>
+Valor Total de Debito: $ 45.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 45.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div>
+
+--000000000000e38351061044f8f8--

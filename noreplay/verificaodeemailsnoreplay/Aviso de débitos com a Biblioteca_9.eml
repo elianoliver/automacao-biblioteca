@@ -1,0 +1,190 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:15a5:b0:7d:69f4:d7c3 with SMTP id bv37csp1035963rbb;
+        Mon, 5 Feb 2024 08:55:41 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IE9pgwyMoaIyKO5ER4gHYOzkEcuYy3F73C3yWOnk8T5tI/+pVFXbjT0Cj4uBSc3R9KuOgua
+X-Received: by 2002:a05:620a:43a7:b0:785:8aa8:f3ba with SMTP id a39-20020a05620a43a700b007858aa8f3bamr272097qkp.54.1707152141366;
+        Mon, 05 Feb 2024 08:55:41 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1707152141; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=bmzVuq/q5Kd8AGCr9/dJUY/SDVYVuDYv4I7f4WNQSZ9OjWsE0VsrK58bqyVwA0UOno
+         7G4dAp+72Q1+mEMdiNuzeUIQdonPFefTjeqAsgrPYE/hnPKC/sWDSgbWOGzeiGH4J2AI
+         lKQt2uFwcc3nd6wPFEpoMud7AjZfZjN3XDTTIyzWRpnwFdco6PfNU8PkaOnHO4MDoHxn
+         Tbq/N0DLuQiIg5bgfd0D9ih9eWucO3Lt63G/tafe6ZYV2QXU9BPWakUlTZ9Qi7vfrmAB
+         GC4RRsgOVAsyfWPxoWXxxyf3RUmfcR4YpK/xD4cL3yjtdu3bzFHklmX9EnSSxVYOwwgJ
+         137w==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:msip_labels:content-language:accept-language
+         :in-reply-to:references:message-id:date:thread-index:thread-topic
+         :subject:to:from:dkim-signature;
+        bh=PWL0gDFBMG7gwyJx6lC1vD94YHqKDIT/EftIcNpN/4Q=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=FKIJC/4v4zef4DWY3EcOhbFDQqeI+QfMYKefeIfKeW0Sk6ctx3RqiAR4DOQzyczgEx
+         n0/xQGkKLfbNUD4frhEepIBiGQ+vrbaPcC8h7J8aOKYaROqrXmWbIIQlOx+bDDpZU7rk
+         ZlzCgl0v5+QIg8xYumWuFZ38B9/1Fdv9nlO7NoJlmkwyBaTCxJXSUBEVs8XI14JSAF0f
+         PyJQwbyOXL5w7h0g0nyeNPXa2E9N4FarvRt+0HEnP+fxSuL3M/U4iJeiMRQs592PwkQq
+         QvMr7Dpk9Rg+CMuRvhb6bcA3P5U9Q9Gqfu07knoZqy2eMUyntQd7vHv+p0OI2sCFfjh7
+         xq+g==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@hotmail.com header.s=selector1 header.b=uGUGIxT4;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of joargenta.73@hotmail.com designates 2a01:111:f403:d10d:: as permitted sender) smtp.mailfrom=joargenta.73@hotmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hotmail.com
+Return-Path: <joargenta.73@hotmail.com>
+Received: from SA9PR02CU001.outbound.protection.outlook.com (mail-southcentralusazolkn190110000.outbound.protection.outlook.com. [2a01:111:f403:d10d::])
+        by mx.google.com with ESMTPS id pj4-20020a05620a1d8400b0078403334a55si223441qkn.133.2024.02.05.08.55.41
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 05 Feb 2024 08:55:41 -0800 (PST)
+Received-SPF: pass (google.com: domain of joargenta.73@hotmail.com designates 2a01:111:f403:d10d:: as permitted sender) client-ip=2a01:111:f403:d10d::;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@hotmail.com header.s=selector1 header.b=uGUGIxT4;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of joargenta.73@hotmail.com designates 2a01:111:f403:d10d:: as permitted sender) smtp.mailfrom=joargenta.73@hotmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hotmail.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=SRKB4mzvSUVxY0WC0QzrVlCJbv5l03NfgFMhpZXl2xCf4UCpNvH/oDpLAOXjMuxKkyptsKTa8oYPwmDQPDf2HUynI3gJ5+9AeMcmca430d5SkGupbLvC8Gb9lmrhA4pgwj6MTh6avV09GsR3UonOTmK0f0B0Ajof4uvq54TOKhi+rYetTxgb+AaBftPxNelaDVqSPjNeiWHPwM6iYTunhF7qVfKf3WWgk4Ur/5b377Xs8A6Z/SoYiRHx3Eas8c8CyTfbAXaxCosFpx4dW/+h2AmITI4q+o5/oKAkS6QWxRbLLx2aGu8etOxbKn9QlaSQQqfzSVAMkoL3CJvThxHuEQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=PWL0gDFBMG7gwyJx6lC1vD94YHqKDIT/EftIcNpN/4Q=;
+ b=mmfyFjKMUBRdS3saFFtQYU51EnnwY8/PyB8Gbdh8jSlMOS5wDJMMdaVh0xpsA2FzH8pBgULZHwml/1bUhzgaHJa3stp2Hrc3TkE1pMc0wzSGtOwcrFZSthkoFI1e5y5gJoSGZjvINx2ESP8X5gWZQjy1AX1BnpsjZSIhE8LCPEDHCRRl4/TQ/u+XgFNv7EhpY72CYsK8uW4G59Rni5Kwm0Axh1yYTMdUl8G2TvJgZGhbsP2ylCGWAgsd5iJJY2WeRXQK7HRPWrq9opZ36N69EBih2/DiL8V1HV4k2EUeGzaLZnxrtjfnfems2czX7YE+XvrJcnTs7EHjHH8BRhrCqg==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=PWL0gDFBMG7gwyJx6lC1vD94YHqKDIT/EftIcNpN/4Q=;
+ b=uGUGIxT44yGRndaAKO3XweYwOL0TEr4qObJvy1NECcoKyzqzVCqJx2oQ5rxlLFtypM01NnM2nS7EaVbGrxA6uhANPzC7oSO22QJzqdM5nWnWK1ZH+PE2cpJXUA5ZtaSnZfGn80oeA9CkWZwR+41o4R9EPk9unYCSF53R7xPWTlUyboIwN/7IClcM2HXG8owNgGlj6PD9wD2cPbcgoMSwgsg5cL6rlZ9+jA3nJO/gaABznP2lT4j1Q11vRfO3qI8WuND3mseyjh8Wfo8MxjnvEUmneGcDvJfAqnJ6oquEwOOVMWwSmtmJIEIzVHdloCLav93P1qWN7IDisoBEBIJboA==
+Received: from BYAPR02MB4039.namprd02.prod.outlook.com (2603:10b6:a02:f9::25)
+ by PH0PR02MB7126.namprd02.prod.outlook.com (2603:10b6:510:13::12) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7249.36; Mon, 5 Feb
+ 2024 16:55:38 +0000
+Received: from BYAPR02MB4039.namprd02.prod.outlook.com
+ ([fe80::ca53:a9e:12bd:2885]) by BYAPR02MB4039.namprd02.prod.outlook.com
+ ([fe80::ca53:a9e:12bd:2885%7]) with mapi id 15.20.7249.032; Mon, 5 Feb 2024
+ 16:55:38 +0000
+From: =?iso-8859-1?Q?J=D4_argenta?= <joargenta.73@hotmail.com>
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Subject: =?iso-8859-1?Q?RE:_Aviso_de_d=E9bitos_com_a_Biblioteca?=
+Thread-Topic: =?iso-8859-1?Q?Aviso_de_d=E9bitos_com_a_Biblioteca?=
+Thread-Index: AQHaVNGdukG49IhF7ky26Kxmocw8NrD7/qJQ
+Date: Mon, 5 Feb 2024 16:55:37 +0000
+Message-ID:
+ <BYAPR02MB4039E398E89145276F6E384B8A472@BYAPR02MB4039.namprd02.prod.outlook.com>
+References: <oCMUSem8tQmXNf1kTv0OnYLUE1ZUHYR3Yh2n2TYBMo@localhost>
+In-Reply-To: <oCMUSem8tQmXNf1kTv0OnYLUE1ZUHYR3Yh2n2TYBMo@localhost>
+Accept-Language: pt-BR, en-US
+Content-Language: pt-BR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+msip_labels:
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [LeX0B4PQmmHeMFVT8CnJ7XaWr1RpDrTIef40rHHFUdia1Gn2G038YUyFnhxEDMpp]
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: BYAPR02MB4039:EE_|PH0PR02MB7126:EE_
+x-ms-office365-filtering-correlation-id: 9f39854b-5259-4d9c-76a1-08dc266b474d
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ GZZsawYOUP9nHPCYv76c2jTRGsku5iXmxdadcTJhLgjNmSP4993LkPe8Rr2dqgvhA/2FNk6+hW7B8SMajq/KJll++ZvfwgLJn79VTo7NiSPFIVUDCrVqqPOuqvzAa98BRQCcDEltWDQX5gyB6pWtGFOPt3pQpvHA48H6Wdftjv39rCIyZUWHkXpuVRJmXYqRFAMAkYEd2IsRTKdKBqkfOIAO1H1s+USCwIarX2vHANAbDg9mSccr3TAoi9R8asYz72uy1LCeUeLXuvUqoOtdP+utvZ4HENgkfS6eKXgBbzrPvZCjNWsOJsWZG312EcaZdmNNatPhTnawjggooXRnA2YfQAeUemN2KErAHXTRbWGu/a3lbv4KLYqXX+LzAq70mNS2sZAFPnBYwEAIIc1f83GXb7d0jiCihemsZE8uAbCTyac6zZuSSEWu2rOi9nj3VEGLQEKRlUGpM4klhcMh7iPceYvW0G9jy1niPDiKMqa+qQIZjisbTWNcMguFBJlLJGAHbeNtXpuPXRnh9T3ZrI7Xc/Ym99Xf9kBr+poT1+12sUVYOeeuILxWLTeYQy+v
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?iso-8859-1?Q?cyMN3+r7Cm3Sn0lNh4EqwHvAh+rz+Vuu+9nN5mKe7N74XF9bE4XllcKxyb?=
+ =?iso-8859-1?Q?xeX9YAXxppqCFhqc7IWWyhdMKF+yk8Tzq9Nf8Y7kRKQTtXGVkzRjQT9nSu?=
+ =?iso-8859-1?Q?CwZ5zsrQQxlTOSp77f2Ayz0/9gaw9G3/7NLvvm/gMOSNi9z2/+4yWELYga?=
+ =?iso-8859-1?Q?11c3rwA7htVH02ndBbcEih7tG1z/CBLE2MU2apw3wvOzD2Tdh9qI0oT/hu?=
+ =?iso-8859-1?Q?cUh4BSQZtO4Vgh0prTufFZtPLc5JGvvc/iVRDWdrk+fRN3u9vw4JOCsqDz?=
+ =?iso-8859-1?Q?Y9wzr+zqR+hWYQdPBPkq5eQsLUfXmZ59ErlG1gj+eqeUDNFf1b0NAcOwSM?=
+ =?iso-8859-1?Q?geFOANwdOn7WGs9oQW+ZCm/8i+ce017Um+5B8uFXU6n1Ffojy420wGl8RS?=
+ =?iso-8859-1?Q?dtNWV1EZJtf59r2AsQTjPEg/DPrUUMq48VgyIazH6CHWIUsXrhgM2fQ53F?=
+ =?iso-8859-1?Q?L0UdgzHRdeU6phWIlEJ3+yMWyG6/nDjfaGaIkaNOBF9zilildCu1ZcqRiD?=
+ =?iso-8859-1?Q?NBGpdp8YQWfC6nIrJzEFrtQlU63POeay601xjwDCiNPTle7wwKMQ4ms2bE?=
+ =?iso-8859-1?Q?gfluQRZrzoQ1RIDgfyTh0AfXR8a1FZmMilw2X8DebeQ72zThkAFd5VLJj4?=
+ =?iso-8859-1?Q?I0f47dz+ny5ynw1UqI7hwYN94fEEZIiu8WrJcMFTtJZam7XrgXI+TsaAS1?=
+ =?iso-8859-1?Q?3E40pdYDdVpVAQ4jpHx2Tfxm96EejIlWKfFvFAUSaJQjSVy1SuLwCCIwZU?=
+ =?iso-8859-1?Q?wB09mm4idTxlVYnGrMMnyS5jevDGUmLfh9tcwJW4P4k97yqfIINnA9DPza?=
+ =?iso-8859-1?Q?nIOxh36YMvO5MSig0jl9/WvRxyDiJDCkIxrolftMVKqmZ0PQc/3KOOOtY1?=
+ =?iso-8859-1?Q?f6frNpRtSZ10QEdWyPZ+0HeAWtEHfrY3sx37qBVO7wKcEZGErbVxg6PNXN?=
+ =?iso-8859-1?Q?t6wYASnPzw9qIBhPzOl4MxNTFqtxppTIiT6sjfJlK79bBucWSlXQM35KOx?=
+ =?iso-8859-1?Q?uauOH0u3SKfk3qmB0gjefZQaaP5lXU9VQthsdLIc4YD5/AqRgtR3iQ1U93?=
+ =?iso-8859-1?Q?mTloy5G44AbIcehIQnTTixbevAla9Iw8+EFe36ScKBeSSx4y3DPflwlAiZ?=
+ =?iso-8859-1?Q?3Ai5V1bNNMQUkcK+hH+k+DKPj7L/6wj+BQdeB4V0PFQZm6/wPHd1c6QpMC?=
+ =?iso-8859-1?Q?iIdU/tafnrEmUQG+9s5xjCQQvikv02gtS94Q9N1DffH6wB/bZE+vGcfJlw?=
+ =?iso-8859-1?Q?ijpGoeleuiAPC1sbqfDyG6Ecp1fDyL0A5E6cWYVxowmDS3VQz32GoXKoM2?=
+ =?iso-8859-1?Q?DbqI8Kid78PhLb+8aIEZbV6D4g=3D=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_BYAPR02MB4039E398E89145276F6E384B8A472BYAPR02MB4039namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: sct-15-20-4755-11-msonline-outlook-99c3d.templateTenant
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: BYAPR02MB4039.namprd02.prod.outlook.com
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: 9f39854b-5259-4d9c-76a1-08dc266b474d
+X-MS-Exchange-CrossTenant-originalarrivaltime: 05 Feb 2024 16:55:37.8880
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH0PR02MB7126
+
+--_000_BYAPR02MB4039E398E89145276F6E384B8A472BYAPR02MB4039namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+N=E3o sei do que se trata.
+
+________________________________
+De: biblioteca@ifc.edu.br <noreplay.biblioteca.camboriu@ifc.edu.br>
+Enviado: quinta-feira, 1 de fevereiro de 2024 02:43
+Para: joargenta.73@hotmail.com <joargenta.73@hotmail.com>
+Assunto: Aviso de d=E9bitos com a Biblioteca
+
+
+Usu=E1rio: 000000011115048 - JUSTINA ARGENTA
+
+Valor Total de Debito: $ 12.00
+Valor Total do Desconto: $ 0.00
+Valor Total a Pagar: $ 12.00
+Este material est=E1 pendente, por favor verifique a data de devolu=E7=E3o.
+
+--_000_BYAPR02MB4039E398E89145276F6E384B8A472BYAPR02MB4039namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div style=3D"font-family: Calibri, Helvetica, sans-serif; font-size: 12pt;=
+ color: rgb(0, 0, 0);" class=3D"elementToProof">
+N=E3o sei do que se trata.</div>
+<span style=3D"font-family: Calibri, Helvetica, sans-serif; font-size: 12pt=
+; color: rgb(0, 0, 0);" class=3D"elementToProof"><br>
+</span>
+<div id=3D"appendonsend"></div>
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>De:</b> biblioteca@ifc.edu.br &=
+lt;noreplay.biblioteca.camboriu@ifc.edu.br&gt;<br>
+<b>Enviado:</b> quinta-feira, 1 de fevereiro de 2024 02:43<br>
+<b>Para:</b> joargenta.73@hotmail.com &lt;joargenta.73@hotmail.com&gt;<br>
+<b>Assunto:</b> Aviso de d=E9bitos com a Biblioteca</font>
+<div>&nbsp;</div>
+</div>
+<div><br>
+Usu=E1rio: 000000011115048 - JUSTINA ARGENTA <br>
+<br>
+Valor Total de Debito: $ 12.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 12.00 <br>
+Este material est=E1 pendente, por favor verifique a data de devolu=E7=E3o.=
+ </div>
+</body>
+</html>
+
+--_000_BYAPR02MB4039E398E89145276F6E384B8A472BYAPR02MB4039namp_--

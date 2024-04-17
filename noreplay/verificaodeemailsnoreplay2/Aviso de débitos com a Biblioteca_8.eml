@@ -1,0 +1,121 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp2976221rbb;
+        Wed, 31 Jan 2024 11:34:58 -0800 (PST)
+X-Received: by 2002:a81:6d84:0:b0:5ff:a9bc:3893 with SMTP id i126-20020a816d84000000b005ffa9bc3893mr80107ywc.12.1706729698619;
+        Wed, 31 Jan 2024 11:34:58 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706729698; cv=none;
+        d=google.com; s=arc-20160816;
+        b=qGXtdLP9shF3F9c9nnL3BXVqBSCt04/1q0sfk0+BZE8ADmqLHWCdwbig5cYDZak3Nl
+         t397ZkKm3AFW95UrxOnadQJ8NU/tP/gAJ9yXHCdGKHtVrHrRVPq3wzegSkFvxq31XPu9
+         peJ/lKyidOhWucYg25O0waVh43uhRY80kpKN8vGZvsYt2S/ds781eXLSod4zOh+iZlE+
+         FxbFziwQyBXkgJVVzEQWK0MoRXtyTwBjB0AXjIvA9UEnorLNj3pnwVYn71vt0u0bgUJ+
+         a03SI34DW8+NssjXUbnTsMj1dVh4pWCMFFge7TLKraaOv9UjzlD4p7LzVocnMLzdIzJZ
+         T70g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=fNhdZt2IMgoK97w+L88ONAUXLEif73d7JHA/IpDB5AE=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=JSkTlD/wJJkdZDBAPYeTX9HV+7u9WmHG3slmFMWVx7kup+f24Du5Htbhyoyv3dNuZ/
+         BY3b1ujl07Qpk4F7AX3jtLjNhViEWZ+cYsc/3xFBtn5F1/taZ+Kd6COXX1Ue0x1LPIQ1
+         +TEj2i+l470qD64VsdffMHLvb1WbZRlrcPcnNCyral7N8AjzC7Rq72fWBfFrPKu1++bR
+         IMmxJQW3ILLZ+OWgLSAgIfeePJ7IGd8E1Cpl4yYDQCcijjjreNWtUe6lE+VvQA9GVnjy
+         sIhfYkgPvtEgHMFq2cnxK8oX7O0qkq1TRzAgCWAKzKW83dsYdAoCs5As7Rypn3rJR+NX
+         kFdg==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=ZsSh8iSd;
+       spf=pass (google.com: domain of douglas.bolinelli@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=douglas.bolinelli@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <douglas.bolinelli@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id w134-20020a0dd48c000000b006041337b74dsor602669ywd.15.2024.01.31.11.34.58
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 11:34:58 -0800 (PST)
+Received-SPF: pass (google.com: domain of douglas.bolinelli@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=ZsSh8iSd;
+       spf=pass (google.com: domain of douglas.bolinelli@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=douglas.bolinelli@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706729698; x=1707334498; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=fNhdZt2IMgoK97w+L88ONAUXLEif73d7JHA/IpDB5AE=;
+        b=ZsSh8iSdLfEy6DUC5XyI1iI1iTdJ5MCsguATYl/JW7HOkK3gS2AQTZxdjZu4nd/DQz
+         TXcuhFOx59GP+5atGbWzgqhSINe3asFJ7nUqpG2eGVsPJ85HltpX602w1GngBLSx7XjH
+         VY0epbkPIDLlNzZpxI0YY2adLdz42FW4Bd9Qi+xpv3ADKor0qEkGAP00lIVEJOFxsUk9
+         FIUCyift4dSm+zShf6UL9RK0lI86oefIUFzX8Q1ZtCZUnxCEXasYyxdjLVXKe7eqOWgh
+         /CIbDLE9npCayjZGBDAeISW4b3xINzw4KXtwKDG8VlConPUi4uqGxaJShYOjryOTL3GN
+         429Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706729698; x=1707334498;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=fNhdZt2IMgoK97w+L88ONAUXLEif73d7JHA/IpDB5AE=;
+        b=FZTDRawM7ppbvypMsGf+nMbPioxH/fBM0eEJlWNLIMeUZ0CPQIqELSnY7dXPKHGhcR
+         UczJ8rzxAPSxfxPdQ5puWJXP3BSJI61J4ICCeL6emPm1zPseUnFveuqVsWQzaC2CLHXr
+         xT3f/SPYryGLEOzbj5oSpizj+uMtus+O5BQscaHSyg1iQYgV/tZi0NQCLzWanex8NqUR
+         jWfdrAh/+CAWHuI8GECHC+szn91uSzUqFhJLd/ElKFcEelMdK+qtONQzyGVfjk32JAo2
+         tqyTEE5cx1RzA4gsaIbrYB+nsMaRvQCws/ybaI6X3qA1Kq6oOqfwAPl63TjNZ2Yvew2t
+         GUhQ==
+X-Gm-Message-State: AOJu0Yy5GRdfSZH9EkiF4Zciatv6BhDYsCnE7ItQhwJqqH1gfOpYEPGU
+	Qpi04uNVK4w8txFnKbvOaiZ5CPIT3fR26kI6F7qiDrKq8Afy25du50/kGOCb8raEEOdEIk33aET
+	SrtmEZGsnDMvjzK9y0WcJUBX7kNOKJjq5
+X-Google-Smtp-Source: AGHT+IFgrND556JK6EOxWqfTd4lAgQ0uYDLjwGSYxUFTYC+YLfMmLLjxswJzOpyQZe/S2FOUrvxvB4fb/LUnNB2LwHQ=
+X-Received: by 2002:a25:9103:0:b0:dc6:4f7f:46f9 with SMTP id
+ v3-20020a259103000000b00dc64f7f46f9mr112901ybl.6.1706729697742; Wed, 31 Jan
+ 2024 11:34:57 -0800 (PST)
+MIME-Version: 1.0
+References: <VKFUqeGvLv0NgCgs5Mk5UM1zWElNKXBaF04X6KsN7lk@pergamum.ifc.edu.br>
+In-Reply-To: <VKFUqeGvLv0NgCgs5Mk5UM1zWElNKXBaF04X6KsN7lk@pergamum.ifc.edu.br>
+From: Douglas <douglas.bolinelli@gmail.com>
+Date: Wed, 31 Jan 2024 16:34:46 -0300
+Message-ID: <CALVot8L+5bKyG8jzc9Qj=2vpE5uxQV5y=Sy5-towXkdKA_uUhw@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="0000000000005ce590061042f9ae"
+
+--0000000000005ce590061042f9ae
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Boa tarde!
+Como tenho d=C3=A9bito a=C3=AD se nunca peguei nada a=C3=AD?
+
+Em qua., 31 de jan. de 2024 13:34, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: 000002016010048 - DOUGLAS JESUS BOLINELLI
+>
+> Valor Total de Debito: $ 19.00
+> Valor Total do Desconto: $ 0.00
+> Valor Total a Pagar: $ 19.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+--0000000000005ce590061042f9ae
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Boa tarde!=C2=A0<div dir=3D"auto">Como tenho d=C3=A9bito =
+a=C3=AD se nunca peguei nada a=C3=AD?=C2=A0</div></div><br><div class=3D"gm=
+ail_quote"><div dir=3D"ltr" class=3D"gmail_attr">Em qua., 31 de jan. de 202=
+4 13:34, <a href=3D"mailto:biblioteca@ifc.edu.br">biblioteca@ifc.edu.br</a>=
+ &lt;<a href=3D"mailto:noreplay.biblioteca.camboriu@ifc.edu.br">noreplay.bi=
+blioteca.camboriu@ifc.edu.br</a>&gt; escreveu:<br></div><blockquote class=
+=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padd=
+ing-left:1ex">=20
+<br>Usu=C3=A1rio: 000002016010048 - DOUGLAS JESUS BOLINELLI
+<br> <br>
+Valor Total de Debito: $ 19.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 19.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div>
+
+--0000000000005ce590061042f9ae--

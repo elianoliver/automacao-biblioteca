@@ -1,0 +1,59 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp2881820rbb;
+        Wed, 31 Jan 2024 08:50:19 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEC9ES7OOrpm6O70Ns+vWbWZqTV0PfStHeoH/ldovvlaWkqqD1vlO+lIDXKNbTgLRdRV+br
+X-Received: by 2002:a05:6871:3186:b0:218:d341:df92 with SMTP id lv6-20020a056871318600b00218d341df92mr1050457oac.48.1706719819741;
+        Wed, 31 Jan 2024 08:50:19 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706719819; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Lruo3S6dbF8DTqLMLQz6E7NLclY/k05NDf5mCkNKsI0jB/UmFF9iaQnJPxKPbeV5Ae
+         Rgaw2MjAdwlBLWTEsR2RyYAo3FRun6bcEIG8biibld9EKB1ggrNh/auhCh6ckpeZQTxH
+         L2FEU+OPUr+EgkSGcSX+1bP6xTZDL/LPctpCEoo527SqYFWbWmh3ajRm2YSL7mgbkLNc
+         8nEExEfc/k7IgDgrs+uhRynaSpVp3QELpA6fUVVPLvePdH7vgLZvRB1rMiRC0zUmq8SR
+         3Vj8s3PlD+j8EAtkebVDJw1OAZgLzjcVWoVn13KKwH2wPpdcVAmOxOOm47zTJHfrH6f3
+         MUMA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:precedence:auto-submitted
+         :references:in-reply-to:subject:to:from:date:message-id;
+        bh=+AWBTRO6s4+OjPA+YOiThQBI2Xw86Z66l0tVR8d5qN8=;
+        fh=v2gfslbnvYTbssQg7S1KB/UN/8hhDDH4t3n5wDELOjY=;
+        b=xCTxdWKo44OmHoIyhdZWG81KX1rBfHkqcgf/XhMCufNsrNBj9BoufcWsGc+kHxilcq
+         z1IThckt5MEKRzeUTC17zNZ7KFv1T1A8m7U61FwesaoHh9QlFVc9fhq1bVJ8UKUHtcL4
+         Ts3DO96NvhWGNqmtNTCzpw2gXFju3kzzb0DCyycdTN9xVjdiIVEqrv/P7HR9b5XsJZ+C
+         VbHsBYH+D13XZcrnKlO9dVXLS0TsRgP5F0HNZbUxDtYjzs/gt94fKpOaCSIzXMGhPvkR
+         zT/1r2h23uMYp+7aAWvzmGti5XgEBKEIPvpPI9zYaKHpxGHtrkskAlO6CFXA6OIHIi1N
+         wvaA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of gobboprodutos@terra.com.br designates 208.84.243.49 as permitted sender) smtp.mailfrom=gobboprodutos@terra.com.br;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=terra.com.br
+Return-Path: <gobboprodutos@terra.com.br>
+Received: from if04-mail-sr02-mia.mta.terra.com (if04-mail-sr02-mia.mta.terra.com. [208.84.243.49])
+        by mx.google.com with ESMTPS id cp23-20020a056830661700b006ddf0a7c818si1202392otb.270.2024.01.31.08.50.19
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 31 Jan 2024 08:50:19 -0800 (PST)
+Received-SPF: pass (google.com: domain of gobboprodutos@terra.com.br designates 208.84.243.49 as permitted sender) client-ip=208.84.243.49;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of gobboprodutos@terra.com.br designates 208.84.243.49 as permitted sender) smtp.mailfrom=gobboprodutos@terra.com.br;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=terra.com.br
+Received: from mail-trr-box10-mia.tpn.terra.com (unknown [10.235.200.49])
+	by mail-sr02-mia.tpn.terra.com (Postfix) with ESMTP id ED61E60022FF
+	for <noreplay.biblioteca.camboriu@ifc.edu.br>; Wed, 31 Jan 2024 16:50:18 +0000 (UTC)
+Received: by mail-trr-box10-mia.tpn.terra.com (Postfix, from userid 520)
+	id AF6461287A0; Wed, 31 Jan 2024 16:50:18 +0000 (UTC)
+X-Sieve: Pigeonhole Sieve 0.4.19 ()
+Message-ID: <dovecot-sieve-1706719818-696808-1@mail-trr-box10-mia.tpn.terra.com>
+Date: Wed, 31 Jan 2024 16:50:18 +0000
+From: gobboprodutos <gobboprodutos@terra.com.br>
+To: <noreplay.biblioteca.camboriu@ifc.edu.br>
+Subject: Recebido
+In-Reply-To: <yc983MGS5zD0B29T5hnhlzHdm1TPJR5TFhH9nIJQkmA@pergamum.ifc.edu.br>
+References: <yc983MGS5zD0B29T5hnhlzHdm1TPJR5TFhH9nIJQkmA@pergamum.ifc.edu.br>
+Auto-Submitted: auto-replied (vacation)
+Precedence: bulk
+X-Auto-Response-Suppress: All
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+E-mail recebido com sucesso.

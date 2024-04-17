@@ -1,0 +1,149 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp2994062rbb;
+        Wed, 31 Jan 2024 12:10:57 -0800 (PST)
+X-Received: by 2002:a17:90b:f0e:b0:292:b026:6aaa with SMTP id br14-20020a17090b0f0e00b00292b0266aaamr2276809pjb.49.1706731856819;
+        Wed, 31 Jan 2024 12:10:56 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706731856; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ta/+X6Zn7JIPd5temJU/Ma+m/oMj5GTyMS0VRxDl/slXyPOoqBd9Y0F4vCWBngB96j
+         UlS6Z/zdyHzEcxsaw38fF75lzzVLDP3H1zxD+hDFV5Rh4zI0I2B0A20XT5y1r9vgnj0E
+         dK0++j3/97Hn8brLZYGoc29BcFm+0tnFVqqWhqvYXlvPybsmulOAxDltIzliaz4RKsGM
+         +T7qC7RKUX1PYMa2EjkmPOWxqTbDbOth5Xpd9CKz0BcZUgh24bgGU7KxsWsa9YB1xVkd
+         o3BH12+jLTHzcmkSeAOLH1TF5mCPuLPTgjP+ZcGlB6K328xccMTy8v8W7x4yaFf7IZmR
+         EGMg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=oIi7baCV5qt6vup/asTmG1d6Squ9dJgWwY3QXDk2iE8=;
+        fh=c/5d/wew3TjGwPab/A1nA+qM4/joswTGkgu8+0sIG2M=;
+        b=sTjNYllYmpcYJojSKkFn4nkvlYkTqrUpNWY7wUcx48ApevBttCMbHYQ37C8xUAN1yp
+         VJu6r5H6t0YCxnWtLJi7UaoBPs4vxAxFDU1iAgf9Ttx9Pkf97jBpCoPshTORvpx4Oq1y
+         J3tBnG3QUiDA4cq/9lycx23zjET0yDqwEH0Pbs1BIr1GZHNcx1aYyG4ilPb6MfPpbFPx
+         HpW8jR7nko8+otSGpZrlYlxXrnlfVQXNPYMcRz2NPTNeg0xOueeu4iuK6hs86Gmx6vU3
+         NODEIy3szB0h3A5VCpkuYx3eBTb+X21ntuyZ5B8l1BMdDI1OZijRkn40lgGsTX2JMQ9z
+         UV9Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=i0pjtE1u;
+       spf=pass (google.com: domain of maneljoseph100@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=maneljoseph100@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <maneljoseph100@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id s9-20020a170903320900b001d751cfca5csor3869536plh.7.2024.01.31.12.10.56
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 12:10:56 -0800 (PST)
+Received-SPF: pass (google.com: domain of maneljoseph100@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=i0pjtE1u;
+       spf=pass (google.com: domain of maneljoseph100@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=maneljoseph100@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706731856; x=1707336656; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=oIi7baCV5qt6vup/asTmG1d6Squ9dJgWwY3QXDk2iE8=;
+        b=i0pjtE1uPWfA/XWDMS6axce4qRiOLbwn8pY4d+AwX6BEGLkkT+RBicFa2wHsf1ZA/c
+         Aa372jVpJ1CJXk2U5rQKxAdydJBFs64nRM4wlz2+EEveXeNb9fymNEUCCl06q6YDc/Ie
+         vbXc4w0hwboG3SVTa+3afsJC4E17uIZoQGA5Yl2Yw6WkzR5NhsWhJd1Wg2coZtQqqbfj
+         KsdYqWDKSW2Cp0aQQvNMxWWoOuB6dAl+hF0753dyREuwIkL4yMG8z1anfWYgWX3vnbRw
+         sg9xTQGtStfIpXemU5w8ab6tnU4K8RsrFxDC5zGxN3yqLVzCjpcmT4AnBKZmpsLM3GoR
+         4sEA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706731856; x=1707336656;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=oIi7baCV5qt6vup/asTmG1d6Squ9dJgWwY3QXDk2iE8=;
+        b=pr4TAEL8HY2wndVSewd5sH60En8xk0tp4xfWFYYwP42Stk7SUnwSk4F31exKp5D0ex
+         UII+GAVOCKiqrcqwezbtiI2y81kyJ1Fe51s7WMYfOakXRaCVgRBa6QsvbWP0nJo+fMwf
+         ahNS9Pk4dVzzcEXlEz9bt+QV6ST/P+GoEPcUWpDLXeoupkvzekgJTPEMlZ+Fr9L604iC
+         6DsI2dCr+JGvBwiJIyyKbAPdUBm4UooKW7IzX370kzOxhXFm7kQDHKZWGI3vKU1mxuRO
+         0TJXi9avIKVscOqXZpawTDcun1p4bfWUkIaoxcJ3birZKQyaEud6pkWN/Yl5nL79kvkX
+         SNHw==
+X-Gm-Message-State: AOJu0YyLe+k6CEMePi/4aBlImKjiQ5taTo4DDsPNJ8757DtOGETSK25L
+	6P3uSFR8VfTTkirQMyEdtHOpb2/iA8KW7RF3stHm51SzWXYxrGw0FTpiu7JagK4SXLsA8vxM4Gn
+	I1e/d/l53z8SRr++Ung/NJHlqApndVd3a
+X-Google-Smtp-Source: AGHT+IFt0cahCvqHN06uMKcn0tSJM/eyJKA7IFI96EckvAbs7viYmGr3aLkehE2ZzzL+Ful1oZmc/XrpjFej+zzS29A=
+X-Received: by 2002:a05:6a20:a786:b0:19a:34f2:96e3 with SMTP id
+ bx6-20020a056a20a78600b0019a34f296e3mr2734519pzb.59.1706731856007; Wed, 31
+ Jan 2024 12:10:56 -0800 (PST)
+MIME-Version: 1.0
+References: <3oOkDOBjsQyIxL27romMaWthA9Qqp8XMNXFe8sTWQ@localhost>
+In-Reply-To: <3oOkDOBjsQyIxL27romMaWthA9Qqp8XMNXFe8sTWQ@localhost>
+From: Manel Joseph <maneljoseph100@gmail.com>
+Date: Wed, 31 Jan 2024 17:10:42 -0300
+Message-ID: <CANY3-r8eo5mP5iKKOGe--FcB9rk_nX1gVo2=x6iSiuHX5N73Tw@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bito_peri=C3=B3dico_de_material?=
+To: noreplay.biblioteca.camboriu@ifc.edu.br
+Content-Type: multipart/alternative; boundary="0000000000000115c70610437a96"
+
+--0000000000000115c70610437a96
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Ter=C3=A7a-feira eu trazer ele,onde eu vou encontrar dinheiro pra pagar ele=
+,que
+eu faz com ele?
+
+Le mer. 31 janv. 2024 =C3=A0 5:07 PM, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> a =C3=A9crit :
+
+>
+> Usu=C3=A1rio: MANEL JOSEPH
+>
+> LEMBRETE:
+> Devolu=C3=A7=C3=A3o de Material para: 11/04/2023
+> T=C3=ADtulo: Consci=C3=AAncia, consequ=C3=AAncia / 2019
+> Volume: UNICO
+> Tipo de obra: Livros
+>
+> "Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o."
+>
+>
+>
+> -------------------------------------------------------
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+> Conforme Art. 44 do Regulamento da Biblioteca h=C3=A1 a penalidade de R$ =
+1,00
+> por dia de atraso.
+>
+>
+
+--0000000000000115c70610437a96
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<p dir=3D"ltr">Ter=C3=A7a-feira eu trazer ele,onde eu vou encontrar dinheir=
+o pra pagar ele,que eu faz com ele?</p>
+<br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">Le mer=
+. 31 janv. 2024 =C3=A0 5:07 PM, <a href=3D"mailto:biblioteca@ifc.edu.br">bi=
+blioteca@ifc.edu.br</a> &lt;<a href=3D"mailto:noreplay.biblioteca.camboriu@=
+ifc.edu.br">noreplay.biblioteca.camboriu@ifc.edu.br</a>&gt; a =C3=A9crit=C2=
+=A0:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;=
+border-left:1px #ccc solid;padding-left:1ex"><br>
+Usu=C3=A1rio: MANEL JOSEPH=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <br>
+LEMBRETE: <br>
+Devolu=C3=A7=C3=A3o de Material para: 11/04/2023<br>
+T=C3=ADtulo: Consci=C3=AAncia, consequ=C3=AAncia / 2019<br>
+Volume: UNICO<br>
+Tipo de obra: Livros<br>
+<br>
+&quot;Este material est=C3=A1 pendente, por favor verifique a data de devol=
+u=C3=A7=C3=A3o.&quot;<br>
+<br>
+<br>
+<br>
+-------------------------------------------------------<br>
+Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.<br>
+Conforme Art. 44 do Regulamento da Biblioteca h=C3=A1 a penalidade de R$ 1,=
+00 por dia de atraso.<br>
+<br>
+</blockquote></div>
+
+--0000000000000115c70610437a96--

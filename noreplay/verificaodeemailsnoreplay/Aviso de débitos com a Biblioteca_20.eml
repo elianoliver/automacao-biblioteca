@@ -1,0 +1,123 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:1583:b0:7c:89f8:37c6 with SMTP id bv3csp114313rbb;
+        Thu, 1 Feb 2024 00:08:59 -0800 (PST)
+X-Received: by 2002:a17:902:e5d1:b0:1d5:eeba:814e with SMTP id u17-20020a170902e5d100b001d5eeba814emr5669938plf.18.1706774939422;
+        Thu, 01 Feb 2024 00:08:59 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706774939; cv=none;
+        d=google.com; s=arc-20160816;
+        b=JZ5czqMwWJbQ5SarHmhA4GA1TvLZIWwg49o60aD570f7H4jyovtuhxnAFjL4bopL2V
+         17hg/2tAM59+6Zjx/NK4Q6qaIxtJj+V6LVgmdw2cQF0UjioM24Yc/V2+nSUClO7Zmksf
+         B2StPnRRW5TwvENqDV/L83Ar10jQCkFK+ePBsdkjFHqwZcgNcBpCmFYyOjKG75l7SEmd
+         z8/Hm3MqZZC324Xf2/j6528tjsRYmztGMXtseUjaa7s/EEWpEiFfCK/6bVSmBewkdemV
+         0S6kEhMxdWdRMrRWCjTIwupr0pphlXL4Wy7EBxiG6GA7U5s0y8ValFNAg4hA3vw/i05N
+         b9Og==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=+/O+dTYHznW2PF9TsW4QwtVfnNkpJjhm9cFdl3V2ZVo=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=TkB6BzJ/cJxdc9GEfJLz0qtmvitnVLzMPe//tssWFKNFjLjo/OJtysPHzFmMvNEanL
+         vIGwKwSiXC8T/5Jg/8mKHozBxnSHXFB2uUZBjKdVo6lb/Mx7D26KALrJ/cqSQzJ980C4
+         9thE01hawBzbJIENE+E/ehoQoMW5W3HZcGw9w66aTwFvmpfP1ATAlK3KufCSbx8HZIDR
+         y6REAWYab+xfYqFffVXM2mA2l1NlJR+Y90bxViffXBhHy9hofsmr39flveKgb3DHlb1e
+         TLY/UkWx1gkp2uOrvS8PHp9sF7J1oYo8PSiZMUkKKKiQ5M7lD1nHtQom0i6/JkincNag
+         BqGg==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=WUQeijLk;
+       spf=pass (google.com: domain of amandaarmstrong2013@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=amandaarmstrong2013@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <amandaarmstrong2013@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id e13-20020a170902cf4d00b001d8da247243sor3961450plg.14.2024.02.01.00.08.59
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Thu, 01 Feb 2024 00:08:59 -0800 (PST)
+Received-SPF: pass (google.com: domain of amandaarmstrong2013@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=WUQeijLk;
+       spf=pass (google.com: domain of amandaarmstrong2013@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=amandaarmstrong2013@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706774938; x=1707379738; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=+/O+dTYHznW2PF9TsW4QwtVfnNkpJjhm9cFdl3V2ZVo=;
+        b=WUQeijLkc9gdoX4HYZX7+96IOFc7PnKSACNl92yAceBLjasIgbUq1e+WjJr+9pTJ00
+         4Oam0KDXmvot6uS0Z8DrNxnlJVrPbJPrBvsIEnZmZWDGSHNHblwiK0DHxoD4YqG3IPiq
+         YANwjYRXT7nUZ5mpOSGVpBBUW9wzP/g06Z+9CizWP9mSewDa2uPLSP/V8s4Ycei+njGH
+         +heMw14EAUxkmmucrQddGQdphEBqLS7B3NSyNm3S/EINnvnWAI29Uefwhdv9hVN9Brns
+         rq0B5BuHZQyf/YCTQJ+yzynGjFTwRI9B4R8XYS8rqG1MOvgGP7sTYDNdmtnRLnClkr2O
+         zeRg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706774938; x=1707379738;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=+/O+dTYHznW2PF9TsW4QwtVfnNkpJjhm9cFdl3V2ZVo=;
+        b=Jo7MJWy0XS5G2ZxvUoEbIM/VmN+zJdBPOmtAAMvpdzCYIoEsp6hGAg1iDKERVffQvU
+         IPdEEeybD9+tbL1P29Fjs7XCU/eo3Q6jRWO9JGeapzzFr5Ib5awFjedXxkVlkxkBP7/N
+         Jbf1TOsaXWc0P1kIMmP93HjuZAAfyTFaoydSVA6Tjjmpq9J/UXiuJOVqRA1vyO5lg0m+
+         sBcM/ZcXyox2VhoXcFMN2qrG6s2dtiYrxBVtq+8sbnx9ZZVhVFUmwJrvv6zuqBDX8htL
+         udkQflJBrJH946GLavlB6xSua4H5u8Q0NfCFnSulnx2GW91U+TAdb08x+xTJLV6GZm5H
+         brMw==
+X-Gm-Message-State: AOJu0Yyo79qNUIzI35OFSCvGPYg945x9mqC61TD5g+OdIgq3JZdO8nk/
+	ViEONJZnZWaBxl02PFejSdK2vM0SmvuFCsoR1d5xJBKJBveQfDXzLp/cMwQ+oTy2peVRKpot6jb
+	d6I9TadCQ79CBkizyi6owkACzTUqRmYx4
+X-Google-Smtp-Source: AGHT+IHaLU+rgI2rhnSWmYM2i1beluif92yIXRXIoY1Q1s6h05R9ApHYamoZOJ50cNhG7QH8R8PBz7o4J2q3bDhOepc=
+X-Received: by 2002:a17:90b:1e53:b0:28e:849c:cb81 with SMTP id
+ pi19-20020a17090b1e5300b0028e849ccb81mr4255406pjb.46.1706774938052; Thu, 01
+ Feb 2024 00:08:58 -0800 (PST)
+MIME-Version: 1.0
+References: <QbH3g01P7iIKCD9rtuvB7GNDzYipNVafb1bvG0hJs@pergamum.ifc.edu.br>
+In-Reply-To: <QbH3g01P7iIKCD9rtuvB7GNDzYipNVafb1bvG0hJs@pergamum.ifc.edu.br>
+From: Amanda Armstrong <amandaarmstrong2013@gmail.com>
+Date: Thu, 1 Feb 2024 05:08:43 -0300
+Message-ID: <CAAtsW28maOFi=B=sOD75OaLDFn-8ZbH=LusF0rrmWOf4yCS3bA@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="000000000000e4ece006104d812c"
+
+--000000000000e4ece006104d812c
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Bom dia, tudo bem?
+Me envia o boleto para realizar o pagamento, por favor =F0=9F=99=8F=F0=9F=
+=8F=BB
+
+Em qua, 31 de jan de 2024 13:15, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: 000002023012490 - AMANDA DA ROSA ARMSTRONG DOS SANTOS
+>
+> Valor Total de Debito: $ 16.00
+> Valor Total do Desconto: $ 0.00
+> Valor Total a Pagar: $ 16.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+--000000000000e4ece006104d812c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Bom dia, tudo bem?<div dir=3D"auto">Me envia o boleto par=
+a realizar o pagamento, por favor =F0=9F=99=8F=F0=9F=8F=BB</div></div><br><=
+div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">Em qua, 31 =
+de jan de 2024 13:15, <a href=3D"mailto:biblioteca@ifc.edu.br">biblioteca@i=
+fc.edu.br</a> &lt;<a href=3D"mailto:noreplay.biblioteca.camboriu@ifc.edu.br=
+">noreplay.biblioteca.camboriu@ifc.edu.br</a>&gt; escreveu:<br></div><block=
+quote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc=
+ solid;padding-left:1ex">=20
+<br>Usu=C3=A1rio: 000002023012490 - AMANDA DA ROSA ARMSTRONG DOS SANTOS    =
+                                                            =20
+<br> <br>
+Valor Total de Debito: $ 16.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 16.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div>
+
+--000000000000e4ece006104d812c--

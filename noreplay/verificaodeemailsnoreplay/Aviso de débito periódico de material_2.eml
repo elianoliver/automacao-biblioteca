@@ -1,0 +1,146 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:15a5:b0:7d:69f4:d7c3 with SMTP id bv37csp310162rbb;
+        Sun, 4 Feb 2024 01:08:57 -0800 (PST)
+X-Received: by 2002:a05:6402:12ca:b0:55e:b943:6277 with SMTP id k10-20020a05640212ca00b0055eb9436277mr2809016edx.22.1707037737644;
+        Sun, 04 Feb 2024 01:08:57 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1707037737; cv=none;
+        d=google.com; s=arc-20160816;
+        b=lxrYwEH5MPvz0tdh/qcJhIoBd6WOowOxKCGrPz8fqJZuI8PExH/jnem2rFEaSD30TU
+         VkxCBP5zZ0Y6++yglcPakdUt1VnMwuCXBzrGKUXCB/iaEGx+1MZ3LjxWKUBr6bLWabfv
+         eNePTS5o1mMD6U1VHkMrJGeHEx6JftUavLdF8t1Wtn1yeLTS+QjycWlqqX8rCbR7Uooi
+         /RZqQY74gG0+/N+8RhqfIIqTFFFlNcN6aK1kZ6pxfS+1SHSdEcJyvBnXWAO8LamAQrkO
+         YIjsCP345v4sm1QrQyYmc1qCrXKlGTcJj8sdaE9OXqv49CP3yihJTdadVXPmurDIleg+
+         PoNg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=GAhOmL4OzcBq1VanRU55be6MW5CVSu17sQ2v/MSJNQs=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=DSAMiy7H6tCyuZadAKJu8dgu9iGkieiF1caUWbJqmrCCRjcxjTwUeoMooLoCRH980F
+         48Rcfc+cr02S7cRHH7Q91P3a19J6dFPsU6X+4LnoreOhAROOhDkfi4LUcqQmqXSE9+wH
+         rZdnIQW5Vvpnes5p8p2NTQzwjoppVSs2lvkwI7ug82+cIup8QLxKTXY+UGQMIG0gBo84
+         zHzNlk3vo/WTzqa0UFxdRGyuhIQG7tXGp6YC1EqNJkpa2HQ4OuYae3bYL2Xvw/4YPzIr
+         1WFp/dymEcEj7MkmhERS+3tYZxjzoXzt0xgkETx+TaEy9rqChDIpO4TCtmmaQ+rIcI9d
+         TEFg==;
+        darn=ifc.edu.br
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=BeaLOPeD;
+       spf=pass (google.com: domain of michellyrodrigues171@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=michellyrodrigues171@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <michellyrodrigues171@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id dj14-20020a05640231ae00b0055f2be36318sor1044632edb.6.2024.02.04.01.08.57
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Sun, 04 Feb 2024 01:08:57 -0800 (PST)
+Received-SPF: pass (google.com: domain of michellyrodrigues171@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=BeaLOPeD;
+       spf=pass (google.com: domain of michellyrodrigues171@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=michellyrodrigues171@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1707037736; x=1707642536; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=GAhOmL4OzcBq1VanRU55be6MW5CVSu17sQ2v/MSJNQs=;
+        b=BeaLOPeDDEkd98pXTYsZFEoDQ3ghK1JPe15UFC9c3f4vNDD9T3hwcD0RJN0sztiXUf
+         Z2yn9MMpFgV0eqd7GGXucWGV1IUEzjKMa7pMx9i+Ss7+cz7hGj1WG9wQfmByK2j7hnXl
+         YSyHt9whxbyylTO1xE56b7iJ09+GWSR6SHPhoYNzv3HZOFYOE569nxLOzn0CYIdrBvEo
+         g2nhK4yHdFkqpFtcFu6E1ozlvSMdT6UpXkkZrZBvZ4jvO40TSKvpkOsRHyt2KjrAvkk0
+         bJ/TcpuT5rqPXrkcd4il0mAGyYOngTjlHrhRXDAaOGDInv4sd8wZCMLw3L6h3UG72b4a
+         uVKQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1707037736; x=1707642536;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=GAhOmL4OzcBq1VanRU55be6MW5CVSu17sQ2v/MSJNQs=;
+        b=ofgbMxWzp2W2imjw+g4pPA/NaOY5x45x799wtg0xec1MK4gKKl4GChDoDFt1NfLuNy
+         +NRioD/dY+NVxtkNUWbIXG0+ys0Z9dpt0ahmxlzojUb7pElQBIpg3CnlUfyzYMfsyo0P
+         UGZ+mLpJO2ZV4kIH/KXIB0/Lei9upcN6XuRpfiG0Wh7QFkCY7XZu03GsJSrW5vsVvqiq
+         cTHHo7FZU7cwwcnreWm1DKim9QXnkSQd45A5/Ye676Cxo259ZxtyPBDh5O2cQyBQo/G6
+         T1IMmz/cYSHY7FS10OI0lPRwUVPEZ7bLfdCDEuebAbvx+YF1e7/jGUW74mWqrAHl9LPm
+         2+OQ==
+X-Gm-Message-State: AOJu0YzbzHVxGuJ8ip4DXO/7emlJXmOXVO3xuvoIPuHtEOLYyP94yfrx
+	Zf8FnKhmi7ZV7RYjvi8Foh1YjjySZAFhX4J8agyPBG1aB2e0s7MEC4yefLK/i46Y3nmJU+MIyue
+	Fgy5yHQmDcqh+16cYsT074vRex9sYmHLW
+X-Google-Smtp-Source: AGHT+IGOycEBzhcHoOThv83jtUpL3DS/To9B9Md3WsCqqtXtMq4scbhPps2OSSHhNfiI6d7w0ZPmny9qkFsqOrWDN0g=
+X-Received: by 2002:a05:6402:26c1:b0:560:5f1e:f420 with SMTP id
+ x1-20020a05640226c100b005605f1ef420mr62199edd.0.1707037736532; Sun, 04 Feb
+ 2024 01:08:56 -0800 (PST)
+MIME-Version: 1.0
+References: <wi62PXUdonR3b6Ux9r0AJueiwCxniFeIbaodg4Mr6U4@localhost>
+In-Reply-To: <wi62PXUdonR3b6Ux9r0AJueiwCxniFeIbaodg4Mr6U4@localhost>
+From: Michelly Rodrigues <michellyrodrigues171@gmail.com>
+Date: Sun, 4 Feb 2024 06:08:43 -0300
+Message-ID: <CAP0f37==08xzYZjwg_1DLi0qS5eP15kNeCboL+cDrPF05zLonw@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bito_peri=C3=B3dico_de_material?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="000000000000e7808906108ab135"
+
+--000000000000e7808906108ab135
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Oi
+
+Em dom., 4 de fev. de 2024 01:43, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: MICHELLY RODRIGUES
+>
+> LEMBRETE:
+> Devolu=C3=A7=C3=A3o de Material para: 16/09/2022
+> T=C3=ADtulo: Lembran=C3=A7as da meia-noite - 28 ed. / 2008
+> Volume: UNICO
+> Tipo de obra: Livros
+>
+> "Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o."
+>
+>
+>
+> -------------------------------------------------------
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+> Conforme Art. 44 do Regulamento da Biblioteca h=C3=A1 a penalidade de R$ =
+1,00
+> por dia de atraso.
+>
+>
+
+--000000000000e7808906108ab135
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Oi</div><br><div class=3D"gmail_quote"><div dir=3D"ltr" c=
+lass=3D"gmail_attr">Em dom., 4 de fev. de 2024 01:43, <a href=3D"mailto:bib=
+lioteca@ifc.edu.br">biblioteca@ifc.edu.br</a> &lt;<a href=3D"mailto:norepla=
+y.biblioteca.camboriu@ifc.edu.br">noreplay.biblioteca.camboriu@ifc.edu.br</=
+a>&gt; escreveu:<br></div><blockquote class=3D"gmail_quote" style=3D"margin=
+:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><br>
+Usu=C3=A1rio: MICHELLY RODRIGUES=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 <br>
+LEMBRETE: <br>
+Devolu=C3=A7=C3=A3o de Material para: 16/09/2022<br>
+T=C3=ADtulo: Lembran=C3=A7as da meia-noite - 28 ed. / 2008<br>
+Volume: UNICO<br>
+Tipo de obra: Livros<br>
+<br>
+&quot;Este material est=C3=A1 pendente, por favor verifique a data de devol=
+u=C3=A7=C3=A3o.&quot;<br>
+<br>
+<br>
+<br>
+-------------------------------------------------------<br>
+Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.<br>
+Conforme Art. 44 do Regulamento da Biblioteca h=C3=A1 a penalidade de R$ 1,=
+00 por dia de atraso.<br>
+<br>
+</blockquote></div>
+
+--000000000000e7808906108ab135--

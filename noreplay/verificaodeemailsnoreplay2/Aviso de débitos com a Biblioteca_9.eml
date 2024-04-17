@@ -1,0 +1,196 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp2969518rbb;
+        Wed, 31 Jan 2024 11:22:40 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IGpFNzPuZZRXpFVIDRApkkbNKypNDwfBDPzc5DNqh010bMEjXk6VqrbweseQd8XRlAmwsew
+X-Received: by 2002:a17:903:298f:b0:1d6:ff27:7627 with SMTP id lm15-20020a170903298f00b001d6ff277627mr3531695plb.50.1706728960603;
+        Wed, 31 Jan 2024 11:22:40 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1706728960; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=jnf4CP71Ps7zqgNh9q0Ex0zXaz5repqk9VlfdMZ6ifDWBPJWSEMnHfSPrZSKPo/B0L
+         o3zneH4EadwcvTeRRorq3jvgEBumERkujFlKnCP3yPakh7ytOsL5pAKKHpAtbI/RhmmO
+         Y/s6cFn0SeA1hlmoycW4XOUkgiJ71OdYolanujWDTazbi9RY6lTdDtPpoWHKkmQgY5ij
+         PRiA6icq/RFlGVEjI0s2tvx+RfWM1OdznecsMjIQHVdWBYsyTrspKcLgLRzrEYKH8SEn
+         bPxhEIDrU6Oo0h/HLjTn2mNA8PHsx7fA8PbQ0eRyw4BD66VtMRCrB8oGKawLpMYTM6JW
+         /xDA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:in-reply-to
+         :references:message-id:date:thread-index:thread-topic:subject:to
+         :from:dkim-signature;
+        bh=g9AL0FXrTC0gJq+ylTw8hW5WRNTG8yaj73EU+Bicwco=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=hqm4wbnSbMCXCPmZNCz7f/cCCWQecpboKXnr+YkrE08YARBK8HSQHXeWoALmyTCWrf
+         f4OguWnIEDoKl0oc0r2kjCPhTFAROrrMDA69A0LUBjnSKwUdZ7E+sTU0DwSZTtGgTopv
+         o5KXMojTsJNqk33uxiIU7w82TebjqpSc0bOMvHAIDMO9telJs97vb8wB/pSuoYwekNEu
+         gTTYE8DYL/UrSGrKK9iH/728fziMHcns8UrQbVvm73zirYveyPceEiyplPuRnwvp/8aM
+         NFA7mP+TOAQxQ5pT+jVzMNSWA+D5ESzZchEfZ5XgsKlSbyf9C426taBNrCILbakjpd1f
+         nETA==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@hotmail.com header.s=selector1 header.b=HKJx30V9;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of marciamotorista@hotmail.com designates 2a01:111:f400:7e88::82e as permitted sender) smtp.mailfrom=marciamotorista@hotmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hotmail.com
+Return-Path: <marciamotorista@hotmail.com>
+Received: from NAM10-DM6-obe.outbound.protection.outlook.com (mail-dm6nam10olkn2082e.outbound.protection.outlook.com. [2a01:111:f400:7e88::82e])
+        by mx.google.com with ESMTPS id q14-20020a170902a3ce00b001d8cc0ffca6si7086745plb.501.2024.01.31.11.22.40
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 31 Jan 2024 11:22:40 -0800 (PST)
+Received-SPF: pass (google.com: domain of marciamotorista@hotmail.com designates 2a01:111:f400:7e88::82e as permitted sender) client-ip=2a01:111:f400:7e88::82e;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@hotmail.com header.s=selector1 header.b=HKJx30V9;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of marciamotorista@hotmail.com designates 2a01:111:f400:7e88::82e as permitted sender) smtp.mailfrom=marciamotorista@hotmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hotmail.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=RCRJCa5nJCYZY7SQnw0WZlFfU34N+LwK8G3lZbG7xkj/+c6LhNedO9/B+4wfGIU0TCbYyvvuKGRgYMaZz4KnUltilW3N9nVa1Egxzfg6BvqSLLJD+cWow8Um3HaQrxbYhD6UQs0RgLiT9eBXaFKVWGONh5LNftVfRzaH1KPRICsM3lKx14s208DKedp1rMyZzjQ+WyLZL7/qQGdcSRliwq3e0DrC1oYT4fc7pQNC2PVqJW702XCXOccTOG+z26eJILTE0CtmZ3yhEA9G7Gq9xbWkENdxDSQ4vg5NqMQN5ppz6okHqth5c7HZmzaO/ahV/zbRVxvqwnphE9u9yF1y2w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=g9AL0FXrTC0gJq+ylTw8hW5WRNTG8yaj73EU+Bicwco=;
+ b=Hr2am5DwgJWObCsK5cqUHc6KjF+mGll36D2HyCNTH7Lr4imtWQRxp1AEkywgKO9QKruhc9iWZ7FnsPllaepTn9XATlwanwX7MS+4ENIRzJnO1HmnTmOiA+DUId0i0MyIs14/Z9WPMLMGoSADB5NwD/o6ylDkETCz3InwtTpSg84BI4aRJXvOtu728yIdcvWEmfFHeq57UNIBgenFkCHqxgP3BiOT/cQp3SJCsQhSYqK6nXIfTN/YaCIqie/8u9JZW7uuyFuK1ROtb2ALHBXHjuaDRbIiabPHARPFLHRBLUR0VMUOStizRqXoJHHU5dpwZ1E+yvRrsxE/BuyIpPzs3Q==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=g9AL0FXrTC0gJq+ylTw8hW5WRNTG8yaj73EU+Bicwco=;
+ b=HKJx30V90cPhEwsYq6H5SwQXT/ACq/XzEHqlCFgnwApr04aoytvbx+gYC1G7OQA6ueJBeyRryhZxVdUh2m1NqWnycUaDPKOVijb0ryKGTvQOKl7TOTP21cN3TK7d9uA8v2Z6hUMwAEBcmH1bhgQ6ThEjTD7esPHCz2waNI/SFbAUE1X4aortUAVBWzQwIfUIbAC/ZEcy/Guj7QUGV6HozBhkHZP1M0fobAeyAtSfOPSnw2gH9uV+cHJER11GNOvuOgvHkhwmuMP+myiq5w2dj/QEmDv0zxDt5quJdamASASJxBCjO6b0c9yS/XaZwqGpnZi2oj8PaTK2PlFyHZiASA==
+Received: from CPUPR80MB6866.lamprd80.prod.outlook.com (2603:10d6:103:1b5::10)
+ by CPUPR80MB6282.lamprd80.prod.outlook.com (2603:10d6:103:142::11) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7249.22; Wed, 31 Jan
+ 2024 19:22:36 +0000
+Received: from CPUPR80MB6866.lamprd80.prod.outlook.com
+ ([fe80::f83b:c789:b1b7:8b84]) by CPUPR80MB6866.lamprd80.prod.outlook.com
+ ([fe80::f83b:c789:b1b7:8b84%7]) with mapi id 15.20.7249.024; Wed, 31 Jan 2024
+ 19:22:36 +0000
+From: MARCIA TERESINHA DA SILVA <marciamotorista@hotmail.com>
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Subject: =?iso-8859-1?Q?Re:_Aviso_de_d=E9bitos_com_a_Biblioteca?=
+Thread-Topic: =?iso-8859-1?Q?Aviso_de_d=E9bitos_com_a_Biblioteca?=
+Thread-Index: AQHaVGoGFlYj3y6Dy0WcoWIsk1ETw7D0TEAb
+Date: Wed, 31 Jan 2024 19:22:36 +0000
+Message-ID:
+ <CPUPR80MB68668ACAA50211A8BC6EFF53BE7C2@CPUPR80MB6866.lamprd80.prod.outlook.com>
+References: <7PGmJbE3VPKWd68JmJqU5DWQImXH8jP018zP3A4BEhc@pergamum.ifc.edu.br>
+In-Reply-To: <7PGmJbE3VPKWd68JmJqU5DWQImXH8jP018zP3A4BEhc@pergamum.ifc.edu.br>
+Accept-Language: pt-BR, en-US
+Content-Language: pt-BR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [/+8t+m2FWlpD7iHxJugqcWVJE1gSv8Oe]
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: CPUPR80MB6866:EE_|CPUPR80MB6282:EE_
+x-ms-office365-filtering-correlation-id: feb9b34e-e192-4079-d080-08dc2291fb70
+x-ms-exchange-slblob-mailprops:
+ EgT5Wr3QDKw4LZoIIF0M8ujPnvO4bX49YUxtHLxEg0FqMyyED3eZ4/f5Zc9PVtK0omKVFFAnd/uQO3hHnOuNbXsLIyWI0dGVGlvFRZYuLu3li0QubykqeSlRSnJFzzr0z1b0mLm7zy8CxVRJWjMmh1wumvoMzxH9RsDn92U9DZ/ukjYJRJ1xKu4GiIhcMXh/3DPm/4O6xv9fsAiywx3cRxDH3Y4UuAflKTRziulFUAdCaaKEbu/ae89r5HUDymp6UzGCtH71LLpgmIqOlxijkdoo/CxJQDv7QrB2B2KrOGBeN1Qy1H8MjIDSwLjZFlSYrpGz7R1TdT3Ffr8T/SPx8Q61rmwc/VoAnPkgQn+1d57+i+qqLpq/XHvCImXcoAZezEvGlWNtCcZLYeX3S8MeJWbEwNCOXtKAs0kqig4+0NhzqspP+3U7pyXjstSpdhbwehV/cKWTPhpXpd70wweuuEHAWFLVCqddveNHbu85KOD7WEpIpL/7IW+ROglskG+KetAlbk+QBStt6BaLVnlzjZhnpMC1R2UZyTZiFq1X4WVproQtcTmQxdBI8sRVM+ARrQGPOMBXPYA3p7uBQ2Pb8lIGOx3IDHPgU543BBT2lR+J+p0GKyW9fX9PuXN1xW6gXhtA0BrE37G9xsdzfzbSjZsnDC5w8TzKNNRDuudGC5vDqz7NYquEWQ/maM0DUGe04b6ZgClQB1QxBjhePabvxjFFvokgfVey/c0aIUsdXf4=
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ N+9jVgHVV65/hdBJxv7jmcRSPpTukKxRvYUCnC1GGD/5j6K0P16GYLs4tlQdBdxq4MXgKDrzpHp8pIguNVSwA5qzE8rLI7ZkPeb1Vet2Kz7/s4IP/c2LHaS5a0T2++OSlTA+N2NVk/N3Smo6CHTM+LZU/OUp0jTJs9+AM5MdCUFuyUHnUE4rgGNEXBmsbHDBUo3n/pADfMLpIPY8VuNfNZcWcpO1HWq7Hi9mN2dJlgHgpywZxlnAIelFjAbfaR0Y5kukpnAwFEnDTyu22AZXh800vQZVpG8pGhoBYOiDZ3IF+EKgUStKQhTGJ+gBhsk5Vle5J5NyChuGGvpFJgZTVBcNXxH1mgzlRZ40IQgpjVIhjDDd+GGPrm+Vttt5DHQL6vBBRcTx0mI490E6ODLGS01sBFTHzlYreUKIvd/DR1WmfJ1NxzQbJV1oZLF5Mro2f1Vv0yiEU2rcjxuW8gIlvB09SRts4EbglanwyXXf8GHiw0lgu8O5v85mHQ3AhC927vDX8P36UOu9eDRrrA/+8DqB5fUd5oQuipfisk5HL3q34EPdLMX724JVlWqndk1dKzOdYnCxWybZ0N6nL2huF+L7GgRM2O20e137J7C1Zas=
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?iso-8859-1?Q?u0JS2cIzqcHL8mcixE5BqGxZhwH3uvt/uIOuBs5znghRyOu9AIyKuUyZZR?=
+ =?iso-8859-1?Q?3S02hkea0PcN6W852cwAooHSNQsO0cr2QymKAumjGBgtDKdtO7lv2qGfAV?=
+ =?iso-8859-1?Q?UhgIIEnfgQIfsIyXzIym/PYV6lpPgEpeQpyeB3M2XX8DVgyofzBh5F3MMW?=
+ =?iso-8859-1?Q?FGJ79b5kt0YsL2y6wwclaljkUdB96JwFF9lSSvMwt2bManvlEE6LRaVQsa?=
+ =?iso-8859-1?Q?tc1QPBzqnP/UhU+xfUCq6yCEn5pViFLskmIRV4T555p+a42jCN4mlo02jg?=
+ =?iso-8859-1?Q?+Hvmmi9SEjusbxwvjAI6izNiN8thWhSjZSe3FCKcNtmDV2YYbi15FBcpHx?=
+ =?iso-8859-1?Q?pQfs4R6QdXty/gUZhfgvmIFFLeMwI2XPNzaC54qC3ob2P4eSWyQdhMQEqY?=
+ =?iso-8859-1?Q?TZnK0lkbBcI7PfaxLnWzmxhBSgtPMkeZ9XQz+gs1nyPSBj1tBapNFFZ3G2?=
+ =?iso-8859-1?Q?NFIQHfsB4f7RNcZVnMSNE5GdswizkY7WSCvAPQcfRQtGUTUBhZRhMAfxKz?=
+ =?iso-8859-1?Q?45mpmqeWQPVubX4R6OmA9Ye8I1bo5wNoIrnRf6VCTcdmmqZ9//cMFV1RAB?=
+ =?iso-8859-1?Q?QSPD9mqn3am7KbucnNM47mReGEJRhQ1VPJoRCYWWzMK3nog1e1zJ6TcLQc?=
+ =?iso-8859-1?Q?zVHvO/A5I6pfGT8sSEdNk6oCJDa459rJd6wQQ9oXvEaXONegFGJib4ityh?=
+ =?iso-8859-1?Q?7lUHncplR8crlrEzDYrHUNmOV73M2V502PGLVIl74IQ+HS65PycEe8f+5Y?=
+ =?iso-8859-1?Q?7K1/lya/B8Rn150zKqTfmXOvO0Z0mv+/plXcRhUc31f6NrbViAV28FPv59?=
+ =?iso-8859-1?Q?weqq+YHW2TSnzZjU0i44Rx4/zUSYw8z4AigeHtvln5FvRc2UgRcrvpRTlj?=
+ =?iso-8859-1?Q?8W7+XMkqk2GFfNRR8woPAZmKCIcA3h+pWNLmCZ/DXC369DFMSbcFpzbWs2?=
+ =?iso-8859-1?Q?l9BBkhS3QkBGdd3HdwPCpi/ermYnCBOIaOgffBww85EAfI+3uDj644iHtG?=
+ =?iso-8859-1?Q?UC21pEOzrpzMm91qarOdM8esFX8qsWbt8D0qXuolycf9AaKOhzcCXhL1Gm?=
+ =?iso-8859-1?Q?u5KKKdxHXQEIxwQkdpdRQokgRR6LeZgb8AYaqhkB1jXi0ZzCPLYX3XuP+E?=
+ =?iso-8859-1?Q?q21wQIxX9v3U3EfdPxxlPJb/oaEBPsbQL744Pbna5aChObCzkABvwPwYXU?=
+ =?iso-8859-1?Q?8RpY6PcRuV6QXs+6LVxkEXQUUXAygP3IGcjNd3iRjYDkG5KQUcm5g/Ys2N?=
+ =?iso-8859-1?Q?6Fof8rDOlem5SrhwIRy8RQwWtniqvLagc4FbISNdYKPe82SmREX6+qYqMz?=
+ =?iso-8859-1?Q?PpwM?=
+Content-Type: multipart/alternative;
+	boundary="_000_CPUPR80MB68668ACAA50211A8BC6EFF53BE7C2CPUPR80MB6866lamp_"
+MIME-Version: 1.0
+X-OriginatorOrg: sct-15-20-4755-11-msonline-outlook-2698a.templateTenant
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: CPUPR80MB6866.lamprd80.prod.outlook.com
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: feb9b34e-e192-4079-d080-08dc2291fb70
+X-MS-Exchange-CrossTenant-originalarrivaltime: 31 Jan 2024 19:22:36.3269
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CPUPR80MB6282
+
+--_000_CPUPR80MB68668ACAA50211A8BC6EFF53BE7C2CPUPR80MB6866lamp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+J=E1 fiz a devolu=E7=E3o do livro assim que voltamos da pandemia. S=F3 falt=
+a pagar essa multa. At=E9 achei que seria perdoada devido a pandemia.
+Assim que poss=EDvel pagarei.
+Obrigado.
+
+Obter o Outlook para Android<https://aka.ms/AAb9ysg>
+________________________________
+From: biblioteca@ifc.edu.br <noreplay.biblioteca.camboriu@ifc.edu.br>
+Sent: Wednesday, January 31, 2024 2:22:04 PM
+To: marciamotorista@hotmail.com <marciamotorista@hotmail.com>
+Subject: Aviso de d=E9bitos com a Biblioteca
+
+
+Usu=E1rio: 000002019008580 - MARCIA TERESINHA DA SILVA
+
+Valor Total de Debito: $ 21.00
+Valor Total do Desconto: $ 0.00
+Valor Total a Pagar: $ 21.00
+Este material est=E1 pendente, por favor verifique a data de devolu=E7=E3o.
+
+--_000_CPUPR80MB68668ACAA50211A8BC6EFF53BE7C2CPUPR80MB6866lamp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+</head>
+<body>
+<div dir=3D"auto">J=E1 fiz a devolu=E7=E3o do livro assim que voltamos da p=
+andemia. S=F3 falta pagar essa multa. At=E9 achei que seria perdoada devido=
+ a pandemia.&nbsp;</div>
+<div dir=3D"auto">Assim que poss=EDvel pagarei.&nbsp;</div>
+<div dir=3D"auto">Obrigado.</div>
+<div><br>
+</div>
+<div id=3D"ms-outlook-mobile-signature" dir=3D"auto">Obter o <a href=3D"htt=
+ps://aka.ms/AAb9ysg">
+Outlook para Android</a></div>
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>From:</b> biblioteca@ifc.edu.br=
+ &lt;noreplay.biblioteca.camboriu@ifc.edu.br&gt;<br>
+<b>Sent:</b> Wednesday, January 31, 2024 2:22:04 PM<br>
+<b>To:</b> marciamotorista@hotmail.com &lt;marciamotorista@hotmail.com&gt;<=
+br>
+<b>Subject:</b> Aviso de d=E9bitos com a Biblioteca</font>
+<div>&nbsp;</div>
+</div>
+<div><br>
+Usu=E1rio: 000002019008580 - MARCIA TERESINHA DA SILVA <br>
+<br>
+Valor Total de Debito: $ 21.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 21.00 <br>
+Este material est=E1 pendente, por favor verifique a data de devolu=E7=E3o.=
+ </div>
+</body>
+</html>
+
+--_000_CPUPR80MB68668ACAA50211A8BC6EFF53BE7C2CPUPR80MB6866lamp_--

@@ -1,0 +1,124 @@
+Delivered-To: noreplay.biblioteca.camboriu@ifc.edu.br
+Received: by 2002:a05:7208:4291:b0:7c:89f8:37c6 with SMTP id bo17csp3035013rbb;
+        Wed, 31 Jan 2024 13:38:25 -0800 (PST)
+X-Received: by 2002:a54:4499:0:b0:3bd:e3da:baf4 with SMTP id v25-20020a544499000000b003bde3dabaf4mr377185oiv.13.1706737105655;
+        Wed, 31 Jan 2024 13:38:25 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706737105; cv=none;
+        d=google.com; s=arc-20160816;
+        b=0dkn28UXACn1CG9gA8/nmO3irsZ7nt+H7T/jtFzsSqIR/Tvu3QQ9G7NYBQlE/uRCv9
+         1BV0MOYjjCPSPymJj+1TIUpG7OlEl9Iw6HRR21w6RHUl51diP/Rb2xjQdGBY5aIOC7kF
+         HAbsymF/qllvc745+cqSh9ANxlBPdZODSLrlxI1xIObKvdWxaMAw14/U+n9TiJNGwS/v
+         /j+TAq7MchVE37CB8cE62EIX0vinVICE+LyzlHz5UzrdQ6XTQcbaI4p0fZq6oLFALRkg
+         XDh3qnbJct0sRWZChxOhTNhYZFhAWdUs+jMWH4OwxhIR8RJ8cpT9DE1TVHhHdUIHdAP7
+         J3Dw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=LdwvBN/IraUgN4UPYPiHMvwGNljZJavYto3BDAnL7XI=;
+        fh=K2wAXNfHALnQnIa/hiyu2S0RnftZklbtH/XXI+x/bRg=;
+        b=Rwt2U4bjUzjGLbbH7NO2+B3VEm9SAjUZblY75RH4IfCjXSJkDGlRlbAZoXVKMjBCrz
+         QNP3mwf2GElG7EtvUWjNAh/4sbjCfN25Q4rZrkdLccrJwC9c/zU19oJba4xVXJy+tpGh
+         ntxfiqYdyYcKQpItKbxzQc0o6SXvO/Uz+5hneLIhL9R3ZoqArehSMUuVH0o2e3jhhiMq
+         EupXwzJlyylztdHaI3KM+0RawiwqdG6D+ewhUQC52DstB5X0BSpeB1+BT2sAfAOTuNAi
+         CVTf1asNxslbMAoGwZatPSZDGHgu9qN4TILuP8fGpIdubPm1PmJceIxBpP4CKq2A0DK5
+         hrVQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=ACcAWdtD;
+       spf=pass (google.com: domain of patyreismm@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=patyreismm@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <patyreismm@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id b12-20020aca1b0c000000b003bb744333a5sor4390619oib.3.2024.01.31.13.38.25
+        for <noreplay.biblioteca.camboriu@ifc.edu.br>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 13:38:25 -0800 (PST)
+Received-SPF: pass (google.com: domain of patyreismm@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=ACcAWdtD;
+       spf=pass (google.com: domain of patyreismm@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=patyreismm@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706737105; x=1707341905; darn=ifc.edu.br;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=LdwvBN/IraUgN4UPYPiHMvwGNljZJavYto3BDAnL7XI=;
+        b=ACcAWdtDFPauSGWCvcarTchWSNDIfsgxcy8xP/q9ultqj3C2VaD9uKl9txZya2CLRZ
+         Yv3DxX+a8UpZ3ZRORgr9KLMcaiT5XXZ9Tz4LeWfoLWnpHI32c4X54TGjvU51mkFKALVH
+         DATUIfHF7OJNChdVWmp2rouGOXtJCt0KOBs54vIcE49S/CnbZEmvsXK997BZdt8fhXld
+         TD359LbYqIWlsE3DleEIFIl10AC9HYG5aK+Bymo8V9YPdmQrTfUJAZhLiszoAa7b6cuH
+         zFOOPhtvd1uqxYVvk2FbQSPdrBLEMvZCia4NiVI4g7BNfRwg9d272SuTj6tEt+c3ErAE
+         RuZw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706737105; x=1707341905;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=LdwvBN/IraUgN4UPYPiHMvwGNljZJavYto3BDAnL7XI=;
+        b=RoYjiW2ctbUSrXCvn8kf3AV+rb3w6URpVHjSe/0SnbpDOvArIkImfckmJISd7lQYx/
+         64IyKdP6kEhkmsqoHqOila121pMeiftzK63lvSJ+i/YQh9VQzWTQzQ/CHVe/FyDKVA1w
+         uW20VhdIzeVhrHLD5hBTJ1XgBslDmPAqTbKhpCfJM+cdnCyOLddRmxigzSKTnwu2Z1qu
+         FhhvAoetQPhZ9d5pBjsaaBB6SfKCgBLYtBLfWISk6dqIkwpME3Y3uqJ40MlkoxikOatl
+         6tO3a85ZfbC6616j7ODN1nAsZ+U3ayZRYeG15tvSD1EmAZo3t9FC8qSzaTrS0Le4Yjlh
+         fxAw==
+X-Gm-Message-State: AOJu0YzhWEtBt63IpgB/CUfXOUSvddFaJbHR+CEM9z899fFStWcjqg8C
+	D4rLmPDD+yONUk6S5A0TupCTGkw7xAEToznTdjvUR5l03GYOlTDH6cljy+laQ1OW97zywwLvanc
+	/DRGnifyL3n+XZg+zcWnEeYZ/ddScpmJ4
+X-Google-Smtp-Source: AGHT+IFAOQqnJ1ZgkVyjLQF0dJTSriRZ0PkipehUkFIXY3T9cuEhaPlGEp35BfC2h5HgNY99oE7F6zGMo5TVpzD57FM=
+X-Received: by 2002:a05:6870:b52a:b0:218:d5aa:c418 with SMTP id
+ v42-20020a056870b52a00b00218d5aac418mr447954oap.53.1706737104967; Wed, 31 Jan
+ 2024 13:38:24 -0800 (PST)
+MIME-Version: 1.0
+References: <1PAyZnv2kvz6ZXfhJXzxuG3x9N9qGB8563j9SoU8@localhost>
+In-Reply-To: <1PAyZnv2kvz6ZXfhJXzxuG3x9N9qGB8563j9SoU8@localhost>
+From: Patricia dos reis <patyreismm@gmail.com>
+Date: Wed, 31 Jan 2024 18:38:13 -0300
+Message-ID: <CAK516UdffMEbSioXqaa89=y38inU+5moGXzYVD6a3sMvWbi=MQ@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Aviso_de_d=C3=A9bitos_com_a_Biblioteca?=
+To: "biblioteca@ifc.edu.br" <noreplay.biblioteca.camboriu@ifc.edu.br>
+Content-Type: multipart/alternative; boundary="000000000000dde010061044b268"
+
+--000000000000dde010061044b268
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Boa tarde
+
+Ja foi devolvido preciso pagar a multa de atraso apenas, se puder me manda
+o boleto vencimento dia 06
+
+Em qua., 31 de jan. de 2024 18:15, biblioteca@ifc.edu.br <
+noreplay.biblioteca.camboriu@ifc.edu.br> escreveu:
+
+>
+> Usu=C3=A1rio: 000002021327196 - PATRICIA BERNARDINO DOS REIS
+>
+> Valor Total de Debito: $ 21.00
+> Valor Total do Desconto: $ 0.00
+> Valor Total a Pagar: $ 21.00
+> Este material est=C3=A1 pendente, por favor verifique a data de devolu=C3=
+=A7=C3=A3o.
+
+--000000000000dde010061044b268
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Boa tarde=C2=A0<div dir=3D"auto"><br></div><div dir=3D"au=
+to">Ja foi devolvido preciso pagar a multa de atraso apenas, se puder me ma=
+nda o boleto vencimento dia 06</div></div><br><div class=3D"gmail_quote"><d=
+iv dir=3D"ltr" class=3D"gmail_attr">Em qua., 31 de jan. de 2024 18:15, <a h=
+ref=3D"mailto:biblioteca@ifc.edu.br">biblioteca@ifc.edu.br</a> &lt;<a href=
+=3D"mailto:noreplay.biblioteca.camboriu@ifc.edu.br">noreplay.biblioteca.cam=
+boriu@ifc.edu.br</a>&gt; escreveu:<br></div><blockquote class=3D"gmail_quot=
+e" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">=
+=20
+<br>Usu=C3=A1rio: 000002021327196 - PATRICIA BERNARDINO DOS REIS           =
+                                                            =20
+<br> <br>
+Valor Total de Debito: $ 21.00<br>
+Valor Total do Desconto: $ 0.00<br>
+Valor Total a Pagar: $ 21.00
+<br>Este material est=C3=A1 pendente, por favor verifique a data de devolu=
+=C3=A7=C3=A3o.
+
+</blockquote></div>
+
+--000000000000dde010061044b268--
