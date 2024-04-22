@@ -9,7 +9,7 @@ from datetime import datetime
 # VARIAVEIS ===================================================================
 caminho_arquivo_excel = './excel/original.xlsx'
 palavras_chave_ignoradas = ['MODELO PARA CÓPIA']
-caminho_arquivo_json = './excel/dados_sem_palavra_chave.json'
+caminho_arquivo_json = './excel/alunos.json'
 colunas_desejadas = ['Matrícula', 'ALUNO', 'REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento', 'Obs. da Biblioteca']
 
 # FUNÇÕES =====================================================================
