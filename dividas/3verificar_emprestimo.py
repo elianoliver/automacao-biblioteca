@@ -16,7 +16,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import TimeoutException
 
-
 # Configurações Selenium
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
@@ -37,9 +36,6 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
         bt_emprestimo.click()
 
     def verificar_estudantes():
-        com_atrasados = []
-        sem_atrasados = []
-
         # Muda para a última aba aberta
         driver.switch_to.window(driver.window_handles[-1])
         iframe = driver.find_element(By.NAME, "meio")
@@ -90,7 +86,6 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
 
                     aluno['LivrosAtrasados'] = []
                     aluno['Multa total'] = 0
-                    valor_total = 0
 
                     for linha in linhas:
                         tds = linha.find_elements(By.TAG_NAME, "td")
