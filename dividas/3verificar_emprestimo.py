@@ -36,13 +36,6 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
         bt_emprestimo.click()
 
     def verificar_estudantes():
-        # Muda para a última aba aberta
-        driver.switch_to.window(driver.window_handles[-1])
-        iframe = driver.find_element(By.NAME, "meio")
-
-        with open('excel/alunos_atualizado.json', 'r', encoding='utf-8') as f:
-            dados = json.load(f)
-
         novas_categorias = {
             "com_debito_com_atrasado": [],
             "com_debito_sem_atrasado": [],
@@ -50,13 +43,21 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
             "sem_debito_com_atrasado": []
         }
 
+        # Muda para a última aba aberta
+        driver.switch_to.window(driver.window_handles[-1])
+        iframe = driver.find_element(By.NAME, "meio")
+
+        # Carrega os dados do arquivo JSON
+        with open('excel/alunos_atualizado.json', 'r', encoding='utf-8') as f:
+            dados = json.load(f)
+
         for categoria, alunos in dados.items():
             print(f"Verificando a categoria {categoria}...")
 
             # Loop para verificar cada aluno
             for aluno in alunos:
                 driver.switch_to.frame(iframe)
-                numero_matricula = aluno['Matrícula']
+                numero_matricula = aluno["Código pessoa"]
 
                 matricula_input = wait.until(EC.presence_of_element_located((By.ID, "id_txt_cod_pessoa")))
                 matricula_input.send_keys(numero_matricula)
@@ -65,7 +66,6 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
                 # fechar o alerta
                 try:
                     alerta = wait.until(EC.alert_is_present())
-                    time.sleep(2)
                     alerta.accept()
                 except:
                     pass
@@ -74,7 +74,6 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
                 try:
                     wait.until(EC.visibility_of_element_located((By.ID, "id_tableAfastamento")))
                     btn_fechar = wait.until(EC.element_to_be_clickable((By.NAME, "btn_fechar")))
-                    time.sleep(2)
                     btn_fechar.click()
                 except:
                     pass
@@ -85,7 +84,6 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
                     linhas = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "#tabelaEmprestimo tbody tr")))
 
                     aluno['LivrosAtrasados'] = []
-                    aluno['Multa total'] = 0
 
                     for linha in linhas:
                         tds = linha.find_elements(By.TAG_NAME, "td")
@@ -95,31 +93,36 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
                             "Emprestado em": tds[5].get_attribute("innerText").strip(),
                             "Devolução prevista": tds[6].get_attribute("innerText").strip(),
                             "Dias de atraso": tds[7].get_attribute("innerText").strip(),
-                            "Valor": tds[13].get_attribute("innerText").strip()
+                            "Valor": tds[13].get_attribute("innerText").strip(),
                         }
 
                         dias_atraso = int(livro["Dias de atraso"]) if livro["Dias de atraso"].isdigit() else 0
 
                         if dias_atraso > 0:
-                            aluno["Multa total"] += float(livro["Valor"].replace(',', '.'))
                             aluno['LivrosAtrasados'].append(livro)
-                            aluno["Obs. da Biblioteca"] = "Possui débito e livros atrasados"
+                            aluno["Obs"] = "livro atrasado"
 
                     # Adiciona o aluno à nova categoria fora do loop dos livros
                     if aluno['LivrosAtrasados']:
                         if categoria == "com_debito_sem_atrasado":
+                            aluno['situação'] = "com_debito_com_atrasado"
                             novas_categorias["com_debito_com_atrasado"].append(aluno)
                         elif categoria == "sem_debito_sem_atrasado":
+                            aluno['situação'] = "sem_debito_com_atrasado"
                             novas_categorias["sem_debito_com_atrasado"].append(aluno)
                     else:
                         if categoria == "com_debito_sem_atrasado":
+                            aluno['situação'] = "com_debito_sem_atrasado"
                             novas_categorias["com_debito_sem_atrasado"].append(aluno)
                         else:
+                            aluno['situação'] = "sem_debito_sem_atrasado"
                             novas_categorias["sem_debito_sem_atrasado"].append(aluno)
                 except:
                     if categoria == "com_debito_sem_atrasado":
+                        aluno['situação'] = "com_debito_sem_atrasado"
                         novas_categorias["com_debito_sem_atrasado"].append(aluno)
                     else:
+                        aluno['situação'] = "sem_debito_sem_atrasado"
                         novas_categorias["sem_debito_sem_atrasado"].append(aluno)
                     pass
 
@@ -133,17 +136,6 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
 
         sys.exit()
 
-    # preencher os campos de login
-    load_dotenv()
-    username = os.getenv('USER')
-    password = os.getenv('PASSWORD')
-    fazer_login(driver, wait, username, password)
-
-    # Interface gráfica
-    root = Tk()
-    root.geometry("200x100")
-    root.title("Automatização com Tkinter e Selenium")
-
     def realizar_funcoes():
         wait = WebDriverWait(driver, 10)
         login_button = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div/div/div/div[1]/div/div/div[2]/div[1]/div[6]/div/button')))
@@ -151,11 +143,22 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
         print("entrei porra")
 
         navegar_ate_emprestimos()
-        time.sleep(2)
+        time.sleep(5)
         verificar_estudantes()
 
-   # Botão de login
-    login_button = Button(root, text="Realizar Login", command=realizar_funcoes)
-    login_button.place(relx=0.5, rely=0.5, anchor=CENTER)
+    def criar_interface_grafica():
+        root = Tk()
+        root.geometry("200x100")
+        root.title("Automatização com Tkinter e Selenium")
 
-    root.mainloop()
+        login_button = Button(root, text="Realizar Login", command=realizar_funcoes)
+        login_button.place(relx=0.5, rely=0.5, anchor=CENTER)
+
+        root.mainloop()
+
+    load_dotenv()
+    username = os.getenv('USER')
+    password = os.getenv('PASSWORD')
+    fazer_login(driver, wait, username, password)
+
+    criar_interface_grafica()

@@ -7,14 +7,40 @@ caminho_nova_planilha_excel = './excel/nova_planilha.xlsx'
 
 # FUNÇÕES =====================================================================
 def equalize_lists(data):
+    equalized_data = {}
+    # Calcula o comprimento máximo entre todas as listas no dicionário
     max_len = max(len(v) if isinstance(v, list) else 1 for v in data.values())
-    return {k: v + [v[-1] if v else None] * (max_len - len(v)) if isinstance(v, list) else [v] * max_len for k, v in data.items()}
+
+    for key, value in data.items():
+        # Se for uma lista, estende com o último elemento até o comprimento máximo
+        if isinstance(value, list):
+            extended_list = value + [value[-1] if value else None] * (max_len - len(value))
+            equalized_data[key] = extended_list
+        # Se não for uma lista, cria uma lista repetindo o valor até o comprimento máximo
+        else:
+            repeated_value_list = [value] * max_len
+            equalized_data[key] = repeated_value_list
+
+    return equalized_data
 
 def desencapsular_aluno(aluno):
+    # Extrai as listas de livros atrasados e entregues do dicionário do aluno
     livros_atrasados = aluno.pop('LivrosAtrasados', [])
     livros_entregues = aluno.pop('LivrosEntregues', [])
-    alunos_desencapsulados = [dict(aluno, **livro) for livro in livros_atrasados + livros_entregues]
-    return alunos_desencapsulados if alunos_desencapsulados else [aluno]
+
+    # Cria uma nova lista de dicionários, cada um representando um livro que o aluno tem ou teve emprestado
+    # Cada dicionário contém todas as informações do aluno, além das informações do livro
+    alunos_desencapsulados = []
+    for livro in livros_atrasados + livros_entregues:
+        aluno_com_livro = dict(aluno, **livro)
+        alunos_desencapsulados.append(aluno_com_livro)
+
+    # Se a lista de alunos desencapsulados estiver vazia (ou seja, o aluno não tem nem teve livros emprestados),
+    # retorna uma lista contendo apenas o dicionário do aluno
+    if not alunos_desencapsulados:
+        return [aluno]
+
+    return alunos_desencapsulados
 
 def criar_nova_planilha_a_partir_json(caminho_arquivo_json, caminho_nova_planilha_excel):
     try:
@@ -24,6 +50,7 @@ def criar_nova_planilha_a_partir_json(caminho_arquivo_json, caminho_nova_planilh
             # Desencapsular os valores dentro do aluno
             for categoria in dados_json:
                 alunos_desencapsulados = []
+
                 for aluno in dados_json[categoria]:
                     alunos_desencapsulados.extend(desencapsular_aluno(aluno))
                 dados_json[categoria] = alunos_desencapsulados

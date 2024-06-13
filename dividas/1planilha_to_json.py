@@ -10,7 +10,7 @@ from datetime import datetime
 caminho_arquivo_excel = './excel/original.xlsx'
 palavras_chave_ignoradas = ['MODELO PARA CÓPIA']
 caminho_arquivo_json = './excel/alunos.json'
-colunas_desejadas = ['Matrícula', 'ALUNO', 'REGULAR NA BIBLIOTECA? - SIM: salvar nada consta na pasta; NÃO: Mandar e-mail solicitando devolução ou pagamento', 'Obs. da Biblioteca']
+colunas_desejadas = ['Código pessoa', 'Nome da pessoa', 'Email', 'Código do exemplar', 'Data de empréstimo', 'Data devolução prevista', 'Título']
 
 # FUNÇÕES =====================================================================
 def salvar_dados_em_json(dados, caminho_arquivo):
@@ -26,7 +26,7 @@ def obter_linhas_sem_palavra_chave(caminho_arquivo_excel, palavras_chave_ignorad
 
     try:
         # Lê todas as planilhas do arquivo Excel
-        planilhas = pd.read_excel(caminho_arquivo_excel, sheet_name=None, dtype={'Matrícula': str})
+        planilhas = pd.read_excel(caminho_arquivo_excel, sheet_name=None, dtype={'Código pessoa': str})
 
         for nome_da_planilha, df in planilhas.items():
             # Verifica se alguma palavra-chave está presente no nome da planilha
@@ -38,13 +38,30 @@ def obter_linhas_sem_palavra_chave(caminho_arquivo_excel, palavras_chave_ignorad
 
                     # Converte colunas Timestamp para formato serializável
                     for coluna in df.select_dtypes(include=['datetime64']).columns:
-                        df[coluna] = df[coluna].apply(lambda x: x.strftime('%Y-%m-%d %H:%M:%S') if pd.notnull(x) else None)
+                        df[coluna] = df[coluna].apply(lambda x: x.strftime('%Y-%m-%d') if pd.notnull(x) else None)
 
                     # Remove linhas vazias
                     df = df.dropna(how='all')
 
+                    # Agrupa por 'Código pessoa' e 'Nome da pessoa'
+                    grupos = df.groupby(['Código pessoa', 'Nome da pessoa'])
+
+                    # Cria uma lista de dicionários para cada grupo
+                    linhas_agrupadas = []
+                    for nome, grupo in grupos:
+                        # Verifica se o e-mail é nulo
+                        email = grupo['Email'].iloc[0] if pd.notnull(grupo['Email'].iloc[0]) else "Sem email"
+                        linhas_agrupadas.append({
+                            'Código pessoa': nome[0],
+                            'Nome da pessoa': nome[1],
+                            'Email': email
+                        })
+
+                    # Ordena as linhas por 'Nome da pessoa'
+                    linhas_agrupadas = sorted(linhas_agrupadas, key=lambda k: k['Nome da pessoa'])
+
                     # Adiciona as linhas da planilha correspondente
-                    linhas_encontradas[nome_da_planilha] = df.to_dict(orient='records')
+                    linhas_encontradas[nome_da_planilha] = linhas_agrupadas
 
         return linhas_encontradas
 
