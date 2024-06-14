@@ -149,7 +149,7 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
 
                             armario = {
                                 "Obs": "Armário alugado",
-                                "Título": "Nº " + tds[2].get_attribute("innerText").strip(),
+                                "Título": "Chave Nº " + tds[2].get_attribute("innerText").strip(),
                                 "Emprestado em": normalizar_data(tds[3].get_attribute("innerText").strip()),
                                 "Devolução prevista": normalizar_data(tds[3].get_attribute("innerText").strip()),
                                 "Devolução efetiva": normalizar_data(tds[4].get_attribute("innerText").strip()),
