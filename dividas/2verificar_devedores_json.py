@@ -41,16 +41,27 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
         except TimeoutException as e:
             print(f"Erro ao navegar até débitos: {e}")
 
-    def diferenca_dias(data1, data2):
-        if data1 == '0,00' or data2 == '0,00':
-            return 0  # ou qualquer valor padrão que você queira usar
-        else:
-            data1 = datetime.strptime(data1, '%d/%m/%Y %H:%M:%S.%f')
-            data2 = datetime.strptime(data2, '%d/%m/%Y %H:%M:%S.%f')
-            # Removendo horas, minutos, segundos e microssegundos
-            data1 = data1.replace(hour=0, minute=0, second=0, microsecond=0)
-            data2 = data2.replace(hour=0, minute=0, second=0, microsecond=0)
-            return abs((data2 - data1).days)
+    def normalizar_data(data):
+        try:
+            data_normalizada = datetime.strptime(data, '%d/%m/%Y %H:%M:%S.%f')
+            return data_normalizada.strftime('%d/%m/%Y')
+        except ValueError:
+            try:
+                data_normalizada = datetime.strptime(data, '%d/%m/%Y')
+                return data_normalizada.strftime('%d/%m/%Y')
+            except ValueError:
+                return data
+
+    # def diferenca_dias(data1, data2):
+    #     if data1 == '0,00' or data2 == '0,00':
+    #         return 0  # ou qualquer valor padrão que você queira usar
+    #     else:
+    #         data1 = datetime.strptime(data1, '%d/%m/%Y %H:%M:%S.%f')
+    #         data2 = datetime.strptime(data2, '%d/%m/%Y %H:%M:%S.%f')
+    #         # Removendo horas, minutos, segundos e microssegundos
+    #         data1 = data1.replace(hour=0, minute=0, second=0, microsecond=0)
+    #         data2 = data2.replace(hour=0, minute=0, second=0, microsecond=0)
+    #         return abs((data2 - data1).days)
 
     def verificar_estudantes():
         alunos_com_debito = []
@@ -110,12 +121,12 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
                             tds = linha.find_elements(By.TAG_NAME, "td")
 
                             livro = {
+                                "Obs": "Multa gerada",
                                 "Título": tds[3].get_attribute("innerText").strip(),
-                                "Emprestado em": tds[13].get_attribute("innerText").strip().split(' ')[0],
-                                "Devolução prevista": tds[14].get_attribute("innerText").strip().split(' ')[0],
-                                "Devolução efetiva": tds[15].get_attribute("innerText").strip().split(' ')[0],
-                                "Valor": tds[9].get_attribute("innerText").strip(),
-                                "Obs": "Multa gerada"
+                                "Emprestado em": normalizar_data(tds[13].get_attribute("innerText").strip().split(' ')[0]),
+                                "Devolução prevista": normalizar_data(tds[14].get_attribute("innerText").strip().split(' ')[0]),
+                                "Devolução efetiva": normalizar_data(tds[15].get_attribute("innerText").strip().split(' ')[0]),
+                                "Valor": tds[9].get_attribute("innerText").strip()
                             }
 
                             # Adiciona o livro à lista de livros
@@ -137,10 +148,12 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
                             tds = linha.find_elements(By.TAG_NAME, "td")
 
                             armario = {
-                                "Armario": tds[2].get_attribute("innerText").strip(),
-                                "Emprestado em": tds[3].get_attribute("innerText").strip(),
-                                "Devolução efetiva": tds[4].get_attribute("innerText").strip(),
-                                "Valor da multa": tds[9].get_attribute("innerText").strip(),
+                                "Obs": "Armário alugado",
+                                "Título": "Nº " + tds[2].get_attribute("innerText").strip(),
+                                "Emprestado em": normalizar_data(tds[3].get_attribute("innerText").strip()),
+                                "Devolução prevista": normalizar_data(tds[3].get_attribute("innerText").strip()),
+                                "Devolução efetiva": normalizar_data(tds[4].get_attribute("innerText").strip()),
+                                "Valor": tds[9].get_attribute("innerText").strip()
                             }
 
                             # Adiciona o armário à lista de armários

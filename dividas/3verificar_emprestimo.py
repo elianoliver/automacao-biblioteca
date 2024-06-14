@@ -20,6 +20,18 @@ from selenium.common.exceptions import TimeoutException
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
 
+# Função para normalizar data
+def normalizar_data(data):
+    try:
+        data_normalizada = datetime.strptime(data, '%d/%m/%Y %H:%M:%S.%f')
+        return data_normalizada.strftime('%d/%m/%Y')
+    except ValueError:
+        try:
+            data_normalizada = datetime.strptime(data, '%d/%m/%Y')
+            return data_normalizada.strftime('%d/%m/%Y')
+        except ValueError:
+            return data
+
 # Inicialização do WebDriver Selenium
 with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager().install())) as driver:
 
@@ -89,9 +101,10 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
                         tds = linha.find_elements(By.TAG_NAME, "td")
 
                         livro = {
+                            "Obs": "Livro atrasado",
                             "Título": tds[3].get_attribute("innerText").strip(),
-                            "Emprestado em": tds[5].get_attribute("innerText").strip(),
-                            "Devolução prevista": tds[6].get_attribute("innerText").strip(),
+                            "Emprestado em": normalizar_data(tds[5].get_attribute("innerText").strip()),
+                            "Devolução prevista": normalizar_data(tds[6].get_attribute("innerText").strip()),
                             "Dias de atraso": tds[7].get_attribute("innerText").strip(),
                             "Valor": tds[13].get_attribute("innerText").strip(),
                         }
@@ -100,29 +113,22 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
 
                         if dias_atraso > 0:
                             aluno['LivrosAtrasados'].append(livro)
-                            aluno["Obs"] = "livro atrasado"
 
                     # Adiciona o aluno à nova categoria fora do loop dos livros
                     if aluno['LivrosAtrasados']:
                         if categoria == "com_debito_sem_atrasado":
-                            aluno['situação'] = "com_debito_com_atrasado"
                             novas_categorias["com_debito_com_atrasado"].append(aluno)
                         elif categoria == "sem_debito_sem_atrasado":
-                            aluno['situação'] = "sem_debito_com_atrasado"
                             novas_categorias["sem_debito_com_atrasado"].append(aluno)
                     else:
                         if categoria == "com_debito_sem_atrasado":
-                            aluno['situação'] = "com_debito_sem_atrasado"
                             novas_categorias["com_debito_sem_atrasado"].append(aluno)
                         else:
-                            aluno['situação'] = "sem_debito_sem_atrasado"
                             novas_categorias["sem_debito_sem_atrasado"].append(aluno)
                 except:
                     if categoria == "com_debito_sem_atrasado":
-                        aluno['situação'] = "com_debito_sem_atrasado"
                         novas_categorias["com_debito_sem_atrasado"].append(aluno)
                     else:
-                        aluno['situação'] = "sem_debito_sem_atrasado"
                         novas_categorias["sem_debito_sem_atrasado"].append(aluno)
                     pass
 

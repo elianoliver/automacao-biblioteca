@@ -24,18 +24,19 @@ def equalize_lists(data):
     return equalized_data
 
 def desencapsular_aluno(aluno):
-    # Extrai as listas de livros atrasados e entregues do dicionário do aluno
+    # Extrai as listas de livros atrasados, entregues e armários do dicionário do aluno
     livros_atrasados = aluno.pop('LivrosAtrasados', [])
     livros_entregues = aluno.pop('LivrosEntregues', [])
+    armarios = aluno.pop('Armarios', [])
 
-    # Cria uma nova lista de dicionários, cada um representando um livro que o aluno tem ou teve emprestado
-    # Cada dicionário contém todas as informações do aluno, além das informações do livro
+    # Cria uma nova lista de dicionários, cada um representando um livro ou armário que o aluno tem ou teve emprestado
+    # Cada dicionário contém todas as informações do aluno, além das informações do livro ou armário
     alunos_desencapsulados = []
-    for livro in livros_atrasados + livros_entregues:
-        aluno_com_livro = dict(aluno, **livro)
-        alunos_desencapsulados.append(aluno_com_livro)
+    for item in livros_atrasados + livros_entregues + armarios:
+        aluno_com_item = dict(aluno, **item)
+        alunos_desencapsulados.append(aluno_com_item)
 
-    # Se a lista de alunos desencapsulados estiver vazia (ou seja, o aluno não tem nem teve livros emprestados),
+    # Se a lista de alunos desencapsulados estiver vazia (ou seja, o aluno não tem nem teve livros ou armários emprestados),
     # retorna uma lista contendo apenas o dicionário do aluno
     if not alunos_desencapsulados:
         return [aluno]
