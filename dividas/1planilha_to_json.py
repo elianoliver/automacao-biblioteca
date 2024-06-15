@@ -1,16 +1,10 @@
-# Este script lê um arquivo Excel contendo várias planilhas, filtra os dados com base em
-# palavras-chave ignoradas e colunas desejadas, converte as colunas de data para um formato
-# serializável, ignora as linhas vazias e salva os dados em um arquivo JSON.
-
 import pandas as pd
 import json
-from datetime import datetime
 
 # VARIAVEIS ===================================================================
 caminho_arquivo_excel = './excel/original.xlsx'
-palavras_chave_ignoradas = ['MODELO PARA CÓPIA']
 caminho_arquivo_json = './excel/alunos.json'
-colunas_desejadas = ['Código pessoa', 'Nome da pessoa', 'Email', 'Código do exemplar', 'Data de empréstimo', 'Data devolução prevista', 'Título']
+colunas_desejadas = ['Código pessoa', 'Nome da pessoa', 'Email']
 
 # FUNÇÕES =====================================================================
 def salvar_dados_em_json(dados, caminho_arquivo):
@@ -21,47 +15,43 @@ def salvar_dados_em_json(dados, caminho_arquivo):
     except Exception as e:
         print(f"Ocorreu um erro ao salvar os dados em JSON: {e}")
 
-def obter_linhas_sem_palavra_chave(caminho_arquivo_excel, palavras_chave_ignoradas, colunas_desejadas):
+def obter_linhas_sem_palavra_chave(caminho_arquivo_excel, colunas_desejadas):
     linhas_encontradas = {}
 
     try:
         # Lê todas as planilhas do arquivo Excel
         planilhas = pd.read_excel(caminho_arquivo_excel, sheet_name=None, dtype={'Código pessoa': str})
+        print(f"Planilhas lidas: {list(planilhas.keys())}")  # Debug: Imprime os nomes das planilhas lidas
 
         for nome_da_planilha, df in planilhas.items():
-            # Verifica se alguma palavra-chave está presente no nome da planilha
-            if not any(palavra.lower() in nome_da_planilha.lower() for palavra in palavras_chave_ignoradas):
-                # Verifica se as colunas desejadas existem na planilha
-                if set(colunas_desejadas).issubset(df.columns):
-                    # Seleciona apenas as colunas desejadas
-                    df = df[colunas_desejadas]
+            print(f"Processando planilha: {nome_da_planilha}")  # Debug: Imprime o nome da planilha sendo processada
 
-                    # Converte colunas Timestamp para formato serializável
-                    for coluna in df.select_dtypes(include=['datetime64']).columns:
-                        df[coluna] = df[coluna].apply(lambda x: x.strftime('%Y-%m-%d') if pd.notnull(x) else None)
+            # Verifica se as colunas desejadas existem na planilha
+            if set(colunas_desejadas).issubset(df.columns):
+                print(f"Colunas desejadas encontradas na planilha: {nome_da_planilha}")  # Debug
+                # Seleciona apenas as colunas desejadas
+                df = df[colunas_desejadas]
 
-                    # Remove linhas vazias
-                    df = df.dropna(how='all')
+                # Converte colunas Timestamp para formato serializável
+                for coluna in df.select_dtypes(include=['datetime64']).columns:
+                    df[coluna] = df[coluna].apply(lambda x: x.strftime('%Y-%m-%d') if pd.notnull(x) else None)
 
-                    # Agrupa por 'Código pessoa' e 'Nome da pessoa'
-                    grupos = df.groupby(['Código pessoa', 'Nome da pessoa'])
+                # Remove linhas vazias
+                df = df.dropna(how='all')
+                print(f"Linhas após remoção de vazias: {len(df)}")  # Debug: Imprime o número de linhas após remoção
 
-                    # Cria uma lista de dicionários para cada grupo
-                    linhas_agrupadas = []
-                    for nome, grupo in grupos:
-                        # Verifica se o e-mail é nulo
-                        email = grupo['Email'].iloc[0] if pd.notnull(grupo['Email'].iloc[0]) else "Sem email"
-                        linhas_agrupadas.append({
-                            'Código pessoa': nome[0],
-                            'Nome da pessoa': nome[1],
-                            'Email': email
-                        })
+                # Verifica se há linhas para processar após a remoção
+                if df.empty:
+                    print(f"Nenhuma linha válida encontrada na planilha {nome_da_planilha} para adicionar ao dicionário")  # Debug
+                    continue  # Pula para a próxima planilha se esta estiver vazia
 
-                    # Ordena as linhas por 'Nome da pessoa'
-                    linhas_agrupadas = sorted(linhas_agrupadas, key=lambda k: k['Nome da pessoa'])
+                # Processamento adicional aqui...
 
-                    # Adiciona as linhas da planilha correspondente
-                    linhas_encontradas[nome_da_planilha] = linhas_agrupadas
+                # Adiciona as linhas da planilha correspondente ao dicionário
+                linhas_encontradas[nome_da_planilha] = df.to_dict('records')
+
+            else:
+                print(f"As colunas desejadas não foram encontradas na planilha: {nome_da_planilha}")  # Debug
 
         return linhas_encontradas
 
@@ -70,7 +60,8 @@ def obter_linhas_sem_palavra_chave(caminho_arquivo_excel, palavras_chave_ignorad
         return None
 
 # EXECUTANDO O PROGRAMA ========================================================
-resultados = obter_linhas_sem_palavra_chave(caminho_arquivo_excel, palavras_chave_ignoradas, colunas_desejadas)
+resultados = obter_linhas_sem_palavra_chave(caminho_arquivo_excel, colunas_desejadas)
+print(f"Total de planilhas processadas: {len(resultados)}")  # Debug: Imprime o total de planilhas processadas
 
 if resultados:
     salvar_dados_em_json(resultados, caminho_arquivo_json)
