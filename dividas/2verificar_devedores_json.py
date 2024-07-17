@@ -97,10 +97,10 @@ with webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager
 
                         # Adiciona o texto do alerta ao objeto aluno
                         aluno = {
-                            "Matrícula": numero_matricula,
-                            "Aluno": aluno["Nome da pessoa"],
+                            "Código pessoa": numero_matricula,
+                            "Nome da pessoa": aluno["Nome da pessoa"],
                             "Email": aluno["Email"],
-                            "Texto do alerta": alerta.text
+                            "Obs": alerta.text
                         }
 
                         alerta.accept()
